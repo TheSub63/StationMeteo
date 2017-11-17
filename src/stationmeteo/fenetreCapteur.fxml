@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.shape.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.60">
+  <tabs>
+    <Tab closable="false" text="Digital">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="150.0" layoutY="100.0" text="Capteur n°" textAlignment="CENTER" AnchorPane.leftAnchor="240.0" AnchorPane.rightAnchor="240.0">
+                     <font>
+                        <Font size="22.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="275.0" layoutY="150.0" text="XX°C" AnchorPane.leftAnchor="280.0" AnchorPane.rightAnchor="280.0" />
+               </children></AnchorPane>
+      </content>
+    </Tab>
+    <Tab closable="false" text="Thermomètre">
+         <content>
+            <HBox>
+               <children>
+                  <ProgressBar progress="0.0" rotate="90.0">
+                     <HBox.margin>
+                        <Insets left="200.0" top="150.0" />
+                     </HBox.margin>
+                  </ProgressBar>
+                  <Label text="Label">
+                     <HBox.margin>
+                        <Insets top="150.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+            </HBox>
+         </content>
+    </Tab>
+      <Tab closable="false" text="Icone">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+        </content>
+      </Tab>
+  </tabs>
+</TabPane>
