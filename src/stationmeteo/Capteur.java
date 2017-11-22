@@ -15,9 +15,9 @@ public class Capteur {
     private IntegerProperty id;
     private StringProperty nom;
     private IntegerProperty actualisation;
-    private IntegerProperty temperature;
+    private FloatProperty temperature;
     
-    public Capteur(int id,String nom,int actualisation, int temperature){
+    public Capteur(int id,String nom,int actualisation, float temperature){
         this.id.set(id);
         this.nom.set(nom);
         this.actualisation.set(actualisation);
@@ -49,11 +49,11 @@ public class Capteur {
         this.actualisation.set(actualisation);
     }
 
-    public int getTemperature() {
+    public float getTemperature() {
         return temperature.get();
     }
 
-    public void setTemperature(int temperature) {
+    public void setTemperature(float temperature) {
         this.temperature.set(temperature);
     }
     private final StringProperty string = new SimpleStringProperty();
@@ -66,8 +66,18 @@ public class Capteur {
         string.set(value);
     }
 
-    public StringProperty stringProperty() {
-        return string;
+    public StringProperty nomProperty() {
+        return nom;
     }
+    public IntegerProperty idProperty() {
+        return id;
+    }
+    public  IntegerProperty actualisationProperty(){
+        return actualisation;
+    }
+    public FloatProperty temperatureProperty(){
+        return temperature;
+    }
+    
 
 }
