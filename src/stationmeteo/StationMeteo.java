@@ -18,7 +18,7 @@ import javafx.fxml.Initializable;
 import javafx.fxml.JavaFXBuilderFactory;
 import javafx.scene.control.TabPane;
 import javafx.scene.layout.AnchorPane;
-
+import java.net.URL;
 /**
  *
  * @author clguilbert
@@ -29,18 +29,24 @@ public class StationMeteo extends Application {
     public void start(Stage primaryStage) {
         this.primaryStage=primaryStage;
         Capteur cap1 = (Capteur) replaceSceneContent("fenetreCapteur.fxml");
-        cap1.setApp(this);
         primaryStage.setTitle("Capteur 0");
         primaryStage.show();
     }
 
     
     private Initializable replaceSceneContent(String fxml){
-        FXMLLoader loader = new FXMLLoader();
-//        TabPane page=fenetreCapteur();
-//        Scene scene = new Scene(page, 600, 400);
-        primaryStage.setScene(scene);
-        primaryStage.sizeToScene();
+        URL url=getClass().getResource(fxml);
+        FXMLLoader loader = new FXMLLoader(url);
+        try{
+            TabPane page=(TabPane) loader.load();
+            Scene scene = new Scene(page, 600, 400);
+            primaryStage.setScene(scene);
+            primaryStage.sizeToScene();
+        }
+        catch (Exception e){
+            e.getMessage();
+        }
+
         return (Initializable) loader.getController();
     }
     /**

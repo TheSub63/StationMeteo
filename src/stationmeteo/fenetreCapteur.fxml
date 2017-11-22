@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.image.*?>
 <?import javafx.scene.shape.*?>
 <?import javafx.geometry.*?>
 <?import javafx.scene.text.*?>
@@ -13,12 +14,12 @@
       <content>
         <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                <children>
-                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="150.0" layoutY="100.0" text="Capteur n°" textAlignment="CENTER" AnchorPane.leftAnchor="240.0" AnchorPane.rightAnchor="240.0">
+                  <Label fx:id="noCapteur" alignment="CENTER" contentDisplay="CENTER" layoutX="150.0" layoutY="100.0" text="Capteur n°" textAlignment="CENTER" AnchorPane.leftAnchor="240.0" AnchorPane.rightAnchor="240.0">
                      <font>
                         <Font size="22.0" />
                      </font>
                   </Label>
-                  <Label layoutX="275.0" layoutY="150.0" text="XX°C" AnchorPane.leftAnchor="280.0" AnchorPane.rightAnchor="280.0" />
+                  <Label fx:id="digitText" layoutX="275.0" layoutY="150.0" text="XX°C" AnchorPane.leftAnchor="280.0" AnchorPane.rightAnchor="280.0" />
                </children></AnchorPane>
       </content>
     </Tab>
@@ -26,12 +27,12 @@
          <content>
             <HBox>
                <children>
-                  <ProgressBar progress="0.0" rotate="90.0">
+                  <ProgressBar fx:id="thermometre" progress="0.0" rotate="90.0">
                      <HBox.margin>
                         <Insets left="200.0" top="150.0" />
                      </HBox.margin>
                   </ProgressBar>
-                  <Label text="Label">
+                  <Label fx:id="barText" text="XX°C">
                      <HBox.margin>
                         <Insets top="150.0" />
                      </HBox.margin>
@@ -42,7 +43,12 @@
     </Tab>
       <Tab closable="false" text="Icone">
         <content>
-          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <Label fx:id="imgText" layoutX="282.0" layoutY="200.0" text="XX°C" AnchorPane.leftAnchor="282.0" AnchorPane.rightAnchor="282.0" />
+                  <ImageView fx:id="img" fitHeight="140.0" fitWidth="200.0" layoutX="200.0" layoutY="49.0" pickOnBounds="true" preserveRatio="true" />
+               </children>
+            </AnchorPane>
         </content>
       </Tab>
   </tabs>
