@@ -66,8 +66,18 @@ public class Capteur {
         string.set(value);
     }
 
-    public StringProperty stringProperty() {
-        return string;
+    public StringProperty nomProperty() {
+        return nom;
     }
+    public IntegerProperty idProperty() {
+        return id;
+    }
+    public  IntegerProperty actualisationProperty(){
+        return actualisation;
+    }
+    public IntegerProperty temperatureProperty(){
+        return temperature;
+    }
+    
 
 }
