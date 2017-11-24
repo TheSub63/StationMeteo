@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package stationmeteo;
+package stationmeteo.controller;
 
 import java.net.URL;
 import java.util.ArrayList;
@@ -17,7 +17,8 @@ import javafx.scene.control.ProgressBar;
 import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
-
+import stationmeteo.java.Capteur;
+import stationmeteo.java.StationMeteo;
 /**
  *
  * @author clguilbert

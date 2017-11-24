@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package stationmeteo;
+package stationmeteo.java;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -20,6 +20,7 @@ import javafx.fxml.JavaFXBuilderFactory;
 import javafx.scene.control.TabPane;
 import javafx.scene.layout.AnchorPane;
 import java.net.URL;
+import javafx.scene.layout.BorderPane;
 /**
  *
  * @author clguilbert
@@ -29,19 +30,19 @@ public class StationMeteo extends Application {
 
     @Override
     public void start(Stage primaryStage) {      
-        URL url=getClass().getResource("fenetreCapteur.fxml");
+        URL url=getClass().getResource("fenetreMain.fxml");
         FXMLLoader loader = new FXMLLoader(url);          
-       TabPane page;
+        BorderPane page;
         try{
 
-            page = (TabPane) loader.load();
+            page = (BorderPane) loader.load();
             Scene scene = new Scene(page);
             primaryStage.setScene(scene);
         }
         catch (IOException e){
             e.printStackTrace();     
         }
-        primaryStage.setTitle("Capteur 0");
+        primaryStage.setTitle("Station Meteo");
         primaryStage.show(); 
     }
 
