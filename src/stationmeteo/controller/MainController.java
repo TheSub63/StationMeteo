@@ -5,9 +5,12 @@
  */
 package stationmeteo.controller;
 
+import java.net.URL;
+import java.util.ResourceBundle;
 import javafx.application.Preloader;
 import javafx.application.Preloader.ProgressNotification;
 import javafx.application.Preloader.StateChangeNotification;
+import javafx.fxml.Initializable;
 import javafx.scene.Scene;
 import javafx.scene.control.ProgressBar;
 import javafx.scene.layout.BorderPane;
@@ -21,11 +24,11 @@ import javafx.stage.Stage;
 public class MainController extends BorderPane implements Initializable {
     
 
-    Stage stage;
-    
-    private Scene createPreloaderScene() {
-        BorderPane p = new BorderPane();
-        return new Scene(p, 300, 150);        
+
+
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
         
