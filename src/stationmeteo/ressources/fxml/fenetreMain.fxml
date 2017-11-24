@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1">
+   <right>
+      <VBox BorderPane.alignment="CENTER">
+         <children>
+            <Button mnemonicParsing="false" text="Ajouter" />
+            <Button mnemonicParsing="false" text="Modifier" />
+            <Button mnemonicParsing="false" text="Supprimer" />
+
+         </children>
+      </VBox>
+   </right>
+   <top>
+      <Pane BorderPane.alignment="CENTER">
+         <children>
+            <Label text="Nom :" />
+         </children>
+      </Pane>
+   </top>
+   <center>
+      <VBox>
+         <children>
+            <HBox alignment="CENTER" spacing="34.0">
+               <children>
+                  <Button mnemonicParsing="false" text="Digit">
+                     <graphic>
+                        <ImageView fitHeight="35.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" />
+                     </graphic>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </Button>
+                  <Button mnemonicParsing="false" text="Thermometre">
+                     <graphic>
+                        <ImageView fitHeight="35.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" />
+                     </graphic>
+                  </Button>
+                  <Button mnemonicParsing="false" text="Icone">
+                     <graphic>
+                        <ImageView fitHeight="35.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" />
+                     </graphic>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+            <ListView />
+         </children>
+      </VBox>
+   </center>
+</BorderPane>
