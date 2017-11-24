@@ -8,6 +8,7 @@
             <file>file:/home/etud/clguilbert/NetBeansProjects/StationMeteo/src/stationmeteo/ressources/fxml/fenetreModif.fxml</file>
             <file>file:/home/etud/clguilbert/NetBeansProjects/StationMeteo/src/stationmeteo/java/Capteur.java</file>
             <file>file:/home/etud/clguilbert/NetBeansProjects/StationMeteo/src/stationmeteo/controller/CapteurController.java</file>
+            <file>file:/home/etud/clguilbert/NetBeansProjects/StationMeteo/src/stationmeteo/controller/MainController.java</file>
             <file>file:/home/etud/clguilbert/NetBeansProjects/StationMeteo/src/stationmeteo/ressources/fxml/fenetreAjout.fxml</file>
             <file>file:/home/etud/clguilbert/NetBeansProjects/StationMeteo/src/stationmeteo/ressources/fxml/fenetreMain.fxml</file>
         </group>
