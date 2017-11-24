@@ -28,23 +28,23 @@ public class StationMeteo extends Application {
     @Override
     public void start(Stage primaryStage) {
         this.primaryStage=primaryStage;
-        Capteur cap1 = (Capteur) replaceSceneContent("fenetreCapteur.fxml");
+        CapteurController control = (CapteurController) replaceSceneContent("fenetreCapteur.fxml");
         primaryStage.setTitle("Capteur 0");
         primaryStage.show();
     }
 
     
-    private Initializable replaceSceneContent(String fxml){
+    private Initializable replaceSceneContent(String fxml){ //SERT A RIEN
         URL url=getClass().getResource(fxml);
         FXMLLoader loader = new FXMLLoader(url);
         try{
             TabPane page=(TabPane) loader.load();
-            Scene scene = new Scene(page, 600, 400);
+            Scene scene = new Scene(page);
             primaryStage.setScene(scene);
-            primaryStage.sizeToScene();
         }
         catch (Exception e){
-            e.getMessage();
+            e.printStackTrace();
+            
         }
 
         return (Initializable) loader.getController();

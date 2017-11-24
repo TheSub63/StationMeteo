@@ -12,10 +12,10 @@ import javafx.beans.property.*;
  * @author magaydu
  */
 public class Capteur {
-    private IntegerProperty id;
-    private StringProperty nom;
-    private IntegerProperty actualisation;
-    private FloatProperty temperature;
+    private IntegerProperty id=new SimpleIntegerProperty(this, "id");
+    private StringProperty nom=new SimpleStringProperty(this, "nom");
+    private IntegerProperty actualisation=new SimpleIntegerProperty(this, "actualisation");
+    private FloatProperty temperature=new SimpleFloatProperty(this, "temperature");
     
     public Capteur(int id,String nom,int actualisation, float temperature){
         this.id.set(id);
