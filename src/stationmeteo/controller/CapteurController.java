@@ -6,7 +6,10 @@
 package stationmeteo;
 
 import java.net.URL;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.ResourceBundle;
+import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
@@ -32,7 +35,7 @@ public class CapteurController extends AnchorPane implements Initializable{
     @FXML
     ImageView img;
     
-    private Capteur cap;
+    private List<Capteur> cap =new ArrayList<>();
     
     private StationMeteo application;
     
@@ -40,11 +43,14 @@ public class CapteurController extends AnchorPane implements Initializable{
         this.application = application;
     }
     
+
+    @Override
     public void initialize(URL location, ResourceBundle resources) {
-        cap=new Capteur(0,"cap0",1,1);
-        digitText.setText(""+cap.getTemperature());
-        barText.setText(""+cap.getTemperature());
-        imgText.setText(""+cap.getTemperature());
+        
+        cap.add(new Capteur(0,"cap0",1,1));
+        digitText.setText(""+cap.get(0).getTemperature());
+        barText.setText(""+cap.get(0).getTemperature());
+        imgText.setText(""+cap.get(0).getTemperature());//To change body of generated methods, choose Tools | Templates.
     }
     
 }
