@@ -5,6 +5,7 @@
  */
 package stationmeteo;
 
+import java.io.IOException;
 import java.io.InputStream;
 import javafx.application.Application;
 import javafx.event.ActionEvent;
@@ -24,31 +25,27 @@ import java.net.URL;
  * @author clguilbert
  */
 public class StationMeteo extends Application {
-    private Stage primaryStage;
-    @Override
-    public void start(Stage primaryStage) {
-        this.primaryStage=primaryStage;
-        CapteurController control = (CapteurController) replaceSceneContent("fenetreCapteur.fxml");
-        primaryStage.setTitle("Capteur 0");
-        primaryStage.show();
-    }
+    //private Stage primaryStage;
 
-    
-    private Initializable replaceSceneContent(String fxml){ //SERT A RIEN
-        URL url=getClass().getResource(fxml);
-        FXMLLoader loader = new FXMLLoader(url);
+    @Override
+    public void start(Stage primaryStage) {      
+        URL url=getClass().getResource("fenetreCapteur.fxml");
+        FXMLLoader loader = new FXMLLoader(url);          
+       TabPane page;
         try{
-            TabPane page=(TabPane) loader.load();
+
+            page = (TabPane) loader.load();
             Scene scene = new Scene(page);
             primaryStage.setScene(scene);
         }
-        catch (Exception e){
-            e.printStackTrace();
-            
+        catch (IOException e){
+            e.printStackTrace();     
         }
-
-        return (Initializable) loader.getController();
+        primaryStage.setTitle("Capteur 0");
+        primaryStage.show(); 
     }
+
+
     /**
      * @param args the command line arguments
      */
