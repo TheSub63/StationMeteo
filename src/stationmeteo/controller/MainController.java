@@ -9,11 +9,13 @@ package stationmeteo.controller;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
 import java.util.ResourceBundle;
 import javafx.application.Preloader;
 import javafx.application.Preloader.ProgressNotification;
 import javafx.application.Preloader.StateChangeNotification;
+import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.EventHandler;
 import javafx.event.EventType;
@@ -55,7 +57,7 @@ public class MainController extends BorderPane implements Initializable {
     @FXML
     ListView capteurList;
     
-    private List<Capteur> capteurs;
+    private final ObservableList<Capteur> listeDeCapteur = FXCollections.observableList(new ArrayList());
     private StationMeteo application;
     private Capteur selectedCapteur;
     private CapteurController capteurController;
@@ -95,10 +97,10 @@ public class MainController extends BorderPane implements Initializable {
                 System.out.println("AFFICHAGE ICONE");
             }
         });
-        
-        
+        //https://www.developpez.net/forums/d1515667/java/interfaces-graphiques-java/javafx/communication-entre-2-controleurs-lies-chacun-fichier-fxml/
+        capteurList.setItems(listeDeCapteur);
         Capteur captdef = new Capteur(0,"capteur defaut",1, 17.7f);
-        capteurs=new ArrayList<Capteur>();
+        //capteurs=new ArrayList<Capteur>();
 	//capteurs.add(captdef);
         //if(capteurList.getItems()!=null) capteurs = capteurList.getItems();
 	//capteurList.getSelectionModel().selectedItemProperty().addListener((property, oldValue, newValue) -> { System.out.println("LIST UPDATED");}
