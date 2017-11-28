@@ -47,6 +47,7 @@ public class AjoutController extends BorderPane implements Initializable{
         //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
         validButton.setOnMousePressed(new EventHandler<MouseEvent>() {
             public void handle(MouseEvent me) {
+               MainController.
                             }
         });
     }
