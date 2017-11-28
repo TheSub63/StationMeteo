@@ -10,14 +10,17 @@ import java.util.ResourceBundle;
 import javafx.application.Preloader;
 import javafx.application.Preloader.ProgressNotification;
 import javafx.application.Preloader.StateChangeNotification;
+import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.ListView;
 import javafx.scene.control.ProgressBar;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
+import stationmeteo.java.Capteur;
 import stationmeteo.java.StationMeteo;
 
 /**
@@ -35,6 +38,8 @@ public class MainController extends BorderPane implements Initializable {
     Button delButton;
     @FXML
     Label nameText;
+    @FXML
+    ListView capteurList;
     
  private StationMeteo application;
     
@@ -44,7 +49,7 @@ public class MainController extends BorderPane implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        capteurList=new ListView<Capteur>();
     }
     
         

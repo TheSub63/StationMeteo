@@ -30,11 +30,10 @@ public class StationMeteo extends Application {
 
     @Override
     public void start(Stage primaryStage) {      
-        URL url=getClass().getResource("fenetreMain.fxml");
+        URL url=getClass().getResource("/stationmeteo/ressources/fxml/fenetreMain.fxml");
         FXMLLoader loader = new FXMLLoader(url);          
-        BorderPane page;
+        BorderPane page;/**=new BorderPane();**/
         try{
-
             page = (BorderPane) loader.load();
             Scene scene = new Scene(page);
             primaryStage.setScene(scene);
