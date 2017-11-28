@@ -8,6 +8,8 @@ package stationmeteo.controller;
 
 import java.io.IOException;
 import java.net.URL;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.ResourceBundle;
 import javafx.application.Preloader;
 import javafx.application.Preloader.ProgressNotification;
@@ -53,16 +55,16 @@ public class MainController extends BorderPane implements Initializable {
     @FXML
     ListView capteurList;
     
+    private List<Capteur> capteurs;
     private StationMeteo application;
     private Capteur selectedCapteur;
-    
+    private CapteurController capteurController;
     public void setApp(StationMeteo application){
         this.application = application;
     }
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        capteurList=new ListView<Capteur>();
         addButton.setOnMousePressed(new EventHandler<MouseEvent>() {
             public void handle(MouseEvent me) {
                 ouvrirFenetreAjout(); 
@@ -93,6 +95,16 @@ public class MainController extends BorderPane implements Initializable {
                 System.out.println("AFFICHAGE ICONE");
             }
         });
+        
+        
+        Capteur captdef = new Capteur(0,"capteur defaut",1, 17.7f);
+        capteurs=new ArrayList<Capteur>();
+	//capteurs.add(captdef);
+        //if(capteurList.getItems()!=null) capteurs = capteurList.getItems();
+	//capteurList.getSelectionModel().selectedItemProperty().addListener((property, oldValue, newValue) -> { System.out.println("LIST UPDATED");}
+//);
+                
+                
     }
     public void ouvrirFenetreAjout(){
         Stage modif=new Stage();
