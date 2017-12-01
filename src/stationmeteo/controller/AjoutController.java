@@ -40,16 +40,20 @@ public class AjoutController extends BorderPane implements Initializable{
     @FXML
     Button validButton;
     
-    
+    private Capteur i;
+    private int id;
     
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-        validButton.setOnMousePressed(new EventHandler<MouseEvent>() {
-            public void handle(MouseEvent me) {
-               MainController.
-                            }
+        validButton.setOnMousePressed((MouseEvent me) -> {
+            id=Integer.parseInt(idCapteur.getText());
+            i = new Capteur(id,nomCapteur.getText(),Integer.parseInt(actualisationCapteur.getText()),Float.parseFloat(temperatureCapteur.getText()));
         });
     }
-    
+    public Capteur getCapteur(){
+        return i;
+    }
 }
+    
+
