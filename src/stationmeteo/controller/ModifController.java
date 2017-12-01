@@ -9,14 +9,18 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.ResourceBundle;
 import javafx.collections.ObservableList;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.ProgressBar;
 import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
+import javafx.stage.Stage;
 import static javax.accessibility.AccessibleRole.LABEL;
 import stationmeteo.java.Capteur;
 import stationmeteo.java.StationMeteo;
@@ -42,6 +46,8 @@ public class ModifController extends BorderPane implements Initializable{
     private TextField actualisationText;
     @FXML
     private TextField temperatureText;
+    @FXML
+    private Button validButton;
     
     private Capteur capteur; 
     public ModifController(Capteur c){
@@ -54,6 +60,24 @@ public class ModifController extends BorderPane implements Initializable{
         idText.setText(String.valueOf(capteur.getId()));
         actualisationText.setText(String.valueOf(capteur.getActualisation()));
         temperatureText.setText(String.valueOf(capteur.getTemperature()));
+        validButton.setOnMousePressed(new EventHandler<MouseEvent>() {
+            public void handle(MouseEvent me) {
+                commitCapteur();
+                
+            }
+        });
+    }
+    public void commitCapteur(){
+            capteur.setNom(nomText.getText());
+            capteur.setId(Integer.parseInt(idText.getText()));
+            capteur.setActualisation(Integer.parseInt(actualisationText.getText()));
+            capteur.setTemperature(Float.parseFloat(temperatureText.getText()));
+            Stage stage = (Stage) validButton.getScene().getWindow();
+            stage.close();
+    }
+
+    public Capteur getCapteur() {
+        return capteur;
     }
     
 }

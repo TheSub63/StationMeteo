@@ -84,7 +84,7 @@ public class MainController extends BorderPane implements Initializable {
         });
         delButton.setOnMousePressed(new EventHandler<MouseEvent>() {
             public void handle(MouseEvent me) {
-                System.out.println("Suppression impossible");
+                listeDeCapteur.remove(selectedCapteur);
             }
         });
         digitalButton.setOnMousePressed(new EventHandler<MouseEvent>() {
@@ -140,6 +140,7 @@ public class MainController extends BorderPane implements Initializable {
         FXMLLoader loader = new FXMLLoader(url);          
         BorderPane page;
         ModifController modifcont=new ModifController(selectedCapteur);
+
         loader.setController(modifcont);
         try{
             page = (BorderPane) loader.load();
@@ -150,7 +151,12 @@ public class MainController extends BorderPane implements Initializable {
             e.printStackTrace();     
         }
         modif.setTitle("Modifier Capteur");
-        modif.show(); 
+        modif.showAndWait(); 
+        if(modifcont.getCapteur()!=null) {// SALE
+            listeDeCapteur.remove(selectedCapteur);
+            selectedCapteur=modifcont.getCapteur(); 
+            listeDeCapteur.add(selectedCapteur);
+        }
     }
         
         public Capteur getCapteur(){

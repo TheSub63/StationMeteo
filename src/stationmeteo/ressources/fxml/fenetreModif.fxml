@@ -15,7 +15,7 @@
                   <Insets bottom="20.0" right="20.0" />
                </HBox.margin>
             </Button>
-            <Button mnemonicParsing="false" text="OK">
+            <Button fx:id="validButton" mnemonicParsing="false" text="OK">
                <HBox.margin>
                   <Insets bottom="20.0" right="20.0" />
                </HBox.margin>
