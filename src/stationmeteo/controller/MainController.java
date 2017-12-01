@@ -98,8 +98,10 @@ public class MainController extends BorderPane implements Initializable {
             }
         });
         //https://www.developpez.net/forums/d1515667/java/interfaces-graphiques-java/javafx/communication-entre-2-controleurs-lies-chacun-fichier-fxml/
-        capteurList.setItems(listeDeCapteur);
+        
         Capteur captdef = new Capteur(0,"capteur defaut",1, 17.7f);
+        listeDeCapteur.add(captdef);
+        capteurList.setItems(listeDeCapteur);
         //capteurs=new ArrayList<Capteur>();
 	//capteurs.add(captdef);
         //if(capteurList.getItems()!=null) capteurs = capteurList.getItems();
@@ -122,7 +124,8 @@ public class MainController extends BorderPane implements Initializable {
             e.printStackTrace();     
         }
         modif.setTitle("Nouveau Capteur");
-        modif.show(); 
+        modif.showAndWait();
+       // if(loader.getController().getCapteur()!=null)
     }
         public void ouvrirFenetreModif(){
         Stage modif=new Stage();

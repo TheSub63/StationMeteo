@@ -68,7 +68,7 @@
                   </Button>
                </children>
             </HBox>
-            <ListView fx:id="CapteurList" />
+            <ListView fx:id="capteurList" />
          </children>
       </VBox>
    </center>

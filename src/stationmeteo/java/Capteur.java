@@ -78,6 +78,8 @@ public class Capteur {
     public FloatProperty temperatureProperty(){
         return temperature;
     }
-    
-
+    @Override
+    public String toString(){
+        return getNom()+" "+getTemperature();
+    }
 }

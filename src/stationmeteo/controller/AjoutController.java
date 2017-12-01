@@ -40,7 +40,7 @@ public class AjoutController extends BorderPane implements Initializable{
     @FXML
     Button validButton;
     
-    private Capteur i;
+    protected Capteur i;
     private int id;
     
     @Override
