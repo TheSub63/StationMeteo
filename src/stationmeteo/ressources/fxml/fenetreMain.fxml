@@ -8,13 +8,16 @@
 
 <BorderPane xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="stationmeteo.controller.MainController">
    <right>
-      <VBox alignment="CENTER" prefWidth="86.0" BorderPane.alignment="CENTER">
+      <VBox alignment="CENTER" prefWidth="86.0" spacing="5.0" BorderPane.alignment="CENTER">
          <children>
-            <Button fx:id="addButton" mnemonicParsing="false" prefHeight="0.0" prefWidth="66.0" text="Ajouter" />
-            <Button fx:id="uptButton" mnemonicParsing="false" text="Modifier" />
-            <Button fx:id="delButton" mnemonicParsing="false" text="Supprimer" />
+            <Button fx:id="addButton" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Ajouter" />
+            <Button fx:id="uptButton" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Modifier" />
+            <Button fx:id="delButton" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Supprimer" />
 
          </children>
+         <padding>
+            <Insets left="5.0" right="5.0" />
+         </padding>
       </VBox>
    </right>
    <top>
@@ -32,7 +35,7 @@
                <children>
                   <Button fx:id="digitalButton" mnemonicParsing="false" text="Digit">
                      <graphic>
-                        <ImageView fitHeight="35.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" >
+                        <ImageView fitHeight="35.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
                                 <image>
                                     <Image url="/stationmeteo/ressources/images/digital.png" />
                                 </image>
@@ -44,7 +47,7 @@
                   </Button>
                   <Button fx:id="thermoButton" mnemonicParsing="false" text="Thermometre">
                      <graphic>
-                        <ImageView fitHeight="35.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" >
+                        <ImageView fitHeight="35.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
                                 <image>
                                     <Image url="/stationmeteo/ressources/images/thermo.png" />
                                 </image>
@@ -65,7 +68,7 @@
                   </Button>
                </children>
             </HBox>
-            <ListView fx:id="CapteurList"/>
+            <ListView fx:id="CapteurList" />
          </children>
       </VBox>
    </center>
