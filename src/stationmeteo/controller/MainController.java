@@ -67,6 +67,11 @@ public class MainController extends BorderPane implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
+        capteurList.setOnMouseClicked(new EventHandler<MouseEvent>() {
+            public void handle(MouseEvent me) {
+                selectedCapteur=(Capteur)capteurList.getSelectionModel().getSelectedItem();
+            }
+        });
         addButton.setOnMousePressed(new EventHandler<MouseEvent>() {
             public void handle(MouseEvent me) {
                 ouvrirFenetreAjout(); 
@@ -115,6 +120,8 @@ public class MainController extends BorderPane implements Initializable {
         URL url=getClass().getResource("/stationmeteo/ressources/fxml/fenetreAjout.fxml");
         FXMLLoader loader = new FXMLLoader(url);          
         BorderPane page;
+        AjoutController ajoutcont=new AjoutController();
+        loader.setController(ajoutcont);
         try{
             page = (BorderPane) loader.load();
             Scene scene = new Scene(page);
@@ -125,13 +132,15 @@ public class MainController extends BorderPane implements Initializable {
         }
         modif.setTitle("Nouveau Capteur");
         modif.showAndWait();
-       // if(loader.getController().getCapteur()!=null)
+        if(ajoutcont.getCapteur()!=null) listeDeCapteur.add(ajoutcont.getCapteur());
     }
         public void ouvrirFenetreModif(){
         Stage modif=new Stage();
         URL url=getClass().getResource("/stationmeteo/ressources/fxml/fenetreModif.fxml");
         FXMLLoader loader = new FXMLLoader(url);          
         BorderPane page;
+        ModifController modifcont=new ModifController(selectedCapteur);
+        loader.setController(modifcont);
         try{
             page = (BorderPane) loader.load();
             Scene scene = new Scene(page);
@@ -143,4 +152,8 @@ public class MainController extends BorderPane implements Initializable {
         modif.setTitle("Modifier Capteur");
         modif.show(); 
     }
+        
+        public Capteur getCapteur(){
+            return selectedCapteur;
+        }
 }

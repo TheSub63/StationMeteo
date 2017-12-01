@@ -8,6 +8,7 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.ResourceBundle;
+import javafx.application.Platform;
 import javafx.collections.ObservableList;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
@@ -20,6 +21,7 @@ import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
+import javafx.stage.Stage;
 import static javax.accessibility.AccessibleRole.LABEL;
 import stationmeteo.java.Capteur;
 import stationmeteo.java.StationMeteo;
@@ -45,11 +47,19 @@ public class AjoutController extends BorderPane implements Initializable{
     
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-        validButton.setOnMousePressed((MouseEvent me) -> {
+        validButton.setOnMousePressed(new EventHandler<MouseEvent>() {
+            public void handle(MouseEvent me) {
+                commitCapteur();
+                
+            }
+        });
+    }
+    
+    public void commitCapteur(){
             id=Integer.parseInt(idCapteur.getText());
             i = new Capteur(id,nomCapteur.getText(),Integer.parseInt(actualisationCapteur.getText()),Float.parseFloat(temperatureCapteur.getText()));
-        });
+             Stage stage = (Stage) validButton.getScene().getWindow();
+             stage.close();
     }
     public Capteur getCapteur(){
         return i;

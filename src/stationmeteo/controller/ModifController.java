@@ -27,20 +27,33 @@ import stationmeteo.java.StationMeteo;
 public class ModifController extends BorderPane implements Initializable{
 
     @FXML
-    Label nomCapteur;
+    private Label nomCapteur;
     @FXML
-    Label idCapteur;
+    private Label idCapteur;
     @FXML
-    Label actualisationCapteur;
+    private Label actualisationCapteur;
     @FXML
-    Label temperatureCapteur;
+    private Label temperatureCapteur;
+    @FXML
+    private TextField nomText;
+    @FXML
+    private TextField idText;
+    @FXML
+    private TextField actualisationText;
+    @FXML
+    private TextField temperatureText;
     
-    
+    private Capteur capteur; 
+    public ModifController(Capteur c){
+        capteur=c;
+    }
     
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        
-
+        nomText.setText(capteur.getNom());
+        idText.setText(String.valueOf(capteur.getId()));
+        actualisationText.setText(String.valueOf(capteur.getActualisation()));
+        temperatureText.setText(String.valueOf(capteur.getTemperature()));
     }
     
 }
