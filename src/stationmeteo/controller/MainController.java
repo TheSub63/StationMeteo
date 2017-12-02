@@ -64,6 +64,7 @@ public class MainController extends BorderPane implements Initializable {
     public void setApp(StationMeteo application){
         this.application = application;
     }
+    private CapteurController capteurcontrol;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -90,7 +91,7 @@ public class MainController extends BorderPane implements Initializable {
         digitalButton.setOnMousePressed(new EventHandler<MouseEvent>() {
             public void handle(MouseEvent me) {
 
-                if(selectedCapteur!=null)affichageDigital();;
+                if(selectedCapteur!=null)affichageDigital();
             }
         });
         thermoButton.setOnMousePressed(new EventHandler<MouseEvent>() {
@@ -100,7 +101,8 @@ public class MainController extends BorderPane implements Initializable {
         });
         iconButton.setOnMousePressed(new EventHandler<MouseEvent>() {
             public void handle(MouseEvent me) {
-                System.out.println("AFFICHAGE ICONE");
+                if(selectedCapteur!=null)affichageIcone();
+
             }
         });
 
@@ -159,7 +161,7 @@ public class MainController extends BorderPane implements Initializable {
         URL url=getClass().getResource("/stationmeteo/ressources/fxml/fenetreDigitale.fxml");
         FXMLLoader loader = new FXMLLoader(url);
         BorderPane page;
-        CapteurController capteurcontrol=new CapteurController(selectedCapteur);
+        capteurcontrol=new CapteurController(selectedCapteur);
         loader.setController(capteurcontrol);
         try{
             page = (BorderPane) loader.load();
@@ -171,6 +173,25 @@ public class MainController extends BorderPane implements Initializable {
         }
         digital.setTitle(selectedCapteur.getNom());
         digital.show();
+    }
+
+    public void affichageIcone(){
+        Stage icone=new Stage();
+        URL url=getClass().getResource("/stationmeteo/ressources/fxml/fenetreIcone.fxml");
+        FXMLLoader loader = new FXMLLoader(url);
+        BorderPane page;
+        capteurcontrol=new CapteurController(selectedCapteur);
+        loader.setController(capteurcontrol);
+        try{
+            page = (BorderPane) loader.load();
+            Scene scene = new Scene(page);
+            icone.setScene(scene);
+        }
+        catch (IOException e){
+            e.printStackTrace();
+        }
+        icone.setTitle(selectedCapteur.getNom());
+        icone.show();
     }
         
         public Capteur getCapteur(){
