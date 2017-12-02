@@ -26,32 +26,27 @@ import stationmeteo.java.StationMeteo;
 public class CapteurController extends AnchorPane implements Initializable{
     
     @FXML
-    Label digitText;
+    private Label nameText;
     @FXML
-    Label barText;
+    private Label cpt;
     @FXML
-    Label imgText;
+    private Label imgText;
     @FXML
-    ProgressBar thermometre;
+    private ProgressBar thermometre;
     @FXML
-    ImageView img;
-    
-    private List<Capteur> cap =new ArrayList<>();
-    
-    private StationMeteo application;
-    
-    public void setApp(StationMeteo application){
-        this.application = application;
+    private ImageView img;
+
+    private Capteur cap;
+
+    public CapteurController(Capteur c){
+        cap=c;
     }
-    
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         
-        cap.add(new Capteur(0,"cap0",1,1));
-        digitText.setText(""+cap.get(0).getTemperature());
-        barText.setText(""+cap.get(0).getTemperature());
-        imgText.setText(""+cap.get(0).getTemperature());//To change body of generated methods, choose Tools | Templates.
+        nameText.setText(cap.getNom());
+        /**if(cpt!=null)**/cpt.setText(String.valueOf(cap.getTemperature())+"°C");
     }
     
 }

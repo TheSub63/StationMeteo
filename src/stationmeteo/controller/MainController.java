@@ -89,7 +89,8 @@ public class MainController extends BorderPane implements Initializable {
         });
         digitalButton.setOnMousePressed(new EventHandler<MouseEvent>() {
             public void handle(MouseEvent me) {
-                System.out.println("AFFICHAGE DIGITAL");
+
+                if(selectedCapteur!=null)affichageDigital();;
             }
         });
         thermoButton.setOnMousePressed(new EventHandler<MouseEvent>() {
@@ -152,6 +153,24 @@ public class MainController extends BorderPane implements Initializable {
             selectedCapteur=modifcont.getCapteur(); 
             listeDeCapteur.add(selectedCapteur);
         }
+    }
+    public void affichageDigital(){
+        Stage digital=new Stage();
+        URL url=getClass().getResource("/stationmeteo/ressources/fxml/fenetreDigitale.fxml");
+        FXMLLoader loader = new FXMLLoader(url);
+        BorderPane page;
+        CapteurController capteurcontrol=new CapteurController(selectedCapteur);
+        loader.setController(capteurcontrol);
+        try{
+            page = (BorderPane) loader.load();
+            Scene scene = new Scene(page);
+            digital.setScene(scene);
+        }
+        catch (IOException e){
+            e.printStackTrace();
+        }
+        digital.setTitle(selectedCapteur.getNom());
+        digital.show();
     }
         
         public Capteur getCapteur(){
