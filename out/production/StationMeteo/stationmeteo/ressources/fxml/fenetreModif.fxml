@@ -15,7 +15,7 @@
                   <Insets bottom="20.0" right="20.0" />
                </HBox.margin>
             </Button>
-            <Button mnemonicParsing="false" text="OK" fx:id="validButton">
+            <Button fx:id="validButton" mnemonicParsing="false" text="OK">
                <HBox.margin>
                   <Insets bottom="20.0" right="20.0" />
                </HBox.margin>
@@ -28,22 +28,22 @@
          <children>
             <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
                <children>
-                  <Label text="id">
+                  <Label fx:id="nomCapteur" text="Nom">
                      <VBox.margin>
                         <Insets bottom="20.0" top="20.0" />
                      </VBox.margin>
                   </Label>
-                  <Label text="nom">
+                  <Label fx:id="idCapteur" text="Id">
                      <VBox.margin>
                         <Insets bottom="20.0" />
                      </VBox.margin>
                   </Label>
-                  <Label text="actualisation">
+                  <Label fx:id= "actualisationCapteur" text="Actualisation">
                      <VBox.margin>
                         <Insets bottom="20.0" />
                      </VBox.margin>
                   </Label>
-                  <Label text="temperature" minWidth="150.0">
+                  <Label fx:id="temperatureCapteur" text="Temperature">
                      <VBox.margin>
                         <Insets bottom="20.0" />
                      </VBox.margin>
@@ -52,22 +52,22 @@
             </VBox>
             <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
                <children>
-                  <TextField alignment="TOP_LEFT" fx:id="idCapteur">
+                  <TextField fx:id="nomText" alignment="TOP_LEFT">
                      <VBox.margin>
                         <Insets bottom="10.0" top="10.0" />
                      </VBox.margin>
                   </TextField>
-                  <TextField fx:id="nomCapteur">
+                  <TextField fx:id="idText">
+                     <VBox.margin>
+                        <Insets bottom="10.0" />
+                     </VBox.margin>
+                  </TextField >
+                  <TextField fx:id="actualisationText">
                      <VBox.margin>
                         <Insets bottom="10.0" />
                      </VBox.margin>
                   </TextField>
-                  <TextField fx:id="actualisationCapteur">
-                     <VBox.margin>
-                        <Insets bottom="10.0" />
-                     </VBox.margin>
-                  </TextField>
-                  <TextField fx:id="temperatureCapteur">
+                  <TextField fx:id="temperatureText">
                      <VBox.margin>
                         <Insets bottom="10.0" />
                      </VBox.margin>
