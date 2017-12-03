@@ -18,8 +18,12 @@ import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.paint.Color;
 import stationmeteo.java.Capteur;
 import stationmeteo.java.StationMeteo;
+
+import javax.swing.*;
+
 /**
  *
  * @author clguilbert
@@ -31,11 +35,9 @@ public class CapteurController extends AnchorPane implements Initializable{
     @FXML
     private Label cpt;
     @FXML
-    private Label imgText;
-    @FXML
-    private ProgressBar thermometre;
-    @FXML
     private ImageView icon;
+    @FXML
+    private ProgressBar thermo;
 
     private Capteur cap;
 
@@ -56,6 +58,11 @@ public class CapteurController extends AnchorPane implements Initializable{
             else if(cap.getTemperature()>=20) imgname="soleil.png";
             Image img=new Image("stationmeteo/ressources/images/"+imgname);
             icon.setImage(img);
+        }
+        if(thermo!=null){
+            thermo.setStyle("-fx-accent: red;");
+            thermo.setProgress((cap.getTemperature()+10)/50);
+
         }
     }
     

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.text.*?>
 <?import javafx.scene.image.*?>
 <?import java.lang.*?>
 <?import java.util.*?>
@@ -7,13 +8,15 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/8.0.151" xmlns:fx="http://javafx.com/fxml/1">
    <center>
-      <Label fx:id="cpt" text="Label" BorderPane.alignment="CENTER">
+      <Label fx:id="cpt" text="23" BorderPane.alignment="CENTER">
          <graphic>
             <ImageView fx:id="icon" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
          </graphic>
+         <font>
+            <Font name="Distant Galaxy" size="12.0" />
+         </font>
       </Label>
    </center>
    <top>

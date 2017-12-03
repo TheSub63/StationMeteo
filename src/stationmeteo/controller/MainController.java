@@ -75,16 +75,19 @@ public class MainController extends BorderPane implements Initializable {
         });
         addButton.setOnMousePressed(new EventHandler<MouseEvent>() {
             public void handle(MouseEvent me) {
-                ouvrirFenetreAjout(); 
+
+                ouvrirFenetreAjout();
             }
         });
         uptButton.setOnMousePressed(new EventHandler<MouseEvent>() {
             public void handle(MouseEvent me) {
-                if(selectedCapteur!=null)ouvrirFenetreModif(); 
+
+                if(selectedCapteur!=null)ouvrirFenetreModif();
             }
         });
         delButton.setOnMousePressed(new EventHandler<MouseEvent>() {
             public void handle(MouseEvent me) {
+
                 listeDeCapteur.remove(selectedCapteur);
             }
         });
@@ -96,7 +99,8 @@ public class MainController extends BorderPane implements Initializable {
         });
         thermoButton.setOnMousePressed(new EventHandler<MouseEvent>() {
             public void handle(MouseEvent me) {
-                System.out.println("AFFICHAGE THERMOMETRE");
+
+                if(selectedCapteur!=null)affichageThermo();
             }
         });
         iconButton.setOnMousePressed(new EventHandler<MouseEvent>() {
@@ -173,6 +177,25 @@ public class MainController extends BorderPane implements Initializable {
         }
         digital.setTitle(selectedCapteur.getNom());
         digital.show();
+    }
+
+    public void affichageThermo(){
+        Stage thermo=new Stage();
+        URL url=getClass().getResource("/stationmeteo/ressources/fxml/fenetreThermo.fxml");
+        FXMLLoader loader = new FXMLLoader(url);
+        BorderPane page;
+        capteurcontrol=new CapteurController(selectedCapteur);
+        loader.setController(capteurcontrol);
+        try{
+            page = (BorderPane) loader.load();
+            Scene scene = new Scene(page);
+            thermo.setScene(scene);
+        }
+        catch (IOException e){
+            e.printStackTrace();
+        }
+        thermo.setTitle(selectedCapteur.getNom());
+        thermo.show();
     }
 
     public void affichageIcone(){
