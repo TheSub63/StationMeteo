@@ -27,4 +27,9 @@ public class AlgorithmeAleatoireFixe implements Algorithme{
         return temperature;
     }
     
+    @Override
+    public String toString(){
+        return "Génération aléatoire Bornée";
+    }
+    
 }

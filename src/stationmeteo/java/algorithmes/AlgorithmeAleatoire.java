@@ -23,4 +23,9 @@ public class AlgorithmeAleatoire implements Algorithme{
         temperature=alea.nextFloat()*10-50;
         return temperature;
     }
+    
+    @Override
+    public String toString(){
+        return "Génération aléatoire";
+    }
 }
