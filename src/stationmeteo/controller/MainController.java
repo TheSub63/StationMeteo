@@ -87,8 +87,10 @@ public class MainController extends BorderPane implements Initializable {
         });
         delButton.setOnMousePressed(new EventHandler<MouseEvent>() {
             public void handle(MouseEvent me) {
-
+               
                 listeDeCapteur.remove(selectedCapteur);
+                selectedCapteur.getLeThread().stop();
+                selectedCapteur=null;
             }
         });
         digitalButton.setOnMousePressed(new EventHandler<MouseEvent>() {
@@ -108,12 +110,13 @@ public class MainController extends BorderPane implements Initializable {
                 if(selectedCapteur!=null)affichageIcone();
 
             }
+            
         });
 
         Capteur captdef = new Capteur(0,"capteur defaut",1, 17.7f);
         listeDeCapteur.add(captdef);
         capteurList.setItems(listeDeCapteur);
-
+       
                 
                 
     }

@@ -3,12 +3,13 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+            <file>file:/home/matthias/Documents/projetjavafx/StationMeteo/StationMeteo/src/stationmeteo/java/StationMeteo.java</file>
             <file>file:/home/matthias/Documents/projetjavafx/StationMeteo/StationMeteo/src/stationmeteo/java/Capteur.java</file>
             <file>file:/home/matthias/Documents/projetjavafx/StationMeteo/StationMeteo/src/stationmeteo/ressources/fxml/fenetreAjout.fxml</file>
             <file>file:/home/matthias/Documents/projetjavafx/StationMeteo/StationMeteo/src/stationmeteo/ressources/fxml/fenetreCapteur.fxml</file>
-            <file>file:/home/matthias/Documents/projetjavafx/StationMeteo/StationMeteo/src/stationmeteo/controller/AjoutController.java</file>
             <file>file:/home/matthias/Documents/projetjavafx/StationMeteo/StationMeteo/src/stationmeteo/controller/MainController.java</file>
             <file>file:/home/matthias/Documents/projetjavafx/StationMeteo/StationMeteo/src/stationmeteo/controller/ModifController.java</file>
+            <file>file:/home/matthias/Documents/projetjavafx/StationMeteo/StationMeteo/src/stationmeteo/controller/CapteurController.java</file>
             <file>file:/home/matthias/Documents/projetjavafx/StationMeteo/StationMeteo/src/stationmeteo/ressources/fxml/fenetreMain.fxml</file>
         </group>
     </open-files>
