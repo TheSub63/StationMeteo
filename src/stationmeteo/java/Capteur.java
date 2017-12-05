@@ -15,18 +15,25 @@ import javafx.concurrent.Task;
 import javafx.event.ActionEvent;
 import javafx.scene.image.Image;
 import javafx.util.Duration;
+import stationmeteo.java.algorithmes.Algorithme;
 
 /**
  *
  * @author magaydu
  */
 public class Capteur {
+    
     private IntegerProperty id=new SimpleIntegerProperty(this, "id");
     private StringProperty nom=new SimpleStringProperty(this, "nom");
     private IntegerProperty actualisation=new SimpleIntegerProperty(this, "actualisation");
     private FloatProperty temperature=new SimpleFloatProperty(this, "temperature");
+    
+    private Algorithme algo;
+    
     private CapteurThread leThread= new CapteurThread(this);
     private Thread test;
+    
+    
     public Capteur(int id,String nom,int actualisation, float temperature) {
         this.test = new Thread();
         this.id.set(id);
@@ -34,7 +41,7 @@ public class Capteur {
         this.actualisation.set(actualisation);
         this.temperature.set(temperature);
         leThread.start();
-       this.temperature=leThread.getCapteurActif().temperatureProperty();
+        this.temperature=leThread.getCapteurActif().temperatureProperty();
         
                 
     }
@@ -81,15 +88,7 @@ public class Capteur {
     public void setTemperature(float temperature) {
         this.temperature.set(temperature);
     }
-    private final StringProperty string = new SimpleStringProperty();
-
-    public String getString() {
-        return string.get();
-    }
-
-    public void setString(String value) {
-        string.set(value);
-    }
+    
 
     public StringProperty nomProperty() {
         return nom;
