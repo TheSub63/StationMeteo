@@ -57,7 +57,7 @@ public class ModifController extends BorderPane implements Initializable{
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         nomText.setText(capteur.getNom());
-        idText.setText(String.valueOf(capteur.getId()));
+        idText.setText(String.valueOf(capteur.getIden()));
         actualisationText.setText(String.valueOf(capteur.getActualisation()));
         temperatureText.setText(String.valueOf(capteur.getTemperature()));
         validButton.setOnMousePressed(new EventHandler<MouseEvent>() {

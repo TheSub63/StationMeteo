@@ -15,10 +15,15 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
 import javafx.scene.control.ProgressBar;
 import javafx.scene.control.TextField;
+import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.paint.Color;
 import stationmeteo.java.Capteur;
 import stationmeteo.java.StationMeteo;
+
+import javax.swing.*;
+
 /**
  *
  * @author clguilbert
@@ -26,32 +31,39 @@ import stationmeteo.java.StationMeteo;
 public class CapteurController extends AnchorPane implements Initializable{
     
     @FXML
-    Label digitText;
+    private Label nameText;
     @FXML
-    Label barText;
+    private Label cpt;
     @FXML
-    Label imgText;
+    private ImageView icon;
     @FXML
-    ProgressBar thermometre;
-    @FXML
-    ImageView img;
-    
-    private List<Capteur> cap =new ArrayList<>();
-    
-    private StationMeteo application;
-    
-    public void setApp(StationMeteo application){
-        this.application = application;
+    private ProgressBar thermo;
+
+    private Capteur cap;
+
+    private String imgname;
+
+    public CapteurController(Capteur c){
+        cap=c;
     }
-    
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        
-        cap.add(new Capteur(0,"cap0",1,1));
-        digitText.setText(""+cap.get(0).getTemperature());
-        barText.setText(""+cap.get(0).getTemperature());
-        imgText.setText(""+cap.get(0).getTemperature());//To change body of generated methods, choose Tools | Templates.
+
+        nameText.setText(cap.getNom());
+        cpt.setText(String.valueOf(cap.getTemperature())+"°C");
+        if(icon!=null){
+            if(cap.getTemperature()<0) imgname="snow.png";
+            else if(cap.getTemperature()<20) imgname="nuage.png";
+            else if(cap.getTemperature()>=20) imgname="soleil.png";
+            Image img=new Image("stationmeteo/ressources/images/"+imgname);
+            icon.setImage(img);
+        }
+        if(thermo!=null){
+            thermo.setStyle("-fx-accent: red;");
+            thermo.setProgress((cap.getTemperature()+10)/50);
+
+        }
     }
     
 }

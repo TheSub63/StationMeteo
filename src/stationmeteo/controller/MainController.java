@@ -41,21 +41,21 @@ import stationmeteo.java.StationMeteo;
 public class MainController extends BorderPane implements Initializable {
     
     @FXML
-    Button addButton;
+    private Button addButton;
     @FXML
-    Button uptButton;
+    private Button uptButton;
     @FXML
-    Button delButton;
+    private Button delButton;
     @FXML
-    Button digitalButton;
+    private Button digitalButton;
     @FXML
-    Button thermoButton;
+    private Button thermoButton;
     @FXML
-    Button iconButton;
+    private Button iconButton;
     @FXML
-    Label nameText;
+    private Label nameText;
     @FXML
-    ListView capteurList;
+    private ListView capteurList;
     
     private final ObservableList<Capteur> listeDeCapteur = FXCollections.observableList(new ArrayList());
     private StationMeteo application;
@@ -64,6 +64,7 @@ public class MainController extends BorderPane implements Initializable {
     public void setApp(StationMeteo application){
         this.application = application;
     }
+    private CapteurController capteurcontrol;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -74,44 +75,48 @@ public class MainController extends BorderPane implements Initializable {
         });
         addButton.setOnMousePressed(new EventHandler<MouseEvent>() {
             public void handle(MouseEvent me) {
-                ouvrirFenetreAjout(); 
+
+                ouvrirFenetreAjout();
             }
         });
         uptButton.setOnMousePressed(new EventHandler<MouseEvent>() {
             public void handle(MouseEvent me) {
-                if(selectedCapteur!=null)ouvrirFenetreModif(); 
+
+                if(selectedCapteur!=null)ouvrirFenetreModif();
             }
         });
         delButton.setOnMousePressed(new EventHandler<MouseEvent>() {
             public void handle(MouseEvent me) {
+               
                 listeDeCapteur.remove(selectedCapteur);
+                selectedCapteur.getLeThread().stop();
+                selectedCapteur=null;
             }
         });
         digitalButton.setOnMousePressed(new EventHandler<MouseEvent>() {
             public void handle(MouseEvent me) {
-                System.out.println("AFFICHAGE DIGITAL");
+
+                if(selectedCapteur!=null)affichageDigital();
             }
         });
         thermoButton.setOnMousePressed(new EventHandler<MouseEvent>() {
             public void handle(MouseEvent me) {
-                System.out.println("AFFICHAGE THERMOMETRE");
+
+                if(selectedCapteur!=null)affichageThermo();
             }
         });
         iconButton.setOnMousePressed(new EventHandler<MouseEvent>() {
             public void handle(MouseEvent me) {
-                System.out.println("AFFICHAGE ICONE");
+                if(selectedCapteur!=null)affichageIcone();
+
             }
+            
         });
-        //https://www.developpez.net/forums/d1515667/java/interfaces-graphiques-java/javafx/communication-entre-2-controleurs-lies-chacun-fichier-fxml/
-        
+
         Capteur captdef = new Capteur(0,"capteur defaut",1, 17.7f);
         listeDeCapteur.add(captdef);
         capteurList.setItems(listeDeCapteur);
-        //capteurs=new ArrayList<Capteur>();
-	//capteurs.add(captdef);
-        //if(capteurList.getItems()!=null) capteurs = capteurList.getItems();
-	//capteurList.getSelectionModel().selectedItemProperty().addListener((property, oldValue, newValue) -> { System.out.println("LIST UPDATED");}
-//);
+       
                 
                 
     }
@@ -157,6 +162,62 @@ public class MainController extends BorderPane implements Initializable {
             selectedCapteur=modifcont.getCapteur(); 
             listeDeCapteur.add(selectedCapteur);
         }
+    }
+    public void affichageDigital(){
+        Stage digital=new Stage();
+        URL url=getClass().getResource("/stationmeteo/ressources/fxml/fenetreDigitale.fxml");
+        FXMLLoader loader = new FXMLLoader(url);
+        BorderPane page;
+        capteurcontrol=new CapteurController(selectedCapteur);
+        loader.setController(capteurcontrol);
+        try{
+            page = (BorderPane) loader.load();
+            Scene scene = new Scene(page);
+            digital.setScene(scene);
+        }
+        catch (IOException e){
+            e.printStackTrace();
+        }
+        digital.setTitle(selectedCapteur.getNom());
+        digital.show();
+    }
+
+    public void affichageThermo(){
+        Stage thermo=new Stage();
+        URL url=getClass().getResource("/stationmeteo/ressources/fxml/fenetreThermo.fxml");
+        FXMLLoader loader = new FXMLLoader(url);
+        BorderPane page;
+        capteurcontrol=new CapteurController(selectedCapteur);
+        loader.setController(capteurcontrol);
+        try{
+            page = (BorderPane) loader.load();
+            Scene scene = new Scene(page);
+            thermo.setScene(scene);
+        }
+        catch (IOException e){
+            e.printStackTrace();
+        }
+        thermo.setTitle(selectedCapteur.getNom());
+        thermo.show();
+    }
+
+    public void affichageIcone(){
+        Stage icone=new Stage();
+        URL url=getClass().getResource("/stationmeteo/ressources/fxml/fenetreIcone.fxml");
+        FXMLLoader loader = new FXMLLoader(url);
+        BorderPane page;
+        capteurcontrol=new CapteurController(selectedCapteur);
+        loader.setController(capteurcontrol);
+        try{
+            page = (BorderPane) loader.load();
+            Scene scene = new Scene(page);
+            icone.setScene(scene);
+        }
+        catch (IOException e){
+            e.printStackTrace();
+        }
+        icone.setTitle(selectedCapteur.getNom());
+        icone.show();
     }
         
         public Capteur getCapteur(){

@@ -32,15 +32,15 @@ import stationmeteo.java.StationMeteo;
 public class AjoutController extends BorderPane implements Initializable{
 
     @FXML
-    TextField idCapteur;
+    private TextField idCapteur;
     @FXML
-    TextField nomCapteur;
+    private TextField nomCapteur;
     @FXML
-    TextField actualisationCapteur;
+    private TextField actualisationCapteur;
     @FXML
-    TextField temperatureCapteur;
+    private TextField temperatureCapteur;
     @FXML
-    Button validButton;
+    private Button validButton;
     
     protected Capteur i;
     private int id;
@@ -56,10 +56,11 @@ public class AjoutController extends BorderPane implements Initializable{
     }
     
     public void commitCapteur(){
-            id=Integer.parseInt(idCapteur.getText());
-            i = new Capteur(id,nomCapteur.getText(),Integer.parseInt(actualisationCapteur.getText()),Float.parseFloat(temperatureCapteur.getText()));
-             Stage stage = (Stage) validButton.getScene().getWindow();
-             stage.close();
+        //erreur non fatale quand champ non rempli
+        id=Integer.parseInt(idCapteur.getText());
+        i = new Capteur(id,nomCapteur.getText(),Integer.parseInt(actualisationCapteur.getText()),Float.parseFloat(temperatureCapteur.getText()));
+        Stage stage = (Stage) validButton.getScene().getWindow();
+        stage.close();
     }
     public Capteur getCapteur(){
         return i;
