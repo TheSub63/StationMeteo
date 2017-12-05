@@ -113,7 +113,7 @@ public class MainController extends BorderPane implements Initializable {
             
         });
 
-        Capteur captdef = new Capteur(0,"capteur defaut",1, 17.7f);
+        Capteur captdef = new Capteur(0,"capteur defaut",1, 17.7f,null);
         listeDeCapteur.add(captdef);
         capteurList.setItems(listeDeCapteur);
        

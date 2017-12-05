@@ -9,7 +9,7 @@
    <bottom>
       <HBox alignment="BOTTOM_RIGHT" prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
          <children>
-            <Button cancelButton="true" mnemonicParsing="false" text="Annuler">
+            <Button fx:id="annulButton" cancelButton="true" mnemonicParsing="false" text="Annuler">
                <HBox.margin>
                   <Insets bottom="20.0" right="20.0" />
                </HBox.margin>

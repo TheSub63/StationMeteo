@@ -34,12 +34,15 @@ public class Capteur {
     private Thread test;
     
     
-    public Capteur(int id,String nom,int actualisation, float temperature) {
+    public Capteur(int id,String nom,int actualisation, float temperature, Algorithme algo) {
         this.test = new Thread();
         this.id.set(id);
         this.nom.set(nom);
         this.actualisation.set(actualisation);
-        this.temperature.set(temperature);
+        this.algo=algo;
+        if(algo==null)this.temperature.set(temperature);
+        else this.temperature.set(algo.getNewTemp(temperature));
+        
         leThread.start();
         this.temperature=leThread.getCapteurActif().temperatureProperty();
         
@@ -54,7 +57,9 @@ public class Capteur {
         this.leThread = leThread;
     }
     
-    
+    public Algorithme getAlgo(){
+        return this.algo;
+    }
     
     public int getIden() {
         return id.get();
@@ -104,6 +109,6 @@ public class Capteur {
     }
     @Override
     public String toString(){
-        return getNom()+" "+getTemperature();
+        return getNom()+" "+getTemperature()+getAlgo();
     }
 }
