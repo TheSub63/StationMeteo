@@ -9,6 +9,11 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.ResourceBundle;
+import javafx.beans.InvalidationListener;
+import javafx.beans.property.SimpleStringProperty;
+import javafx.beans.property.StringProperty;
+import javafx.beans.value.ChangeListener;
+import javafx.beans.value.ObservableValue;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -42,16 +47,20 @@ public class CapteurController extends AnchorPane implements Initializable{
     private Capteur cap;
 
     private String imgname;
-
+    private StringProperty tempe=new SimpleStringProperty(this,"temp");
     public CapteurController(Capteur c){
         cap=c;
     }
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-
-        nameText.setText(cap.getNom());
+        
+        
+        tempe.set(String.valueOf(cap.getTemperature()));
+        //nameText.setText(cap.getNom());
+        nameText.textProperty().bind(cap.nomProperty());
         cpt.setText(String.valueOf(cap.getTemperature())+"°C");
+        cpt.textProperty().bind(tempe);
         if(icon!=null){
             if(cap.getTemperature()<0) imgname="snow.png";
             else if(cap.getTemperature()<20) imgname="nuage.png";
@@ -65,5 +74,7 @@ public class CapteurController extends AnchorPane implements Initializable{
 
         }
     }
+
+    
     
 }
