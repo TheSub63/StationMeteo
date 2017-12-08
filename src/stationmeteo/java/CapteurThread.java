@@ -9,6 +9,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
+import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.util.Duration;
 
@@ -30,8 +31,8 @@ public class CapteurThread extends Thread implements Runnable{
             } catch (InterruptedException ex) {
                 Logger.getLogger(CapteurThread.class.getName()).log(Level.SEVERE, null, ex);
             }
-                this.capteurActif.setTemperature(this.capteurActif.getTemperature()-1);
-                System.out.println("le thread s'execute\n");
+                Platform.runLater(() -> this.capteurActif.setTemperature(this.capteurActif.getTemperature()-1));
+                
         
         }
     
