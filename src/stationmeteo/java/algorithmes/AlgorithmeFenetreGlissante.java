@@ -26,5 +26,8 @@ public class AlgorithmeFenetreGlissante implements Algorithme{
         temperature=temperature+(alea.nextFloat()*10)%intervalle-intervalle/2;
         return temperature;
     }
-    
+    @Override
+    public String toString(){
+        return "Génération aléatoire réaliste";
+    }
 }
