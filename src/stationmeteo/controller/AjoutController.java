@@ -48,6 +48,8 @@ public class AjoutController extends BorderPane implements Initializable{
     @FXML
     private TextField temperatureCapteur;
     @FXML
+    private TextField intervalleAlgo;
+    @FXML
     private Button validButton;
     @FXML
     private Button annulButton;
@@ -57,9 +59,10 @@ public class AjoutController extends BorderPane implements Initializable{
     private Algorithme selectedAlgo;
     protected Capteur i;
     private int id;
-    
+
     @Override
     public void initialize(URL location, ResourceBundle resources) {
+
         validButton.setOnMousePressed(new EventHandler<MouseEvent>() {
             public void handle(MouseEvent me) {
                 commitCapteur();
@@ -73,9 +76,13 @@ public class AjoutController extends BorderPane implements Initializable{
                 
             }
         });
-/**tests**/        algoCapteur.setItems(FXCollections.observableArrayList(null, new AlgorithmeAleatoire(), new AlgorithmeAleatoireFixe(1f,1f), new AlgorithmeFenetreGlissante(1f)));
+/**tests**/algoCapteur.setItems(FXCollections.observableArrayList(null, new AlgorithmeAleatoire(), new AlgorithmeAleatoireFixe(1f,1f), new AlgorithmeFenetreGlissante(1f)));
         algoCapteur.getSelectionModel().selectedIndexProperty();
-
+        selectedAlgo=(Algorithme)algoCapteur.getSelectionModel().getSelectedItem();
+        //if(selectedAlgo.getClass()==AlgorithmeFenetreGlissante.class) {                                   //L ERREUR EST LA EN FAIT
+        //   this.getStylesheets().add("fenetreAjoutIntervalle.css");       //////////////////////////:
+        //}
+        
     }
     
     public void commitCapteur(){
@@ -87,8 +94,7 @@ public class AjoutController extends BorderPane implements Initializable{
                 
         id=Integer.parseInt(idCapteur.getText());
         i = new Capteur(id,nomCapteur.getText(),Integer.parseInt(actualisationCapteur.getText()),Float.parseFloat(temperatureCapteur.getText()),algo);
-        Stage stage = (Stage) validButton.getScene().getWindow();
-        stage.close();
+
     }
     public Capteur getCapteur(){
         return i;
