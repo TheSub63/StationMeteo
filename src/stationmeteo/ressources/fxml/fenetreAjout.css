@@ -1,0 +1,22 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 8 déc. 2017, 10:49:42
+    Author     : clguilbert
+*/
+
+BorderPane{
+    -fx-background-color: linear-gradient(to bottom right, lightcyan, white);
+    
+} 
+
+#onAlgoFixeAfficher{
+    visibility: hidden;
+}
+
+#onFenetreGlissanteAfficher{
+    visibility: hidden;
+}

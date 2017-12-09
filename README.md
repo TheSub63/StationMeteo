@@ -1,8 +1,9 @@
 # StationMeteo
 A Faire :
--Gérer l'Ajout
--Gérer la liste
--Gérer la modification
--Gerer la suppression
--Gerer l'affichage d'une fenetre
--Gerer les algorithmes
+-Gerer les algorithmes / Implementer le patron Stratégie
+-Nettoyer
+-Fourrer des patterns partout (Fabrique pour les fenetres?)
+-Voir Feuille
+
+
+BIND CONVERTER: https://stackoverflow.com/questions/21450328/how-to-bind-two-different-javafx-properties-string-and-double-with-stringconve

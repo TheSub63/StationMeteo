@@ -5,27 +5,63 @@
  */
 package stationmeteo.java;
 
+import static com.sun.org.apache.xalan.internal.lib.ExsltDatetime.time;
+import static com.sun.org.apache.xalan.internal.lib.ExsltDatetime.time;
+import static com.sun.org.apache.xalan.internal.lib.ExsltDatetime.time;
+import javafx.animation.KeyFrame;
+import javafx.animation.Timeline;
 import javafx.beans.property.*;
+import javafx.concurrent.Task;
+import javafx.event.ActionEvent;
+import javafx.scene.image.Image;
+import javafx.util.Duration;
+import stationmeteo.java.algorithmes.Algorithme;
 
 /**
  *
  * @author magaydu
  */
 public class Capteur {
+    
     private IntegerProperty id=new SimpleIntegerProperty(this, "id");
     private StringProperty nom=new SimpleStringProperty(this, "nom");
     private IntegerProperty actualisation=new SimpleIntegerProperty(this, "actualisation");
     private FloatProperty temperature=new SimpleFloatProperty(this, "temperature");
     
-    public Capteur(int id,String nom,int actualisation, float temperature){
+    private Algorithme algo;
+    
+    private CapteurThread leThread= new CapteurThread(this);
+    private Thread test;
+    
+    
+    public Capteur(int id,String nom,int actualisation, float temperature, Algorithme algo) {
+        this.test = new Thread();
         this.id.set(id);
         this.nom.set(nom);
         this.actualisation.set(actualisation);
-        this.temperature.set(temperature);
+        this.algo=algo;
+        if(algo==null)this.temperature.set(temperature);
+        else this.temperature.set(algo.getNewTemp(temperature));
         
+        leThread.start();
+        this.temperature=leThread.getCapteurActif().temperatureProperty();
+        
+                
     }
 
-    public int getId() {
+    public CapteurThread getLeThread() {
+        return leThread;
+    }
+
+    public void setLeThread(CapteurThread leThread) {
+        this.leThread = leThread;
+    }
+    
+    public Algorithme getAlgo(){
+        return this.algo;
+    }
+    
+    public int getIden() {
         return id.get();
     }
 
@@ -50,21 +86,14 @@ public class Capteur {
     }
 
     public float getTemperature() {
+                
         return temperature.get();
     }
 
     public void setTemperature(float temperature) {
         this.temperature.set(temperature);
     }
-    private final StringProperty string = new SimpleStringProperty();
-
-    public String getString() {
-        return string.get();
-    }
-
-    public void setString(String value) {
-        string.set(value);
-    }
+    
 
     public StringProperty nomProperty() {
         return nom;
@@ -80,6 +109,6 @@ public class Capteur {
     }
     @Override
     public String toString(){
-        return getNom()+" "+getTemperature();
+        return getNom()+" "+getTemperature()+getAlgo();
     }
 }

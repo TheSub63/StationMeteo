@@ -21,20 +21,23 @@ import javafx.scene.control.TabPane;
 import javafx.scene.layout.AnchorPane;
 import java.net.URL;
 import javafx.scene.layout.BorderPane;
+import stationmeteo.controller.MainController;
 /**
  *
  * @author clguilbert
  */
 public class StationMeteo extends Application {
     //private Stage primaryStage;
-
+    private MainController leMain= new MainController();
     @Override
-    public void start(Stage primaryStage) {      
+    public void start(Stage primaryStage) {
+        
         URL url=getClass().getResource("/stationmeteo/ressources/fxml/fenetreMain.fxml");
-        FXMLLoader loader = new FXMLLoader(url);          
+        FXMLLoader loader = new FXMLLoader(url);
+        loader.setController(leMain);
         BorderPane page;
         try{
-            page = (BorderPane) loader.load();
+            page = loader.load();
             Scene scene = new Scene(page);
             primaryStage.setScene(scene);
         }
@@ -44,7 +47,10 @@ public class StationMeteo extends Application {
         primaryStage.setTitle("Station Meteo");
         primaryStage.show(); 
     }
-
+@Override
+    public void stop(){
+       System.exit(0);
+    }
 
     /**
      * @param args the command line arguments
@@ -52,5 +58,5 @@ public class StationMeteo extends Application {
     public static void main(String[] args) {
         Application.launch(StationMeteo.class, (java.lang.String[])null);
     }
-    
+   
 }
