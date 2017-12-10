@@ -27,11 +27,11 @@ import stationmeteo.java.Capteur;
 
 import javafx.beans.binding.ObjectBinding;
 import javafx.beans.binding.When;
-import javafx.beans.property.BooleanProperty;
+
 import javafx.beans.property.FloatProperty;
 import javafx.beans.property.ObjectProperty;
 
-import javafx.beans.property.SimpleBooleanProperty;
+
 import javafx.beans.property.SimpleFloatProperty;
 import javafx.beans.property.SimpleObjectProperty;
 
@@ -59,13 +59,13 @@ public class CapteurController extends AnchorPane implements Initializable{
     private final Capteur cap;
     private final FloatProperty progressBarValue=new SimpleFloatProperty();
     private final FloatProperty IconProperty=new SimpleFloatProperty();
-    private String imgname;
+    
     private final ObjectProperty<Image> ImageProperty= new SimpleObjectProperty();
     private final ObjectBinding uneParti ;
     //private ObjectProperty<Image> ImageProperty = new SimpleObjectProperty(); 
     private final ObjectBinding monImage ;
                                                                        
-    private final BooleanProperty isTemp = new SimpleBooleanProperty();
+    
     private final StringConverter<Number> converter = new NumberStringConverter();
     public CapteurController(Capteur c){
         cap=c;
