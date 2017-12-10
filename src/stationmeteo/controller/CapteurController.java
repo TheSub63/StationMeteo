@@ -32,8 +32,20 @@ import javafx.util.converter.FloatStringConverter;
 import stationmeteo.java.Capteur;
 import stationmeteo.java.StationMeteo;
 import java.lang.Float;
+import static java.lang.Math.abs;
 import java.text.Format;
+import java.util.Observable;
+import java.util.concurrent.Callable;
+import javafx.application.Platform;
+import javafx.beans.binding.DoubleBinding;
+import javafx.beans.property.BooleanProperty;
+import javafx.beans.property.FloatProperty;
+import javafx.beans.property.ObjectProperty;
 import javafx.beans.property.Property;
+import javafx.beans.property.SimpleBooleanProperty;
+import javafx.beans.property.SimpleFloatProperty;
+import javafx.beans.property.SimpleObjectProperty;
+import javafx.concurrent.Task;
 import javafx.util.converter.DoubleStringConverter;
 import javafx.util.converter.NumberStringConverter;
 import javax.swing.*;
@@ -55,12 +67,16 @@ public class CapteurController extends AnchorPane implements Initializable{
     private ProgressBar thermo;
 
     private Capteur cap;
-
+    private FloatProperty progressBarValue=new SimpleFloatProperty();
+    private FloatProperty IconProperty=new SimpleFloatProperty();
     private String imgname;
-    StringConverter<Number> converter = new NumberStringConverter();
+    private ObjectProperty<Image> ImageProperty = new SimpleObjectProperty(); 
+    private BooleanProperty isTemp = new SimpleBooleanProperty();
+    private StringConverter<Number> converter = new NumberStringConverter();
     public CapteurController(Capteur c){
         cap=c;
     }
+   
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -73,16 +89,33 @@ public class CapteurController extends AnchorPane implements Initializable{
         //cpt.setText(String.valueOf(cap.getTemperature())+"°C");
         //cpt.textProperty().bind( cap.temperatureProperty().asString());
         Bindings.bindBidirectional(cpt.textProperty(), cap.temperatureProperty(), converter);
+         
          if(icon!=null){
-            if(cap.getTemperature()<0) imgname="snow.png";
-            else if(cap.getTemperature()<20) imgname="nuage.png";
-            else if(cap.getTemperature()>=20) imgname="soleil.png";
-            Image img=new Image("stationmeteo/ressources/images/"+imgname);
-            icon.setImage(img);
+            this.isTemp.bind(cap.temperatureProperty().lessThan(0f));
+            if(this.isTemp.get())
+                    ImageProperty.set(new Image("stationmeteo/ressources/images/snow.png"));
+            else{
+                this.isTemp.bind(cap.temperatureProperty().lessThan(20f));
+                if(this.isTemp.get()) 
+                    ImageProperty.setValue(new Image("stationmeteo/ressources/images/nuage.png"));
+                else{
+                    ImageProperty.setValue(new Image("stationmeteo/ressources/images/soleil.png"));
+                    
+                }
+            } 
+                
+            
+            icon.imageProperty().bind(ImageProperty);
         }
         if(thermo!=null){
             thermo.setStyle("-fx-accent: red;");
-            thermo.setProgress((cap.getTemperature()+10)/50);
+            
+            
+            this.progressBarValue.bind(cap.temperatureProperty().add(10f).divide(50f));
+            thermo.progressProperty().bind(this.progressBarValue);
+                    
+                    
+            
 
         }
     }

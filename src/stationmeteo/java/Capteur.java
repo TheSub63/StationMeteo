@@ -109,6 +109,6 @@ public class Capteur {
     }
     @Override
     public String toString(){
-        return getNom()+" "+getTemperature()+getAlgo();
+        return getNom()+" "+getAlgo();
     }
 }
