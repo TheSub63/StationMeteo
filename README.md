@@ -1,6 +1,8 @@
 # StationMeteo
 A Faire :
--Gerer les algorithmes / Implementer le patron Stratégie
+-Finir algorithmes
+-Finir verification
+-Super Capteurs
 -Nettoyer
 -Fourrer des patterns partout (Fabrique pour les fenetres?)
 -Voir Feuille
