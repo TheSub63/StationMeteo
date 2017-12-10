@@ -5,7 +5,7 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" stylesheets="stationmeteo/ressources/fxml/fenetreAjout.css" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" stylesheets="stationmeteo/ressources/fxml/fenetreAjout.css" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1">
    <bottom>
       <HBox alignment="BOTTOM_RIGHT" prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
          <children>
@@ -51,14 +51,14 @@
                      <VBox.margin>
                         <Insets bottom="20.0" />
                      </VBox.margin></Label>
+                  <Label id="onAlgoFixeAfficher" stylesheets="@fenetreAjout.css" text="Bornes">
+                     <VBox.margin>
+                        <Insets bottom="30.0" />
+                     </VBox.margin>
+                  </Label>
                   <Label id="onFenetreGlissanteAfficher" stylesheets="@fenetreAjout.css" text="Intervalle">
                      <VBox.margin>
                         <Insets bottom="20.0" />
-                     </VBox.margin>
-                  </Label>
-                  <Label id="onAlgoFixeAfficher" stylesheets="@fenetreAjout.css" text="Fenetre">
-                     <VBox.margin>
-                        <Insets bottom="30.0" />
                      </VBox.margin>
                   </Label>
                </children>
@@ -89,14 +89,9 @@
                      <VBox.margin>
                         <Insets bottom="10.0" />
                      </VBox.margin></ChoiceBox>
-                  <TextField fx:id="intervalleAlgo" id="onFenetreGlissanteAfficher" stylesheets="@fenetreAjout.css">
-                     <VBox.margin>
-                        <Insets bottom="10.0" />
-                     </VBox.margin>
-                  </TextField>
-                  <HBox id="onAlgoFixeAfficher" stylesheets="@fenetreAjout.css">
+                  <HBox>
                      <children>
-                        <TextField id="onAlgoFixeAfficher" stylesheets="@fenetreAjout.css">
+                        <TextField fx:id="onAlgoFixeAfficher1" disable="true" stylesheets="@fenetreAjout.css">
                            <HBox.margin>
                               <Insets />
                            </HBox.margin>
@@ -104,7 +99,7 @@
                               <Tooltip text="Minimum" />
                            </tooltip>
                         </TextField>
-                        <TextField id="onAlgoFixeAfficher" stylesheets="@fenetreAjout.css">
+                        <TextField fx:id="onAlgoFixeAfficher2" disable="true" stylesheets="@fenetreAjout.css">
                            <HBox.margin>
                               <Insets bottom="10.0" />
                            </HBox.margin>
@@ -117,6 +112,11 @@
                         <Insets bottom="10.0" />
                      </VBox.margin>
                   </HBox>
+                  <TextField id="onFenetreGlissanteAfficher" fx:id="intervalleAlgo" disable="true" stylesheets="@fenetreAjout.css">
+                     <VBox.margin>
+                        <Insets bottom="10.0" />
+                     </VBox.margin>
+                  </TextField>
                </children>
             </VBox>
          </children>

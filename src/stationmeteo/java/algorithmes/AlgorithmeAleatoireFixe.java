@@ -31,5 +31,6 @@ public class AlgorithmeAleatoireFixe implements Algorithme{
     public String toString(){
         return "Génération aléatoire Bornée";
     }
+
     
 }
