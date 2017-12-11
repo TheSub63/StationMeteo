@@ -23,7 +23,7 @@ public class AlgorithmeFenetreGlissante implements Algorithme{
     
     @Override
     public float getNewTemp(float temperature) {
-        temperature=temperature+(alea.nextFloat()*10)%intervalle-intervalle/2;
+        temperature=temperature+(((alea.nextFloat()*10)%intervalle-intervalle/2)*2);
         return temperature;
     }
     @Override

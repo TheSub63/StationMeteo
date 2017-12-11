@@ -13,6 +13,9 @@ import java.util.Random;
  */
 public class AlgorithmeAleatoireFixe implements Algorithme{
     private Random alea;
+
+
+
     private float min, max;
     
     public AlgorithmeAleatoireFixe(float min, float max){
@@ -23,7 +26,7 @@ public class AlgorithmeAleatoireFixe implements Algorithme{
     
     @Override
     public float getNewTemp(float temperature) {
-        temperature=(min+alea.nextFloat()*10)%max;
+        temperature=min+alea.nextFloat()*(max-min);
         return temperature;
     }
     
@@ -32,5 +35,4 @@ public class AlgorithmeAleatoireFixe implements Algorithme{
         return "Génération aléatoire Bornée";
     }
 
-    
 }

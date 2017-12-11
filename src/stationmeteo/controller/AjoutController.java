@@ -60,7 +60,7 @@ public class AjoutController extends BorderPane implements Initializable{
     private ChoiceBox<Algorithme> algoCapteur;//https://docs.oracle.com/javafx/2/ui_controls/choice-box.htm
     
     private Algorithme selectedAlgo;
-    protected Capteur i;
+    private Capteur i;
     private int id;
 
     @Override
@@ -112,10 +112,10 @@ public class AjoutController extends BorderPane implements Initializable{
         });
     }
     
-    public void commitCapteur(){
+    private void commitCapteur(){
         //erreur non fatale quand champ non rempli
 
-        if(verifInfos()==false){
+        if(!verifInfos()){
             Alert alert = new Alert(Alert.AlertType.ERROR);
             alert.setTitle("Erreur");
             alert.setHeaderText("Veuillez remplir tous les champs");
@@ -123,6 +123,12 @@ public class AjoutController extends BorderPane implements Initializable{
             alert.showAndWait();
         }
         else {
+            if(selectedAlgo.getClass()==AlgorithmeAleatoireFixe.class){
+                selectedAlgo=new AlgorithmeAleatoireFixe(Float.parseFloat(onAlgoFixeAfficher1.getText()),Float.parseFloat(onAlgoFixeAfficher2.getText()));
+            }
+            if(selectedAlgo.getClass()==AlgorithmeFenetreGlissante.class){
+                selectedAlgo=new AlgorithmeFenetreGlissante(Float.parseFloat(intervalleAlgo.getText()));
+            }
             Algorithme algo = selectedAlgo;
             id = Integer.parseInt(idCapteur.getText());
             i = new Capteur(id, nomCapteur.getText(), Integer.parseInt(actualisationCapteur.getText()), Float.parseFloat(temperatureCapteur.getText()), algo);
