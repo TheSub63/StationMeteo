@@ -2,20 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="547e6231-116d-4ef2-8fd2-74a1b1fee0d9" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/StationMeteo/stationmeteo/controller/AjoutController$1.class" afterPath="$PROJECT_DIR$/out/production/StationMeteo/stationmeteo/controller/AjoutController$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/StationMeteo/stationmeteo/controller/AjoutController$2.class" afterPath="$PROJECT_DIR$/out/production/StationMeteo/stationmeteo/controller/AjoutController$2.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/StationMeteo/stationmeteo/controller/AjoutController$3.class" afterPath="$PROJECT_DIR$/out/production/StationMeteo/stationmeteo/controller/AjoutController$3.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/StationMeteo/stationmeteo/controller/AjoutController.class" afterPath="$PROJECT_DIR$/out/production/StationMeteo/stationmeteo/controller/AjoutController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/StationMeteo/stationmeteo/java/CapteurThread.class" afterPath="$PROJECT_DIR$/out/production/StationMeteo/stationmeteo/java/CapteurThread.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/StationMeteo/stationmeteo/java/algorithmes/AlgorithmeAleatoire.class" afterPath="$PROJECT_DIR$/out/production/StationMeteo/stationmeteo/java/algorithmes/AlgorithmeAleatoire.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/StationMeteo/stationmeteo/java/algorithmes/AlgorithmeAleatoireFixe.class" afterPath="$PROJECT_DIR$/out/production/StationMeteo/stationmeteo/java/algorithmes/AlgorithmeAleatoireFixe.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/StationMeteo/stationmeteo/java/algorithmes/AlgorithmeFenetreGlissante.class" afterPath="$PROJECT_DIR$/out/production/StationMeteo/stationmeteo/java/algorithmes/AlgorithmeFenetreGlissante.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/stationmeteo/controller/AjoutController.java" afterPath="$PROJECT_DIR$/src/stationmeteo/controller/AjoutController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/stationmeteo/java/CapteurThread.java" afterPath="$PROJECT_DIR$/src/stationmeteo/java/CapteurThread.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/stationmeteo/java/algorithmes/AlgorithmeAleatoire.java" afterPath="$PROJECT_DIR$/src/stationmeteo/java/algorithmes/AlgorithmeAleatoire.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/stationmeteo/java/algorithmes/AlgorithmeAleatoireFixe.java" afterPath="$PROJECT_DIR$/src/stationmeteo/java/algorithmes/AlgorithmeAleatoireFixe.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/stationmeteo/java/algorithmes/AlgorithmeFenetreGlissante.java" afterPath="$PROJECT_DIR$/src/stationmeteo/java/algorithmes/AlgorithmeFenetreGlissante.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -49,11 +39,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AjoutController.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="AjoutController.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/stationmeteo/controller/AjoutController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="441">
-              <caret line="131" column="43" lean-forward="true" selection-start-line="131" selection-start-column="43" selection-end-line="131" selection-end-column="43" />
+            <state relative-caret-position="627">
+              <caret line="175" column="0" lean-forward="true" selection-start-line="175" selection-start-column="0" selection-end-line="175" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -113,7 +103,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AlgorithmeFenetreGlissante.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="AlgorithmeFenetreGlissante.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/stationmeteo/java/algorithmes/AlgorithmeFenetreGlissante.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="441">
@@ -167,9 +157,9 @@
         <option value="$PROJECT_DIR$/src/stationmeteo/ressources/fxml/fenetreAjout.fxml" />
         <option value="$PROJECT_DIR$/src/stationmeteo/java/CapteurThread.java" />
         <option value="$PROJECT_DIR$/src/stationmeteo/java/algorithmes/AlgorithmeAleatoire.java" />
-        <option value="$PROJECT_DIR$/src/stationmeteo/controller/AjoutController.java" />
         <option value="$PROJECT_DIR$/src/stationmeteo/java/algorithmes/AlgorithmeAleatoireFixe.java" />
         <option value="$PROJECT_DIR$/src/stationmeteo/java/algorithmes/AlgorithmeFenetreGlissante.java" />
+        <option value="$PROJECT_DIR$/src/stationmeteo/controller/AjoutController.java" />
       </list>
     </option>
   </component>
@@ -473,7 +463,15 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="2" />
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/stationmeteo/controller/AjoutController.java</url>
+          <line>101</line>
+          <properties />
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="3" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -897,16 +895,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/stationmeteo/controller/AjoutController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="441">
-          <caret line="131" column="43" lean-forward="true" selection-start-line="131" selection-start-column="43" selection-end-line="131" selection-end-column="43" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/stationmeteo/java/algorithmes/AlgorithmeAleatoireFixe.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
@@ -920,6 +908,16 @@
         <state relative-caret-position="441">
           <caret line="25" column="34" lean-forward="false" selection-start-line="25" selection-start-column="34" selection-end-line="25" selection-end-column="34" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/stationmeteo/controller/AjoutController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="627">
+          <caret line="175" column="0" lean-forward="true" selection-start-line="175" selection-start-column="0" selection-end-line="175" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

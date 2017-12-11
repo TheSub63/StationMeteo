@@ -87,40 +87,24 @@ public class AjoutController extends BorderPane implements Initializable{
             public void handle(ActionEvent ae) {
                 algoCapteur.getSelectionModel().selectedIndexProperty();
                 selectedAlgo=(Algorithme)algoCapteur.getSelectionModel().getSelectedItem();
-                if(selectedAlgo==null){
-                    onAlgoFixeAfficher1.setDisable(true);
-                    onAlgoFixeAfficher2.setDisable(true);
-                    intervalleAlgo.setDisable(true);
-                }
+                if(selectedAlgo==null) disableAll();
                 else if(selectedAlgo.getClass()==AlgorithmeAleatoireFixe.class){
+                    disableAll();
                     onAlgoFixeAfficher1.setDisable(false);
                     onAlgoFixeAfficher2.setDisable(false);
-                    intervalleAlgo.setDisable(true); //SALE?
                 }
                 else if(selectedAlgo.getClass()==AlgorithmeFenetreGlissante.class){
+                    disableAll();
                     intervalleAlgo.setDisable(false);
-                    onAlgoFixeAfficher1.setDisable(true);
-                    onAlgoFixeAfficher2.setDisable(true);
                 }
-                else {
-                    onAlgoFixeAfficher1.setDisable(true);
-                    onAlgoFixeAfficher2.setDisable(true);
-                    intervalleAlgo.setDisable(true);
+                else disableAll();
                 }
-
-            }
         });
     }
     
     private void commitCapteur(){
-        //erreur non fatale quand champ non rempli
-
         if(!verifInfos()){
-            Alert alert = new Alert(Alert.AlertType.ERROR);
-            alert.setTitle("Erreur");
-            alert.setHeaderText("Veuillez remplir tous les champs");
-            alert.setContentText("Id doit être un entier, température et actualisation des nombres.");
-            alert.showAndWait();
+            showError();
         }
         else {
             if(selectedAlgo.getClass()==AlgorithmeAleatoireFixe.class){
@@ -139,17 +123,47 @@ public class AjoutController extends BorderPane implements Initializable{
 
     private boolean verifInfos(){
 
-        if(nomCapteur.getText().isEmpty() || idCapteur.getText().isEmpty() || actualisationCapteur.getText().isEmpty()){
-            return false;
-        }
+        if(nomCapteur.getText().isEmpty() || idCapteur.getText().isEmpty() || actualisationCapteur.getText().isEmpty())return false;
+
         if(temperatureCapteur.getText().isEmpty()||!temperatureCapteur.getText().matches("^-?[0-9]*(.[0-9]+)?$")) temperatureCapteur.setText("0");
 
         if(! idCapteur.getText().matches("^[0-9]+$")||!actualisationCapteur.getText().matches("^[0-9.]*(.[0-9]+)?$"))return false;
 
-        //Faire verifs algo spécialisés
-        //Rendre la fonction accessible par ModifController
+        if(! onAlgoFixeAfficher1.isDisable()){
 
+            if(! onAlgoFixeAfficher1.getText().matches("^-?[0-9]*(.[0-9]+)?$")||!onAlgoFixeAfficher2.getText().matches("^-?[0-9]*(.[0-9]+)?$")) return false;
+
+            if(Float.parseFloat(onAlgoFixeAfficher1.getText())>=Float.parseFloat(onAlgoFixeAfficher2.getText())) return false;
+
+        }
+
+        if(! intervalleAlgo.isDisable()) {
+
+            if (!intervalleAlgo.getText().matches("^-?[0-9]*(.[0-9]+)?$")) return false;
+
+            return Float.parseFloat(intervalleAlgo.getText())!=0;
+
+        }
+        //Rendre la fonction accessible par ModifController
         return true;
+    }
+
+    private void showError(){
+        Alert alert = new Alert(Alert.AlertType.ERROR);
+        alert.setTitle("Erreur");
+        alert.setHeaderText("Veuillez remplir tous les champs");
+        alert.setContentText("Id doit être un entier, température et actualisation des nombres. Pour Algorithme aléatoire bornée, min doit etre inférieur à max deux nombres. Pour Algorithme aléatoire réaliste, intervalle doit être un nombre différent de 0.");
+        alert.showAndWait();
+    }
+
+    private void disableAll(){
+        onAlgoFixeAfficher1.setDisable(true);
+        onAlgoFixeAfficher2.setDisable(true);
+        intervalleAlgo.setDisable(true);
+        onAlgoFixeAfficher1.setText("");
+        onAlgoFixeAfficher2.setText("");
+        intervalleAlgo.setText("");
+
     }
 
     public Capteur getCapteur(){
