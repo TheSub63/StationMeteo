@@ -108,24 +108,14 @@ public class MainController extends BorderPane implements Initializable {
                 selectedCapteur=null;
             }
         });
-        digitalButton.setOnMousePressed(new EventHandler<MouseEvent>() {
-            public void handle(MouseEvent me) {
-
-                if(selectedCapteur!=null)affichageDigital();
-            }
+        digitalButton.setOnMousePressed(me -> {
+            if(selectedCapteur!=null)affichageDigital();
         });
-        thermoButton.setOnMousePressed(new EventHandler<MouseEvent>() {
-            public void handle(MouseEvent me) {
-
-                if(selectedCapteur!=null)affichageThermo();
-            }
+        thermoButton.setOnMousePressed((MouseEvent me) -> {
+            if(selectedCapteur!=null)affichageThermo();
         });
-        iconButton.setOnMousePressed(new EventHandler<MouseEvent>() {
-            public void handle(MouseEvent me) {
-                if(selectedCapteur!=null)affichageIcone();
-
-            }
-            
+        iconButton.setOnMousePressed((MouseEvent me) -> {
+            if(selectedCapteur!=null)affichageIcone();
         });
 
 

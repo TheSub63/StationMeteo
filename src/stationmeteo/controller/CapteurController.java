@@ -11,6 +11,7 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 import javafx.beans.binding.Bindings;
+import javafx.beans.binding.FloatBinding;
 
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -59,12 +60,12 @@ public class CapteurController extends AnchorPane implements Initializable{
     private final Capteur cap;
     private final FloatProperty progressBarValue=new SimpleFloatProperty();
     private final FloatProperty IconProperty=new SimpleFloatProperty();
-    
+    private final FloatProperty progressBarMin=new SimpleFloatProperty();
     private final ObjectProperty<Image> ImageProperty= new SimpleObjectProperty();
     private final ObjectBinding uneParti ;
     //private ObjectProperty<Image> ImageProperty = new SimpleObjectProperty(); 
     private final ObjectBinding monImage ;
-                                                                       
+    private final FloatBinding min;
     
     private final StringConverter<Number> converter = new NumberStringConverter();
     public CapteurController(Capteur c){
@@ -75,6 +76,8 @@ public class CapteurController extends AnchorPane implements Initializable{
         monImage = new When(cap.temperatureProperty().lessThanOrEqualTo(0f))
                        .then(snow)
                        .otherwise(uneParti);
+        progressBarMin.set(0f);
+        min=(FloatBinding)new When(cap.temperatureProperty().lessThan(-10f)).then(progressBarMin).otherwise(cap.temperatureProperty().add(10f).divide(50f));
     }
    
 
@@ -89,6 +92,7 @@ public class CapteurController extends AnchorPane implements Initializable{
         //cpt.setText(String.valueOf(cap.getTemperature())+"°C");
         //cpt.textProperty().bind( cap.temperatureProperty().asString());
         Bindings.bindBidirectional(cpt.textProperty(), cap.temperatureProperty(), converter);
+        cpt.textProperty().bindBidirectional(cap.temperatureProperty(), converter);
          
          if(icon!=null){
             
@@ -100,12 +104,8 @@ public class CapteurController extends AnchorPane implements Initializable{
         if(thermo!=null){
             thermo.setStyle("-fx-accent: red;");
             
-            
             this.progressBarValue.bind(cap.temperatureProperty().add(10f).divide(50f));
-            thermo.progressProperty().bind(this.progressBarValue);
-                    
-                    
-            
+            thermo.progressProperty().bind(min);
 
         }
     }

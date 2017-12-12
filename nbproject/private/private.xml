@@ -3,17 +3,23 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+            <file>file:/home/etud/clguilbert/NetBeansProjects/StationMeteo/src/stationmeteo/controller/ModifController.java</file>
+            <file>file:/home/etud/clguilbert/NetBeansProjects/StationMeteo/src/stationmeteo/java/StationMeteo.java</file>
+            <file>file:/home/etud/clguilbert/NetBeansProjects/StationMeteo/src/stationmeteo/controller/CapteurController.java</file>
+            <file>file:/home/etud/clguilbert/NetBeansProjects/StationMeteo/src/stationmeteo/java/CapteurThread.java</file>
             <file>file:/home/etud/clguilbert/NetBeansProjects/StationMeteo/src/stationmeteo/controller/AjoutController.java</file>
             <file>file:/home/etud/clguilbert/NetBeansProjects/StationMeteo/src/stationmeteo/ressources/fxml/fenetreCapteur.fxml</file>
-            <file>file:/home/etud/clguilbert/NetBeansProjects/StationMeteo/src/stationmeteo/java/StationMeteo.java</file>
+            <file>file:/home/etud/clguilbert/NetBeansProjects/StationMeteo/src/stationmeteo/java/algorithmes/AlgorithmeAleatoireFixe.java</file>
             <file>file:/home/etud/clguilbert/NetBeansProjects/StationMeteo/src/stationmeteo/ressources/fxml/fenetreModif.fxml</file>
             <file>file:/home/etud/clguilbert/NetBeansProjects/StationMeteo/src/stationmeteo/java/Capteur.java</file>
-            <file>file:/home/etud/clguilbert/NetBeansProjects/StationMeteo/src/stationmeteo/controller/CapteurController.java</file>
             <file>file:/home/etud/clguilbert/NetBeansProjects/StationMeteo/src/stationmeteo/controller/MainController.java</file>
             <file>file:/home/etud/clguilbert/NetBeansProjects/StationMeteo/src/stationmeteo/ressources/fxml/fenetreAjoutIntervalle.css</file>
+            <file>file:/home/etud/clguilbert/NetBeansProjects/StationMeteo/src/stationmeteo/java/algorithmes/Algorithme.java</file>
             <file>file:/home/etud/clguilbert/NetBeansProjects/StationMeteo/src/stationmeteo/java/algorithmes/AlgorithmeFenetreGlissante.java</file>
             <file>file:/home/etud/clguilbert/NetBeansProjects/StationMeteo/src/stationmeteo/ressources/fxml/fenetreMain.fxml</file>
+            <file>file:/home/etud/clguilbert/NetBeansProjects/StationMeteo/src/stationmeteo/ressources/fxml/fenetreThermo.fxml</file>
             <file>file:/home/etud/clguilbert/NetBeansProjects/StationMeteo/src/stationmeteo/ressources/fxml/fenetreAjout.css</file>
+            <file>file:/home/etud/clguilbert/NetBeansProjects/StationMeteo/src/stationmeteo/java/algorithmes/AlgorithmeAleatoire.java</file>
         </group>
     </open-files>
 </project-private>

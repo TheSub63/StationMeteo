@@ -63,6 +63,8 @@ public class AjoutController extends BorderPane implements Initializable{
     private Capteur i;
     private int id;
 
+    private final static String regnum="^-?[0-9]*(.[0-9]+)?$";
+    
     @Override
     public void initialize(URL location, ResourceBundle resources) {
 
@@ -80,7 +82,7 @@ public class AjoutController extends BorderPane implements Initializable{
             }
         });
 
-        algoCapteur.setItems(FXCollections.observableArrayList(null, new AlgorithmeAleatoire(), new AlgorithmeAleatoireFixe(1f,1f), new AlgorithmeFenetreGlissante(1f)));
+        algoCapteur.setItems(FXCollections.observableArrayList(new AlgorithmeAleatoire(), new AlgorithmeAleatoireFixe(1f,1f), new AlgorithmeFenetreGlissante(1f)));
 
 
         algoCapteur.setOnAction(new EventHandler<ActionEvent>() {
@@ -122,16 +124,18 @@ public class AjoutController extends BorderPane implements Initializable{
     }
 
     private boolean verifInfos(){
+        
+        if(selectedAlgo==null)return false;
 
         if(nomCapteur.getText().isEmpty() || idCapteur.getText().isEmpty() || actualisationCapteur.getText().isEmpty())return false;
 
-        if(temperatureCapteur.getText().isEmpty()||!temperatureCapteur.getText().matches("^-?[0-9]*(.[0-9]+)?$")) temperatureCapteur.setText("0");
+        if(temperatureCapteur.getText().isEmpty()||!temperatureCapteur.getText().matches(regnum)) temperatureCapteur.setText("0");
 
         if(! idCapteur.getText().matches("^[0-9]+$")||!actualisationCapteur.getText().matches("^[0-9.]*(.[0-9]+)?$"))return false;
 
         if(! onAlgoFixeAfficher1.isDisable()){
 
-            if(! onAlgoFixeAfficher1.getText().matches("^-?[0-9]*(.[0-9]+)?$")||!onAlgoFixeAfficher2.getText().matches("^-?[0-9]*(.[0-9]+)?$")) return false;
+            if(! onAlgoFixeAfficher1.getText().matches(regnum)||!onAlgoFixeAfficher2.getText().matches(regnum)) return false;
 
             if(Float.parseFloat(onAlgoFixeAfficher1.getText())>=Float.parseFloat(onAlgoFixeAfficher2.getText())) return false;
 
@@ -139,9 +143,9 @@ public class AjoutController extends BorderPane implements Initializable{
 
         if(! intervalleAlgo.isDisable()) {
 
-            if (!intervalleAlgo.getText().matches("^-?[0-9]*(.[0-9]+)?$")) return false;
+            if (!intervalleAlgo.getText().matches(regnum)) return false;
 
-            return Float.parseFloat(intervalleAlgo.getText())!=0;
+            return (! intervalleAlgo.getText().isEmpty() && Float.parseFloat(intervalleAlgo.getText())!=0);
 
         }
         //Rendre la fonction accessible par ModifController
@@ -152,7 +156,7 @@ public class AjoutController extends BorderPane implements Initializable{
         Alert alert = new Alert(Alert.AlertType.ERROR);
         alert.setTitle("Erreur");
         alert.setHeaderText("Veuillez remplir tous les champs");
-        alert.setContentText("Id doit être un entier, température et actualisation des nombres. Pour Algorithme aléatoire bornée, min doit etre inférieur à max deux nombres. Pour Algorithme aléatoire réaliste, intervalle doit être un nombre différent de 0.");
+        alert.setContentText("Id doit être un entier, température et actualisation des nombres. Pour Algorithme aléatoire bornée, min doit etre inférieur à max deux nombres. Pour Algorithme aléatoire réaliste, intervalle doit être un nombre différent de 0. Un algorithme doit etre selectionné");
         alert.showAndWait();
     }
 

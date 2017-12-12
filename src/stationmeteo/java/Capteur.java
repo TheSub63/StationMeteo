@@ -5,16 +5,8 @@
  */
 package stationmeteo.java;
 
-import static com.sun.org.apache.xalan.internal.lib.ExsltDatetime.time;
-import static com.sun.org.apache.xalan.internal.lib.ExsltDatetime.time;
-import static com.sun.org.apache.xalan.internal.lib.ExsltDatetime.time;
-import javafx.animation.KeyFrame;
-import javafx.animation.Timeline;
+
 import javafx.beans.property.*;
-import javafx.concurrent.Task;
-import javafx.event.ActionEvent;
-import javafx.scene.image.Image;
-import javafx.util.Duration;
 import stationmeteo.java.algorithmes.Algorithme;
 
 /**
@@ -27,12 +19,9 @@ public class Capteur {
     private StringProperty nom=new SimpleStringProperty(this, "nom");
     private IntegerProperty actualisation=new SimpleIntegerProperty(this, "actualisation");
     private FloatProperty temperature=new SimpleFloatProperty(this, "temperature");
-    
     private Algorithme algo;
-    
     private CapteurThread leThread= new CapteurThread(this);
     private Thread test;
-    
     
     public Capteur(int id,String nom,int actualisation, float temperature, Algorithme algo) {
         this.test = new Thread();
@@ -42,11 +31,8 @@ public class Capteur {
         this.algo=algo;
         if(algo==null)this.temperature.set(temperature);
         else this.temperature.set(algo.getNewTemp(temperature));
-        
         leThread.start();
         this.temperature=leThread.getCapteurActif().temperatureProperty();
-        
-                
     }
 
     public CapteurThread getLeThread() {
@@ -86,7 +72,6 @@ public class Capteur {
     }
 
     public float getTemperature() {
-                
         return temperature.get();
     }
 
