@@ -60,47 +60,37 @@ public class AjoutController extends BorderPane implements Initializable{
     private ChoiceBox<Algorithme> algoCapteur;//https://docs.oracle.com/javafx/2/ui_controls/choice-box.htm
     
     private Algorithme selectedAlgo;
-    private Capteur i;
+    private Capteur capteur;
     private int id;
 
-    private final static String regnum="^-?[0-9]*(.[0-9]+)?$";
+    private final static String REGNUM="^-?[0-9]*(.[0-9]+)?$";
     
     @Override
     public void initialize(URL location, ResourceBundle resources) {
 
-        validButton.setOnMousePressed(new EventHandler<MouseEvent>() {
-            public void handle(MouseEvent me) {
-                commitCapteur();
-                
+        validButton.setOnMousePressed(me -> commitCapteur());
+        annulButton.setOnMousePressed(me -> annulButton.getScene().getWindow().hide());
+
+        algoCapteur.setItems(FXCollections.observableArrayList(
+                new AlgorithmeAleatoire(), 
+                new AlgorithmeAleatoireFixe(1f,1f), 
+                new AlgorithmeFenetreGlissante(1f)));
+
+
+        algoCapteur.setOnAction(ae -> {
+            algoCapteur.getSelectionModel().selectedIndexProperty();
+            selectedAlgo=(Algorithme)algoCapteur.getSelectionModel().getSelectedItem();
+            if(selectedAlgo==null) disableAll();
+            else if(selectedAlgo.getClass()==AlgorithmeAleatoireFixe.class){
+                disableAll();
+                onAlgoFixeAfficher1.setDisable(false);
+                onAlgoFixeAfficher2.setDisable(false);
             }
-        });
-        annulButton.setOnMousePressed(new EventHandler<MouseEvent>() {
-            public void handle(MouseEvent me) {
-                Stage stage = (Stage) annulButton.getScene().getWindow();
-                stage.close();
-                
+            else if(selectedAlgo.getClass()==AlgorithmeFenetreGlissante.class){
+                disableAll();
+                intervalleAlgo.setDisable(false);
             }
-        });
-
-        algoCapteur.setItems(FXCollections.observableArrayList(new AlgorithmeAleatoire(), new AlgorithmeAleatoireFixe(1f,1f), new AlgorithmeFenetreGlissante(1f)));
-
-
-        algoCapteur.setOnAction(new EventHandler<ActionEvent>() {
-            public void handle(ActionEvent ae) {
-                algoCapteur.getSelectionModel().selectedIndexProperty();
-                selectedAlgo=(Algorithme)algoCapteur.getSelectionModel().getSelectedItem();
-                if(selectedAlgo==null) disableAll();
-                else if(selectedAlgo.getClass()==AlgorithmeAleatoireFixe.class){
-                    disableAll();
-                    onAlgoFixeAfficher1.setDisable(false);
-                    onAlgoFixeAfficher2.setDisable(false);
-                }
-                else if(selectedAlgo.getClass()==AlgorithmeFenetreGlissante.class){
-                    disableAll();
-                    intervalleAlgo.setDisable(false);
-                }
-                else disableAll();
-                }
+            else disableAll();
         });
     }
     
@@ -110,16 +100,24 @@ public class AjoutController extends BorderPane implements Initializable{
         }
         else {
             if(selectedAlgo.getClass()==AlgorithmeAleatoireFixe.class){
-                selectedAlgo=new AlgorithmeAleatoireFixe(Float.parseFloat(onAlgoFixeAfficher1.getText()),Float.parseFloat(onAlgoFixeAfficher2.getText()));
+                selectedAlgo=new AlgorithmeAleatoireFixe(
+                        Float.parseFloat(onAlgoFixeAfficher1.getText()),
+                        Float.parseFloat(onAlgoFixeAfficher2.getText()));
             }
             if(selectedAlgo.getClass()==AlgorithmeFenetreGlissante.class){
-                selectedAlgo=new AlgorithmeFenetreGlissante(Float.parseFloat(intervalleAlgo.getText()));
+                selectedAlgo=new AlgorithmeFenetreGlissante(
+                        Float.parseFloat(intervalleAlgo.getText()));
             }
             Algorithme algo = selectedAlgo;
             id = Integer.parseInt(idCapteur.getText());
-            i = new Capteur(id, nomCapteur.getText(), Integer.parseInt(actualisationCapteur.getText()), Float.parseFloat(temperatureCapteur.getText()), algo);
-            Stage stage = (Stage) validButton.getScene().getWindow();
-            stage.close();
+            capteur = new Capteur(
+                    id, 
+                    nomCapteur.getText(), 
+                    Integer.parseInt(actualisationCapteur.getText()), 
+                    Float.parseFloat(temperatureCapteur.getText()), 
+                    algo);
+            validButton.getScene().getWindow().hide();
+            
         }
     }
 
@@ -127,15 +125,21 @@ public class AjoutController extends BorderPane implements Initializable{
         
         if(selectedAlgo==null)return false;
 
-        if(nomCapteur.getText().isEmpty() || idCapteur.getText().isEmpty() || actualisationCapteur.getText().isEmpty())return false;
+        if(nomCapteur.getText().isEmpty() 
+                || idCapteur.getText().isEmpty() 
+                || actualisationCapteur.getText().isEmpty())return false;
 
-        if(temperatureCapteur.getText().isEmpty()||!temperatureCapteur.getText().matches(regnum)) temperatureCapteur.setText("0");
+        if(temperatureCapteur.getText().isEmpty()
+                ||!temperatureCapteur.getText().matches(REGNUM)) 
+                temperatureCapteur.setText("0");
 
-        if(! idCapteur.getText().matches("^[0-9]+$")||!actualisationCapteur.getText().matches("^[0-9.]*(.[0-9]+)?$"))return false;
+        if(! idCapteur.getText().matches("^[0-9]+$")
+                ||!actualisationCapteur.getText().matches("^[0-9.]*(.[0-9]+)?$"))
+            return false;
 
         if(! onAlgoFixeAfficher1.isDisable()){
 
-            if(! onAlgoFixeAfficher1.getText().matches(regnum)||!onAlgoFixeAfficher2.getText().matches(regnum)) return false;
+            if(! onAlgoFixeAfficher1.getText().matches(REGNUM)||!onAlgoFixeAfficher2.getText().matches(REGNUM)) return false;
 
             if(Float.parseFloat(onAlgoFixeAfficher1.getText())>=Float.parseFloat(onAlgoFixeAfficher2.getText())) return false;
 
@@ -143,7 +147,7 @@ public class AjoutController extends BorderPane implements Initializable{
 
         if(! intervalleAlgo.isDisable()) {
 
-            if (!intervalleAlgo.getText().matches(regnum)) return false;
+            if (!intervalleAlgo.getText().matches(REGNUM)) return false;
 
             return (! intervalleAlgo.getText().isEmpty() && Float.parseFloat(intervalleAlgo.getText())!=0);
 
@@ -156,7 +160,10 @@ public class AjoutController extends BorderPane implements Initializable{
         Alert alert = new Alert(Alert.AlertType.ERROR);
         alert.setTitle("Erreur");
         alert.setHeaderText("Veuillez remplir tous les champs");
-        alert.setContentText("Id doit être un entier, température et actualisation des nombres. Pour Algorithme aléatoire bornée, min doit etre inférieur à max deux nombres. Pour Algorithme aléatoire réaliste, intervalle doit être un nombre différent de 0. Un algorithme doit etre selectionné");
+        alert.setContentText("Id doit être un entier, température et actualisation des nombres. "
+                + "Pour Algorithme aléatoire bornée, min doit etre inférieur à max deux nombres."
+                + "Pour Algorithme aléatoire réaliste, intervalle doit être un nombre différent de 0. "
+                + "Un algorithme doit etre selectionné");
         alert.showAndWait();
     }
 
@@ -171,7 +178,7 @@ public class AjoutController extends BorderPane implements Initializable{
     }
 
     public Capteur getCapteur(){
-        return i;
+        return capteur;
     }
 
 }

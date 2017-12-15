@@ -67,7 +67,8 @@ public class MainController extends BorderPane implements Initializable {
     private ObservableList<Capteur> listeDeCapteur = FXCollections.observableList(new ArrayList());
     private StationMeteo application;
     private Capteur selectedCapteur;
-    private CapteurController capteurController;
+    private CapteurController capteurcontrol;
+    
     public void setApp(StationMeteo application){
         this.application = application;
     }
@@ -79,7 +80,7 @@ public class MainController extends BorderPane implements Initializable {
     public void setListeDeCapteur(ObservableList<Capteur> listeDeCapteur) {
         this.listeDeCapteur = listeDeCapteur;
     }
-    private CapteurController capteurcontrol;
+    
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
