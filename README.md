@@ -1,6 +1,7 @@
 # StationMeteo
 A Faire :
 
+-Diviser les responsabilités de CapteurController
 -Finir verification
 -Super Capteurs
 -Nettoyer
