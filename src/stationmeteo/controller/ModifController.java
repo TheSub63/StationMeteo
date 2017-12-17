@@ -48,6 +48,8 @@ public class ModifController extends BorderPane implements Initializable{
     private TextField temperatureText;
     @FXML
     private Button validButton;
+    @FXML
+    private Button annulButton;
     
     private Capteur capteur; 
     public ModifController(Capteur c){
@@ -60,12 +62,8 @@ public class ModifController extends BorderPane implements Initializable{
         idText.setText(String.valueOf(capteur.getIden()));
         actualisationText.setText(String.valueOf(capteur.getActualisation()));
         temperatureText.setText(String.valueOf(capteur.getTemperature()));
-        validButton.setOnMousePressed(new EventHandler<MouseEvent>() {
-            public void handle(MouseEvent me) {
-                commitCapteur();
-                
-            }
-        });
+        validButton.setOnMousePressed(me -> commitCapteur());
+        annulButton.setOnMousePressed(me -> annulButton.getScene().getWindow().hide());
     }
     public void commitCapteur(){
             capteur.setNom(nomText.getText());

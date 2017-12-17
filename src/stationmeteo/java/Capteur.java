@@ -13,26 +13,27 @@ import stationmeteo.java.algorithmes.Algorithme;
  *
  * @author magaydu
  */
-public class Capteur {
+public class Capteur extends Icapteur{
     
-    private IntegerProperty id=new SimpleIntegerProperty(this, "id");
-    private StringProperty nom=new SimpleStringProperty(this, "nom");
+    //private IntegerProperty id=new SimpleIntegerProperty(this, "id");
+    //private StringProperty nom=new SimpleStringProperty(this, "nom");
     private IntegerProperty actualisation=new SimpleIntegerProperty(this, "actualisation");
-    private FloatProperty temperature=new SimpleFloatProperty(this, "temperature");
+    //private FloatProperty temperature=new SimpleFloatProperty(this, "temperature");
     private Algorithme algo;
     private CapteurThread leThread= new CapteurThread(this);
     private Thread test;
+    //private FloatProperty Poid = new SimpleFloatProperty(this, "poid");
     
     public Capteur(int id,String nom,int actualisation, float temperature, Algorithme algo) {
         this.test = new Thread();
-        this.id.set(id);
-        this.nom.set(nom);
+        super.setId(id);
+        super.setNom(nom);
         this.actualisation.set(actualisation);
         this.algo=algo;
-        if(algo==null)this.temperature.set(temperature);
-        else this.temperature.set(algo.getNewTemp(temperature));
+        if(algo==null)this.setTemperature(temperature);
+        else this.setTemperature(algo.getNewTemp(temperature));
         leThread.start();
-        this.temperature=leThread.getCapteurActif().temperatureProperty();
+        
     }
 
     public CapteurThread getLeThread() {
@@ -46,22 +47,9 @@ public class Capteur {
     public Algorithme getAlgo(){
         return this.algo;
     }
-    
-    public int getIden() {
-        return id.get();
-    }
+ 
 
-    public void setId(int id) {
-        this.id.set(id);
-    }
 
-    public String getNom() {
-        return nom.get();
-    }
-
-    public void setNom(String nom) {
-        this.nom.set(nom);
-    }
 
     public int getActualisation() {
         return actualisation.get();
@@ -71,29 +59,28 @@ public class Capteur {
         this.actualisation.set(actualisation);
     }
 
-    public float getTemperature() {
-        return temperature.get();
-    }
 
-    public void setTemperature(float temperature) {
-        this.temperature.set(temperature);
-    }
     
 
-    public StringProperty nomProperty() {
-        return nom;
-    }
-    public IntegerProperty idProperty() {
-        return id;
-    }
+    
+    
     public  IntegerProperty actualisationProperty(){
         return actualisation;
     }
-    public FloatProperty temperatureProperty(){
-        return temperature;
-    }
+  
+
+    
+    
     @Override
     public String toString(){
         return getNom()+" "+getAlgo();
     }
+
+   
+
+    @Override
+    public void setTemperature(float temperature) {
+        super.setUneTemperature(temperature); //To change body of generated methods, choose Tools | Templates.
+    }
+    
 }

@@ -1,6 +1,7 @@
 # StationMeteo
 A Faire :
--Finir algorithmes
+
+-Diviser les responsabilités de CapteurController
 -Finir verification
 -Super Capteurs
 -Nettoyer
@@ -8,4 +9,4 @@ A Faire :
 -Voir Feuille
 
 
-BIND CONVERTER: https://stackoverflow.com/questions/21450328/how-to-bind-two-different-javafx-properties-string-and-double-with-stringconve
+Apprendre à décomposer le converteur

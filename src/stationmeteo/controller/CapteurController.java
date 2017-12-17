@@ -63,11 +63,10 @@ public class CapteurController extends AnchorPane implements Initializable{
     private final FloatProperty progressBarMin=new SimpleFloatProperty();
     private final ObjectProperty<Image> ImageProperty= new SimpleObjectProperty();
     private final ObjectBinding uneParti ;
-    //private ObjectProperty<Image> ImageProperty = new SimpleObjectProperty(); 
     private final ObjectBinding monImage ;
     private final FloatBinding min;
-    
     private final StringConverter<Number> converter = new NumberStringConverter();
+    
     public CapteurController(Capteur c){
         cap=c;
         uneParti=new When(cap.temperatureProperty().lessThan(20f))
