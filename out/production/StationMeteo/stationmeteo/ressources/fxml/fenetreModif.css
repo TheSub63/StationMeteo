@@ -8,6 +8,7 @@ and open the template in the editor.
     Author     : clguilbert
 */
 
-#onFenetreGlissanteAfficher{
-    visibility:visible;
-}
+BorderPane{
+    -fx-background-color: linear-gradient(to bottom right, lightyellow, orange);
+    
+} 

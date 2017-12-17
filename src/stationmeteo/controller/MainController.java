@@ -30,13 +30,14 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
-import javafx.scene.control.ListView;
-import javafx.scene.control.ProgressBar;
+import javafx.scene.control.*;
+import javafx.scene.input.ClipboardContent;
+import javafx.scene.input.Dragboard;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.input.TransferMode;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
+import javafx.util.Callback;
 import stationmeteo.java.Capteur;
 import stationmeteo.java.StationMeteo;
 
@@ -65,12 +66,11 @@ public class MainController extends BorderPane implements Initializable {
     private ListView capteurList;
     
     private ObservableList<Capteur> listeDeCapteur = FXCollections.observableList(new ArrayList());
-    private StationMeteo application;
     private Capteur selectedCapteur;
     private CapteurController capteurcontrol;
     
     public void setApp(StationMeteo application){
-        this.application = application;
+        StationMeteo application1 = application;
     }
 
     public ObservableList<Capteur> getListeDeCapteur() {
@@ -80,34 +80,27 @@ public class MainController extends BorderPane implements Initializable {
     public void setListeDeCapteur(ObservableList<Capteur> listeDeCapteur) {
         this.listeDeCapteur = listeDeCapteur;
     }
-    
+
+
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        capteurList.setOnMouseClicked(new EventHandler<MouseEvent>() {
-            public void handle(MouseEvent me) {
-                selectedCapteur=(Capteur)capteurList.getSelectionModel().getSelectedItem();
+        capteurList.setOnMouseClicked(me -> selectedCapteur=(Capteur)capteurList.getSelectionModel().getSelectedItem());
+        /**capteurList.setCellFactory(new Callback<ListView<Capteur>, ListCell<Capteur>>() {
+            @Override
+            public ListCell<Capteur> call(ListView<Capteur> param) {
+                return new CellFactory();
             }
-        });
-        addButton.setOnMousePressed(new EventHandler<MouseEvent>() {
-            public void handle(MouseEvent me) {
+        });**/
+        addButton.setOnMousePressed(me -> ouvrirFenetreAjout());
+        uptButton.setOnMousePressed(me -> {
 
-                ouvrirFenetreAjout();
-            }
+            if(selectedCapteur!=null)ouvrirFenetreModif();
         });
-        uptButton.setOnMousePressed(new EventHandler<MouseEvent>() {
-            public void handle(MouseEvent me) {
-
-                if(selectedCapteur!=null)ouvrirFenetreModif();
-            }
-        });
-        delButton.setOnMousePressed(new EventHandler<MouseEvent>() {
-            public void handle(MouseEvent me) {
-               
-                listeDeCapteur.remove(selectedCapteur);
-                selectedCapteur.getLeThread().stop();
-                selectedCapteur=null;
-            }
+        delButton.setOnMousePressed(me -> {
+            listeDeCapteur.remove(selectedCapteur);
+            selectedCapteur.getLeThread().stop();
+            selectedCapteur=null;
         });
         digitalButton.setOnMousePressed(me -> {
             if(selectedCapteur!=null)affichageDigital();
@@ -127,10 +120,48 @@ public class MainController extends BorderPane implements Initializable {
         listeDeCapteur.add(captdef);
        
         capteurList.setItems(listeDeCapteur);
+
+        /**capteurList.setOnDragDetected(event -> {
+            if (! listeDeCapteur.isEmpty()) {
+                Dragboard db = capteurList.startDragAndDrop(TransferMode.MOVE);
+                ClipboardContent cc = new ClipboardContent();
+                cc.putString(capteurList.getItems());
+                db.setContent(cc);
+                dragSource.set(capteurList);
+            }
+        });
+
+        capteurList.setOnDragOver(event -> {
+            Dragboard db = event.getDragboard();
+            if (db.hasString()) {
+                event.acceptTransferModes(TransferMode.MOVE);
+            }
+        });
+
+        capteurList.setOnDragDone(event -> listView.getItems().remove(capteurList.getItem()));
+
+        capteurList.setOnDragDropped(event -> {
+            Dragboard db = event.getDragboard();
+            if (db.hasString() && dragSource.get() != null) {
+                // in this example you could just do
+                // listView.getItems().add(db.getString());
+                // but more generally:
+
+                ListCell<String> dragSourceCell = dragSource.get();
+                listView.getItems().add(dragSourceCell.getItem());
+                event.setDropCompleted(true);
+                dragSource.set(null);
+            } else {
+                event.setDropCompleted(false);
+            }
+        });**/
+
        
                 
     }
-    public void ouvrirFenetreAjout(){
+
+
+    private void ouvrirFenetreAjout(){
         Stage modif=new Stage();
         URL url=getClass().getResource("/stationmeteo/ressources/fxml/fenetreAjout.fxml");
         FXMLLoader loader = new FXMLLoader(url);          
@@ -149,7 +180,7 @@ public class MainController extends BorderPane implements Initializable {
         modif.showAndWait();
         if(ajoutcont.getCapteur()!=null) listeDeCapteur.add(ajoutcont.getCapteur());
     }
-        public void ouvrirFenetreModif(){
+        private void ouvrirFenetreModif(){
         Stage modif=new Stage();
         URL url=getClass().getResource("/stationmeteo/ressources/fxml/fenetreModif.fxml");
         FXMLLoader loader = new FXMLLoader(url);          
@@ -181,7 +212,7 @@ public class MainController extends BorderPane implements Initializable {
     public void setCapteurList(ListView capteurList) {
         this.capteurList = capteurList;
     }
-    public void affichageDigital(){
+    private void affichageDigital(){
         Stage digital=new Stage();
         URL url=getClass().getResource("/stationmeteo/ressources/fxml/fenetreDigitale.fxml");
         FXMLLoader loader = new FXMLLoader(url);
@@ -200,7 +231,7 @@ public class MainController extends BorderPane implements Initializable {
         digital.show();
     }
 
-    public void affichageThermo(){
+    private void affichageThermo(){
         Stage thermo=new Stage();
         URL url=getClass().getResource("/stationmeteo/ressources/fxml/fenetreThermo.fxml");
         FXMLLoader loader = new FXMLLoader(url);
@@ -219,7 +250,7 @@ public class MainController extends BorderPane implements Initializable {
         thermo.show();
     }
 
-    public void affichageIcone(){
+    private void affichageIcone(){
         Stage icone=new Stage();
         URL url=getClass().getResource("/stationmeteo/ressources/fxml/fenetreIcone.fxml");
         FXMLLoader loader = new FXMLLoader(url);
