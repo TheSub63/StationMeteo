@@ -3,10 +3,10 @@ package stationmeteo.controller;
 import javafx.scene.control.ListCell;
 import javafx.scene.paint.Color;
 import stationmeteo.java.Capteur;
+import stationmeteo.java.Icapteur;
 
-public class CellFactory extends ListCell<Capteur> {
+public class CellFactory extends ListCell<Icapteur> {
 
-    @Override
     protected void updateItem(Capteur item, boolean empty) {
         super.updateItem(item, empty);
 

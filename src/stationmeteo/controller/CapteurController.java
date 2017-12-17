@@ -37,6 +37,7 @@ import javafx.beans.property.SimpleFloatProperty;
 import javafx.beans.property.SimpleObjectProperty;
 
 import javafx.util.converter.NumberStringConverter;
+import stationmeteo.java.Icapteur;
 
 
 
@@ -57,7 +58,7 @@ public class CapteurController extends AnchorPane implements Initializable{
     private final Image snow =new Image("stationmeteo/ressources/images/snow.png");
     private final Image nuage= new Image("stationmeteo/ressources/images/nuage.png");
     private final Image soleil=new Image("stationmeteo/ressources/images/soleil.png");
-    private final Capteur cap;
+    private final Icapteur cap;
     private final FloatProperty progressBarValue=new SimpleFloatProperty();
     private final FloatProperty IconProperty=new SimpleFloatProperty();
     private final FloatProperty progressBarMin=new SimpleFloatProperty();
@@ -67,7 +68,7 @@ public class CapteurController extends AnchorPane implements Initializable{
     private final FloatBinding min;
     private final StringConverter<Number> converter = new NumberStringConverter();
     
-    public CapteurController(Capteur c){
+    public CapteurController(Icapteur c){
         cap=c;
         uneParti=new When(cap.temperatureProperty().lessThan(20f))
                     .then(nuage)

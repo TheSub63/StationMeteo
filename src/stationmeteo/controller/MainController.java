@@ -39,6 +39,7 @@ import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 import javafx.util.Callback;
 import stationmeteo.java.Capteur;
+import stationmeteo.java.Icapteur;
 import stationmeteo.java.StationMeteo;
 
 /**
@@ -65,7 +66,7 @@ public class MainController extends BorderPane implements Initializable {
     @FXML
     private ListView capteurList;
     
-    private ObservableList<Capteur> listeDeCapteur = FXCollections.observableList(new ArrayList());
+    private ObservableList<Icapteur> listeDeCapteur = FXCollections.observableList(new ArrayList());
     private Capteur selectedCapteur;
     private CapteurController capteurcontrol;
     
@@ -73,11 +74,11 @@ public class MainController extends BorderPane implements Initializable {
         StationMeteo application1 = application;
     }
 
-    public ObservableList<Capteur> getListeDeCapteur() {
+    public ObservableList<Icapteur> getListeDeCapteur() {
         return listeDeCapteur;
     }
 
-    public void setListeDeCapteur(ObservableList<Capteur> listeDeCapteur) {
+    public void setListeDeCapteur(ObservableList<Icapteur> listeDeCapteur) {
         this.listeDeCapteur = listeDeCapteur;
     }
 
@@ -85,7 +86,7 @@ public class MainController extends BorderPane implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        capteurList.setOnMouseClicked(me -> selectedCapteur=(Capteur)capteurList.getSelectionModel().getSelectedItem());
+        capteurList.setOnMouseClicked(me -> selectedCapteur=(Capteur) capteurList.getSelectionModel().getSelectedItem());
         /**capteurList.setCellFactory(new Callback<ListView<Capteur>, ListCell<Capteur>>() {
             @Override
             public ListCell<Capteur> call(ListView<Capteur> param) {
