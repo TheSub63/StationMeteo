@@ -23,6 +23,7 @@ import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 import static javax.accessibility.AccessibleRole.LABEL;
 import stationmeteo.java.Capteur;
+import stationmeteo.java.Icapteur;
 import stationmeteo.java.StationMeteo;
 /**
  *
@@ -51,8 +52,8 @@ public class ModifController extends BorderPane implements Initializable{
     @FXML
     private Button annulButton;
     
-    private Capteur capteur; 
-    public ModifController(Capteur c){
+    private Icapteur capteur; 
+    public ModifController(Icapteur c){
         capteur=c;
     }
     
@@ -60,7 +61,9 @@ public class ModifController extends BorderPane implements Initializable{
     public void initialize(URL location, ResourceBundle resources) {
         nomText.setText(capteur.getNom());
         idText.setText(String.valueOf(capteur.getIden()));
-        actualisationText.setText(String.valueOf(capteur.getActualisation()));
+        if(capteur.getClass()==Capteur.class){
+        actualisationText.setText(String.valueOf(((Capteur) capteur).getActualisation()));
+        }
         temperatureText.setText(String.valueOf(capteur.getTemperature()));
         validButton.setOnMousePressed(me -> commitCapteur());
         annulButton.setOnMousePressed(me -> annulButton.getScene().getWindow().hide());
@@ -68,13 +71,16 @@ public class ModifController extends BorderPane implements Initializable{
     public void commitCapteur(){
             capteur.setNom(nomText.getText());
             capteur.setId(Integer.parseInt(idText.getText()));
-            capteur.setActualisation(Integer.parseInt(actualisationText.getText()));
+            if(capteur.getClass()==Capteur.class){
+                ((Capteur)capteur).setActualisation(Integer.parseInt(actualisationText.getText()));
+        }
+            
             capteur.setTemperature(Float.parseFloat(temperatureText.getText()));
             Stage stage = (Stage) validButton.getScene().getWindow();
             stage.close();
     }
 
-    public Capteur getCapteur() {
+    public Icapteur getCapteur() {
         return capteur;
     }
     

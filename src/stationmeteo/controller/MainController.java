@@ -67,7 +67,7 @@ public class MainController extends BorderPane implements Initializable {
     private ListView capteurList;
     
     private ObservableList<Icapteur> listeDeCapteur = FXCollections.observableList(new ArrayList());
-    private Capteur selectedCapteur;
+    private Icapteur selectedCapteur;
     private CapteurController capteurcontrol;
     
     public void setApp(StationMeteo application){
@@ -86,7 +86,7 @@ public class MainController extends BorderPane implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        capteurList.setOnMouseClicked(me -> selectedCapteur=(Capteur) capteurList.getSelectionModel().getSelectedItem());
+        capteurList.setOnMouseClicked(me -> selectedCapteur=(Icapteur) capteurList.getSelectionModel().getSelectedItem());
         /**capteurList.setCellFactory(new Callback<ListView<Capteur>, ListCell<Capteur>>() {
             @Override
             public ListCell<Capteur> call(ListView<Capteur> param) {
@@ -100,7 +100,10 @@ public class MainController extends BorderPane implements Initializable {
         });
         delButton.setOnMousePressed(me -> {
             listeDeCapteur.remove(selectedCapteur);
-            selectedCapteur.getLeThread().stop();
+            if(selectedCapteur.getClass()==Capteur.class){
+                
+                ((Capteur) selectedCapteur).getLeThread().interrupt();
+            }
             selectedCapteur=null;
         });
         digitalButton.setOnMousePressed(me -> {
@@ -270,7 +273,7 @@ public class MainController extends BorderPane implements Initializable {
         icone.show();
     }
         
-        public Capteur getCapteur(){
+        public Icapteur getCapteur(){
             return selectedCapteur;
         }
 }
