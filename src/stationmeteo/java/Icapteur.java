@@ -38,10 +38,10 @@ public abstract class Icapteur {
     public StringProperty nomProperty() {
         return nom;
     }
-    void setUnPoid(float poid) {
+    public void setUnPoid(float poid) {
         this.poids.set(poid);
     }
-    Float getPoids() {
+    public Float getPoids() {
         return poids.get();
     }
     
@@ -55,7 +55,7 @@ public abstract class Icapteur {
         return temperature;
     }
 
-    void setUneTemperature(float temperature) {
+    public void setUneTemperature(float temperature) {
         this.temperature.set(temperature);
     }
        

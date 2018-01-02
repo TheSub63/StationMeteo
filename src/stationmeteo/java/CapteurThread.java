@@ -27,9 +27,11 @@ public class CapteurThread extends Thread implements Runnable{
     public void run(){
         while(true){
             try {
-                this.sleep(capteurActif.getActualisation()*1000);
+                sleep(capteurActif.getActualisation()*1000);
+
             } catch (InterruptedException ex) {
-                Logger.getLogger(CapteurThread.class.getName()).log(Level.SEVERE, null, ex);
+                Thread.currentThread().interrupt();
+                break;
             }
                 if(capteurActif.getAlgo()==null) {
                     Platform.runLater(() -> this.capteurActif.setTemperature(this.capteurActif.getTemperature() - 1));
