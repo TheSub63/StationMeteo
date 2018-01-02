@@ -5,8 +5,6 @@
  */
 package stationmeteo.controller;
 import java.net.URL;
-import java.util.ArrayList;
-import java.util.List;
 import java.util.ResourceBundle;
 import javafx.application.Platform;
 import javafx.beans.value.ChangeListener;
@@ -24,10 +22,7 @@ import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 import static javax.accessibility.AccessibleRole.LABEL;
-
-import jdk.nashorn.internal.runtime.regexp.joni.Regex;
 import stationmeteo.java.Capteur;
-import stationmeteo.java.StationMeteo;
 import stationmeteo.java.algorithmes.Algorithme;
 import stationmeteo.java.algorithmes.AlgorithmeAleatoire;
 import stationmeteo.java.algorithmes.AlgorithmeAleatoireFixe;
@@ -139,17 +134,17 @@ public class AjoutController extends BorderPane implements Initializable{
 
         if(! onAlgoFixeAfficher1.isDisable()){
 
-            if(! onAlgoFixeAfficher1.getText().matches(REGNUM)||!onAlgoFixeAfficher2.getText().matches(REGNUM)) return false;
+            if(! onAlgoFixeAfficher1.getText().matches(REGNUM)||!onAlgoFixeAfficher2.getText().matches(REGNUM))
+                return false;
 
-            if(Float.parseFloat(onAlgoFixeAfficher1.getText())>=Float.parseFloat(onAlgoFixeAfficher2.getText())) return false;
+            if(Float.parseFloat(onAlgoFixeAfficher1.getText())>=Float.parseFloat(onAlgoFixeAfficher2.getText()))
+                return false;
 
         }
 
         if(! intervalleAlgo.isDisable()) {
 
-            if (!intervalleAlgo.getText().matches(REGNUM)) return false;
-
-            return (! intervalleAlgo.getText().isEmpty() && Float.parseFloat(intervalleAlgo.getText())!=0);
+            return intervalleAlgo.getText().matches(REGNUM) && (!intervalleAlgo.getText().isEmpty() && Float.parseFloat(intervalleAlgo.getText()) != 0);
 
         }
         //Rendre la fonction accessible par ModifController

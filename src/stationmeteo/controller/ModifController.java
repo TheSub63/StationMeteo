@@ -5,7 +5,6 @@
  */
 package stationmeteo.controller;
 import java.net.URL;
-import java.util.ArrayList;
 import java.util.List;
 import java.util.ResourceBundle;
 import javafx.collections.ObservableList;
@@ -31,14 +30,7 @@ import stationmeteo.java.StationMeteo;
  */
 public class ModifController extends BorderPane implements Initializable{
 
-    @FXML
-    private Label nomCapteur;
-    @FXML
-    private Label idCapteur;
-    @FXML
-    private Label actualisationCapteur;
-    @FXML
-    private Label temperatureCapteur;
+
     @FXML
     private TextField nomText;
     @FXML
@@ -68,7 +60,7 @@ public class ModifController extends BorderPane implements Initializable{
         validButton.setOnMousePressed(me -> commitCapteur());
         annulButton.setOnMousePressed(me -> annulButton.getScene().getWindow().hide());
     }
-    public void commitCapteur(){
+    private void commitCapteur(){
             capteur.setNom(nomText.getText());
             capteur.setId(Integer.parseInt(idText.getText()));
             if(capteur.getClass()==Capteur.class){

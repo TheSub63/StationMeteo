@@ -21,7 +21,7 @@ public abstract class Icapteur {
     private IntegerProperty id=new SimpleIntegerProperty(this, "id");
     private StringProperty nom=new SimpleStringProperty(this, "nom");
     private FloatProperty temperature=new SimpleFloatProperty(this, "temperature");
-    private FloatProperty Poid = new SimpleFloatProperty(this, "poid");
+    private FloatProperty poids = new SimpleFloatProperty(this, "poid");
     
     
     //public abstract void setPoid(float poid);
@@ -38,15 +38,15 @@ public abstract class Icapteur {
     public StringProperty nomProperty() {
         return nom;
     }
-    public void setUnPoid(float poid) {
-        this.Poid.set(poid);
+    void setUnPoid(float poid) {
+        this.poids.set(poid);
     }
-    public Float getPoid() {
-        return Poid.get();
+    Float getPoids() {
+        return poids.get();
     }
     
-    public FloatProperty PoidProperty(){
-        return Poid;
+    public FloatProperty poidsProperty(){
+        return poids;
     }
     public float getTemperature() {
         return temperature.get();
@@ -55,7 +55,7 @@ public abstract class Icapteur {
         return temperature;
     }
 
-    public void setUneTemperature(float temperature) {
+    void setUneTemperature(float temperature) {
         this.temperature.set(temperature);
     }
        

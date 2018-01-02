@@ -23,9 +23,6 @@ import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 
 import javafx.util.StringConverter;
-
-import stationmeteo.java.Capteur;
-
 import javafx.beans.binding.ObjectBinding;
 import javafx.beans.binding.When;
 

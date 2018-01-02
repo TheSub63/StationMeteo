@@ -7,8 +7,6 @@ package stationmeteo.java;
 
 import java.util.ArrayList;
 import java.util.List;
-import javafx.beans.property.ListProperty;
-import javafx.beans.property.SimpleListProperty;
 
 /**
  *
@@ -26,8 +24,8 @@ public class SuperCapteur extends Icapteur{
         this.temperatureProperty().set(0f);
         
         for(i=0;i<listCapteur.size();i++){
-            this.temperatureProperty().set(this.temperatureProperty().get()+(listCapteur.get(i).getTemperature()*listCapteur.get(i).getPoid()));
-            poid=listCapteur.get(i).getPoid();
+            this.temperatureProperty().set(this.temperatureProperty().get()+(listCapteur.get(i).getTemperature()*listCapteur.get(i).getPoids()));
+            poid=listCapteur.get(i).getPoids();
         }
        this.temperatureProperty().set(this.temperatureProperty().get()/poid);
     }
@@ -42,8 +40,8 @@ public class SuperCapteur extends Icapteur{
     public void setTemperature(float temperature) {
         
         for(i=0;i<listCapteur.size();i++){
-        this.temperatureProperty().bind(this.temperatureProperty().add(listCapteur.get(i).getTemperature()*listCapteur.get(i).getPoid()));
-        poid=listCapteur.get(i).getPoid();
+        this.temperatureProperty().bind(this.temperatureProperty().add(listCapteur.get(i).getTemperature()*listCapteur.get(i).getPoids()));
+        poid=listCapteur.get(i).getPoids();
         }
         this.temperatureProperty().bind(this.temperatureProperty().divide(poid));
         

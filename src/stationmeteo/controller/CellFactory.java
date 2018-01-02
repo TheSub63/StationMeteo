@@ -9,7 +9,7 @@ public class CellFactory extends ListCell<Icapteur> {
 
     protected void updateItem(Capteur item, boolean empty) {
         super.updateItem(item, empty);
-
+        System.out.println("update");
         if (item != null) {
             float temp = item.getTemperature();
             setTextFill(isSelected() ? Color.WHITE :
