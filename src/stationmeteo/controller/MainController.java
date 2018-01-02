@@ -10,27 +10,16 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
-import javafx.application.Preloader;
-import javafx.application.Preloader.ProgressNotification;
-import javafx.application.Preloader.StateChangeNotification;
-import javafx.beans.value.ChangeListener;
-import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
-import javafx.event.EventType;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
-import javafx.scene.input.ClipboardContent;
-import javafx.scene.input.Dragboard;
 import javafx.scene.input.MouseEvent;
-import javafx.scene.input.TransferMode;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
-import javafx.util.Callback;
 import stationmeteo.java.Capteur;
 import stationmeteo.java.Icapteur;
 import stationmeteo.java.StationMeteo;
@@ -61,9 +50,9 @@ public class MainController extends BorderPane implements Initializable {
     private Icapteur selectedCapteur;
     private CapteurController capteurcontrol;
     
-    public void setApp(StationMeteo application){
-        StationMeteo application1 = application;
-    }
+   // public void setApp(StationMeteo application){
+   //     StationMeteo application1 = application;
+   // }
 
     public ObservableList<Icapteur> getListeDeCapteur() {
         return listeDeCapteur;

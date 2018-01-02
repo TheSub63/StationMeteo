@@ -5,24 +5,15 @@
  */
 package stationmeteo.controller;
 import java.net.URL;
-import java.util.List;
 import java.util.ResourceBundle;
-import javafx.collections.ObservableList;
-import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
-import javafx.scene.control.ProgressBar;
 import javafx.scene.control.TextField;
-import javafx.scene.image.ImageView;
-import javafx.scene.input.MouseEvent;
-import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
-import static javax.accessibility.AccessibleRole.LABEL;
 import stationmeteo.java.Capteur;
 import stationmeteo.java.Icapteur;
-import stationmeteo.java.StationMeteo;
 /**
  *
  * @author magaydu
