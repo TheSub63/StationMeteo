@@ -2,11 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="547e6231-116d-4ef2-8fd2-74a1b1fee0d9" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/stationmeteo/controller/AjoutController.java" afterPath="$PROJECT_DIR$/src/stationmeteo/controller/AjoutController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/stationmeteo/controller/CapteurController.java" afterPath="$PROJECT_DIR$/src/stationmeteo/controller/CapteurController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/stationmeteo/controller/MainController.java" afterPath="$PROJECT_DIR$/src/stationmeteo/controller/MainController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/stationmeteo/controller/ModifController.java" afterPath="$PROJECT_DIR$/src/stationmeteo/controller/ModifController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/stationmeteo/java/CapteurThread.java" afterPath="$PROJECT_DIR$/src/stationmeteo/java/CapteurThread.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/stationmeteo/java/StationMeteo.java" afterPath="$PROJECT_DIR$/src/stationmeteo/java/StationMeteo.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/stationmeteo/java/Capteur.java" afterPath="$PROJECT_DIR$/src/stationmeteo/java/Capteur.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -21,10 +19,11 @@
       <file leaf-file-name="CapteurController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/stationmeteo/controller/CapteurController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="24" column="35" lean-forward="false" selection-start-line="24" selection-start-column="35" selection-end-line="24" selection-end-column="35" />
+            <state relative-caret-position="966">
+              <caret line="56" column="0" lean-forward="false" selection-start-line="56" selection-start-column="0" selection-end-line="56" selection-end-column="0" />
               <folding>
-                <marker date="1514901425866" expanded="true" signature="3557:3574" ph="{...}" />
+                <element signature="imports" expanded="true" />
+                <marker date="1514903952707" expanded="true" signature="3415:3432" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -40,6 +39,18 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="Capteur.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/stationmeteo/java/Capteur.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="441">
+              <caret line="26" column="10" lean-forward="false" selection-start-line="26" selection-start-column="10" selection-end-line="26" selection-end-column="10" />
+              <folding>
+                <element signature="e#0#2112#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="Icapteur.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/stationmeteo/java/Icapteur.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -50,7 +61,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="StationMeteo.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="StationMeteo.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/stationmeteo/java/StationMeteo.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="114">
@@ -86,8 +97,8 @@
       <file leaf-file-name="MainController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/stationmeteo/controller/MainController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="231">
-              <caret line="54" column="5" lean-forward="false" selection-start-line="54" selection-start-column="5" selection-end-line="54" selection-end-column="5" />
+            <state relative-caret-position="420">
+              <caret line="24" column="0" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -115,19 +126,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SuperCapteur.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/stationmeteo/java/SuperCapteur.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="10" column="3" lean-forward="true" selection-start-line="10" selection-start-column="3" selection-end-line="10" selection-end-column="3" />
-              <folding>
-                <element signature="e#0#1539#0" expanded="true" />
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
@@ -140,9 +138,9 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>nameTex</find>
       <find>cell</find>
       <find>Capteur</find>
+      <find>nameTex</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -165,15 +163,15 @@
         <option value="$PROJECT_DIR$/src/stationmeteo/java/algorithmes/AlgorithmeAleatoire.java" />
         <option value="$PROJECT_DIR$/src/stationmeteo/java/algorithmes/AlgorithmeAleatoireFixe.java" />
         <option value="$PROJECT_DIR$/src/stationmeteo/java/algorithmes/AlgorithmeFenetreGlissante.java" />
-        <option value="$PROJECT_DIR$/src/stationmeteo/java/Capteur.java" />
         <option value="$PROJECT_DIR$/src/stationmeteo/controller/CellFactory.java" />
-        <option value="$PROJECT_DIR$/src/stationmeteo/controller/CapteurController.java" />
         <option value="$PROJECT_DIR$/src/stationmeteo/java/Icapteur.java" />
-        <option value="$PROJECT_DIR$/src/stationmeteo/controller/MainController.java" />
         <option value="$PROJECT_DIR$/src/stationmeteo/controller/AjoutController.java" />
         <option value="$PROJECT_DIR$/src/stationmeteo/controller/ModifController.java" />
         <option value="$PROJECT_DIR$/src/stationmeteo/java/CapteurThread.java" />
         <option value="$PROJECT_DIR$/src/stationmeteo/java/StationMeteo.java" />
+        <option value="$PROJECT_DIR$/src/stationmeteo/controller/CapteurController.java" />
+        <option value="$PROJECT_DIR$/src/stationmeteo/controller/MainController.java" />
+        <option value="$PROJECT_DIR$/src/stationmeteo/java/Capteur.java" />
       </list>
     </option>
   </component>
@@ -530,7 +528,8 @@
         <state relative-caret-position="1155">
           <caret line="92" column="0" lean-forward="false" selection-start-line="92" selection-start-column="0" selection-end-line="92" selection-end-column="0" />
           <folding>
-            <marker date="1514901425866" expanded="true" signature="3557:3574" ph="{...}" />
+            <element signature="imports" expanded="true" />
+            <marker date="1514903952707" expanded="true" signature="3415:3432" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -631,7 +630,8 @@
         <state relative-caret-position="1197">
           <caret line="57" column="0" lean-forward="true" selection-start-line="57" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
           <folding>
-            <marker date="1514901425866" expanded="true" signature="3557:3574" ph="{...}" />
+            <element signature="imports" expanded="true" />
+            <marker date="1514903952707" expanded="true" signature="3415:3432" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -699,7 +699,8 @@
         <state relative-caret-position="612">
           <caret line="56" column="64" lean-forward="false" selection-start-line="56" selection-start-column="64" selection-end-line="56" selection-end-column="64" />
           <folding>
-            <marker date="1514901425866" expanded="true" signature="3557:3574" ph="{...}" />
+            <element signature="imports" expanded="true" />
+            <marker date="1514903952707" expanded="true" signature="3415:3432" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -811,26 +812,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/stationmeteo/java/Capteur.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="672">
-          <caret line="33" column="62" lean-forward="false" selection-start-line="33" selection-start-column="62" selection-end-line="33" selection-end-column="62" />
-          <folding>
-            <element signature="e#0#2133#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/stationmeteo/controller/CapteurController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="24" column="35" lean-forward="false" selection-start-line="24" selection-start-column="35" selection-end-line="24" selection-end-column="35" />
-          <folding>
-            <marker date="1514901425866" expanded="true" signature="3557:3574" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/stationmeteo/java/SuperCapteur.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
@@ -866,16 +847,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/stationmeteo/controller/MainController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="54" column="5" lean-forward="false" selection-start-line="54" selection-start-column="5" selection-end-line="54" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/stationmeteo/controller/AjoutController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="168">
@@ -907,6 +878,37 @@
           <folding>
             <element signature="e#1249#1250#0" expanded="true" />
             <element signature="e#1278#1279#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/stationmeteo/controller/MainController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="24" column="0" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/stationmeteo/controller/CapteurController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="966">
+          <caret line="56" column="0" lean-forward="false" selection-start-line="56" selection-start-column="0" selection-end-line="56" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <marker date="1514903952707" expanded="true" signature="3415:3432" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/stationmeteo/java/Capteur.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="441">
+          <caret line="26" column="10" lean-forward="false" selection-start-line="26" selection-start-column="10" selection-end-line="26" selection-end-column="10" />
+          <folding>
+            <element signature="e#0#2112#0" expanded="true" />
           </folding>
         </state>
       </provider>

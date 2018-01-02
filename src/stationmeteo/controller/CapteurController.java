@@ -52,27 +52,25 @@ public class CapteurController extends AnchorPane implements Initializable{
     private ImageView icon;
     @FXML
     private ProgressBar thermo;
-    private final Image snow =new Image("stationmeteo/ressources/images/snow.png");
-    private final Image nuage= new Image("stationmeteo/ressources/images/nuage.png");
-    private final Image soleil=new Image("stationmeteo/ressources/images/soleil.png");
     private final Icapteur cap;
     private final FloatProperty progressBarValue=new SimpleFloatProperty();
-    private final FloatProperty IconProperty=new SimpleFloatProperty();
-    private final FloatProperty progressBarMin=new SimpleFloatProperty();
-    private final ObjectProperty<Image> ImageProperty= new SimpleObjectProperty();
-    private final ObjectBinding uneParti ;
+    private final SimpleObjectProperty ImageProperty= new SimpleObjectProperty();
     private final ObjectBinding monImage ;
     private final FloatBinding min;
     private final StringConverter<Number> converter = new NumberStringConverter();
     
     public CapteurController(Icapteur c){
         cap=c;
-        uneParti=new When(cap.temperatureProperty().lessThan(20f))
-                    .then(nuage)
-                    .otherwise(soleil);
+        Image nuage = new Image("stationmeteo/ressources/images/nuage.png");
+        Image soleil = new Image("stationmeteo/ressources/images/soleil.png");
+        ObjectBinding uneParti = new When(cap.temperatureProperty().lessThan(20f))
+                .then(nuage)
+                .otherwise(soleil);
+        Image snow = new Image("stationmeteo/ressources/images/snow.png");
         monImage = new When(cap.temperatureProperty().lessThanOrEqualTo(0f))
                        .then(snow)
                        .otherwise(uneParti);
+        FloatProperty progressBarMin = new SimpleFloatProperty();
         progressBarMin.set(0f);
         min=(FloatBinding)new When(cap.temperatureProperty().lessThan(-10f)).then(progressBarMin).otherwise(cap.temperatureProperty().add(10f).divide(50f));
     }

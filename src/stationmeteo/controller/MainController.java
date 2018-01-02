@@ -22,7 +22,6 @@ import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 import stationmeteo.java.Capteur;
 import stationmeteo.java.Icapteur;
-import stationmeteo.java.StationMeteo;
 
 /**
  * Simple Preloader Using the ProgressBar Control

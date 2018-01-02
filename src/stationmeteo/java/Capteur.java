@@ -21,11 +21,10 @@ public class Capteur extends Icapteur{
     //private FloatProperty temperature=new SimpleFloatProperty(this, "temperature");
     private Algorithme algo;
     private CapteurThread leThread= new CapteurThread(this);
-    private Thread test;
     //private FloatProperty Poid = new SimpleFloatProperty(this, "poid");
     
     public Capteur(int id,String nom,int actualisation, float temperature, Algorithme algo) {
-        this.test = new Thread();
+        //Thread test = new Thread();
         super.setId(id);
         super.setNom(nom);
         this.actualisation.set(actualisation);
