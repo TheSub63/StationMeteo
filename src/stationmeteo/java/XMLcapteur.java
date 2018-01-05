@@ -22,7 +22,7 @@ import stationmeteo.java.algorithmes.Algorithme;
  *
  * @author matthias
  */
-class XMLcapteur extends Icapteur implements Serializable{
+public class XMLcapteur extends Icapteur implements Serializable{
 //commun
     private IntegerProperty id;
     private StringProperty nom;
@@ -42,6 +42,7 @@ class XMLcapteur extends Icapteur implements Serializable{
     public void setTemperature(float temperature) {
         //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
+   
     public XMLcapteur(Icapteur n){
         model=n;
         id=new SimpleIntegerProperty(n.getIden());

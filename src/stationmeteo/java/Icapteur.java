@@ -5,6 +5,7 @@
  */
 package stationmeteo.java;
 
+import java.util.List;
 import javafx.beans.property.FloatProperty;
 import javafx.beans.property.IntegerProperty;
 import javafx.beans.property.SimpleFloatProperty;
@@ -27,6 +28,18 @@ public abstract class Icapteur {
     //capteur
     private IntegerProperty actualisation=new SimpleIntegerProperty(this, "actualisation");
     private Algorithme algo;
+    //superCapteur
+    private List<Icapteur> listCapteur;
+    private float poid = 0;
+    private int i;
+    public Algorithme getAlgo() {
+        return algo;
+    }
+    
+   
+    public void setAlgo(Algorithme algo) {
+        this.algo = algo;
+    }
     //public abstract void setPoid(float poid);
     public abstract void setTemperature(float temperature);
     
@@ -81,6 +94,30 @@ public abstract class Icapteur {
     
     public  IntegerProperty actualisationProperty(){
         return actualisation;
+    }
+
+    public List<Icapteur> getListCapteur() {
+        return listCapteur;
+    }
+
+    public void setListCapteur(List<Icapteur> listCapteur) {
+        this.listCapteur = listCapteur;
+    }
+
+    public float getPoid() {
+        return poid;
+    }
+
+    public void setPoid(float poid) {
+        this.poid = poid;
+    }
+
+    public int getI() {
+        return i;
+    }
+
+    public void setI(int i) {
+        this.i = i;
     }
   
 }

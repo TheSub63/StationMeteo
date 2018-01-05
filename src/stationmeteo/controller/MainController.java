@@ -22,6 +22,7 @@ import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 import stationmeteo.java.Capteur;
 import stationmeteo.java.Icapteur;
+import stationmeteo.java.XMLcapteur;
 
 /**
  * Simple Preloader Using the ProgressBar Control
@@ -48,7 +49,7 @@ public class MainController extends BorderPane implements Initializable {
     private ObservableList<Icapteur> listeDeCapteur = FXCollections.observableList(new ArrayList());
     private Icapteur selectedCapteur;
     private CapteurController capteurcontrol;
-    
+    private XMLcapteur XMLcapteur;
    // public void setApp(StationMeteo application){
    //     StationMeteo application1 = application;
    // }
@@ -95,12 +96,12 @@ public class MainController extends BorderPane implements Initializable {
             if(selectedCapteur!=null)affichageIcone();
         });
 
-
-        Capteur captdef = new Capteur(0,"capteur defaut",1, 17.7f,null);
+        XMLcapteur=new XMLcapteur(new Capteur(0,"capteur defaut",1, 17.7f,null));
+        
 
         
 
-        listeDeCapteur.add(captdef);
+        //listeDeCapteur.add(captdef);
        
         capteurList.setItems(listeDeCapteur);
 
