@@ -11,6 +11,7 @@ import javafx.beans.property.SimpleFloatProperty;
 import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
+import stationmeteo.java.algorithmes.Algorithme;
 
 /**
  *
@@ -18,12 +19,14 @@ import javafx.beans.property.StringProperty;
  */
 public abstract class Icapteur {
     
+    //commun
     private IntegerProperty id=new SimpleIntegerProperty(this, "id");
     private StringProperty nom=new SimpleStringProperty(this, "nom");
     private FloatProperty temperature=new SimpleFloatProperty(this, "temperature");
     private FloatProperty poids = new SimpleFloatProperty(this, "poid");
-    
-    
+    //capteur
+    private IntegerProperty actualisation=new SimpleIntegerProperty(this, "actualisation");
+    private Algorithme algo;
     //public abstract void setPoid(float poid);
     public abstract void setTemperature(float temperature);
     
@@ -69,4 +72,15 @@ public abstract class Icapteur {
     public IntegerProperty idProperty() {
         return id;
     }
+       public void setActualisation(int actualisation) {
+        this.actualisation.set(actualisation);
+    }
+        public int getActualisation() {
+        return actualisation.get();
+    }
+    
+    public  IntegerProperty actualisationProperty(){
+        return actualisation;
+    }
+  
 }

@@ -13,38 +13,34 @@ import java.util.List;
  * @author matthias
  */
 public class SuperCapteur extends Icapteur{
-    private List<Icapteur> listCapteur;
-    private float poid = 0;
-    private int i;
+   
     public SuperCapteur(int id , String nom ,Icapteur capteur){
         super.setId(id);
         super.setNom(nom);
-        listCapteur= new ArrayList<>();
+        super.setListCapteur(new ArrayList<>());
         this.ajouter(capteur, 1f);
         this.temperatureProperty().set(0f);
-        
-        for(i=0;i<listCapteur.size();i++){
-            this.temperatureProperty().set(this.temperatureProperty().get()+(listCapteur.get(i).getTemperature()*listCapteur.get(i).getPoids()));
-            poid=listCapteur.get(i).getPoids();
+        super.setPoid(0);
+        for(super.setI(0);super.getI()<super.getListCapteur().size();super.setI(super.getI()+1)){
+            this.temperatureProperty().set(this.temperatureProperty().get()+(super.getListCapteur().get(super.getI()).getTemperature()*super.getListCapteur().get(super.getI()).getPoids()));
+            super.setPoid(super.getPoid()+super.getListCapteur().get(super.getI()).getPoids());
         }
-       this.temperatureProperty().set(this.temperatureProperty().get()/poid);
+       this.temperatureProperty().set(this.temperatureProperty().get()/super.getPoid());
     }
     public void ajouter(Icapteur i,float poid){
         i.setUnPoid(poid);
-        listCapteur.add(i);
+        super.getListCapteur().add(i);
     } 
     
     
 
     @Override
     public void setTemperature(float temperature) {
-        
-        for(i=0;i<listCapteur.size();i++){
-        this.temperatureProperty().bind(this.temperatureProperty().add(listCapteur.get(i).getTemperature()*listCapteur.get(i).getPoids()));
-        poid=listCapteur.get(i).getPoids();
+        for(super.setI(0);super.getI()<super.getListCapteur().size();super.setI(super.getI()+1)){
+            this.temperatureProperty().set(this.temperatureProperty().get()+(super.getListCapteur().get(super.getI()).getTemperature()*super.getListCapteur().get(super.getI()).getPoids()));
+            super.setPoid(super.getPoid()+super.getListCapteur().get(super.getI()).getPoids());
         }
-        this.temperatureProperty().bind(this.temperatureProperty().divide(poid));
-        
+       this.temperatureProperty().set(this.temperatureProperty().get()/super.getPoid());  
     }
     
 }
