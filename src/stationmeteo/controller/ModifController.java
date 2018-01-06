@@ -6,7 +6,6 @@
 package stationmeteo.controller;
 import java.net.URL;
 import java.util.ResourceBundle;
-
 import javafx.collections.FXCollections;
 import javafx.fxml.Initializable;
 import stationmeteo.java.Capteur;
@@ -22,20 +21,19 @@ import stationmeteo.java.algorithmes.AlgorithmeFenetreGlissante;
  */
 public class ModifController extends WindowController implements Initializable{
 
-
-
-    private Icapteur capteur; 
     public ModifController(Icapteur c){
         capteur=c;
     }
     private Algorithme selectedAlgo;
+    private boolean isModified=false;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
+        verif=new Verification();
         nomCapteur.setText(capteur.getNom());
         idCapteur.setText(String.valueOf(capteur.getIden()));
         if(capteur.getClass()==Capteur.class){
-        actualisationCapteur.setText(String.valueOf(capteur.getActualisation()));
+            actualisationCapteur.setText(String.valueOf(capteur.getActualisation()));
         }
         temperatureCapteur.setText(String.valueOf(capteur.getTemperature()));
         validButton.setOnMousePressed(me -> commitCapteur());
@@ -69,11 +67,15 @@ public class ModifController extends WindowController implements Initializable{
     }
 
 
+
+
     @Override
     void commitCapteur() {
-        if (!verifInfos()) { //RETOURNE ERREUR
+        if (!verif.verifInfos(selectedAlgo, nomCapteur, idCapteur, actualisationCapteur, temperatureCapteur,
+                onAlgoFixeAfficher1, onAlgoFixeAfficher2, intervalleAlgo)){
             showError();
         } else {
+            isModified=true;
             capteur.setNom(nomCapteur.getText());
             capteur.setId(Integer.parseInt(idCapteur.getText()));
             if (capteur.getClass() == Capteur.class) {
@@ -85,4 +87,7 @@ public class ModifController extends WindowController implements Initializable{
         }
     }
 
+    boolean isModified() {
+        return isModified;
+    }
 }

@@ -28,7 +28,7 @@ public class SerializerCapteur extends Icapteur implements Serializable {
     public List<Icapteur> chargeCapteur() {
         List<Icapteur> result = null;
         try (XMLDecoder ois = new XMLDecoder(new FileInputStream("capteur.xml"))) {
-            result = ((ArrayList<XMLcapteur>) ois.readObject()).stream().map(n -> n.getModel()).collect(Collectors.toList());
+            result = ((ArrayList<XMLcapteur>) ois.readObject()).stream().map(XMLcapteur::getModel).collect(Collectors.toList());
             
         } catch (IOException e) {
             e.printStackTrace();
@@ -40,7 +40,7 @@ public class SerializerCapteur extends Icapteur implements Serializable {
     
     public void sauveCapteurs(ArrayList<Icapteur> listCapteur) {
         try (XMLEncoder oos = new XMLEncoder(new FileOutputStream("capteur.xml"))) {
-            List<XMLcapteur> bn = listCapteur.stream().map(n -> new XMLcapteur(n)).collect(Collectors.toList());
+            List<XMLcapteur> bn = listCapteur.stream().map(XMLcapteur::new).collect(Collectors.toList());
             oos.writeObject(bn);
             
         }catch (IOException e) {

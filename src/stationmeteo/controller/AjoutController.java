@@ -7,10 +7,7 @@ package stationmeteo.controller;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.collections.FXCollections;
-import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.*;
-import javafx.scene.layout.BorderPane;
 import stationmeteo.java.Capteur;
 import stationmeteo.java.algorithmes.Algorithme;
 import stationmeteo.java.algorithmes.AlgorithmeAleatoire;
@@ -29,7 +26,7 @@ public class AjoutController extends WindowController implements Initializable{
 
         validButton.setOnMousePressed(me -> commitCapteur());
         annulButton.setOnMousePressed(me -> annulButton.getScene().getWindow().hide());
-
+        verif=new Verification();
         algoCapteur.setItems(FXCollections.observableArrayList(
                 new AlgorithmeAleatoire(), 
                 new AlgorithmeAleatoireFixe(1f,1f), 
@@ -53,9 +50,11 @@ public class AjoutController extends WindowController implements Initializable{
         });
     }
 
+
     @Override
     void commitCapteur(){
-        if(!verifInfos()){
+        if(!verif.verifInfos(selectedAlgo, nomCapteur, idCapteur, actualisationCapteur, temperatureCapteur,
+                onAlgoFixeAfficher1, onAlgoFixeAfficher2, intervalleAlgo)){
             showError();
         }
         else {

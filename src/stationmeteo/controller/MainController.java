@@ -183,7 +183,8 @@ public class MainController extends BorderPane implements Initializable {
         modif.showAndWait();
         if(ajoutcont.getCapteur()!=null) listeDeCapteur.add(ajoutcont.getCapteur());
     }
-        private void ouvrirFenetreModif(){
+
+    private void ouvrirFenetreModif(){
         Stage modif=new Stage();
         URL url=getClass().getResource("/stationmeteo/ressources/fxml/fenetreModif.fxml");
         FXMLLoader loader = new FXMLLoader(url);          
@@ -199,12 +200,13 @@ public class MainController extends BorderPane implements Initializable {
         catch (IOException e){
             e.printStackTrace();     
         }
-        modif.setTitle("Modifier Capteur");
-        modif.showAndWait(); 
-        if(modifcont.getCapteur()!=null) {// SALE
+        modif.setTitle("Modifier Capteur"); //OUI
+        modif.showAndWait();
+        if(modifcont.isModified()) {
             listeDeCapteur.remove(selectedCapteur);
-            selectedCapteur=modifcont.getCapteur(); 
+            selectedCapteur=modifcont.getCapteur();
             listeDeCapteur.add(selectedCapteur);
+
         }
     }
 
@@ -230,7 +232,7 @@ public class MainController extends BorderPane implements Initializable {
         catch (IOException e){
             e.printStackTrace();
         }
-        digital.setTitle(selectedCapteur.getNom());
+        digital.setTitle("Affichage Numérique");
         digital.show();
     }
 
@@ -249,7 +251,7 @@ public class MainController extends BorderPane implements Initializable {
         catch (IOException e){
             e.printStackTrace();
         }
-        thermo.setTitle(selectedCapteur.getNom());
+        thermo.setTitle("Affichage Thermomètre");
         thermo.show();
     }
 
@@ -268,7 +270,7 @@ public class MainController extends BorderPane implements Initializable {
         catch (IOException e){
             e.printStackTrace();
         }
-        icone.setTitle(selectedCapteur.getNom());
+        icone.setTitle("Affichage Pictogramme");
         icone.show();
     }
         
