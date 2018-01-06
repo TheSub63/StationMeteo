@@ -82,7 +82,7 @@ public class ModifController extends WindowController implements Initializable{
             if (capteur.getClass() == Capteur.class) {
                 capteur.setActualisation(Integer.parseInt(actualisationCapteur.getText()));
             }
-            capteur.setUneTemperature(Float.parseFloat(temperatureCapteur.getText()));
+            capteur.setTemperature(Float.parseFloat(temperatureCapteur.getText()));
             capteur.setAlgo(buildAlgo(selectedAlgo));
             validButton.getScene().getWindow().hide();
         }

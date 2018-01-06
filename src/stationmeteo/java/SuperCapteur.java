@@ -80,10 +80,7 @@ public class SuperCapteur extends Icapteur{
     
     @Override
     public float getTemperature() {return temperature.get();}
-    @Override
-    public void setUneTemperature(float temperature) {
-        this.temperature.set(temperature);
-    }       
+      
     @Override
     public int getId() {return id.get();}
     @Override

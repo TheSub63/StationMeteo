@@ -16,14 +16,14 @@ import stationmeteo.java.serialize.ICapteurSerialize;
  */
 public class Capteur extends Icapteur implements ICapteurSerialize{
     
-    private IntegerProperty id=new SimpleIntegerProperty(this, "id");
+    /*private IntegerProperty id=new SimpleIntegerProperty(this, "id");
     private StringProperty nom=new SimpleStringProperty(this, "nom");
     private FloatProperty temperature=new SimpleFloatProperty(this, "temperature");
     private IntegerProperty actualisation=new SimpleIntegerProperty(this, "actualisation");
-    private CapteurThread leThread= new CapteurThread(this);
-    private FloatProperty poids = new SimpleFloatProperty(this, "poids");
-    private ObjectProperty<Algorithme> algo = new SimpleObjectProperty(this,"algo");
     
+    private FloatProperty poids = new SimpleFloatProperty(this, "poids");
+    private ObjectProperty<Algorithme> algo = new SimpleObjectProperty(this,"algo");*/
+    private CapteurThread leThread= new CapteurThread(this);
     public Capteur(int id,String nom,int actualisation, float temperature, Algorithme algo) {
         //Thread test = new Thread();
         super.setId(id);
@@ -44,7 +44,7 @@ public class Capteur extends Icapteur implements ICapteurSerialize{
         
         leThread.start();
     }
-    @Override
+    /*@Override
     public IntegerProperty idProperty(){return id;}
     @Override
     public StringProperty nomProperty(){return nom;}
@@ -54,7 +54,7 @@ public class Capteur extends Icapteur implements ICapteurSerialize{
     @Override
     public IntegerProperty actualisationProperty(){return actualisation;}
     @Override
-    public ObjectProperty<Algorithme> algoProperty(){return algo;}
+    public ObjectProperty<Algorithme> algoProperty(){return algo;}*/
     public CapteurThread getLeThread() {
         return leThread;
     }
@@ -62,7 +62,8 @@ public class Capteur extends Icapteur implements ICapteurSerialize{
     public void setLeThread(CapteurThread leThread) {
         this.leThread = leThread;
     }
- 
+    
+    
     @Override
     public String toString(){
         return getNom()+" "+getAlgo();

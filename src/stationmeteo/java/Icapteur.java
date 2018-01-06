@@ -75,7 +75,7 @@ public abstract class Icapteur {
     }
     
 
-    public void setUneTemperature(float temperature) {
+    public void setTemperature(float temperature) {
         this.temperature.set(temperature);
     }
        
