@@ -5,6 +5,10 @@
  */
 package stationmeteo.java.algorithmes;
 
+import javafx.beans.property.SimpleStringProperty;
+import javafx.beans.property.StringProperty;
+
+
 /**
  *
  * @author clguilbert

@@ -8,8 +8,10 @@ package stationmeteo.java;
 import java.util.List;
 import javafx.beans.property.FloatProperty;
 import javafx.beans.property.IntegerProperty;
+import javafx.beans.property.ObjectProperty;
 import javafx.beans.property.SimpleFloatProperty;
 import javafx.beans.property.SimpleIntegerProperty;
+import javafx.beans.property.SimpleObjectProperty;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
 import stationmeteo.java.algorithmes.Algorithme;
@@ -27,18 +29,22 @@ public abstract class Icapteur {
     private FloatProperty poids = new SimpleFloatProperty(this, "poid");
     //capteur
     private IntegerProperty actualisation=new SimpleIntegerProperty(this, "actualisation");
-    private Algorithme algo;
+    private ObjectProperty<Algorithme> algo = new SimpleObjectProperty(this,"algo");
+    
     //superCapteur
-    private List<Icapteur> listCapteur;
-    private float poid = 0;
-    private int i;
+    private ObjectProperty<List<Icapteur>> listCapteur=new SimpleObjectProperty<>(this,"listeCapteur");
+    private FloatProperty poid = new SimpleFloatProperty(this,"poid");
+    private IntegerProperty i= new SimpleIntegerProperty(this,"i");
+    
     public Algorithme getAlgo() {
+        return algo.get();
+    }
+    public ObjectProperty<Algorithme> algoProperty(){
         return algo;
     }
-    
    
     public void setAlgo(Algorithme algo) {
-        this.algo = algo;
+        this.algo.set(algo);
     }
     //public abstract void setPoid(float poid);
     public abstract void setTemperature(float temperature);
@@ -97,27 +103,27 @@ public abstract class Icapteur {
     }
 
     public List<Icapteur> getListCapteur() {
-        return listCapteur;
+        return listCapteur.get();
     }
 
     public void setListCapteur(List<Icapteur> listCapteur) {
-        this.listCapteur = listCapteur;
+        this.listCapteur.set(listCapteur);
     }
 
     public float getPoid() {
-        return poid;
+        return poid.get();
     }
 
     public void setPoid(float poid) {
-        this.poid = poid;
+        this.poid.set(poid);
     }
 
     public int getI() {
-        return i;
+        return i.get();
     }
 
     public void setI(int i) {
-        this.i = i;
+        this.i.set(i);
     }
   
 }

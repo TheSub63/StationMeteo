@@ -34,7 +34,33 @@ public class Capteur extends Icapteur{
         leThread.start();
         
     }
+    public Capteur(int id,String nom,int actualisation, float temperature) {
+        //Thread test = new Thread();
+        super.setId(id);
+        super.setNom(nom);
+        super.setActualisation(actualisation);
+        
+        this.setTemperature(temperature);
+        
+        leThread.start();
+        
+    }
 
+    Capteur() {
+        super.setId(500);
+        super.setNom("default");
+        super.setActualisation(1);
+        super.setAlgo(null);
+        this.setTemperature(27);
+        
+        leThread.start();
+    }
+    public IntegerProperty Idproperty(){return super.idProperty();}
+    public StringProperty Nomproperty(){return super.nomProperty();}
+    public FloatProperty Temperatureproperty(){return super.temperatureProperty();}
+    public FloatProperty Poidproperty(){return super.poidsProperty();}
+    public IntegerProperty Actualisationproperty(){return super.actualisationProperty();}
+    public ObjectProperty<Algorithme> Algoproperty(){return super.algoProperty();}
     public CapteurThread getLeThread() {
         return leThread;
     }

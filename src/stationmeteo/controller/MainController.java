@@ -9,6 +9,7 @@ package stationmeteo.controller;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
+import java.util.List;
 import java.util.ResourceBundle;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -22,6 +23,7 @@ import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 import stationmeteo.java.Capteur;
 import stationmeteo.java.Icapteur;
+import stationmeteo.java.SerializerCapteur;
 import stationmeteo.java.XMLcapteur;
 
 /**
@@ -49,7 +51,7 @@ public class MainController extends BorderPane implements Initializable {
     private ObservableList<Icapteur> listeDeCapteur = FXCollections.observableList(new ArrayList());
     private Icapteur selectedCapteur;
     private CapteurController capteurcontrol;
-    private XMLcapteur XMLcapteur;
+    private SerializerCapteur XMLdatamanager=new SerializerCapteur();;
    // public void setApp(StationMeteo application){
    //     StationMeteo application1 = application;
    // }
@@ -96,14 +98,13 @@ public class MainController extends BorderPane implements Initializable {
             if(selectedCapteur!=null)affichageIcone();
         });
 
-        XMLcapteur=new XMLcapteur(new Capteur(0,"capteur defaut",1, 17.7f,null));
         
 
         
 
         //listeDeCapteur.add(captdef);
        
-        capteurList.setItems(listeDeCapteur);
+        
 
         /**capteurList.setOnDragDetected(event -> {
             if (! listeDeCapteur.isEmpty()) {
@@ -139,11 +140,29 @@ public class MainController extends BorderPane implements Initializable {
                 event.setDropCompleted(false);
             }
         });**/
-
+    capteurList.setItems(listeDeCapteur);
        
                 
     }
-
+    public void ChargerCapteur(){
+        if(listeDeCapteur!=null){
+            List<Icapteur> result=XMLdatamanager.chargeCapteur();
+            if(result!=null){
+            listeDeCapteur.clear();
+            listeDeCapteur.addAll(result);
+            }
+        }
+    }
+    public void sauveCapteur(){
+        
+        if(this.XMLdatamanager!= null){
+            ArrayList test =new ArrayList();
+            test.addAll(capteurList.getItems());
+            //ObservableList items = this.capteurList.getItems();
+        XMLdatamanager.sauveCapteurs(test);
+        }
+        else System.out.println("prout");
+}
 
     private void ouvrirFenetreAjout(){
         Stage modif=new Stage();
