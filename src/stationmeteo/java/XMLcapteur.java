@@ -38,11 +38,19 @@ public class XMLcapteur extends Icapteur implements Serializable{
     private FloatProperty PoidTot;
     //propre au xmlCapteur
     private transient Icapteur model;  
-    @Override
-    public void setTemperature(float temperature) {
-        //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
    
+    public XMLcapteur(){
+        model=new Capteur();
+        id=new SimpleIntegerProperty(model.getIden());
+        nom=new SimpleStringProperty(model.getNom());
+        temperature=new SimpleFloatProperty(model.getTemperature());
+        Poid=new SimpleFloatProperty(model.getPoid());
+        actualisation=new SimpleIntegerProperty(model.getActualisation());
+        algo=new SimpleObjectProperty(model.getAlgo());
+        listCapteur=new SimpleObjectProperty(model.getListCapteur());
+        i= new SimpleIntegerProperty(model.getI());
+        PoidTot=new SimpleFloatProperty(model.getPoid());
+    }
     public XMLcapteur(Icapteur n){
         model=n;
         id=new SimpleIntegerProperty(n.getIden());
@@ -55,9 +63,109 @@ public class XMLcapteur extends Icapteur implements Serializable{
         i= new SimpleIntegerProperty(n.getI());
         PoidTot=new SimpleFloatProperty(n.getPoid());
     }
-
+    public IntegerProperty Idproperty(){return id;}
+    public StringProperty Nomproperty(){return nom;}
+    public FloatProperty Temperatureproperty(){return temperature;}
+    public FloatProperty Poidproperty(){return Poid;}
+    public IntegerProperty Actualisationproperty(){return actualisation;}
+    public ObjectProperty Algoproperty(){return algo;}
+    public ObjectProperty listCapteurproperty(){return listCapteur;}
+    public IntegerProperty Iproperty(){return i;}
+    public FloatProperty PoidTotproperty(){return PoidTot;}
     public Icapteur getModel() {
         return model;
     }
+
+    public int getId() {
+        return id.get();
+    }
+
+    /**
+     *
+     * @param id
+     */
+    @Override
+    public void setId(int id) {
+         this.id.set(id);
+    }
+
+    @Override
+    public String getNom() {
+        return nom.get();
+    }
+
+    @Override
+    public void setNom(String nom) {
+        this.nom.set(nom);
+    }
+
+    @Override
+    public float getTemperature() {
+        return temperature.get();
+    }
+
+    /**
+     *
+     * @param temperature
+     */
+    @Override
+    public void setTemperature(float temperature) {
+        this.temperature.set(temperature);
+    }
+
+    /**
+     *
+     * @return
+     */
+    @Override
+    public float getPoid() {
+        return Poid.get();
+    }
+
+    /**
+     *
+     * @param Poid
+     */
+    @Override
+    public void setPoid(float Poid) {
+        this.Poid.set(Poid);
+    }
+
+    @Override
+    public int getActualisation() {
+        return actualisation.get();
+    }
+
+    @Override
+    public void setActualisation(int actualisation) {
+        this.actualisation.set(actualisation);
+    }
+
+    public void setListCapteur(ObjectProperty<List<Icapteur>> listCapteur) {
+        this.listCapteur = listCapteur;
+    }
+
+    /**
+     *
+     * @return
+     */
+    @Override
+    public int getI() {
+        return i.get();
+    }
+
+    @Override
+    public void setI(int i) {
+        this.i.set(i);
+    }
+
+    public float getPoidTot() {
+        return PoidTot.get();
+    }
+
+    public void setPoidTot(float PoidTot) {
+        this.PoidTot.set(PoidTot);
+    }
+    
     
 }

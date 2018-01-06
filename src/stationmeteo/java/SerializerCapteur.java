@@ -29,17 +29,20 @@ public class SerializerCapteur extends Icapteur implements Serializable {
         List<Icapteur> result = null;
         try (XMLDecoder ois = new XMLDecoder(new FileInputStream("capteur.xml"))) {
             result = ((ArrayList<XMLcapteur>) ois.readObject()).stream().map(n -> n.getModel()).collect(Collectors.toList());
+            
         } catch (IOException e) {
             e.printStackTrace();
         }
+        
         return result;
     }
 
     
-    public void sauveCapteurs(List<Icapteur> listCapteur) {
+    public void sauveCapteurs(ArrayList<Icapteur> listCapteur) {
         try (XMLEncoder oos = new XMLEncoder(new FileOutputStream("capteur.xml"))) {
             List<XMLcapteur> bn = listCapteur.stream().map(n -> new XMLcapteur(n)).collect(Collectors.toList());
             oos.writeObject(bn);
+            
         }catch (IOException e) {
             e.printStackTrace();
         }      

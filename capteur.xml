@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<java version="1.8.0_151" class="java.beans.XMLDecoder">
+ <object class="java.util.ArrayList">
+  <void method="add">
+   <object class="stationmeteo.java.XMLcapteur">
+    <void property="temperature">
+     <float>25.0</float>
+    </void>
+   </object>
+  </void>
+ </object>
+</java>
