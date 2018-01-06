@@ -21,11 +21,12 @@ import stationmeteo.java.algorithmes.AlgorithmeFenetreGlissante;
  */
 public class ModifController extends WindowController implements Initializable{
 
+    private boolean isModified=false;
     public ModifController(Icapteur c){
         capteur=c;
     }
     private Algorithme selectedAlgo;
-    private boolean isModified=false;
+
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -70,7 +71,7 @@ public class ModifController extends WindowController implements Initializable{
 
 
     @Override
-    void commitCapteur() {
+    protected void commitCapteur() {
         if (!verif.verifInfos(selectedAlgo, nomCapteur, idCapteur, actualisationCapteur, temperatureCapteur,
                 onAlgoFixeAfficher1, onAlgoFixeAfficher2, intervalleAlgo)){
             showError();
@@ -87,7 +88,8 @@ public class ModifController extends WindowController implements Initializable{
         }
     }
 
-    boolean isModified() {
+    @SuppressWarnings("WeakerAccess")
+    protected boolean isModified() {
         return isModified;
     }
 }

@@ -11,35 +11,36 @@ import stationmeteo.java.algorithmes.Algorithme;
 import stationmeteo.java.algorithmes.AlgorithmeAleatoireFixe;
 import stationmeteo.java.algorithmes.AlgorithmeFenetreGlissante;
 
+@SuppressWarnings("WeakerAccess")
 abstract class WindowController extends BorderPane {
 
     @FXML
-    TextField idCapteur;
+    protected TextField idCapteur;
     @FXML
-    TextField nomCapteur;
+    protected TextField nomCapteur;
     @FXML
-    TextField actualisationCapteur;
+    protected TextField actualisationCapteur;
     @FXML
-    TextField temperatureCapteur;
+    protected TextField temperatureCapteur;
     @FXML
-    TextField intervalleAlgo;
+    protected TextField intervalleAlgo;
     @FXML
-    TextField onAlgoFixeAfficher1;
+    protected TextField onAlgoFixeAfficher1;
     @FXML
-    TextField onAlgoFixeAfficher2;
+    protected TextField onAlgoFixeAfficher2;
     @FXML
-    Button validButton;
+    protected Button validButton;
     @FXML
-    Button annulButton;
+    protected Button annulButton;
     @FXML
-    ChoiceBox<Algorithme> algoCapteur;//https://docs.oracle.com/javafx/2/ui_controls/choice-box.htm
+    protected ChoiceBox<Algorithme> algoCapteur;//https://docs.oracle.com/javafx/2/ui_controls/choice-box.htm
 
-    Algorithme selectedAlgo;
-    Icapteur capteur;
-    Verification verif;
+    protected Algorithme selectedAlgo;
+    protected Icapteur capteur;
+    protected Verification verif;
 
 
-    void showError(){
+    protected void showError(){
         Alert alert = new Alert(Alert.AlertType.ERROR);
         alert.setTitle("Erreur");
         alert.setHeaderText("Veuillez remplir tous les champs");
@@ -50,7 +51,7 @@ abstract class WindowController extends BorderPane {
         alert.showAndWait();
     }
 
-    void disableAll(){
+    protected void disableAll(){
         onAlgoFixeAfficher1.setDisable(true);
         onAlgoFixeAfficher2.setDisable(true);
         intervalleAlgo.setDisable(true);
@@ -60,7 +61,7 @@ abstract class WindowController extends BorderPane {
     }
     abstract void commitCapteur();
 
-    Algorithme buildAlgo(Algorithme selectedAlgo){
+    protected Algorithme buildAlgo(Algorithme selectedAlgo){
         if(selectedAlgo.getClass()==AlgorithmeAleatoireFixe.class){
             selectedAlgo=new AlgorithmeAleatoireFixe(
                     Float.parseFloat(onAlgoFixeAfficher1.getText()),

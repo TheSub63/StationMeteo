@@ -52,7 +52,7 @@ public class AjoutController extends WindowController implements Initializable{
 
 
     @Override
-    void commitCapteur(){
+    protected void commitCapteur(){
         if(!verif.verifInfos(selectedAlgo, nomCapteur, idCapteur, actualisationCapteur, temperatureCapteur,
                 onAlgoFixeAfficher1, onAlgoFixeAfficher2, intervalleAlgo)){
             showError();
