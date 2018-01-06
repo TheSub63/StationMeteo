@@ -7,32 +7,22 @@ package stationmeteo.controller;
 
 
 import java.net.URL;
-
 import java.util.ResourceBundle;
-
 import javafx.beans.binding.Bindings;
 import javafx.beans.binding.FloatBinding;
-
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
 import javafx.scene.control.ProgressBar;
-
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
-
 import javafx.util.StringConverter;
 import javafx.beans.binding.ObjectBinding;
 import javafx.beans.binding.When;
-
 import javafx.beans.property.FloatProperty;
-import javafx.beans.property.ObjectProperty;
-
-
 import javafx.beans.property.SimpleFloatProperty;
 import javafx.beans.property.SimpleObjectProperty;
-
 import javafx.util.converter.NumberStringConverter;
 import stationmeteo.java.Icapteur;
 

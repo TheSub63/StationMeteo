@@ -4,24 +4,24 @@
   <void method="add">
    <object class="stationmeteo.java.XMLcapteur">
     <void property="temperature">
-     <float>-2.0</float>
+     <float>1.0</float>
     </void>
    </object>
   </void>
   <void method="add">
    <object class="stationmeteo.java.XMLcapteur">
     <void property="temperature">
-     <float>-2.0</float>
+     <float>-4.3900986</float>
     </void>
    </object>
   </void>
   <void method="add">
    <object class="stationmeteo.java.XMLcapteur">
     <void property="nom">
-     <string>Daniel</string>
+     <string>strh</string>
     </void>
     <void property="temperature">
-     <float>35.630844</float>
+     <float>21.067</float>
     </void>
    </object>
   </void>

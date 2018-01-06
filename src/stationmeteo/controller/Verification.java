@@ -5,8 +5,8 @@ import stationmeteo.java.algorithmes.Algorithme;
 
 
 public class Verification {
-    final static String REGNUM="^-?[0-9]*(.[0-9]+)?$";
-    boolean verifInfos(Algorithme selectedAlgo, TextField nomCapteur,TextField idCapteur,TextField actualisationCapteur,
+    private final static String REGNUM="^-?[0-9]*(.[0-9]+)?$";
+    protected boolean verifInfos(Algorithme selectedAlgo, TextField nomCapteur,TextField idCapteur,TextField actualisationCapteur,
                        TextField temperatureCapteur, TextField onAlgoFixeAfficher1, TextField onAlgoFixeAfficher2,
                        TextField intervalleAlgo) {
         {
