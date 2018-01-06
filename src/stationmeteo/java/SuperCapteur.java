@@ -46,9 +46,9 @@ public class SuperCapteur extends Icapteur{
     
     
     public SuperCapteur(int id , String nom ,Icapteur capteur){
-        super.setId(id);
-        super.setNom(nom);
-        super.setListCapteur(new ArrayList<>());
+        setId(id);
+        setNom(nom);
+        setListCapteur(new ArrayList<>());
         this.ajouter(capteur, 1f);
         
        System.out.println(this.getNom()+" est un super capteur");
