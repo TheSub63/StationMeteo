@@ -113,7 +113,8 @@ public class MainController extends BorderPane implements Initializable {
         //listeDeCapteur.add(captdef);
        
         
-
+        SuperCapteur test = new SuperCapteur(1,"test",new Capteur());
+        listeDeCapteur.add(test);
         /**capteurList.setOnDragDetected(event -> {
             if (! listeDeCapteur.isEmpty()) {
                 Dragboard db = capteurList.startDragAndDrop(TransferMode.MOVE);
@@ -123,7 +124,7 @@ public class MainController extends BorderPane implements Initializable {
                 dragSource.set(capteurList);
             }
         });
-
+        listeDe
         capteurList.setOnDragOver(event -> {
             Dragboard db = event.getDragboard();
             if (db.hasString()) {

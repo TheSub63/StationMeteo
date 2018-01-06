@@ -1,21 +1,3 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <java version="1.8.0_151" class="java.beans.XMLDecoder">
- <object class="java.util.ArrayList">
-  <void method="add">
-   <object class="stationmeteo.java.serialize.XMLcapteur">
-    <void property="actualisation">
-     <int>12</int>
-    </void>
-    <void property="algo">
-     <object class="stationmeteo.java.algorithmes.AlgorithmeAleatoire"/>
-    </void>
-    <void property="id">
-     <int>1</int>
-    </void>
-    <void property="nom">
-     <string>mom</string>
-    </void>
-   </object>
-  </void>
- </object>
 </java>
