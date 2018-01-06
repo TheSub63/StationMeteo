@@ -43,6 +43,8 @@ public class MainController extends BorderPane implements Initializable {
     @FXML
     private Button delButton;
     @FXML
+    private Button groupButton;
+    @FXML
     private Button digitalButton;
     @FXML
     private Button thermoButton;
@@ -79,17 +81,27 @@ public class MainController extends BorderPane implements Initializable {
             }
         });**/
         capteurList.setOnDragDetected(me -> {
+
             if(selectedCapteur!=null){capteurList.startDragAndDrop(TransferMode.ANY);
             System.out.println(selectedCapteur.getNom()+" est en train d'etre bougé");
-                SuperCapteur sc=new SuperCapteur(selectedCapteur.getId(),selectedCapteur.getNom(),selectedCapteur);
-                sc.ajouter(selectedCapteur,1);
-
                 System.out.println("DRAGGING");
             }
+            capteurList.setOnDragOver(event -> {
+                System.out.println("DROPPED");
+                Capteur souscap= (Capteur) selectedCapteur;
+                capteurList.setOnMouseReleased(hover -> selectedCapteur=(Icapteur) capteurList.getSelectionModel().getSelectedItem());
 
+                SuperCapteur sc=new SuperCapteur(selectedCapteur.getId(),selectedCapteur.getNom(),souscap);
+
+                event.setDropCompleted(true);
+
+                event.consume();
+            });
         });
 
+
         addButton.setOnMousePressed(me -> ouvrirFenetreAjout());
+        groupButton.setOnMousePressed(me -> ouvrirFenetreSuperCapteur());
         uptButton.setOnMousePressed(me -> {
 
             if(selectedCapteur!=null)ouvrirFenetreModif();
@@ -199,6 +211,14 @@ public class MainController extends BorderPane implements Initializable {
         modif.setTitle("Nouveau Capteur");
         modif.showAndWait();
         if(ajoutcont.getCapteur()!=null) listeDeCapteur.add(ajoutcont.getCapteur());
+    }
+
+    private void ouvrirFenetreSuperCapteur(){
+        Stage modif=new Stage();
+        URL url=getClass().getResource("/stationmeteo/ressources/fxml/fenetreSuperCapteur.fxml");
+        FXMLLoader loader = new FXMLLoader(url);
+        BorderPane page;
+        //FAIRE CONTROLLER
     }
 
     private void ouvrirFenetreModif(){

@@ -71,8 +71,8 @@ public class CapteurController extends AnchorPane implements Initializable{
         
 
 
-        //nameText.setText(cap.getNom());
-        nameText.textProperty().bind(cap.nomProperty());
+        nameText.setText(cap.getNom());
+        //nameText.textProperty().bind(cap.nomProperty());
         
         //cpt.setText(String.valueOf(cap.getTemperature())+"°C");
         //cpt.textProperty().bind( cap.temperatureProperty().asString());

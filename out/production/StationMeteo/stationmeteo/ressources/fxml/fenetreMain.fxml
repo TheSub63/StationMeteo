@@ -13,6 +13,7 @@
             <Button fx:id="addButton" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Ajouter" />
             <Button fx:id="uptButton" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Modifier" />
             <Button fx:id="delButton" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Supprimer" />
+            <Button fx:id="groupButton" layoutX="15.0" layoutY="253.0" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Grouper" />
 
          </children>
          <padding>
