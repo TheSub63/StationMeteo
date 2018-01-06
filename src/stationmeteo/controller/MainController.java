@@ -27,7 +27,6 @@ import stationmeteo.java.serialize.ICapteurSerialize;
 import stationmeteo.java.Icapteur;
 import stationmeteo.java.SuperCapteur;
 import stationmeteo.java.serialize.SerializerCapteur;
-import stationmeteo.java.serialize.XMLcapteur;
 
 /**
  * Simple Preloader Using the ProgressBar Control
@@ -218,7 +217,18 @@ public class MainController extends BorderPane implements Initializable {
         URL url=getClass().getResource("/stationmeteo/ressources/fxml/fenetreSuperCapteur.fxml");
         FXMLLoader loader = new FXMLLoader(url);
         BorderPane page;
-        //FAIRE CONTROLLER
+        SuperCapController supcont=new SuperCapController(listeDeCapteur);
+        loader.setController(supcont);
+        try{
+            page = loader.load();
+            Scene scene = new Scene(page);
+            modif.setScene(scene);
+        }
+        catch (IOException e){
+            e.printStackTrace();
+        }
+        modif.setTitle("Creer Super Capteur");
+        modif.showAndWait();
     }
 
     private void ouvrirFenetreModif(){
