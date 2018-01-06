@@ -2,13 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="547e6231-116d-4ef2-8fd2-74a1b1fee0d9" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/StationMeteo/stationmeteo/controller/MainController.class" afterPath="$PROJECT_DIR$/out/production/StationMeteo/stationmeteo/controller/MainController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/StationMeteo/stationmeteo/controller/ModifController.class" afterPath="$PROJECT_DIR$/out/production/StationMeteo/stationmeteo/controller/ModifController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/StationMeteo/stationmeteo/java/Capteur.class" afterPath="$PROJECT_DIR$/out/production/StationMeteo/stationmeteo/java/Capteur.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/StationMeteo/stationmeteo/java/Icapteur.class" afterPath="$PROJECT_DIR$/out/production/StationMeteo/stationmeteo/java/Icapteur.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/StationMeteo/stationmeteo/java/SuperCapteur.class" afterPath="$PROJECT_DIR$/out/production/StationMeteo/stationmeteo/java/SuperCapteur.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/capteur.xml" afterPath="$PROJECT_DIR$/capteur.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/stationmeteo/controller/AjoutController.java" afterPath="$PROJECT_DIR$/src/stationmeteo/controller/AjoutController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/stationmeteo/controller/CapteurController.java" afterPath="$PROJECT_DIR$/src/stationmeteo/controller/CapteurController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/stationmeteo/controller/ModifController.java" afterPath="$PROJECT_DIR$/src/stationmeteo/controller/ModifController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/stationmeteo/controller/Verification.java" afterPath="$PROJECT_DIR$/src/stationmeteo/controller/Verification.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/stationmeteo/controller/WindowController.java" afterPath="$PROJECT_DIR$/src/stationmeteo/controller/WindowController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/stationmeteo/java/algorithmes/Algorithme.java" afterPath="$PROJECT_DIR$/src/stationmeteo/java/algorithmes/Algorithme.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/stationmeteo/controller/MainController.java" afterPath="$PROJECT_DIR$/src/stationmeteo/controller/MainController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/stationmeteo/java/SuperCapteur.java" afterPath="$PROJECT_DIR$/src/stationmeteo/java/SuperCapteur.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -20,11 +22,71 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="AlgorithmeFenetreGlissante.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/stationmeteo/java/algorithmes/AlgorithmeFenetreGlissante.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="25" column="34" lean-forward="false" selection-start-line="25" selection-start-column="34" selection-end-line="25" selection-end-column="34" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SuperCapteur.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/stationmeteo/java/SuperCapteur.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="399">
+              <caret line="54" column="62" lean-forward="false" selection-start-line="54" selection-start-column="62" selection-end-line="54" selection-end-column="62" />
+              <folding>
+                <element signature="e#3206#3207#0" expanded="true" />
+                <element signature="e#3255#3256#0" expanded="true" />
+                <marker date="1515257465412" expanded="false" signature="3541:3552" ph=" { " />
+                <marker date="1515257465412" expanded="false" signature="3586:3592" ph=" }" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Capteur.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/stationmeteo/java/Capteur.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="288">
+              <caret line="33" column="27" lean-forward="false" selection-start-line="33" selection-start-column="18" selection-end-line="33" selection-end-column="32" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CapteurThread.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/stationmeteo/java/CapteurThread.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="63">
+              <caret line="7" column="35" lean-forward="false" selection-start-line="7" selection-start-column="35" selection-end-line="7" selection-end-column="35" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ModifController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/stationmeteo/controller/ModifController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="470">
+              <caret line="80" column="65" lean-forward="true" selection-start-line="80" selection-start-column="65" selection-end-line="84" selection-end-column="26" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <marker date="1515256465851" expanded="false" signature="3346:3379" ph="/WeakerAccess/" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="CapteurController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/stationmeteo/controller/CapteurController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="63">
-              <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+            <state relative-caret-position="925">
+              <caret line="61" column="0" lean-forward="false" selection-start-line="61" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <marker date="1515233218702" expanded="true" signature="3361:3378" ph="{...}" />
@@ -36,100 +98,68 @@
       <file leaf-file-name="MainController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/stationmeteo/controller/MainController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="124">
-              <caret line="204" column="0" lean-forward="false" selection-start-line="204" selection-start-column="0" selection-end-line="204" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AjoutController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/stationmeteo/controller/AjoutController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1050">
-              <caret line="54" column="13" lean-forward="false" selection-start-line="54" selection-start-column="13" selection-end-line="54" selection-end-column="13" />
+            <state relative-caret-position="416">
+              <caret line="82" column="83" lean-forward="false" selection-start-line="82" selection-start-column="83" selection-end-line="82" selection-end-column="83" />
               <folding>
-                <element signature="imports" expanded="true" />
+                <marker date="1515257549689" expanded="false" signature="7718:7729" ph=" { " />
+                <marker date="1515257549689" expanded="false" signature="7748:7754" ph=" }" />
+                <marker date="1515257549689" expanded="false" signature="7808:7819" ph=" { " />
+                <marker date="1515257549689" expanded="false" signature="7850:7856" ph=" }" />
+                <marker date="1515257549689" expanded="false" signature="9805:9819" ph=" { " />
+                <marker date="1515257549689" expanded="false" signature="9842:9852" ph=" }" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Verification.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/stationmeteo/controller/Verification.java">
+      <file leaf-file-name="StationMeteo.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/stationmeteo/java/StationMeteo.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-193">
-              <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+            <state relative-caret-position="21">
+              <caret line="24" column="28" lean-forward="false" selection-start-line="24" selection-start-column="14" selection-end-line="24" selection-end-column="28" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CellFactory.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/stationmeteo/controller/CellFactory.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="294">
+              <caret line="17" column="5" lean-forward="true" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Icapteur.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/stationmeteo/java/Icapteur.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="218">
+              <caret line="82" column="19" lean-forward="false" selection-start-line="82" selection-start-column="19" selection-end-line="82" selection-end-column="19" />
               <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="WindowController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/stationmeteo/controller/WindowController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="311">
-              <caret line="67" column="69" lean-forward="true" selection-start-line="67" selection-start-column="69" selection-end-line="67" selection-end-column="69" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#459#492#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Algorithme.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/stationmeteo/java/algorithmes/Algorithme.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="63">
-              <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AlgorithmeAleatoire.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/stationmeteo/java/algorithmes/AlgorithmeAleatoire.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="21" column="33" lean-forward="false" selection-start-line="21" selection-start-column="28" selection-end-line="21" selection-end-column="45" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AlgorithmeAleatoireFixe.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/stationmeteo/java/algorithmes/AlgorithmeAleatoireFixe.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="189">
-              <caret line="13" column="59" lean-forward="false" selection-start-line="13" selection-start-column="59" selection-end-line="13" selection-end-column="59" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AlgorithmeFenetreGlissante.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/stationmeteo/java/algorithmes/AlgorithmeFenetreGlissante.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="441">
-              <caret line="25" column="34" lean-forward="false" selection-start-line="25" selection-start-column="34" selection-end-line="25" selection-end-column="34" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ModifController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/stationmeteo/controller/ModifController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1172">
-              <caret line="73" column="14" lean-forward="false" selection-start-line="73" selection-start-column="14" selection-end-line="73" selection-end-column="14" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#3345#3378#0" expanded="true" />
-                <element signature="e#3414#3415#0" expanded="true" />
-                <element signature="e#3447#3448#0" expanded="true" />
+                <marker date="1515256465853" expanded="false" signature="2781:2792" ph=" { " />
+                <marker date="1515256465853" expanded="false" signature="2826:2832" ph=" }" />
+                <marker date="1515256465853" expanded="false" signature="2863:2874" ph=" { " />
+                <marker date="1515256465853" expanded="false" signature="2890:2896" ph=" }" />
+                <marker date="1515256465853" expanded="false" signature="2927:2938" ph=" { " />
+                <marker date="1515256465853" expanded="false" signature="2954:2960" ph=" }" />
+                <marker date="1515256465853" expanded="false" signature="3020:3031" ph=" { " />
+                <marker date="1515256465853" expanded="false" signature="3069:3075" ph=" }" />
+                <marker date="1515256465853" expanded="false" signature="3113:3124" ph=" { " />
+                <marker date="1515256465853" expanded="false" signature="3151:3157" ph=" }" />
+                <marker date="1515256465853" expanded="false" signature="3211:3222" ph=" { " />
+                <marker date="1515256465853" expanded="false" signature="3247:3253" ph=" }" />
+                <marker date="1515256465853" expanded="false" signature="3313:3324" ph=" { " />
+                <marker date="1515256465853" expanded="false" signature="3358:3364" ph=" }" />
+                <marker date="1515256465853" expanded="false" signature="3392:3403" ph=" { " />
+                <marker date="1515256465853" expanded="false" signature="3421:3427" ph=" }" />
+                <marker date="1515256465853" expanded="false" signature="3464:3475" ph=" { " />
+                <marker date="1515256465853" expanded="false" signature="3495:3501" ph=" }" />
+                <marker date="1515256465853" expanded="false" signature="3524:3535" ph=" { " />
+                <marker date="1515256465853" expanded="false" signature="3550:3556" ph=" }" />
+                <marker date="1515256465853" expanded="false" signature="3585:3596" ph=" { " />
+                <marker date="1515256465853" expanded="false" signature="3610:3616" ph=" }" />
               </folding>
             </state>
           </provider>
@@ -180,13 +210,15 @@
         <option value="$PROJECT_DIR$/src/stationmeteo/ressources/fxml/fenetreModif.fxml" />
         <option value="$PROJECT_DIR$/src/stationmeteo/java/Verification.java" />
         <option value="$PROJECT_DIR$/src/stationmeteo/java/SerializerCapteur.java" />
-        <option value="$PROJECT_DIR$/src/stationmeteo/controller/MainController.java" />
         <option value="$PROJECT_DIR$/src/stationmeteo/controller/Verification.java" />
         <option value="$PROJECT_DIR$/src/stationmeteo/controller/AjoutController.java" />
         <option value="$PROJECT_DIR$/src/stationmeteo/controller/CapteurController.java" />
         <option value="$PROJECT_DIR$/src/stationmeteo/controller/ModifController.java" />
         <option value="$PROJECT_DIR$/src/stationmeteo/controller/WindowController.java" />
         <option value="$PROJECT_DIR$/src/stationmeteo/java/algorithmes/Algorithme.java" />
+        <option value="$PROJECT_DIR$/src/stationmeteo/controller/DragAndDropManager.java" />
+        <option value="$PROJECT_DIR$/src/stationmeteo/java/SuperCapteur.java" />
+        <option value="$PROJECT_DIR$/src/stationmeteo/controller/MainController.java" />
       </list>
     </option>
   </component>
@@ -211,6 +243,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -256,6 +289,14 @@
               <item name="StationMeteo" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="stationmeteo" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="serialize" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="StationMeteo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="StationMeteo" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="stationmeteo" type="462c0819:PsiDirectoryNode" />
               <item name="ressources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -280,7 +321,6 @@
       </pane>
       <pane id="Scope" />
       <pane id="PackagesPane" />
-      <pane id="Scratches" />
       <pane id="AndroidView" />
     </panes>
   </component>
@@ -440,21 +480,37 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.171875" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289183" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39955848" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39955848" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289183" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1986755" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.171875" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289183" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -495,38 +551,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/stationmeteo/java/algorithmes/AlgorithmeAleatoireFixe.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="567">
-          <caret line="33" column="0" lean-forward="false" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/stationmeteo/controller/ModifController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="756">
-          <caret line="61" column="46" lean-forward="false" selection-start-line="61" selection-start-column="32" selection-end-line="61" selection-end-column="46" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#3345#3378#0" expanded="true" />
-            <element signature="e#3414#3415#0" expanded="true" />
-            <element signature="e#3447#3448#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/stationmeteo/ressources/fxml/fenetreAjout.fxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2121">
-          <caret line="101" column="42" lean-forward="true" selection-start-line="101" selection-start-column="42" selection-end-line="101" selection-end-column="42" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/stationmeteo/controller/AjoutController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1806">
@@ -541,7 +565,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="168">
           <caret line="27" column="13" lean-forward="false" selection-start-line="27" selection-start-column="13" selection-end-line="27" selection-end-column="13" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -560,7 +586,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3465">
           <caret line="165" column="0" lean-forward="true" selection-start-line="165" selection-start-column="0" selection-end-line="165" selection-end-column="0" />
-          <folding />
+          <folding>
+            <marker date="1515257549689" expanded="false" signature="7718:7729" ph=" { " />
+            <marker date="1515257549689" expanded="false" signature="7748:7754" ph=" }" />
+            <marker date="1515257549689" expanded="false" signature="7808:7819" ph=" { " />
+            <marker date="1515257549689" expanded="false" signature="7850:7856" ph=" }" />
+            <marker date="1515257549689" expanded="false" signature="9805:9819" ph=" { " />
+            <marker date="1515257549689" expanded="false" signature="9842:9852" ph=" }" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -580,9 +613,7 @@
           <caret line="61" column="46" lean-forward="false" selection-start-line="61" selection-start-column="32" selection-end-line="61" selection-end-column="46" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#3345#3378#0" expanded="true" />
-            <element signature="e#3414#3415#0" expanded="true" />
-            <element signature="e#3447#3448#0" expanded="true" />
+            <marker date="1515256465851" expanded="false" signature="3346:3379" ph="/WeakerAccess/" />
           </folding>
         </state>
       </provider>
@@ -613,7 +644,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
           <caret line="27" column="13" lean-forward="false" selection-start-line="27" selection-start-column="13" selection-end-line="27" selection-end-column="13" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -633,7 +666,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2567">
           <caret line="190" column="32" lean-forward="true" selection-start-line="190" selection-start-column="32" selection-end-line="190" selection-end-column="32" />
-          <folding />
+          <folding>
+            <marker date="1515257549689" expanded="false" signature="7718:7729" ph=" { " />
+            <marker date="1515257549689" expanded="false" signature="7748:7754" ph=" }" />
+            <marker date="1515257549689" expanded="false" signature="7808:7819" ph=" { " />
+            <marker date="1515257549689" expanded="false" signature="7850:7856" ph=" }" />
+            <marker date="1515257549689" expanded="false" signature="9805:9819" ph=" { " />
+            <marker date="1515257549689" expanded="false" signature="9842:9852" ph=" }" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -653,9 +693,7 @@
           <caret line="61" column="46" lean-forward="false" selection-start-line="61" selection-start-column="32" selection-end-line="61" selection-end-column="46" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#3345#3378#0" expanded="true" />
-            <element signature="e#3414#3415#0" expanded="true" />
-            <element signature="e#3447#3448#0" expanded="true" />
+            <marker date="1515256465851" expanded="false" signature="3346:3379" ph="/WeakerAccess/" />
           </folding>
         </state>
       </provider>
@@ -687,7 +725,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
           <caret line="27" column="13" lean-forward="false" selection-start-line="27" selection-start-column="13" selection-end-line="27" selection-end-column="13" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -695,7 +735,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1037">
           <caret line="104" column="0" lean-forward="false" selection-start-line="104" selection-start-column="0" selection-end-line="104" selection-end-column="0" />
-          <folding />
+          <folding>
+            <marker date="1515257549689" expanded="false" signature="7718:7729" ph=" { " />
+            <marker date="1515257549689" expanded="false" signature="7748:7754" ph=" }" />
+            <marker date="1515257549689" expanded="false" signature="7808:7819" ph=" { " />
+            <marker date="1515257549689" expanded="false" signature="7850:7856" ph=" }" />
+            <marker date="1515257549689" expanded="false" signature="9805:9819" ph=" { " />
+            <marker date="1515257549689" expanded="false" signature="9842:9852" ph=" }" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -737,24 +784,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/stationmeteo/controller/CellFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
-          <caret line="17" column="5" lean-forward="true" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/stationmeteo/java/SuperCapteur.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="630">
-          <caret line="40" column="95" lean-forward="true" selection-start-line="40" selection-start-column="95" selection-end-line="40" selection-end-column="95" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/stationmeteo/java/CapteurThread.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="63">
@@ -767,7 +796,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="315">
           <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -775,7 +803,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -801,66 +828,43 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/stationmeteo/java/Capteur.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="21">
-          <caret line="8" column="7" lean-forward="false" selection-start-line="8" selection-start-column="7" selection-end-line="8" selection-end-column="7" />
-          <folding>
-            <element signature="e#0#2619#0" expanded="true" />
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/stationmeteo/java/Icapteur.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-248">
-          <caret line="34" column="33" lean-forward="false" selection-start-line="34" selection-start-column="33" selection-end-line="34" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/stationmeteo/java/XMLcapteur.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-315">
-          <caret line="24" column="13" lean-forward="false" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/stationmeteo/java/StationMeteo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-60">
-          <caret line="24" column="28" lean-forward="false" selection-start-line="24" selection-start-column="14" selection-end-line="24" selection-end-column="28" />
+        <state relative-caret-position="218">
+          <caret line="82" column="19" lean-forward="false" selection-start-line="82" selection-start-column="19" selection-end-line="82" selection-end-column="19" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <marker date="1515256465853" expanded="false" signature="2781:2792" ph=" { " />
+            <marker date="1515256465853" expanded="false" signature="2826:2832" ph=" }" />
+            <marker date="1515256465853" expanded="false" signature="2863:2874" ph=" { " />
+            <marker date="1515256465853" expanded="false" signature="2890:2896" ph=" }" />
+            <marker date="1515256465853" expanded="false" signature="2927:2938" ph=" { " />
+            <marker date="1515256465853" expanded="false" signature="2954:2960" ph=" }" />
+            <marker date="1515256465853" expanded="false" signature="3020:3031" ph=" { " />
+            <marker date="1515256465853" expanded="false" signature="3069:3075" ph=" }" />
+            <marker date="1515256465853" expanded="false" signature="3113:3124" ph=" { " />
+            <marker date="1515256465853" expanded="false" signature="3151:3157" ph=" }" />
+            <marker date="1515256465853" expanded="false" signature="3211:3222" ph=" { " />
+            <marker date="1515256465853" expanded="false" signature="3247:3253" ph=" }" />
+            <marker date="1515256465853" expanded="false" signature="3313:3324" ph=" { " />
+            <marker date="1515256465853" expanded="false" signature="3358:3364" ph=" }" />
+            <marker date="1515256465853" expanded="false" signature="3392:3403" ph=" { " />
+            <marker date="1515256465853" expanded="false" signature="3421:3427" ph=" }" />
+            <marker date="1515256465853" expanded="false" signature="3464:3475" ph=" { " />
+            <marker date="1515256465853" expanded="false" signature="3495:3501" ph=" }" />
+            <marker date="1515256465853" expanded="false" signature="3524:3535" ph=" { " />
+            <marker date="1515256465853" expanded="false" signature="3550:3556" ph=" }" />
+            <marker date="1515256465853" expanded="false" signature="3585:3596" ph=" { " />
+            <marker date="1515256465853" expanded="false" signature="3610:3616" ph=" }" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/stationmeteo/java/SerializerCapteur.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="42" column="61" lean-forward="false" selection-start-line="42" selection-start-column="61" selection-end-line="42" selection-end-column="61" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/stationmeteo/controller/MainController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="124">
-          <caret line="204" column="0" lean-forward="false" selection-start-line="204" selection-start-column="0" selection-end-line="204" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/stationmeteo/java/XMLcapteur.java" />
+    <entry file="file://$PROJECT_DIR$/src/stationmeteo/java/SerializerCapteur.java" />
     <entry file="file://$PROJECT_DIR$/src/stationmeteo/controller/Verification.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-193">
           <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -876,8 +880,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/stationmeteo/controller/CapteurController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="63">
-          <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+        <state relative-caret-position="925">
+          <caret line="61" column="0" lean-forward="false" selection-start-line="61" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
             <marker date="1515233218702" expanded="true" signature="3361:3378" ph="{...}" />
@@ -887,13 +891,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/stationmeteo/controller/ModifController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1172">
-          <caret line="73" column="14" lean-forward="false" selection-start-line="73" selection-start-column="14" selection-end-line="73" selection-end-column="14" />
+        <state relative-caret-position="470">
+          <caret line="80" column="65" lean-forward="true" selection-start-line="80" selection-start-column="65" selection-end-line="84" selection-end-column="26" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#3345#3378#0" expanded="true" />
-            <element signature="e#3414#3415#0" expanded="true" />
-            <element signature="e#3447#3448#0" expanded="true" />
+            <marker date="1515256465851" expanded="false" signature="3346:3379" ph="/WeakerAccess/" />
           </folding>
         </state>
       </provider>
@@ -902,10 +904,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="311">
           <caret line="67" column="69" lean-forward="true" selection-start-line="67" selection-start-column="69" selection-end-line="67" selection-end-column="69" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#459#492#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -913,7 +911,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="63">
           <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -921,7 +918,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="315">
           <caret line="21" column="33" lean-forward="false" selection-start-line="21" selection-start-column="28" selection-end-line="21" selection-end-column="45" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -929,15 +925,92 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="189">
           <caret line="13" column="59" lean-forward="false" selection-start-line="13" selection-start-column="59" selection-end-line="13" selection-end-column="59" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/stationmeteo/java/algorithmes/AlgorithmeFenetreGlissante.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="441">
+        <state relative-caret-position="0">
           <caret line="25" column="34" lean-forward="false" selection-start-line="25" selection-start-column="34" selection-end-line="25" selection-end-column="34" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/stationmeteo/java/serialize/XMLcapteur.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="504">
+          <caret line="41" column="16" lean-forward="false" selection-start-line="41" selection-start-column="16" selection-end-line="41" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/stationmeteo/controller/DragAndDropManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="4" column="8" lean-forward="false" selection-start-line="4" selection-start-column="8" selection-end-line="4" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/stationmeteo/controller/CellFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="294">
+          <caret line="17" column="5" lean-forward="true" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/stationmeteo/java/serialize/ICapteurSerialize.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="441">
+          <caret line="36" column="8" lean-forward="false" selection-start-line="36" selection-start-column="8" selection-end-line="36" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/stationmeteo/java/StationMeteo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="21">
+          <caret line="24" column="28" lean-forward="false" selection-start-line="24" selection-start-column="14" selection-end-line="24" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/stationmeteo/java/Capteur.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="33" column="27" lean-forward="false" selection-start-line="33" selection-start-column="18" selection-end-line="33" selection-end-column="32" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/stationmeteo/controller/MainController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="416">
+          <caret line="82" column="83" lean-forward="false" selection-start-line="82" selection-start-column="83" selection-end-line="82" selection-end-column="83" />
+          <folding>
+            <marker date="1515257549689" expanded="false" signature="7718:7729" ph=" { " />
+            <marker date="1515257549689" expanded="false" signature="7748:7754" ph=" }" />
+            <marker date="1515257549689" expanded="false" signature="7808:7819" ph=" { " />
+            <marker date="1515257549689" expanded="false" signature="7850:7856" ph=" }" />
+            <marker date="1515257549689" expanded="false" signature="9805:9819" ph=" { " />
+            <marker date="1515257549689" expanded="false" signature="9842:9852" ph=" }" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/stationmeteo/java/SuperCapteur.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="399">
+          <caret line="54" column="62" lean-forward="false" selection-start-line="54" selection-start-column="62" selection-end-line="54" selection-end-column="62" />
+          <folding>
+            <element signature="e#3206#3207#0" expanded="true" />
+            <element signature="e#3255#3256#0" expanded="true" />
+            <marker date="1515257465412" expanded="false" signature="3541:3552" ph=" { " />
+            <marker date="1515257465412" expanded="false" signature="3586:3592" ph=" }" />
+          </folding>
         </state>
       </provider>
     </entry>

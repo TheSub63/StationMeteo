@@ -52,7 +52,7 @@ public class SuperCapteur extends Icapteur{
         super.setListCapteur(new ArrayList<>());
         this.ajouter(capteur, 1f);
         
-       
+       System.out.println(this.getNom()+" est un super capteur");
     }
     public void ajouter(Icapteur i,float poid){
         i.setPoids(poid);

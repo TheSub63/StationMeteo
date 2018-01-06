@@ -79,10 +79,16 @@ public class MainController extends BorderPane implements Initializable {
             }
         });**/
         capteurList.setOnDragDetected(me -> {
-            capteurList.startDragAndDrop(TransferMode.ANY);
-            SuperCapteur sc=new SuperCapteur(selectedCapteur.getId(),selectedCapteur.getNom(),selectedCapteur);
-            sc.ajouter(selectedCapteur,1);
+            if(selectedCapteur!=null){capteurList.startDragAndDrop(TransferMode.ANY);
+            System.out.println(selectedCapteur.getNom()+" est en train d'etre bougé");
+                SuperCapteur sc=new SuperCapteur(selectedCapteur.getId(),selectedCapteur.getNom(),selectedCapteur);
+                sc.ajouter(selectedCapteur,1);
+
+                System.out.println("DRAGGING");
+            }
+
         });
+
         addButton.setOnMousePressed(me -> ouvrirFenetreAjout());
         uptButton.setOnMousePressed(me -> {
 
