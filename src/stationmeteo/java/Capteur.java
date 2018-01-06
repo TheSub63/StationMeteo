@@ -8,6 +8,7 @@ package stationmeteo.java;
 
 import javafx.beans.property.*;
 import stationmeteo.java.algorithmes.Algorithme;
+import stationmeteo.java.serialize.ICapteurSerialize;
 
 /**
  *
@@ -34,7 +35,7 @@ public class Capteur extends Icapteur implements ICapteurSerialize{
         leThread.start();
         
     }
-    Capteur() {
+    public Capteur() {
         super.setId(500);
         super.setNom("default");
         super.setActualisation(1);

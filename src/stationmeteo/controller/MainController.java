@@ -22,10 +22,10 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 import stationmeteo.java.Capteur;
-import stationmeteo.java.ICapteurSerialize;
+import stationmeteo.java.serialize.ICapteurSerialize;
 import stationmeteo.java.Icapteur;
-import stationmeteo.java.SerializerCapteur;
-import stationmeteo.java.XMLcapteur;
+import stationmeteo.java.serialize.SerializerCapteur;
+import stationmeteo.java.serialize.XMLcapteur;
 
 /**
  * Simple Preloader Using the ProgressBar Control

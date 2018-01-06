@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package stationmeteo.java;
+package stationmeteo.java.serialize;
 
 import java.io.Serializable;
 import java.util.List;
@@ -16,6 +16,8 @@ import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.SimpleObjectProperty;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
+import stationmeteo.java.Capteur;
+import stationmeteo.java.Icapteur;
 import stationmeteo.java.algorithmes.Algorithme;
 
 /**

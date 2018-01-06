@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package stationmeteo.java;
+package stationmeteo.java.serialize;
 
 import java.beans.XMLDecoder;
 import java.beans.XMLEncoder;
@@ -18,6 +18,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.prefs.Preferences;
 import java.util.stream.Collectors;
+import stationmeteo.java.Icapteur;
 
 /**
  *
