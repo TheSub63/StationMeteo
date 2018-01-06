@@ -3,12 +3,19 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+            <file>file:/home/matthias/Documents/projetjavafx/StationMeteo/src/stationmeteo/java/serialize/SerializerCapteur.java</file>
+            <file>file:/home/matthias/Documents/projetjavafx/StationMeteo/src/stationmeteo/controller/CapteurController.java</file>
             <file>file:/home/matthias/Documents/projetjavafx/StationMeteo/src/stationmeteo/java/Icapteur.java</file>
-            <file>file:/home/matthias/Documents/projetjavafx/StationMeteo/src/stationmeteo/java/XMLcapteur.java</file>
-            <file>file:/home/matthias/Documents/projetjavafx/StationMeteo/src/stationmeteo/java/SerializerCapteur.java</file>
             <file>file:/home/matthias/Documents/projetjavafx/StationMeteo/src/stationmeteo/java/Capteur.java</file>
             <file>file:/home/matthias/Documents/projetjavafx/StationMeteo/src/stationmeteo/java/StationMeteo.java</file>
+            <file>file:/home/matthias/Documents/projetjavafx/StationMeteo/src/stationmeteo/java/CapteurPoid.java</file>
+            <file>file:/home/matthias/Documents/projetjavafx/StationMeteo/src/stationmeteo/java/serialize/ICapteurSerialize.java</file>
+            <file>file:/home/matthias/Documents/projetjavafx/StationMeteo/src/stationmeteo/controller/Verification.java</file>
+            <file>file:/home/matthias/Documents/projetjavafx/StationMeteo/src/stationmeteo/java/serialize/XMLcapteur.java</file>
+            <file>file:/home/matthias/Documents/projetjavafx/StationMeteo/src/stationmeteo/controller/ModifController.java</file>
+            <file>file:/home/matthias/Documents/projetjavafx/StationMeteo/src/stationmeteo/controller/AjoutController.java</file>
             <file>file:/home/matthias/Documents/projetjavafx/StationMeteo/src/stationmeteo/java/SuperCapteur.java</file>
+            <file>file:/home/matthias/Documents/projetjavafx/StationMeteo/src/stationmeteo/controller/MainController.java</file>
         </group>
     </open-files>
 </project-private>
