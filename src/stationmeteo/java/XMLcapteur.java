@@ -41,7 +41,7 @@ public class XMLcapteur extends Icapteur implements Serializable{
    
     public XMLcapteur(){
         model=new Capteur();
-        id=new SimpleIntegerProperty(model.getIden());
+        id=new SimpleIntegerProperty(model.getId());
         nom=new SimpleStringProperty(model.getNom());
         temperature=new SimpleFloatProperty(model.getTemperature());
         Poid=new SimpleFloatProperty(model.getPoid());
@@ -51,9 +51,21 @@ public class XMLcapteur extends Icapteur implements Serializable{
         i= new SimpleIntegerProperty(model.getI());
         PoidTot=new SimpleFloatProperty(model.getPoid());
     }
+    public XMLcapteur(Capteur n){
+        model=n;
+        id=new SimpleIntegerProperty(n.getId());
+        nom=new SimpleStringProperty(n.getNom());
+        temperature=new SimpleFloatProperty(n.getTemperature());
+        actualisation=new SimpleIntegerProperty(n.getActualisation());
+        Poid=null;
+        algo=null;
+        listCapteur=null;
+        i= null;
+        PoidTot=null;
+    }
     public XMLcapteur(Icapteur n){
         model=n;
-        id=new SimpleIntegerProperty(n.getIden());
+        id=new SimpleIntegerProperty(n.getId());
         nom=new SimpleStringProperty(n.getNom());
         temperature=new SimpleFloatProperty(n.getTemperature());
         Poid=new SimpleFloatProperty(n.getPoid());
@@ -63,23 +75,32 @@ public class XMLcapteur extends Icapteur implements Serializable{
         i= new SimpleIntegerProperty(n.getI());
         PoidTot=new SimpleFloatProperty(n.getPoid());
     }
-    public IntegerProperty Idproperty(){return id;}
-    public StringProperty Nomproperty(){return nom;}
-    public FloatProperty Temperatureproperty(){return temperature;}
-    public FloatProperty Poidproperty(){return Poid;}
-    public IntegerProperty Actualisationproperty(){return actualisation;}
-    public ObjectProperty Algoproperty(){return algo;}
-    public ObjectProperty listCapteurproperty(){return listCapteur;}
-    public IntegerProperty Iproperty(){return i;}
-    public FloatProperty PoidTotproperty(){return PoidTot;}
+    @Override
+    public IntegerProperty idProperty(){return id;}
+    @Override
+    public StringProperty nomProperty(){return nom;}
+    @Override
+    public FloatProperty temperatureProperty(){return temperature;}
+    @Override
+    public FloatProperty poidsProperty(){return Poid;}
+    @Override
+    public IntegerProperty actualisationProperty(){return actualisation;}
+    @Override
+    public ObjectProperty<Algorithme> algoProperty(){return algo;}
+    @Override
+    public ObjectProperty<List<Icapteur>> listCapteurProperty(){return listCapteur;}
+    @Override
+    public FloatProperty poidProperty(){return PoidTot;}
+    @Override
+    public IntegerProperty iProperty(){return i;}
+     
     public Icapteur getModel() {
         return model;
     }
-
+    @Override
     public int getId() {
         return id.get();
     }
-
     /**
      *
      * @param id
@@ -88,12 +109,10 @@ public class XMLcapteur extends Icapteur implements Serializable{
     public void setId(int id) {
          this.id.set(id);
     }
-
     @Override
     public String getNom() {
         return nom.get();
     }
-
     @Override
     public void setNom(String nom) {
         this.nom.set(nom);
@@ -103,7 +122,6 @@ public class XMLcapteur extends Icapteur implements Serializable{
     public float getTemperature() {
         return temperature.get();
     }
-
     /**
      *
      * @param temperature
@@ -112,39 +130,39 @@ public class XMLcapteur extends Icapteur implements Serializable{
     public void setTemperature(float temperature) {
         this.temperature.set(temperature);
     }
-
     /**
      *
      * @return
      */
     @Override
-    public float getPoid() {
+    public float getPoids() {
         return Poid.get();
     }
-
     /**
      *
      * @param Poid
      */
     @Override
-    public void setPoid(float Poid) {
+    public void setPoids(float Poid) {
         this.Poid.set(Poid);
     }
-
     @Override
     public int getActualisation() {
         return actualisation.get();
     }
-
     @Override
     public void setActualisation(int actualisation) {
         this.actualisation.set(actualisation);
     }
-
-    public void setListCapteur(ObjectProperty<List<Icapteur>> listCapteur) {
-        this.listCapteur = listCapteur;
+    @Override
+    public List<Icapteur> getListCapteur() {
+        return listCapteur.get();
     }
 
+    @Override
+    public void setListCapteur(List<Icapteur> listCapteur) {
+        this.listCapteur.set(listCapteur);
+    }
     /**
      *
      * @return
@@ -153,18 +171,25 @@ public class XMLcapteur extends Icapteur implements Serializable{
     public int getI() {
         return i.get();
     }
-
     @Override
     public void setI(int i) {
         this.i.set(i);
     }
-
-    public float getPoidTot() {
+    @Override
+    public float getPoid() {
         return PoidTot.get();
     }
-
-    public void setPoidTot(float PoidTot) {
+    @Override
+    public void setPoid(float PoidTot) {
         this.PoidTot.set(PoidTot);
+    }
+    @Override
+     public Algorithme getAlgo() {
+        return algo.get();
+    }
+    @Override
+    public void setAlgo(Algorithme algo) {
+        this.algo.set(algo);
     }
     
     

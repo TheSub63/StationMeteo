@@ -31,7 +31,7 @@ public class ModifController extends WindowController implements Initializable{
     public void initialize(URL location, ResourceBundle resources) {
         verif=new Verification();
         nomCapteur.setText(capteur.getNom());
-        idCapteur.setText(String.valueOf(capteur.getIden()));
+        idCapteur.setText(String.valueOf(capteur.getId()));
         if(capteur.getClass()==Capteur.class){
             actualisationCapteur.setText(String.valueOf(capteur.getActualisation()));
         }

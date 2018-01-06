@@ -36,12 +36,21 @@ public abstract class Icapteur {
     private FloatProperty poid = new SimpleFloatProperty(this,"poid");
     private IntegerProperty i= new SimpleIntegerProperty(this,"i");
     
+    public IntegerProperty idProperty(){return id;}
+    public StringProperty nomProperty(){return nom;}
+    public FloatProperty temperatureProperty(){return temperature;}
+    public FloatProperty poidsProperty(){return poids;}
+    public IntegerProperty actualisationProperty(){return actualisation;}
+    public ObjectProperty<Algorithme> algoProperty(){return algo;}
+    public ObjectProperty<List<Icapteur>> listCapteurProperty(){return listCapteur;}
+    public FloatProperty poidProperty(){return poid;}
+    public IntegerProperty iProperty(){return i;}
+    
+            
     public Algorithme getAlgo() {
         return algo.get();
     }
-    public ObjectProperty<Algorithme> algoProperty(){
-        return algo;
-    }
+  
    
     public void setAlgo(Algorithme algo) {
         this.algo.set(algo);
@@ -57,40 +66,32 @@ public abstract class Icapteur {
     public void setNom(String nom) {
         this.nom.set(nom);
     }
-    public StringProperty nomProperty() {
-        return nom;
-    }
-    public void setUnPoid(float poid) {
+    
+    public void setPoids(float poid) {
         this.poids.set(poid);
     }
-    public Float getPoids() {
+    public float getPoids() {
         return poids.get();
     }
     
-    public FloatProperty poidsProperty(){
-        return poids;
-    }
+    
     public float getTemperature() {
         return temperature.get();
     }
-    public FloatProperty temperatureProperty(){
-        return temperature;
-    }
+    
 
     public void setUneTemperature(float temperature) {
         this.temperature.set(temperature);
     }
        
-    public int getIden() {
+    public int getId() {
         return id.get();
     }
 
     public void setId(int id) {
         this.id.set(id);
     }
-    public IntegerProperty idProperty() {
-        return id;
-    }
+    
        public void setActualisation(int actualisation) {
         this.actualisation.set(actualisation);
     }
@@ -98,9 +99,7 @@ public abstract class Icapteur {
         return actualisation.get();
     }
     
-    public  IntegerProperty actualisationProperty(){
-        return actualisation;
-    }
+    
 
     public List<Icapteur> getListCapteur() {
         return listCapteur.get();

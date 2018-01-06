@@ -15,13 +15,13 @@ import stationmeteo.java.algorithmes.Algorithme;
  */
 public class Capteur extends Icapteur{
     
-    //private IntegerProperty id=new SimpleIntegerProperty(this, "id");
-    //private StringProperty nom=new SimpleStringProperty(this, "nom");
-    
-    //private FloatProperty temperature=new SimpleFloatProperty(this, "temperature");
-    
+    private IntegerProperty id=new SimpleIntegerProperty(this, "id");
+    private StringProperty nom=new SimpleStringProperty(this, "nom");
+    private FloatProperty temperature=new SimpleFloatProperty(this, "temperature");
+    private IntegerProperty actualisation=new SimpleIntegerProperty(this, "actualisation");
     private CapteurThread leThread= new CapteurThread(this);
-    //private FloatProperty Poid = new SimpleFloatProperty(this, "poid");
+    private FloatProperty poids = new SimpleFloatProperty(this, "poids");
+    private ObjectProperty<Algorithme> algo = new SimpleObjectProperty(this,"algo");
     
     public Capteur(int id,String nom,int actualisation, float temperature, Algorithme algo) {
         //Thread test = new Thread();
@@ -34,18 +34,6 @@ public class Capteur extends Icapteur{
         leThread.start();
         
     }
-    public Capteur(int id,String nom,int actualisation, float temperature) {
-        //Thread test = new Thread();
-        super.setId(id);
-        super.setNom(nom);
-        super.setActualisation(actualisation);
-        
-        this.setTemperature(temperature);
-        
-        leThread.start();
-        
-    }
-
     Capteur() {
         super.setId(500);
         super.setNom("default");
@@ -55,12 +43,18 @@ public class Capteur extends Icapteur{
         
         leThread.start();
     }
-    public IntegerProperty Idproperty(){return super.idProperty();}
-    public StringProperty Nomproperty(){return super.nomProperty();}
-    public FloatProperty Temperatureproperty(){return super.temperatureProperty();}
-    public FloatProperty Poidproperty(){return super.poidsProperty();}
-    public IntegerProperty Actualisationproperty(){return super.actualisationProperty();}
-    public ObjectProperty<Algorithme> Algoproperty(){return super.algoProperty();}
+    @Override
+    public IntegerProperty idProperty(){return id;}
+    @Override
+    public StringProperty nomProperty(){return nom;}
+    @Override
+    public FloatProperty temperatureProperty(){return temperature;}
+    @Override
+    public FloatProperty poidsProperty(){return poids;}
+    @Override
+    public IntegerProperty actualisationProperty(){return actualisation;}
+    @Override
+    public ObjectProperty<Algorithme> algoProperty(){return algo;}
     public CapteurThread getLeThread() {
         return leThread;
     }
