@@ -56,7 +56,7 @@ public abstract class Icapteur {
         this.algo.set(algo);
     }
     //public abstract void setPoid(float poid);
-    public abstract void setTemperature(float temperature);
+    //public abstract void setTemperature(float temperature);
     
     
     public String getNom() {

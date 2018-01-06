@@ -22,6 +22,7 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 import stationmeteo.java.Capteur;
+import stationmeteo.java.ICapteurSerialize;
 import stationmeteo.java.Icapteur;
 import stationmeteo.java.SerializerCapteur;
 import stationmeteo.java.XMLcapteur;
@@ -145,13 +146,16 @@ public class MainController extends BorderPane implements Initializable {
                 
     }
     public void ChargerCapteur(){
-        if(listeDeCapteur!=null){
-            List<Icapteur> result=XMLdatamanager.chargeCapteur();
+       if(listeDeCapteur!=null){
+            List<ICapteurSerialize> result=XMLdatamanager.chargeCapteur();
             if(result!=null){
             listeDeCapteur.clear();
-            listeDeCapteur.addAll(result);
+            for(int i=0;i<XMLdatamanager.chargeCapteur().size();i++){
+            listeDeCapteur.add((Capteur )XMLdatamanager.chargeCapteur().get(i));
             }
-        }
+            }
+       //XMLdatamanager.chargeCapteur();
+       }
     }
     public void sauveCapteur(){
         

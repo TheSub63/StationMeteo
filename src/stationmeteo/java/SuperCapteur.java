@@ -50,14 +50,7 @@ public class SuperCapteur extends Icapteur{
     
     
 
-    @Override
-    public void setTemperature(float temperature) {
-        for(super.setI(0);super.getI()<super.getListCapteur().size();super.setI(super.getI()+1)){
-            this.temperatureProperty().set(this.temperatureProperty().get()+(super.getListCapteur().get(super.getI()).getTemperature()*super.getListCapteur().get(super.getI()).getPoids()));
-            super.setPoid(super.getPoid()+super.getListCapteur().get(super.getI()).getPoids());
-        }
-       this.temperatureProperty().set(this.temperatureProperty().get()/super.getPoid());  
-    }
+   
     @Override
     public IntegerProperty idProperty(){return id;}
     @Override

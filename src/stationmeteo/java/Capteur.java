@@ -13,7 +13,7 @@ import stationmeteo.java.algorithmes.Algorithme;
  *
  * @author magaydu
  */
-public class Capteur extends Icapteur{
+public class Capteur extends Icapteur implements ICapteurSerialize{
     
     private IntegerProperty id=new SimpleIntegerProperty(this, "id");
     private StringProperty nom=new SimpleStringProperty(this, "nom");
@@ -70,9 +70,6 @@ public class Capteur extends Icapteur{
 
    
 
-    @Override
-    public void setTemperature(float temperature) {
-        super.setUneTemperature(temperature); //To change body of generated methods, choose Tools | Templates.
-    }
+   
     
 }

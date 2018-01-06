@@ -25,11 +25,12 @@ import java.util.stream.Collectors;
  */
 public class SerializerCapteur extends Icapteur implements Serializable {
      
-    public List<Icapteur> chargeCapteur() {
-        List<Icapteur> result = null;
+    public List<ICapteurSerialize> chargeCapteur() {
+        
+        List<ICapteurSerialize> result = null;
         try (XMLDecoder ois = new XMLDecoder(new FileInputStream("capteur.xml"))) {
-            result = ((ArrayList<XMLcapteur>) ois.readObject()).stream().map(XMLcapteur::getModel).collect(Collectors.toList());
-            
+            result = ((ArrayList<XMLcapteur>) ois.readObject()).stream().map(n -> n.getModel()).collect(Collectors.toList());
+               
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -38,9 +39,9 @@ public class SerializerCapteur extends Icapteur implements Serializable {
     }
 
     
-    public void sauveCapteurs(ArrayList<Icapteur> listCapteur) {
+    public void sauveCapteurs(ArrayList<ICapteurSerialize> listCapteur) {
         try (XMLEncoder oos = new XMLEncoder(new FileOutputStream("capteur.xml"))) {
-            List<XMLcapteur> bn = listCapteur.stream().map(XMLcapteur::new).collect(Collectors.toList());
+            List<XMLcapteur> bn = listCapteur.stream().map((n)->new XMLcapteur(n)).collect(Collectors.toList());
             oos.writeObject(bn);
             
         }catch (IOException e) {
@@ -48,8 +49,5 @@ public class SerializerCapteur extends Icapteur implements Serializable {
         }      
     }
 
-    @Override
-    public void setTemperature(float temperature) {
-        //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+    
 }
