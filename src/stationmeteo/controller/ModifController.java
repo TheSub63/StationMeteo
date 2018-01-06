@@ -6,64 +6,83 @@
 package stationmeteo.controller;
 import java.net.URL;
 import java.util.ResourceBundle;
-import javafx.fxml.FXML;
+
+import javafx.collections.FXCollections;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Button;
-import javafx.scene.control.TextField;
-import javafx.scene.layout.BorderPane;
-import javafx.stage.Stage;
 import stationmeteo.java.Capteur;
 import stationmeteo.java.Icapteur;
+import stationmeteo.java.algorithmes.Algorithme;
+import stationmeteo.java.algorithmes.AlgorithmeAleatoire;
+import stationmeteo.java.algorithmes.AlgorithmeAleatoireFixe;
+import stationmeteo.java.algorithmes.AlgorithmeFenetreGlissante;
+
 /**
  *
  * @author magaydu
  */
-public class ModifController extends BorderPane implements Initializable{
+public class ModifController extends WindowController implements Initializable{
 
 
-    @FXML
-    private TextField nomText;
-    @FXML
-    private TextField idText;
-    @FXML
-    private TextField actualisationText;
-    @FXML
-    private TextField temperatureText;
-    @FXML
-    private Button validButton;
-    @FXML
-    private Button annulButton;
-    
+
     private Icapteur capteur; 
     public ModifController(Icapteur c){
         capteur=c;
     }
-    
+    private Algorithme selectedAlgo;
+
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        nomText.setText(capteur.getNom());
-        idText.setText(String.valueOf(capteur.getIden()));
+        nomCapteur.setText(capteur.getNom());
+        idCapteur.setText(String.valueOf(capteur.getIden()));
         if(capteur.getClass()==Capteur.class){
-        actualisationText.setText(String.valueOf(((Capteur) capteur).getActualisation()));
+        actualisationCapteur.setText(String.valueOf(capteur.getActualisation()));
         }
-        temperatureText.setText(String.valueOf(capteur.getTemperature()));
+        temperatureCapteur.setText(String.valueOf(capteur.getTemperature()));
         validButton.setOnMousePressed(me -> commitCapteur());
         annulButton.setOnMousePressed(me -> annulButton.getScene().getWindow().hide());
-    }
-    private void commitCapteur(){
-            capteur.setNom(nomText.getText());
-            capteur.setId(Integer.parseInt(idText.getText()));
-            if(capteur.getClass()==Capteur.class){
-                ((Capteur)capteur).setActualisation(Integer.parseInt(actualisationText.getText()));
-        }
-            
-            capteur.setTemperature(Float.parseFloat(temperatureText.getText()));
-            Stage stage = (Stage) validButton.getScene().getWindow();
-            stage.close();
+        selectedAlgo=capteur.getAlgo();
+        initAlgo();
+
     }
 
-    public Icapteur getCapteur() {
-        return capteur;
+    private void initAlgo(){
+        algoCapteur.setItems(FXCollections.observableArrayList(
+                new AlgorithmeAleatoire(),
+                new AlgorithmeAleatoireFixe(1f,1f),
+                new AlgorithmeFenetreGlissante(1f)));
+        algoCapteur.setValue(selectedAlgo);
+        algoCapteur.setOnAction(ae -> {
+            algoCapteur.getSelectionModel().selectedIndexProperty();
+            selectedAlgo= algoCapteur.getSelectionModel().getSelectedItem();
+            if(selectedAlgo==null) disableAll();
+            else if(selectedAlgo.getClass()==AlgorithmeAleatoireFixe.class){
+                disableAll();
+                onAlgoFixeAfficher1.setDisable(false);
+                onAlgoFixeAfficher2.setDisable(false);
+            }
+            else if(selectedAlgo.getClass()==AlgorithmeFenetreGlissante.class){
+                disableAll();
+                intervalleAlgo.setDisable(false);
+            }
+            else disableAll();
+        });
     }
-    
+
+
+    @Override
+    void commitCapteur() {
+        if (!verifInfos()) { //RETOURNE ERREUR
+            showError();
+        } else {
+            capteur.setNom(nomCapteur.getText());
+            capteur.setId(Integer.parseInt(idCapteur.getText()));
+            if (capteur.getClass() == Capteur.class) {
+                capteur.setActualisation(Integer.parseInt(actualisationCapteur.getText()));
+            }
+            capteur.setTemperature(Float.parseFloat(temperatureCapteur.getText()));
+            capteur.setAlgo(buildAlgo(selectedAlgo));
+            validButton.getScene().getWindow().hide();
+        }
+    }
+
 }
