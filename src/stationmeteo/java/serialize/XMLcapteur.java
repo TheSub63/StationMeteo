@@ -43,7 +43,6 @@ public class XMLcapteur extends Icapteur implements Serializable,ICapteurSeriali
         id = new SimpleIntegerProperty(model.getId());
         nom = new SimpleStringProperty(model.getNom());
         temperature = new SimpleFloatProperty(model.getTemperature());
-        Poid = new SimpleFloatProperty(model.getPoids());
         actualisation = new SimpleIntegerProperty(model.getActualisation());
         algo = new SimpleObjectProperty(model.getAlgo());
    
@@ -54,7 +53,6 @@ public class XMLcapteur extends Icapteur implements Serializable,ICapteurSeriali
         id = new SimpleIntegerProperty(n.getId());
         nom = new SimpleStringProperty(n.getNom());
         temperature = new SimpleFloatProperty(n.getTemperature());
-        Poid = new SimpleFloatProperty(n.getPoids());
         actualisation = new SimpleIntegerProperty(n.getActualisation());
         algo = new SimpleObjectProperty(n.getAlgo());
         

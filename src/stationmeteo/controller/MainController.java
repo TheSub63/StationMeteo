@@ -19,11 +19,13 @@ import javafx.fxml.Initializable;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.input.TransferMode;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 import stationmeteo.java.Capteur;
 import stationmeteo.java.serialize.ICapteurSerialize;
 import stationmeteo.java.Icapteur;
+import stationmeteo.java.SuperCapteur;
 import stationmeteo.java.serialize.SerializerCapteur;
 import stationmeteo.java.serialize.XMLcapteur;
 
@@ -76,6 +78,11 @@ public class MainController extends BorderPane implements Initializable {
                 return new CellFactory();
             }
         });**/
+        capteurList.setOnDragDetected(me -> {
+            capteurList.startDragAndDrop(TransferMode.ANY);
+            SuperCapteur sc=new SuperCapteur(selectedCapteur.getId(),selectedCapteur.getNom(),selectedCapteur);
+            sc.ajouter(selectedCapteur,1);
+        });
         addButton.setOnMousePressed(me -> ouvrirFenetreAjout());
         uptButton.setOnMousePressed(me -> {
 

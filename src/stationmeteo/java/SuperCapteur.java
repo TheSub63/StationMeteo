@@ -7,6 +7,7 @@ package stationmeteo.java;
 
 import java.util.ArrayList;
 import java.util.List;
+import javafx.beans.binding.FloatBinding;
 import javafx.beans.property.FloatProperty;
 import javafx.beans.property.IntegerProperty;
 import javafx.beans.property.ObjectProperty;
@@ -23,11 +24,26 @@ import javafx.beans.property.StringProperty;
 public class SuperCapteur extends Icapteur{
     private IntegerProperty id=new SimpleIntegerProperty(this, "id");
     private StringProperty nom=new SimpleStringProperty(this, "nom");
-    private FloatProperty temperature=new SimpleFloatProperty(this, "temperature");
+    private FloatProperty temperature=new SimpleFloatProperty(this, "temperature") ;
     private FloatProperty poids = new SimpleFloatProperty(this, "poid");
     private ObjectProperty<List<Icapteur>> listCapteur=new SimpleObjectProperty<>(this,"listeCapteur");
     private FloatProperty poid = new SimpleFloatProperty(this,"poid");
     private IntegerProperty i= new SimpleIntegerProperty(this,"i");
+    private FloatBinding temp =new FloatBinding() {
+        {this.bind(temperature);}
+        @Override
+        protected float computeValue() {
+          float temp=temperature.get();
+          setPoid(0);
+          float result =0;
+          for(int i =0;i<getListCapteur().size();i++){
+            result=result+(getListCapteur().get(i).getTemperature()*getListCapteur().get(i).getPoids());
+            setPoid(getPoid()+getListCapteur().get(i).getPoids());
+        }
+       result=result/getPoid();
+       return result;
+        }
+    };
     
     
     public SuperCapteur(int id , String nom ,Icapteur capteur){
@@ -35,13 +51,8 @@ public class SuperCapteur extends Icapteur{
         super.setNom(nom);
         super.setListCapteur(new ArrayList<>());
         this.ajouter(capteur, 1f);
-        this.temperatureProperty().set(0f);
-        super.setPoid(0);
-        for(super.setI(0);super.getI()<super.getListCapteur().size();super.setI(super.getI()+1)){
-            this.temperatureProperty().set(this.temperatureProperty().get()+(super.getListCapteur().get(super.getI()).getTemperature()*super.getListCapteur().get(super.getI()).getPoids()));
-            super.setPoid(super.getPoid()+super.getListCapteur().get(super.getI()).getPoids());
-        }
-       this.temperatureProperty().set(this.temperatureProperty().get()/super.getPoid());
+        
+       
     }
     public void ajouter(Icapteur i,float poid){
         i.setPoids(poid);
