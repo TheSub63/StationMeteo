@@ -50,8 +50,7 @@ public class Capteur extends Icapteur implements ICapteurSerialize{
     public StringProperty nomProperty(){return nom;}
     @Override
     public FloatProperty temperatureProperty(){return temperature;}
-    @Override
-    public FloatProperty poidsProperty(){return poids;}
+    
     @Override
     public IntegerProperty actualisationProperty(){return actualisation;}
     @Override

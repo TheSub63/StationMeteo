@@ -30,7 +30,7 @@ public class XMLcapteur extends Icapteur implements Serializable,ICapteurSeriali
     private IntegerProperty id;
     private StringProperty nom;
     private FloatProperty temperature;
-    private FloatProperty Poid;
+   
     //capteur
     private IntegerProperty actualisation;
     private final ObjectProperty<Algorithme> algo;
@@ -73,10 +73,7 @@ public class XMLcapteur extends Icapteur implements Serializable,ICapteurSeriali
         return temperature;
     }
 
-    @Override
-    public FloatProperty poidsProperty() {
-        return Poid;
-    }
+  
 
     @Override
     public IntegerProperty actualisationProperty() {
@@ -133,23 +130,6 @@ public class XMLcapteur extends Icapteur implements Serializable,ICapteurSeriali
         this.temperature.set(temperature);
     }
 
-    /**
-     *
-     * @return
-     */
-    @Override
-    public float getPoids() {
-        return Poid.get();
-    }
-
-    /**
-     *
-     * @param Poid
-     */
-    @Override
-    public void setPoids(float Poid) {
-        this.Poid.set(Poid);
-    }
 
     @Override
     public int getActualisation() {
