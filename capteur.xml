@@ -17,5 +17,18 @@
     </void>
    </object>
   </void>
+  <void method="add">
+   <object class="stationmeteo.java.serialize.XMLcapteur">
+    <void property="algo">
+     <object class="stationmeteo.java.algorithmes.AlgorithmeAleatoire"/>
+    </void>
+    <void property="id">
+     <int>2</int>
+    </void>
+    <void property="nom">
+     <string>un autre</string>
+    </void>
+   </object>
+  </void>
  </object>
 </java>

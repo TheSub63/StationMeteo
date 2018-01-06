@@ -32,18 +32,18 @@ public abstract class Icapteur {
     private ObjectProperty<Algorithme> algo = new SimpleObjectProperty(this,"algo");
     
     //superCapteur
-    private ObjectProperty<List<Icapteur>> listCapteur=new SimpleObjectProperty<>(this,"listeCapteur");
-    private FloatProperty poid = new SimpleFloatProperty(this,"poid");
+    private ObjectProperty<List<CapteurPoid>> listCapteur=new SimpleObjectProperty<>(this,"listeCapteur");
+   
     private IntegerProperty i= new SimpleIntegerProperty(this,"i");
     
     public IntegerProperty idProperty(){return id;}
     public StringProperty nomProperty(){return nom;}
     public FloatProperty temperatureProperty(){return temperature;}
-    public FloatProperty poidsProperty(){return poids;}
+   
     public IntegerProperty actualisationProperty(){return actualisation;}
     public ObjectProperty<Algorithme> algoProperty(){return algo;}
-    public ObjectProperty<List<Icapteur>> listCapteurProperty(){return listCapteur;}
-    public FloatProperty poidProperty(){return poid;}
+    public ObjectProperty<List<CapteurPoid>> listCapteurProperty(){return listCapteur;}
+   
     public IntegerProperty iProperty(){return i;}
     
             
@@ -67,12 +67,7 @@ public abstract class Icapteur {
         this.nom.set(nom);
     }
     
-    public void setPoids(float poid) {
-        this.poids.set(poid);
-    }
-    public float getPoids() {
-        return poids.get();
-    }
+    
     
     
     public float getTemperature() {
@@ -101,21 +96,15 @@ public abstract class Icapteur {
     
     
 
-    public List<Icapteur> getListCapteur() {
+    public List<CapteurPoid> getListCapteur() {
         return listCapteur.get();
     }
 
-    public void setListCapteur(List<Icapteur> listCapteur) {
+    public void setListCapteur(List<CapteurPoid> listCapteur) {
         this.listCapteur.set(listCapteur);
     }
 
-    public float getPoid() {
-        return poid.get();
-    }
-
-    public void setPoid(float poid) {
-        this.poid.set(poid);
-    }
+    
 
     public int getI() {
         return i.get();

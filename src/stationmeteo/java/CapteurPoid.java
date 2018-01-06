@@ -6,13 +6,39 @@
 package stationmeteo.java;
 
 import javafx.beans.property.FloatProperty;
+import javafx.beans.property.SimpleFloatProperty;
 
 /**
  *
  * @author matthias
  */
-/*public class CapteurPoid {
+public class CapteurPoid {
     private Icapteur monCapteur;
-    private FloatProperty MonPoid=new 
+    private FloatProperty MonPoid=new SimpleFloatProperty(this,"poid");
+    
+    public CapteurPoid(Icapteur Uncapteur){
+        monCapteur= Uncapteur;
+        MonPoid.set(1);
+    }
+    public CapteurPoid(Icapteur Uncapteur, float poid){
+        monCapteur= Uncapteur;
+        MonPoid.set(poid);
+    }
+
+    public Icapteur getMonCapteur() {
+        return monCapteur;
+    }
+
+    public void setMonCapteur(Icapteur monCapteur) {
+        this.monCapteur = monCapteur;
+    }
+
+    public float getMonPoid() {
+        return MonPoid.get();
+    }
+
+    public void setMonPoid(float MonPoid) {
+        this.MonPoid.set(MonPoid);
+    }
+    
 }
-*/
