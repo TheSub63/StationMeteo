@@ -13,6 +13,10 @@ import stationmeteo.java.Icapteur;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
+import javafx.scene.control.SelectionMode;
+import static javafx.scene.control.SelectionMode.MULTIPLE;
+import javafx.scene.control.SelectionModel;
+import static javax.swing.ListSelectionModel.MULTIPLE_INTERVAL_SELECTION;
 import stationmeteo.java.SuperCapteur;
 
 public class SuperCapController extends BorderPane implements Initializable{
@@ -27,8 +31,9 @@ public class SuperCapController extends BorderPane implements Initializable{
     protected Button stopButton;
     @FXML
     private ListView<Icapteur> capteurList;
-
-    private Icapteur selectedCapteur;
+    
+    private Icapteur leader;
+    private ListView<Icapteur> selectedCapteurs;
     private ObservableList<Icapteur> listeDeCapteur;
     private SuperCapteur onCap;
 
@@ -38,15 +43,20 @@ public class SuperCapController extends BorderPane implements Initializable{
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
+        selectedCapteurs= new ListView<Icapteur>();
         validButton.setOnMousePressed(me -> commitCapteur());
         stopButton.setOnMousePressed(me -> stopButton.getScene().getWindow().hide());
-        capteurList.setOnMouseClicked(me -> selectedCapteur= capteurList.getSelectionModel().getSelectedItem());
         capteurList.setItems(listeDeCapteur);
+        capteurList.getSelectionModel().setSelectionMode(SelectionMode.MULTIPLE);
+        capteurList.getSelectionModel().selectedItemProperty().addListener((obs,ov,nv)->{
+            selectedCapteurs.setItems(capteurList.getSelectionModel().getSelectedItems());
+        });        
+        
     }
 
     private void commitCapteur() {
         onCap=new SuperCapteur(Integer.parseInt(idCapteur.getText()),
-                                nomCapteur.getText(),selectedCapteur);
+                                nomCapteur.getText(),leader);
         listeDeCapteur.add(onCap);
         validButton.getScene().getWindow().hide();
     }

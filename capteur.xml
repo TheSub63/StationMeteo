@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<java version="1.8.0_60" class="java.beans.XMLDecoder">
+ <object class="java.util.ArrayList">
+  <void method="add">
+   <object class="stationmeteo.java.serialize.XMLcapteur">
+    <void property="algo">
+     <object class="stationmeteo.java.algorithmes.AlgorithmeAleatoire"/>
+    </void>
+    <void property="id">
+     <int>0</int>
+    </void>
+    <void property="nom">
+     <string>uirfuy</string>
+    </void>
+    <void property="temperature">
+     <float>-17.811226</float>
+    </void>
+   </object>
+  </void>
+  <void method="add">
+   <object class="stationmeteo.java.serialize.XMLcapteur">
+    <void property="algo">
+     <object class="stationmeteo.java.algorithmes.AlgorithmeAleatoire"/>
+    </void>
+    <void property="id">
+     <int>1</int>
+    </void>
+    <void property="nom">
+     <string>rtjuh</string>
+    </void>
+    <void property="temperature">
+     <float>-42.426533</float>
+    </void>
+   </object>
+  </void>
+  <void method="add">
+   <object class="stationmeteo.java.serialize.XMLcapteur">
+    <void property="algo">
+     <object class="stationmeteo.java.algorithmes.AlgorithmeAleatoire"/>
+    </void>
+    <void property="id">
+     <int>1</int>
+    </void>
+    <void property="nom">
+     <string>ftrju</string>
+    </void>
+    <void property="temperature">
+     <float>1.4314651</float>
+    </void>
+   </object>
+  </void>
+ </object>
+</java>
