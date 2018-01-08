@@ -13,6 +13,7 @@ import stationmeteo.java.Icapteur;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
+import stationmeteo.java.SuperCapteur;
 
 public class SuperCapController extends BorderPane implements Initializable{
 
@@ -29,6 +30,7 @@ public class SuperCapController extends BorderPane implements Initializable{
 
     private Icapteur selectedCapteur;
     private ObservableList<Icapteur> listeDeCapteur;
+    private SuperCapteur onCap;
 
     public SuperCapController(ObservableList<Icapteur> list){
         listeDeCapteur=FXCollections.observableList(list);
@@ -43,5 +45,9 @@ public class SuperCapController extends BorderPane implements Initializable{
     }
 
     private void commitCapteur() {
+        onCap=new SuperCapteur(Integer.parseInt(idCapteur.getText()),
+                                nomCapteur.getText(),selectedCapteur);
+        listeDeCapteur.add(onCap);
+        validButton.getScene().getWindow().hide();
     }
 }
