@@ -17,6 +17,7 @@ import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.SimpleObjectProperty;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
+import javafx.scene.control.ListView;
 
 /**
  *
@@ -51,10 +52,10 @@ public class SuperCapteur extends Icapteur{
      }
     
     
-    public SuperCapteur(int id , String nom ,List<CapteurPoid> capteur){
+    public SuperCapteur(int id , String nom ,ListView<CapteurPoid> capteur){
         setId(id);
         setNom(nom);
-        super.setListCapteur(capteur);
+        super.setListCapteur((List<CapteurPoid>) capteur);
         
         temperatureProperty().bind(temp);
        System.out.println(this.getNom()+" est un super capteur");

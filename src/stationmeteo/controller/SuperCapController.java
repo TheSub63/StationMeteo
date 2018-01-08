@@ -43,7 +43,7 @@ public class SuperCapController extends BorderPane implements Initializable{
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        selectedCapteurs= new ListView<Icapteur>();
+        selectedCapteurs= new ListView<>();
         validButton.setOnMousePressed(me -> commitCapteur());
         stopButton.setOnMousePressed(me -> stopButton.getScene().getWindow().hide());
         capteurList.setItems(listeDeCapteur);
@@ -55,8 +55,8 @@ public class SuperCapController extends BorderPane implements Initializable{
     }
 
     private void commitCapteur() {
-        onCap=new SuperCapteur(Integer.parseInt(idCapteur.getText()),
-                                nomCapteur.getText(),leader);
+        //onCap=new SuperCapteur(Integer.parseInt(idCapteur.getText()),
+        //                       nomCapteur.getText(),list<CP>);
         listeDeCapteur.add(onCap);
         validButton.getScene().getWindow().hide();
     }
