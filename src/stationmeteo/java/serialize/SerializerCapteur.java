@@ -14,6 +14,7 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
+import javafx.beans.property.FloatProperty;
 import stationmeteo.java.Capteur;
 import stationmeteo.java.Icapteur;
 
@@ -52,6 +53,11 @@ public class SerializerCapteur extends Icapteur implements Serializable {
         }catch(Exception e){
             
         }      
+    }
+
+    @Override
+    public FloatProperty temperatureProperty() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
   

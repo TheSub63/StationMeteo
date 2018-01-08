@@ -1,5 +1,0 @@
-build/
-dist/
-*.properties
-*.class
-/nbproject/private/

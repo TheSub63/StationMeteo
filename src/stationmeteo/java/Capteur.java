@@ -69,6 +69,11 @@ public class Capteur extends Icapteur implements ICapteurSerialize{
         return getNom()+" "+getAlgo();
     }
 
+    @Override
+    public FloatProperty temperatureProperty() {
+        return temperaturemet();
+    }
+
    
 
    

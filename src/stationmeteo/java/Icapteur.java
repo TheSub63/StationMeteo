@@ -38,8 +38,8 @@ public abstract class Icapteur {
     
     public IntegerProperty idProperty(){return id;}
     public StringProperty nomProperty(){return nom;}
-    public FloatProperty temperatureProperty(){return temperature;}
-   
+    public abstract FloatProperty temperatureProperty();
+   FloatProperty temperaturemet(){return temperature;}
     public IntegerProperty actualisationProperty(){return actualisation;}
     public ObjectProperty<Algorithme> algoProperty(){return algo;}
     public ObjectProperty<List<CapteurPoid>> listCapteurProperty(){return listCapteur;}
@@ -71,12 +71,12 @@ public abstract class Icapteur {
     
     
     public float getTemperature() {
-        return temperature.get();
+        return temperatureProperty().get();
     }
     
 
     public void setTemperature(float temperature) {
-        this.temperature.set(temperature);
+        this.temperatureProperty().set(temperature);
     }
        
     public int getId() {
