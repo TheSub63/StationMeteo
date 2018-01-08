@@ -8,6 +8,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.ListView;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.BorderPane;
+import stationmeteo.java.CapteurPoid;
 import stationmeteo.java.Icapteur;
 
 import java.net.URL;
@@ -56,7 +57,7 @@ public class SuperCapController extends BorderPane implements Initializable{
 
     private void commitCapteur() {
         //onCap=new SuperCapteur(Integer.parseInt(idCapteur.getText()),
-        //                       nomCapteur.getText(),list<CP>);
+        //                       nomCapteur.getText(),selectedCapteurs);    Transformer la liste de Icapteur en liste de CapteurPoids
         listeDeCapteur.add(onCap);
         validButton.getScene().getWindow().hide();
     }

@@ -12,7 +12,7 @@ import javafx.beans.property.SimpleFloatProperty;
  *
  * @author matthias
  */
-public class CapteurPoid {
+public class CapteurPoid extends Icapteur {
     private Icapteur monCapteur;
     private FloatProperty MonPoid=new SimpleFloatProperty(this,"poid");
     
@@ -40,5 +40,9 @@ public class CapteurPoid {
     public void setMonPoid(float MonPoid) {
         this.MonPoid.set(MonPoid);
     }
-    
+
+    @Override
+    public FloatProperty temperatureProperty() {
+        return null;
+    }
 }
