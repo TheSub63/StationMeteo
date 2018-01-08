@@ -7,17 +7,14 @@ package stationmeteo.java.serialize;
 
 import java.beans.XMLDecoder;
 import java.beans.XMLEncoder;
-import java.io.ByteArrayOutputStream;
-import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
-import java.io.ObjectOutputStream;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.prefs.Preferences;
 import java.util.stream.Collectors;
+import stationmeteo.java.Capteur;
 import stationmeteo.java.Icapteur;
 
 /**
@@ -40,15 +37,24 @@ public class SerializerCapteur extends Icapteur implements Serializable {
     }
 
     
-    public void sauveCapteurs(ArrayList<ICapteurSerialize> listCapteur) {
+    public void sauveCapteurs(ArrayList<Icapteur> listCapteur) {
+        List<ICapteurSerialize> maListe = new ArrayList();
+        for(int i=0;i<listCapteur.size();i++)
+            if(listCapteur.get(i).getClass()==Capteur.class)
+                maListe.add((Capteur)listCapteur.get(i));
         try (XMLEncoder oos = new XMLEncoder(new FileOutputStream("capteur.xml"))) {
-            List<XMLcapteur> bn = listCapteur.stream().map((n)->new XMLcapteur(n)).collect(Collectors.toList());
+            List<XMLcapteur> bn;
+            bn = maListe.stream().map((n)-> new XMLcapteur(n)).collect(Collectors.toList());
             oos.writeObject(bn);
             
         }catch (IOException e) {
             e.printStackTrace();
+        }catch(Exception e){
+            
         }      
     }
+
+  
 
     
 }

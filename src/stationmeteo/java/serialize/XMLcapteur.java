@@ -57,6 +57,15 @@ public class XMLcapteur extends Icapteur implements Serializable,ICapteurSeriali
         algo = new SimpleObjectProperty(n.getAlgo());
         
     }
+    public XMLcapteur(Capteur n) {
+        model = n;
+        id = new SimpleIntegerProperty(n.getId());
+        nom = new SimpleStringProperty(n.getNom());
+        temperature = new SimpleFloatProperty(n.getTemperature());
+        actualisation = new SimpleIntegerProperty(n.getActualisation());
+        algo = new SimpleObjectProperty(n.getAlgo());
+        
+    }
 
     @Override
     public IntegerProperty idProperty() {
