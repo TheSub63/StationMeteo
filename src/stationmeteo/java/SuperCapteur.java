@@ -29,29 +29,34 @@ public class SuperCapteur extends Icapteur{
     
     private ObjectProperty<List<CapteurPoid>> listCapteur=new SimpleObjectProperty<>(this,"listeCapteur");
     private IntegerProperty i= new SimpleIntegerProperty(this,"i");*/
+    private FloatProperty temperatureS=new SimpleFloatProperty(this, "temperature") ;
     private FloatBinding temp =new FloatBinding() {
-        {this.bind(temperatureProperty());}
+        {this.bind(temperatureS);}
         @Override
         protected float computeValue() {
-          float temp=temperatureProperty().get();
           float Poid=0;
           float result =0;
           for(int i =0;i<getListCapteur().size();i++){
-            result=result+(getListCapteur().get(i).getMonCapteur().getTemperature()*getListCapteur().get(i).getMonPoid());
+            result=result+(getListCapteur().get(i).getMonCapteur().temperatureProperty().get()*getListCapteur().get(i).getMonPoid());
             Poid=Poid+getListCapteur().get(i).getMonPoid();
         }
        result=result/Poid;
        return result;
         }
     };
+    @Override
+     public FloatProperty temperatureProperty(){
+         System.out.println(temperatureS.get());
+         return temperatureS;
+     }
     
     
-    public SuperCapteur(int id , String nom ,Icapteur capteur){
+    public SuperCapteur(int id , String nom ,List<CapteurPoid> capteur){
         setId(id);
         setNom(nom);
-        setListCapteur(new ArrayList<>());
-        this.ajouter(capteur, 1f);
+        super.setListCapteur(capteur);
         
+        temperatureProperty().bind(temp);
        System.out.println(this.getNom()+" est un super capteur");
     }
     public void ajouter(Icapteur i,float poid){
@@ -60,7 +65,7 @@ public class SuperCapteur extends Icapteur{
     } 
     @Override
     public String toString(){
-        return this.getNom()+ "est un superCapteur";
+        return this.getNom()+ " est un superCapteur";
     }
     
 
