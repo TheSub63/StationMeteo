@@ -45,4 +45,5 @@ public class CapteurPoid extends Icapteur {
     public FloatProperty temperatureProperty() {
         return null;
     }
+
 }

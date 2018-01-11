@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<java version="1.8.0_60" class="java.beans.XMLDecoder">
+<java version="1.8.0_121" class="java.beans.XMLDecoder">
  <object class="java.util.ArrayList">
   <void method="add">
    <object class="stationmeteo.java.serialize.XMLcapteur">
@@ -13,7 +13,7 @@
      <string>uirfuy</string>
     </void>
     <void property="temperature">
-     <float>10.867138</float>
+     <float>-3.059452</float>
     </void>
    </object>
   </void>
@@ -29,7 +29,7 @@
      <string>rtjuh</string>
     </void>
     <void property="temperature">
-     <float>23.750359</float>
+     <float>20.065697</float>
     </void>
    </object>
   </void>
@@ -45,7 +45,55 @@
      <string>ftrju</string>
     </void>
     <void property="temperature">
-     <float>-44.287724</float>
+     <float>8.786774</float>
+    </void>
+   </object>
+  </void>
+  <void method="add">
+   <object class="stationmeteo.java.serialize.XMLcapteur">
+    <void property="actualisation">
+     <int>10000</int>
+    </void>
+    <void property="id">
+     <int>10</int>
+    </void>
+    <void property="nom">
+     <string>CapteurFixe</string>
+    </void>
+    <void property="temperature">
+     <float>9.99999</float>
+    </void>
+   </object>
+  </void>
+  <void method="add">
+   <object class="stationmeteo.java.serialize.XMLcapteur">
+    <void property="actualisation">
+     <int>100000</int>
+    </void>
+    <void property="id">
+     <int>11</int>
+    </void>
+    <void property="nom">
+     <string>CapteurFixe2</string>
+    </void>
+    <void property="temperature">
+     <float>30.000008</float>
+    </void>
+   </object>
+  </void>
+  <void method="add">
+   <object class="stationmeteo.java.serialize.XMLcapteur">
+    <void property="actualisation">
+     <int>100000</int>
+    </void>
+    <void property="id">
+     <int>112</int>
+    </void>
+    <void property="nom">
+     <string>CapteurFixe3</string>
+    </void>
+    <void property="temperature">
+     <float>-49.999992</float>
     </void>
    </object>
   </void>

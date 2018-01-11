@@ -52,16 +52,15 @@ public class SuperCapteur extends Icapteur{
      }
     
     
-    public SuperCapteur(int id , String nom ,ListView<CapteurPoid> capteur){
+    public SuperCapteur(int id , String nom ,CapteurPoid capteur){
         setId(id);
         setNom(nom);
-        super.setListCapteur((List<CapteurPoid>) capteur);
-        
+        super.setListCapteur(new ArrayList<CapteurPoid>());
+        super.getListCapteur().add(capteur);
         temperatureProperty().bind(temp);
        System.out.println(this.getNom()+" est un super capteur");
     }
-    public void ajouter(Icapteur i,float poid){
-        CapteurPoid lecap=new CapteurPoid(i,poid);
+    public void ajouter(CapteurPoid lecap){
         super.getListCapteur().add(lecap);
     } 
     @Override
