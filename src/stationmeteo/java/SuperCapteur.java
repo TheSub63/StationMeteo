@@ -75,8 +75,8 @@ public class SuperCapteur extends Icapteur implements ISuperCapteurSerialize{
      }
     @Override
     public ObjectProperty<List<CapteurPoid>> listCapteurProperty(){return listCapteur;}
-    @Override
+    /*@Override
     public List<CapteurPoid> getListCapteur(){return listCapteur.get();}
     @Override
-    public void setListCapteur(List<CapteurPoid>maliste){listCapteur.set(maliste);}
+    public void setListCapteur(List<CapteurPoid>maliste){listCapteur.set(maliste);}*/
 }

@@ -112,7 +112,7 @@ public class MainController extends BorderPane implements Initializable {
         groupButton.setOnMousePressed(me -> ouvrirFenetreSuperCapteur());
         uptButton.setOnMousePressed(me -> {
 
-            if(selectedCapteur!=null)ouvrirFenetreModif();
+            if(selectedCapteur!=null && selectedCapteur.getClass()==Capteur.class)ouvrirFenetreModif();
         });
         delButton.setOnMousePressed(me -> {
             listeDeCapteur.remove(selectedCapteur);

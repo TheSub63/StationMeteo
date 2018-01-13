@@ -34,7 +34,7 @@ public class ModifController extends WindowController implements Initializable{
         nomCapteur.setText(capteur.getNom());
         idCapteur.setText(String.valueOf(capteur.getId()));
         if(capteur.getClass()==Capteur.class){
-            actualisationCapteur.setText(String.valueOf(capteur.getActualisation()));
+            actualisationCapteur.setText(String.valueOf(((Capteur)capteur).getActualisation()));
         }
         temperatureCapteur.setText(String.valueOf(capteur.getTemperature()));
         validButton.setOnMousePressed(me -> commitCapteur());

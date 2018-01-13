@@ -26,7 +26,7 @@ public abstract class Icapteur {
     private IntegerProperty id=new SimpleIntegerProperty(this, "id");
     private StringProperty nom=new SimpleStringProperty(this, "nom");
     private FloatProperty temperature=new SimpleFloatProperty(this, "temperature");
-    private FloatProperty poids = new SimpleFloatProperty(this, "poid");
+    //private FloatProperty poids = new SimpleFloatProperty(this, "poid");
 
     public IntegerProperty idProperty(){return id;}
     public StringProperty nomProperty(){return nom;}

@@ -13,7 +13,7 @@
      <string>uirfuy</string>
     </void>
     <void property="temperature">
-     <float>-32.677017</float>
+     <float>11.455334</float>
     </void>
    </object>
   </void>
@@ -29,7 +29,7 @@
      <string>rtjuh</string>
     </void>
     <void property="temperature">
-     <float>37.052277</float>
+     <float>-36.280533</float>
     </void>
    </object>
   </void>
@@ -45,7 +45,7 @@
      <string>ftrju</string>
     </void>
     <void property="temperature">
-     <float>-27.545238</float>
+     <float>-36.54978</float>
     </void>
    </object>
   </void>
@@ -94,6 +94,25 @@
     </void>
     <void property="temperature">
      <float>-49.999992</float>
+    </void>
+   </object>
+  </void>
+  <void method="add">
+   <object class="stationmeteo.java.serialize.XMLcapteur">
+    <void property="actualisation">
+     <int>12</int>
+    </void>
+    <void property="algo">
+     <object class="stationmeteo.java.algorithmes.AlgorithmeAleatoire"/>
+    </void>
+    <void property="id">
+     <int>1</int>
+    </void>
+    <void property="nom">
+     <string>4242</string>
+    </void>
+    <void property="temperature">
+     <float>-46.914627</float>
     </void>
    </object>
   </void>
