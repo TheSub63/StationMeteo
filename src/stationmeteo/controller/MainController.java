@@ -115,12 +115,14 @@ public class MainController extends BorderPane implements Initializable {
             if(selectedCapteur!=null && selectedCapteur.getClass()==Capteur.class)ouvrirFenetreModif();
         });
         delButton.setOnMousePressed(me -> {
-            listeDeCapteur.remove(selectedCapteur);
-            if(selectedCapteur.getClass()==Capteur.class){
-                
+            if(selectedCapteur!=null && selectedCapteur.getClass()==Icapteur.class) {
+                listeDeCapteur.remove(selectedCapteur);
+
+
                 ((Capteur) selectedCapteur).getLeThread().interrupt();
+
+                selectedCapteur = null;
             }
-            selectedCapteur=null;
         });
         digitalButton.setOnMousePressed(me -> {
             if(selectedCapteur!=null)affichageDigital();
