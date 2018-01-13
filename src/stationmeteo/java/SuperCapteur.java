@@ -54,7 +54,8 @@ public class SuperCapteur extends Icapteur implements ISuperCapteurSerialize{
         setNom("default");
         this.setListCapteur(new ArrayList());
         monTempBind=new TempBinding(this.getListCapteur(),this.listCapteur.get().get(0).temperatureProperty());
-      temperatureProperty().bind(monTempBind);
+      
+        temperatureProperty().bind(monTempBind);
        // temperature.bind(temp);
        System.out.println(this.getNom()+" est un super capteur");//To change body of generated methods, choose Tools | Templates.
     }
