@@ -20,9 +20,9 @@ import stationmeteo.java.algorithmes.AlgorithmeFenetreGlissante;
  * @author magaydu
  */
 public class ModifController extends WindowController implements Initializable{
-
+    private Capteur capteur;
     private boolean isModified=false;
-    public ModifController(Icapteur c){
+    public ModifController(Capteur c){
         capteur=c;
     }
     private Algorithme selectedAlgo;

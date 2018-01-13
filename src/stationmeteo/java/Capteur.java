@@ -15,21 +15,17 @@ import stationmeteo.java.serialize.ICapteurSerialize;
  * @author magaydu
  */
 public class Capteur extends Icapteur implements ICapteurSerialize{
-    
-    /*private IntegerProperty id=new SimpleIntegerProperty(this, "id");
-    private StringProperty nom=new SimpleStringProperty(this, "nom");
-    private FloatProperty temperature=new SimpleFloatProperty(this, "temperature");
+     
     private IntegerProperty actualisation=new SimpleIntegerProperty(this, "actualisation");
-    
-    private FloatProperty poids = new SimpleFloatProperty(this, "poids");
-    private ObjectProperty<Algorithme> algo = new SimpleObjectProperty(this,"algo");*/
+    private ObjectProperty<Algorithme> algo = new SimpleObjectProperty(this,"algo");
     private CapteurThread leThread= new CapteurThread(this);
+    private FloatProperty temperature=new SimpleFloatProperty(this, "temperature") ;
     public Capteur(int id,String nom,int actualisation, float temperature, Algorithme algo) {
         //Thread test = new Thread();
         super.setId(id);
         super.setNom(nom);
-        super.setActualisation(actualisation);
-        super.setAlgo(algo);
+        setActualisation(actualisation);
+        setAlgo(algo);
         if(algo==null)this.setTemperature(temperature);
         else this.setTemperature(algo.getNewTemp(temperature));
         leThread.start();
@@ -38,23 +34,13 @@ public class Capteur extends Icapteur implements ICapteurSerialize{
     public Capteur() {
         super.setId(500);
         super.setNom("default");
-        super.setActualisation(1);
-        super.setAlgo(null);
+        setActualisation(1);
+        algo.set(null);
         this.setTemperature(27);
         
         leThread.start();
     }
-    /*@Override
-    public IntegerProperty idProperty(){return id;}
-    @Override
-    public StringProperty nomProperty(){return nom;}
-    @Override
-    public FloatProperty temperatureProperty(){return temperature;}
-    
-    @Override
-    public IntegerProperty actualisationProperty(){return actualisation;}
-    @Override
-    public ObjectProperty<Algorithme> algoProperty(){return algo;}*/
+ 
     public CapteurThread getLeThread() {
         return leThread;
     }
@@ -69,13 +55,28 @@ public class Capteur extends Icapteur implements ICapteurSerialize{
         return getNom()+" "+getAlgo();
     }
 
-    @Override
-    public FloatProperty temperatureProperty() {
-        return temperaturemet();
+    
+
+    public IntegerProperty actualisationProperty(){return actualisation;}
+    public ObjectProperty<Algorithme> algoProperty(){return algo;}
+    public Algorithme getAlgo() {
+        return algo.get();
+    }
+  
+   
+    public void setAlgo(Algorithme algo) {
+        this.algo.set(algo);
+    }
+    public void setActualisation(int actualisation) {
+        this.actualisation.set(actualisation);
+    }
+    public int getActualisation() {
+        return actualisation.get();
     }
 
-   
-
-   
+    @Override
+    public FloatProperty temperatureProperty() {
+        return this.temperature;//To change body of generated methods, choose Tools | Templates.
+    }
     
 }

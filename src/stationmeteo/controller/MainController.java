@@ -18,6 +18,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
+import javafx.scene.control.Alert.AlertType;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
@@ -202,7 +203,10 @@ public class MainController extends BorderPane implements Initializable {
         URL url=getClass().getResource("/stationmeteo/ressources/fxml/fenetreModif.fxml");
         FXMLLoader loader = new FXMLLoader(url);          
         BorderPane page;
-        ModifController modifcont=new ModifController(selectedCapteur);
+        
+        if(selectedCapteur.getClass()==Capteur.class){
+           
+           ModifController modifcont=new ModifController((Capteur) selectedCapteur);
 
         loader.setController(modifcont);
         try{
@@ -220,6 +224,15 @@ public class MainController extends BorderPane implements Initializable {
             selectedCapteur=modifcont.getCapteur();
             listeDeCapteur.add(selectedCapteur);
 
+        }
+        }
+        if(selectedCapteur.getClass()==SuperCapteur.class){
+        Alert alert = new Alert(AlertType.ERROR);
+        alert.setTitle("Erreur Modif");
+        alert.setHeaderText("Capteur Erreur");
+        alert.setContentText("L'element selectionner doit être un capteur");
+
+        alert.showAndWait();
         }
     }
 

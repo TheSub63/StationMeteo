@@ -27,36 +27,10 @@ public abstract class Icapteur {
     private StringProperty nom=new SimpleStringProperty(this, "nom");
     private FloatProperty temperature=new SimpleFloatProperty(this, "temperature");
     private FloatProperty poids = new SimpleFloatProperty(this, "poid");
-    //capteur
-    private IntegerProperty actualisation=new SimpleIntegerProperty(this, "actualisation");
-    private ObjectProperty<Algorithme> algo = new SimpleObjectProperty(this,"algo");
-    
-    //superCapteur
-    private ObjectProperty<List<CapteurPoid>> listCapteur=new SimpleObjectProperty<>(this,"listeCapteur");
-   
-    private IntegerProperty i= new SimpleIntegerProperty(this,"i");
-    
+
     public IntegerProperty idProperty(){return id;}
     public StringProperty nomProperty(){return nom;}
     public abstract FloatProperty temperatureProperty();
-   FloatProperty temperaturemet(){return temperature;}
-    public IntegerProperty actualisationProperty(){return actualisation;}
-    public ObjectProperty<Algorithme> algoProperty(){return algo;}
-    public ObjectProperty<List<CapteurPoid>> listCapteurProperty(){return listCapteur;}
-   
-    public IntegerProperty iProperty(){return i;}
-    
-            
-    public Algorithme getAlgo() {
-        return algo.get();
-    }
-  
-   
-    public void setAlgo(Algorithme algo) {
-        this.algo.set(algo);
-    }
-    //public abstract void setPoid(float poid);
-    //public abstract void setTemperature(float temperature);
     
     
     public String getNom() {
@@ -66,9 +40,6 @@ public abstract class Icapteur {
     public void setNom(String nom) {
         this.nom.set(nom);
     }
-    
-    
-    
     
     public float getTemperature() {
         return temperatureProperty().get();
@@ -86,32 +57,5 @@ public abstract class Icapteur {
     public void setId(int id) {
         this.id.set(id);
     }
-    
-       public void setActualisation(int actualisation) {
-        this.actualisation.set(actualisation);
-    }
-        public int getActualisation() {
-        return actualisation.get();
-    }
-    
-    
 
-    public List<CapteurPoid> getListCapteur() {
-        return listCapteur.get();
-    }
-
-    public void setListCapteur(List<CapteurPoid> listCapteur) {
-        this.listCapteur.set(listCapteur);
-    }
-
-    
-
-    public int getI() {
-        return i.get();
-    }
-
-    public void setI(int i) {
-        this.i.set(i);
-    }
-  
 }

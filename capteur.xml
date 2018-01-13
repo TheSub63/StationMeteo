@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<java version="1.8.0_121" class="java.beans.XMLDecoder">
+<java version="1.8.0_151" class="java.beans.XMLDecoder">
  <object class="java.util.ArrayList">
   <void method="add">
    <object class="stationmeteo.java.serialize.XMLcapteur">
@@ -13,7 +13,7 @@
      <string>uirfuy</string>
     </void>
     <void property="temperature">
-     <float>-3.059452</float>
+     <float>22.197258</float>
     </void>
    </object>
   </void>
@@ -29,7 +29,7 @@
      <string>rtjuh</string>
     </void>
     <void property="temperature">
-     <float>20.065697</float>
+     <float>43.08307</float>
     </void>
    </object>
   </void>
@@ -45,7 +45,7 @@
      <string>ftrju</string>
     </void>
     <void property="temperature">
-     <float>8.786774</float>
+     <float>42.110497</float>
     </void>
    </object>
   </void>
