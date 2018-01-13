@@ -13,6 +13,7 @@ import javafx.beans.binding.ObjectBinding;
 import javafx.beans.property.FloatProperty;
 import javafx.beans.property.IntegerProperty;
 import javafx.beans.property.ObjectProperty;
+import javafx.beans.property.Property;
 import javafx.beans.property.SimpleFloatProperty;
 import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.SimpleObjectProperty;
@@ -43,7 +44,7 @@ public class SuperCapteur extends Icapteur implements ISuperCapteurSerialize{
         this.setListCapteur(new ArrayList());
         this.getListCapteur().add(capteur);
         monTempBind=new TempBinding(this.getListCapteur(),this.listCapteur.get().get(0).temperatureProperty());
-      temperatureProperty().bind(monTempBind);
+        temperature.bind(monTempBind);
        // temperature.bind(temp);
        System.out.println(this.getNom()+" est un super capteur");
     }
@@ -69,8 +70,6 @@ public class SuperCapteur extends Icapteur implements ISuperCapteurSerialize{
     }
     @Override
      public FloatProperty temperatureProperty(){
-         
-         //temperature.bind(temp);
          return temperature;
      }
     @Override
