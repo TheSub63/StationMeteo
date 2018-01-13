@@ -13,7 +13,7 @@
      <string>uirfuy</string>
     </void>
     <void property="temperature">
-     <float>22.197258</float>
+     <float>-16.099865</float>
     </void>
    </object>
   </void>
@@ -29,7 +29,7 @@
      <string>rtjuh</string>
     </void>
     <void property="temperature">
-     <float>43.08307</float>
+     <float>23.449722</float>
     </void>
    </object>
   </void>
@@ -45,7 +45,7 @@
      <string>ftrju</string>
     </void>
     <void property="temperature">
-     <float>42.110497</float>
+     <float>-34.207726</float>
     </void>
    </object>
   </void>

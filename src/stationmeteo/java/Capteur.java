@@ -57,19 +57,25 @@ public class Capteur extends Icapteur implements ICapteurSerialize{
 
     
 
+    @Override
     public IntegerProperty actualisationProperty(){return actualisation;}
+    @Override
     public ObjectProperty<Algorithme> algoProperty(){return algo;}
+    @Override
     public Algorithme getAlgo() {
         return algo.get();
     }
   
    
+    @Override
     public void setAlgo(Algorithme algo) {
         this.algo.set(algo);
     }
+    @Override
     public void setActualisation(int actualisation) {
         this.actualisation.set(actualisation);
     }
+    @Override
     public int getActualisation() {
         return actualisation.get();
     }

@@ -5,32 +5,33 @@
  */
 package stationmeteo.java;
 
+import java.io.Serializable;
 import javafx.beans.property.FloatProperty;
+import javafx.beans.property.ObjectProperty;
 import javafx.beans.property.SimpleFloatProperty;
+import javafx.beans.property.SimpleObjectProperty;
 
 /**
  *
  * @author matthias
  */
-public class CapteurPoid extends Icapteur {
-    private Icapteur monCapteur;
+public class CapteurPoid implements Serializable{
+    private ObjectProperty<Icapteur> monCapteur=new SimpleObjectProperty(this,"monCapteur");
     private FloatProperty MonPoid=new SimpleFloatProperty(this,"poid");
-    
-    public CapteurPoid(Icapteur Uncapteur){
-        monCapteur= Uncapteur;
-        MonPoid.set(1);
-    }
+    private FloatProperty temperature=new SimpleFloatProperty(this,"temperature");
+  
     public CapteurPoid(Icapteur Uncapteur, float poid){
-        monCapteur= Uncapteur;
+        monCapteur.set(Uncapteur);
         MonPoid.set(poid);
+        temperature.bind(Uncapteur.temperatureProperty());
     }
 
     public Icapteur getMonCapteur() {
-        return monCapteur;
+        return monCapteur.get();
     }
 
     public void setMonCapteur(Icapteur monCapteur) {
-        this.monCapteur = monCapteur;
+        this.monCapteur.set(monCapteur);
     }
 
     public float getMonPoid() {
@@ -41,9 +42,12 @@ public class CapteurPoid extends Icapteur {
         this.MonPoid.set(MonPoid);
     }
 
-    @Override
     public FloatProperty temperatureProperty() {
-        return null;
+        //temperature.bind(monCapteur.get().temperatureProperty());
+        return monCapteur.get().temperatureProperty();
+    }
+    public FloatProperty PoidProperty(){
+        return MonPoid;
     }
 
 }

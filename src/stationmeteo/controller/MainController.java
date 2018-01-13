@@ -26,6 +26,7 @@ import stationmeteo.java.Capteur;
 import stationmeteo.java.serialize.ICapteurSerialize;
 import stationmeteo.java.Icapteur;
 import stationmeteo.java.SuperCapteur;
+import stationmeteo.java.serialize.ISuperCapteurSerialize;
 import stationmeteo.java.serialize.SerializerCapteur;
 
 /**
@@ -143,6 +144,13 @@ public class MainController extends BorderPane implements Initializable {
             listeDeCapteur.add((Capteur )XMLdatamanager.chargeCapteur().get(i));
             }
             }
+            
+           /* List<ISuperCapteurSerialize> resultSup=XMLdatamanager.chargeSuperCapteur();
+            if(resultSup!=null){
+                for(int i=0;i<XMLdatamanager.chargeSuperCapteur().size();i++){
+                    listeDeCapteur.add((SuperCapteur )XMLdatamanager.chargeSuperCapteur().get(i));
+                }
+            }*/
        //XMLdatamanager.chargeCapteur();
        }
     }

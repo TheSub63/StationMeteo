@@ -8,7 +8,6 @@ package stationmeteo.java.serialize;
 import java.io.Serializable;
 import java.util.List;
 import javafx.beans.property.FloatProperty;
-
 import javafx.beans.property.IntegerProperty;
 import javafx.beans.property.ObjectProperty;
 import javafx.beans.property.SimpleFloatProperty;
@@ -16,49 +15,36 @@ import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.SimpleObjectProperty;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
-import stationmeteo.java.Capteur;
-import stationmeteo.java.Icapteur;
-import stationmeteo.java.algorithmes.Algorithme;
+import stationmeteo.java.CapteurPoid;
+import stationmeteo.java.SuperCapteur;
 
 /**
  *
  * @author matthias
  */
-public class XMLcapteur extends Icapteur implements Serializable,ICapteurSerialize {
-//commun
-
+public class XMLSuperCapteur implements Serializable,ISuperCapteurSerialize{
     private IntegerProperty id;
     private StringProperty nom;
-    private FloatProperty temperature;
-   
-    //capteur
-    private IntegerProperty actualisation;
-    private final ObjectProperty<Algorithme> algo;
-
-    //propre au xmlCapteur
-    private transient ICapteurSerialize model;
-
-    public XMLcapteur() {
-        model = new Capteur();
+    private FloatProperty temperature; 
+    private ObjectProperty<List<CapteurPoid>> listCapteur;
+    private transient ISuperCapteurSerialize model;
+    public XMLSuperCapteur() {
+        model = new SuperCapteur();
         id = new SimpleIntegerProperty(model.getId());
         nom = new SimpleStringProperty(model.getNom());
         temperature = new SimpleFloatProperty(model.getTemperature());
-        actualisation = new SimpleIntegerProperty(model.getActualisation());
-        algo = new SimpleObjectProperty(model.getAlgo());
+        listCapteur=new SimpleObjectProperty(model.getListCapteur());
    
     }
-
-    public XMLcapteur(ICapteurSerialize n) {
+     public XMLSuperCapteur(ISuperCapteurSerialize n) {
         model = n;
         id = new SimpleIntegerProperty(n.getId());
         nom = new SimpleStringProperty(n.getNom());
         temperature = new SimpleFloatProperty(n.getTemperature());
-        actualisation = new SimpleIntegerProperty(n.getActualisation());
-        algo = new SimpleObjectProperty(n.getAlgo());
+        listCapteur= new SimpleObjectProperty(n.getListCapteur());
         
     }
-   
-
+     
     @Override
     public IntegerProperty idProperty() {
         return id;
@@ -73,31 +59,25 @@ public class XMLcapteur extends Icapteur implements Serializable,ICapteurSeriali
     public FloatProperty temperatureProperty() {
         return temperature;
     }
-
-  
-
     @Override
-    public IntegerProperty actualisationProperty() {
-        return actualisation;
+    public ObjectProperty<List<CapteurPoid>> listCapteurProperty(){
+        return this.listCapteur;
     }
-
-    @Override
-    public ObjectProperty<Algorithme> algoProperty() {
-        return algo;
-    }
-
-
-
-    public ICapteurSerialize getModel() {
-        model = new Capteur(this.getId(),this.getNom(),this.getActualisation(),this.getTemperature(),this.getAlgo());
+    public ISuperCapteurSerialize getModel() {
+        model = new SuperCapteur(this.getId(),this.getNom(),this.listCapteur.get().get(0));
+        /*for (int i=1;i<this.listCapteur.get().size();i++){
+            model.getListCapteur().add(this.listCapteur.get().get(i));
+        }*/
         return model;
     }
-
+    @Override
+    public String toString(){
+        return this.getNom();
+    }
     @Override
     public int getId() {
         return id.get();
     }
-
     /**
      *
      * @param id
@@ -122,40 +102,16 @@ public class XMLcapteur extends Icapteur implements Serializable,ICapteurSeriali
         return temperature.get();
     }
 
-    /**
-     *
-     * @param temperature
-     */
     @Override
     public void setTemperature(float temperature) {
         this.temperature.set(temperature);
     }
-
-
     @Override
-    public int getActualisation() {
-        return actualisation.get();
+    public List<CapteurPoid> getListCapteur(){
+        return this.listCapteurProperty().get();
     }
-
     @Override
-    public void setActualisation(int actualisation) {
-        this.actualisation.set(actualisation);
-    }
-
-    
-
-    @Override
-    public Algorithme getAlgo() {
-        return algo.get();
-    }
-
-    @Override
-    public void setAlgo(Algorithme algo) {
-        this.algo.set(algo);
-    }
-
-    @Override
-    public String toString(){
-        return this.getNom();
+    public void setListCapteur(List<CapteurPoid>maliste){
+       this.listCapteurProperty().set(maliste);
     }
 }
