@@ -9,6 +9,7 @@
             <file>file:/home/matthias/Documents/projetjavafx/StationMeteo/src/stationmeteo/ressources/fxml/fenetreSuperCapteur.fxml</file>
             <file>file:/home/matthias/Documents/projetjavafx/StationMeteo/src/stationmeteo/java/Capteur.java</file>
             <file>file:/home/matthias/Documents/projetjavafx/StationMeteo/src/stationmeteo/java/StationMeteo.java</file>
+            <file>file:/home/matthias/Documents/projetjavafx/StationMeteo/src/stationmeteo/java/serialize/ISuperCapteurSerialize.java</file>
             <file>file:/home/matthias/Documents/projetjavafx/StationMeteo/src/stationmeteo/java/CapteurPoid.java</file>
             <file>file:/home/matthias/Documents/projetjavafx/StationMeteo/src/stationmeteo/java/serialize/ICapteurSerialize.java</file>
             <file>file:/home/matthias/Documents/projetjavafx/StationMeteo/src/stationmeteo/controller/SuperCapController.java</file>
@@ -16,6 +17,7 @@
             <file>file:/home/matthias/Documents/projetjavafx/StationMeteo/src/stationmeteo/controller/Verification.java</file>
             <file>file:/home/matthias/Documents/projetjavafx/StationMeteo/src/stationmeteo/java/serialize/XMLcapteur.java</file>
             <file>file:/home/matthias/Documents/projetjavafx/StationMeteo/src/stationmeteo/controller/WindowController.java</file>
+            <file>file:/home/matthias/Documents/projetjavafx/StationMeteo/src/stationmeteo/java/serialize/XMLSuperCapteur.java</file>
             <file>file:/home/matthias/Documents/projetjavafx/StationMeteo/src/stationmeteo/controller/ModifController.java</file>
             <file>file:/home/matthias/Documents/projetjavafx/StationMeteo/src/stationmeteo/controller/AjoutController.java</file>
             <file>file:/home/matthias/Documents/projetjavafx/StationMeteo/src/stationmeteo/java/SuperCapteur.java</file>

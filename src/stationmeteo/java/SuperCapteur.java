@@ -32,22 +32,7 @@ public class SuperCapteur extends Icapteur implements ISuperCapteurSerialize{
     private ObjectProperty<List<CapteurPoid>> listCapteur=new SimpleObjectProperty(this,"listCapteur");
     //private IntegerProperty i= new SimpleIntegerProperty(this,"i");
     private FloatProperty temperature=new SimpleFloatProperty(this, "temperature") ;
-  
-    private FloatBinding temp= new FloatBinding() {
-            {super.bind(temperatureProperty(),listCapteur);}
-          
-            @Override
-            protected float computeValue() {
-                float Poid=0;
-                float result =0;
-                for(int i =0;i<listCapteurProperty().get().size();i++){
-                    result=result+(getListCapteur().get(i).temperatureProperty().get()*getListCapteur().get(i).PoidProperty().get());
-                    Poid=Poid+getListCapteur().get(i).PoidProperty().get();
-                }
-                result=result/Poid;
-                return result;
-            }
-        };
+    private TempBinding monTempBind;
     
     
     public SuperCapteur(int id , String nom ,CapteurPoid capteur){
@@ -57,7 +42,8 @@ public class SuperCapteur extends Icapteur implements ISuperCapteurSerialize{
         
         this.setListCapteur(new ArrayList());
         this.getListCapteur().add(capteur);
-      temperatureProperty().bind(temp);
+        monTempBind=new TempBinding(this.getListCapteur(),this.listCapteur.get().get(0).temperatureProperty());
+      temperatureProperty().bind(monTempBind);
        // temperature.bind(temp);
        System.out.println(this.getNom()+" est un super capteur");
     }
@@ -67,6 +53,8 @@ public class SuperCapteur extends Icapteur implements ISuperCapteurSerialize{
          setId(10);
         setNom("default");
         this.setListCapteur(new ArrayList());
+        monTempBind=new TempBinding(this.getListCapteur(),this.listCapteur.get().get(0).temperatureProperty());
+      temperatureProperty().bind(monTempBind);
        // temperature.bind(temp);
        System.out.println(this.getNom()+" est un super capteur");//To change body of generated methods, choose Tools | Templates.
     }

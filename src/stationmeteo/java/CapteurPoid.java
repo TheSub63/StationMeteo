@@ -17,12 +17,12 @@ import javafx.beans.property.SimpleObjectProperty;
  */
 public class CapteurPoid implements Serializable{
     private ObjectProperty<Icapteur> monCapteur=new SimpleObjectProperty(this,"monCapteur");
-    private FloatProperty MonPoid=new SimpleFloatProperty(this,"poid");
+    private FloatProperty monPoid=new SimpleFloatProperty(this,"poid");
     private FloatProperty temperature=new SimpleFloatProperty(this,"temperature");
   
     public CapteurPoid(Icapteur Uncapteur, float poid){
         monCapteur.set(Uncapteur);
-        MonPoid.set(poid);
+        monPoid.set(poid);
         temperature.bind(Uncapteur.temperatureProperty());
     }
 
@@ -35,19 +35,19 @@ public class CapteurPoid implements Serializable{
     }
 
     public float getMonPoid() {
-        return MonPoid.get();
+        return monPoid.get();
     }
 
     public void setMonPoid(float MonPoid) {
-        this.MonPoid.set(MonPoid);
+        this.monPoid.set(MonPoid);
     }
 
     public FloatProperty temperatureProperty() {
         //temperature.bind(monCapteur.get().temperatureProperty());
         return monCapteur.get().temperatureProperty();
     }
-    public FloatProperty PoidProperty(){
-        return MonPoid;
+    public FloatProperty poidProperty(){
+        return monPoid;
     }
 
 }

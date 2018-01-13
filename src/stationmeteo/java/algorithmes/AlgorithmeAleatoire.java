@@ -20,6 +20,7 @@ public class AlgorithmeAleatoire implements Algorithme{
     
     @Override
     public float getNewTemp(float temperature){
+        
         temperature=alea.nextFloat()*100-50;
         return temperature;
     }
