@@ -27,6 +27,6 @@ public interface ISuperCapteurSerialize {
     default public List<CapteurPoid> getListCapteur(){return listCapteurProperty().get();}
     default public void setId(int id){idProperty().set(id);}
     default public void setNom(String nom){nomProperty().set(nom);}
-    default public void setTemperature(float temperature){temperatureProperty().set(temperature);}
+    //default public void setTemperature(float temperature){temperatureProperty().set(temperature);}
     default public void setListCapteur(List<CapteurPoid>maliste){this.listCapteurProperty().set(maliste);}
 }

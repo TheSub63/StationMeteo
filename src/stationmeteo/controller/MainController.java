@@ -112,16 +112,17 @@ public class MainController extends BorderPane implements Initializable {
         groupButton.setOnMousePressed(me -> ouvrirFenetreSuperCapteur());
         uptButton.setOnMousePressed(me -> {
 
-            if(selectedCapteur!=null && selectedCapteur.getClass()==Capteur.class)ouvrirFenetreModif();
+            if(selectedCapteur!=null)
+                if(selectedCapteur.getClass()==Capteur.class)
+                    ouvrirFenetreModif();
         });
-        delButton.setOnMousePressed(me -> {
-            if(selectedCapteur!=null && selectedCapteur.getClass()==Icapteur.class) {
+        delButton.setOnMousePressed((MouseEvent me) -> {
+            if(selectedCapteur!=null) {
                 listeDeCapteur.remove(selectedCapteur);
-
-
-                ((Capteur) selectedCapteur).getLeThread().interrupt();
-
+                if(selectedCapteur.getClass()==Capteur.class)
+                    ((Capteur) selectedCapteur).getLeThread().interrupt();
                 selectedCapteur = null;
+                
             }
         });
         digitalButton.setOnMousePressed(me -> {
@@ -153,7 +154,7 @@ public class MainController extends BorderPane implements Initializable {
                     listeDeCapteur.add((SuperCapteur )XMLdatamanager.chargeSuperCapteur().get(i));
                 }
             }*/
-       //XMLdatamanager.chargeCapteur();
+      
        }
     }
     
@@ -214,7 +215,7 @@ public class MainController extends BorderPane implements Initializable {
         FXMLLoader loader = new FXMLLoader(url);          
         BorderPane page;
         
-        if(selectedCapteur.getClass()==Capteur.class){
+
            
            ModifController modifcont=new ModifController((Capteur) selectedCapteur);
 
@@ -235,15 +236,8 @@ public class MainController extends BorderPane implements Initializable {
             listeDeCapteur.add(selectedCapteur);
 
         }
-        }
-        if(selectedCapteur.getClass()==SuperCapteur.class){
-        Alert alert = new Alert(AlertType.ERROR);
-        alert.setTitle("Erreur Modif");
-        alert.setHeaderText("Capteur Erreur");
-        alert.setContentText("L'element selectionner doit être un capteur");
-
-        alert.showAndWait();
-        }
+        
+       
     }
 
     public ListView getCapteurList() {

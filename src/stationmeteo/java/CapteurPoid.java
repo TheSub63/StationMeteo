@@ -18,12 +18,16 @@ import javafx.beans.property.SimpleObjectProperty;
 public class CapteurPoid implements Serializable{
     private ObjectProperty<Icapteur> monCapteur=new SimpleObjectProperty(this,"monCapteur");
     private FloatProperty monPoid=new SimpleFloatProperty(this,"poid");
-    private FloatProperty temperature=new SimpleFloatProperty(this,"temperature");
+    
+    private int actualisation;
   
     public CapteurPoid(Icapteur Uncapteur, float poid){
         monCapteur.set(Uncapteur);
         monPoid.set(poid);
-        temperature.bind(Uncapteur.temperatureProperty());
+        
+        if(Uncapteur.getClass()==Capteur.class)
+            actualisation=((Capteur) Uncapteur).getActualisation();
+        else actualisation=((SuperCapteur)Uncapteur).getActualisation();
     }
 
     public Icapteur getMonCapteur() {
@@ -33,7 +37,9 @@ public class CapteurPoid implements Serializable{
     public void setMonCapteur(Icapteur monCapteur) {
         this.monCapteur.set(monCapteur);
     }
-
+    public int getActu(){
+        return actualisation;
+    }
     public float getMonPoid() {
         return monPoid.get();
     }
@@ -43,7 +49,7 @@ public class CapteurPoid implements Serializable{
     }
 
     public FloatProperty temperatureProperty() {
-        //temperature.bind(monCapteur.get().temperatureProperty());
+        
         return monCapteur.get().temperatureProperty();
     }
     public FloatProperty poidProperty(){

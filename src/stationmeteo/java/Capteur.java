@@ -80,9 +80,14 @@ public class Capteur extends Icapteur implements ICapteurSerialize{
         return actualisation.get();
     }
 
-    @Override
+    
     public FloatProperty temperatureProperty() {
         return this.temperature;//To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public float getTemperature() {
+        return temperatureProperty().get();
     }
     
 }

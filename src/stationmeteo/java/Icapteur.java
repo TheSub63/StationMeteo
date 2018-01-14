@@ -25,13 +25,13 @@ public abstract class Icapteur {
     //commun
     private IntegerProperty id=new SimpleIntegerProperty(this, "id");
     private StringProperty nom=new SimpleStringProperty(this, "nom");
-    private FloatProperty temperature=new SimpleFloatProperty(this, "temperature");
+   // private FloatProperty temperature=new SimpleFloatProperty(this, "temperature");
     //private FloatProperty poids = new SimpleFloatProperty(this, "poid");
 
     public IntegerProperty idProperty(){return id;}
     public StringProperty nomProperty(){return nom;}
     public abstract FloatProperty temperatureProperty();
-    
+    public abstract float getTemperature();
     
     public String getNom() {
         return nom.get();
@@ -41,15 +41,7 @@ public abstract class Icapteur {
         this.nom.set(nom);
     }
     
-    public float getTemperature() {
-        return temperatureProperty().get();
-    }
-    
-
-    public void setTemperature(float temperature) {
-       
-        this.temperatureProperty().set(temperature);
-    }
+   
        
     public int getId() {
         return id.get();

@@ -27,13 +27,15 @@ public class CapteurThread extends Thread implements Runnable{
                 Thread.currentThread().interrupt();
                 break;
             }
+            
                 if(capteurActif.getAlgo()==null) {
                     Platform.runLater(() -> this.capteurActif.setTemperature(this.capteurActif.getTemperature() - 1));
                 }
                 else {
                     Platform.runLater(() -> this.capteurActif.setTemperature(this.capteurActif.getAlgo().getNewTemp(capteurActif.getTemperature())));
                 }
-        }
+        
+            }
     
     }
 

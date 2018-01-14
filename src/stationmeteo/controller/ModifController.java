@@ -79,9 +79,7 @@ public class ModifController extends WindowController implements Initializable{
             isModified=true;
             capteur.setNom(nomCapteur.getText());
             capteur.setId(Integer.parseInt(idCapteur.getText()));
-            if (capteur.getClass() == Capteur.class) {
-                capteur.setActualisation(Integer.parseInt(actualisationCapteur.getText()));
-            }
+            capteur.setActualisation(Integer.parseInt(actualisationCapteur.getText()));
             capteur.setTemperature(Float.parseFloat(temperatureCapteur.getText()));
             capteur.setAlgo(buildAlgo(selectedAlgo));
             validButton.getScene().getWindow().hide();
@@ -91,5 +89,8 @@ public class ModifController extends WindowController implements Initializable{
     @SuppressWarnings("WeakerAccess")
     protected boolean isModified() {
         return isModified;
+    }
+    public Capteur getCapteur(){
+        return capteur;
     }
 }

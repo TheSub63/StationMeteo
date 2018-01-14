@@ -13,7 +13,7 @@
      <string>uirfuy</string>
     </void>
     <void property="temperature">
-     <float>-15.389137</float>
+     <float>3.816784</float>
     </void>
    </object>
   </void>
@@ -29,39 +29,7 @@
      <string>rtjuh</string>
     </void>
     <void property="temperature">
-     <float>25.843323</float>
-    </void>
-   </object>
-  </void>
-  <void method="add">
-   <object class="stationmeteo.java.serialize.XMLcapteur">
-    <void property="algo">
-     <object class="stationmeteo.java.algorithmes.AlgorithmeAleatoire"/>
-    </void>
-    <void property="id">
-     <int>1</int>
-    </void>
-    <void property="nom">
-     <string>ftrju</string>
-    </void>
-    <void property="temperature">
-     <float>-28.56288</float>
-    </void>
-   </object>
-  </void>
-  <void method="add">
-   <object class="stationmeteo.java.serialize.XMLcapteur">
-    <void property="actualisation">
-     <int>10000</int>
-    </void>
-    <void property="id">
-     <int>10</int>
-    </void>
-    <void property="nom">
-     <string>CapteurFixe</string>
-    </void>
-    <void property="temperature">
-     <float>9.99999</float>
+     <float>41.372322</float>
     </void>
    </object>
   </void>
@@ -83,25 +51,6 @@
   </void>
   <void method="add">
    <object class="stationmeteo.java.serialize.XMLcapteur">
-    <void property="actualisation">
-     <int>100000</int>
-    </void>
-    <void property="id">
-     <int>112</int>
-    </void>
-    <void property="nom">
-     <string>CapteurFixe3</string>
-    </void>
-    <void property="temperature">
-     <float>-49.999992</float>
-    </void>
-   </object>
-  </void>
-  <void method="add">
-   <object class="stationmeteo.java.serialize.XMLcapteur">
-    <void property="actualisation">
-     <int>12</int>
-    </void>
     <void property="algo">
      <object class="stationmeteo.java.algorithmes.AlgorithmeAleatoire"/>
     </void>
@@ -109,10 +58,10 @@
      <int>1</int>
     </void>
     <void property="nom">
-     <string>4242</string>
+     <string>ftrju</string>
     </void>
     <void property="temperature">
-     <float>49.703957</float>
+     <float>9.604759</float>
     </void>
    </object>
   </void>

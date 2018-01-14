@@ -102,10 +102,7 @@ public class XMLSuperCapteur implements Serializable,ISuperCapteurSerialize{
         return temperature.get();
     }
 
-    @Override
-    public void setTemperature(float temperature) {
-        this.temperature.set(temperature);
-    }
+    
     @Override
     public List<CapteurPoid> getListCapteur(){
         return this.listCapteurProperty().get();
