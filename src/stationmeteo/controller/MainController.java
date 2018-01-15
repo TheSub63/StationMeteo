@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package stationmeteo.controller;
 
 
@@ -18,15 +13,12 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
-import javafx.scene.control.Alert.AlertType;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 import stationmeteo.java.Capteur;
 import stationmeteo.java.serialize.ICapteurSerialize;
 import stationmeteo.java.Icapteur;
-import stationmeteo.java.SuperCapteur;
-import stationmeteo.java.serialize.ISuperCapteurSerialize;
 import stationmeteo.java.serialize.SerializerCapteur;
 
 /**

@@ -46,7 +46,7 @@ abstract class WindowController extends BorderPane {
         alert.setHeaderText("Veuillez remplir tous les champs");
         alert.setContentText("Id doit être un entier, température et actualisation des nombres. "
                 + "Pour Algorithme aléatoire bornée, min doit etre inférieur à max deux nombres."
-                + "Pour Algorithme aléatoire réaliste, intervalle doit être un nombre différent de 0. "
+                + "Pour Algorithme aléatoire réaliste, intervalle doit être un nombre supérieur ou égal à 1. "
                 + "Un algorithme doit etre selectionné");
         alert.showAndWait();
     }

@@ -8,29 +8,23 @@ import javafx.scene.control.*;
 import javafx.scene.layout.BorderPane;
 import stationmeteo.java.CapteurPoid;
 import stationmeteo.java.Icapteur;
-
 import java.net.URL;
-import java.util.ArrayList;
 import java.util.ResourceBundle;
-
-import static javafx.scene.control.SelectionMode.MULTIPLE;
-import static javax.swing.ListSelectionModel.MULTIPLE_INTERVAL_SELECTION;
 import stationmeteo.java.SuperCapteur;
 
 public class SuperCapController extends BorderPane implements Initializable{
 
     @FXML
-    protected TextField idCapteur;
+    private TextField idCapteur;
     @FXML
-    protected TextField nomCapteur;
+    private TextField nomCapteur;
     @FXML
-    protected Button validButton;
+    private Button validButton;
     @FXML
-    protected Button stopButton;
+    private Button stopButton;
     @FXML
     private ListView<Icapteur> capteurList;
     
-    private Icapteur leader;
     private ListView<Icapteur> selectedCapteurs;
     private ObservableList<Icapteur> listeDeCapteur;
     private SuperCapteur onCap;
@@ -46,22 +40,25 @@ public class SuperCapController extends BorderPane implements Initializable{
         stopButton.setOnMousePressed(me -> stopButton.getScene().getWindow().hide());
         capteurList.setItems(listeDeCapteur);
         capteurList.getSelectionModel().setSelectionMode(SelectionMode.MULTIPLE);
-        capteurList.getSelectionModel().selectedItemProperty().addListener((obs,ov,nv)->{
-            selectedCapteurs.setItems(capteurList.getSelectionModel().getSelectedItems());
-        });
+        capteurList.getSelectionModel().selectedItemProperty().addListener((obs,ov,nv)->
+                selectedCapteurs.setItems(capteurList.getSelectionModel().getSelectedItems()));
         
     }
 
     private void commitCapteur() {
         for (Icapteur element : selectedCapteurs.getItems()) {
             TextInputDialog poidsI=new TextInputDialog("Entrez le poids du capteur "+element.getNom());
-            poidsI.showAndWait();
-            CapteurPoid sousCap=new CapteurPoid(element, Integer.parseInt(poidsI.getEditor().getText()));
-            if(onCap==null){
-                onCap=new SuperCapteur(Integer.parseInt(idCapteur.getText()),
-                        nomCapteur.getText(),sousCap);
+            while(!poidsI.getEditor().getText().matches("^[1-9]+$")) {
+                poidsI.showAndWait();
+                if (poidsI.getEditor().getText().matches("^[1-9]+$")) {
+                    CapteurPoid sousCap = new CapteurPoid(element, Integer.parseInt(poidsI.getEditor().getText()));
+                    if (onCap == null) {
+                        onCap = new SuperCapteur(Integer.parseInt(idCapteur.getText()),
+                                nomCapteur.getText(), sousCap);
+                    }
+                    else onCap.ajouter(sousCap);
+                }
             }
-            else onCap.ajouter(sousCap);
         }
         listeDeCapteur.add(onCap);
         validButton.getScene().getWindow().hide();
