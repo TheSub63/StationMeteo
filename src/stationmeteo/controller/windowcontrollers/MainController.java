@@ -1,4 +1,4 @@
-package stationmeteo.controller.WindowControllers;
+package stationmeteo.controller.windowcontrollers;
 
 
 import java.io.IOException;
@@ -15,9 +15,9 @@ import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
-import stationmeteo.controller.DisplayController.DigitalController;
-import stationmeteo.controller.DisplayController.IconController;
-import stationmeteo.controller.DisplayController.ThermoController;
+import stationmeteo.controller.displaycontroller.DigitalController;
+import stationmeteo.controller.displaycontroller.IconController;
+import stationmeteo.controller.displaycontroller.ThermoController;
 import stationmeteo.java.Capteur;
 import stationmeteo.java.serialize.ICapteurSerialize;
 import stationmeteo.java.Icapteur;

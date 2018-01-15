@@ -7,7 +7,7 @@ import javafx.stage.Stage;
 import javafx.fxml.FXMLLoader;
 import java.net.URL;
 import javafx.scene.layout.BorderPane;
-import stationmeteo.controller.WindowControllers.MainController;
+import stationmeteo.controller.windowcontrollers.MainController;
 
 /**
  * Classe principale de l'application, elle charge la fenêtre principale,

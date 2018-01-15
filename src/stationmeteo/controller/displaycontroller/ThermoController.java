@@ -1,4 +1,4 @@
-package stationmeteo.controller.DisplayController;
+package stationmeteo.controller.displaycontroller;
 
 import javafx.beans.binding.FloatBinding;
 import javafx.beans.binding.When;
