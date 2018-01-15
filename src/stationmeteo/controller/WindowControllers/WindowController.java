@@ -1,5 +1,6 @@
 package stationmeteo.controller.WindowControllers;
 
+import javafx.collections.FXCollections;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
@@ -8,9 +9,14 @@ import javafx.scene.control.TextField;
 import javafx.scene.layout.BorderPane;
 import stationmeteo.java.Icapteur;
 import stationmeteo.java.algorithmes.Algorithme;
+import stationmeteo.java.algorithmes.AlgorithmeAleatoire;
 import stationmeteo.java.algorithmes.AlgorithmeAleatoireFixe;
 import stationmeteo.java.algorithmes.AlgorithmeFenetreGlissante;
 
+/**
+ * Classe mere des controleurs de fenêtres agissant sur les capteurs.
+ * @author Clément
+ */
 @SuppressWarnings("WeakerAccess")
 abstract class WindowController extends BorderPane {
 
@@ -37,9 +43,15 @@ abstract class WindowController extends BorderPane {
 
     protected Algorithme selectedAlgo;
     protected Icapteur capteur;
-    protected Verification verif;
+    protected Verification verif=new Verification();
 
+    public Icapteur getCapteur() {
+        return this.capteur;
+    }
 
+    /**
+     * Methode affichant un message d'alerte en cas d'invalidité des informations saisies
+     */
     protected void showError(){
         Alert alert = new Alert(Alert.AlertType.ERROR);
         alert.setTitle("Erreur");
@@ -51,6 +63,9 @@ abstract class WindowController extends BorderPane {
         alert.showAndWait();
     }
 
+    /**
+     * Methode désactivant et vidant les champs inutiles
+     */
     protected void disableAll(){
         onAlgoFixeAfficher1.setDisable(true);
         onAlgoFixeAfficher2.setDisable(true);
@@ -59,8 +74,14 @@ abstract class WindowController extends BorderPane {
         onAlgoFixeAfficher2.setText("");
         intervalleAlgo.setText("");
     }
+
     abstract void commitCapteur();
 
+    /**
+     * Methode construisant un algorithme avec les paramètres choisis
+     * @param selectedAlgo l'algorithme souhaité
+     * @return l'algorithme utilisable
+     */
     protected Algorithme buildAlgo(Algorithme selectedAlgo){
         if(selectedAlgo.getClass()==AlgorithmeAleatoireFixe.class){
             selectedAlgo=new AlgorithmeAleatoireFixe(
@@ -74,7 +95,28 @@ abstract class WindowController extends BorderPane {
         return selectedAlgo;
     }
 
-    public Icapteur getCapteur() {
-        return this.capteur;
+    /**
+     * Methode chargeant la choice box d'algorithmes
+     */
+    protected void initAlgo(){
+        algoCapteur.setItems(FXCollections.observableArrayList(
+                new AlgorithmeAleatoire(),
+                new AlgorithmeAleatoireFixe(1f,1f),
+                new AlgorithmeFenetreGlissante(1f)));
+        algoCapteur.setOnAction(ae -> {
+            algoCapteur.getSelectionModel().selectedIndexProperty();
+            selectedAlgo= algoCapteur.getSelectionModel().getSelectedItem();
+            if(selectedAlgo==null) disableAll();
+            else if(selectedAlgo.getClass()==AlgorithmeAleatoireFixe.class){
+                disableAll();
+                onAlgoFixeAfficher1.setDisable(false);
+                onAlgoFixeAfficher2.setDisable(false);  //si l'algo selectionnée est AlgorithmeAleatoireFixe alors on affiche les zones de textes associées
+            }
+            else if(selectedAlgo.getClass()==AlgorithmeFenetreGlissante.class){
+                disableAll();
+                intervalleAlgo.setDisable(false);       //Meme procédé pour AlgorithmeFenetreGlissante
+            }
+            else disableAll();                          //Sinon on desactive les zones de textes
+        });
     }
 }

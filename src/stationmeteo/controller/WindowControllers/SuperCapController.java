@@ -19,14 +19,6 @@ import stationmeteo.java.SuperCapteur;
 public class SuperCapController extends WindowController implements Initializable{
 
     @FXML
-    private TextField idCapteur;
-    @FXML
-    private TextField nomCapteur;
-    @FXML
-    private Button validButton;
-    @FXML
-    private Button stopButton;
-    @FXML
     private ListView<Icapteur> capteurList;         //Liste affichant les capteurs sélectionnables
     
     private ListView<Icapteur> selectedCapteurs;    //Liste contenant les capteurs sélectionnés
@@ -52,7 +44,7 @@ public class SuperCapController extends WindowController implements Initializabl
         selectedCapteurs= new ListView<>();
 
         validButton.setOnMousePressed(me -> commitCapteur());
-        stopButton.setOnMousePressed(me -> stopButton.getScene().getWindow().hide());
+        annulButton.setOnMousePressed(me -> annulButton.getScene().getWindow().hide());
 
         capteurList.setItems(listeDeCapteur);
         capteurList.getSelectionModel().setSelectionMode(SelectionMode.MULTIPLE);
@@ -79,14 +71,10 @@ public class SuperCapController extends WindowController implements Initializabl
 
                     CapteurPoid sousCap = new CapteurPoid(element, Integer.parseInt(poidsI.getEditor().getText()));
                     if (onCap == null) {
-<<<<<<< HEAD:src/stationmeteo/controller/SuperCapController.java
                         onCap = new SuperCapteur(Integer.parseInt(idCapteur.getText()),
-                                nomCapteur.getText(), (ICapteurPoid) sousCap);
-=======
-
+                                nomCapteur.getText(), sousCap);
                         onCap = new SuperCapteur(Integer.parseInt(idCapteur.getText()), nomCapteur.getText(), sousCap);
 
->>>>>>> 57d58d1a16a6a905740d2f9edc2da8dd07d86423:src/stationmeteo/controller/WindowControllers/SuperCapController.java
                     }
                     else onCap.ajouter(sousCap);
                 }

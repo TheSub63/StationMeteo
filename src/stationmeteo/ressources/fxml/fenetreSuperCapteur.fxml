@@ -1,53 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.image.*?>
 <?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
-<?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
 <BorderPane xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1">
     <right>
         <VBox alignment="CENTER" prefWidth="86.0" spacing="5.0" BorderPane.alignment="CENTER">
-            <children>
-                <Button fx:id="validButton" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="OK" />
-                <Button fx:id="stopButton" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="ANNULER" />
-
-            </children>
             <padding>
-                <Insets left="5.0" right="5.0" />
+                <Insets left="5.0" right="5.0"/>
             </padding>
+            <Button fx:id="validButton" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="OK"/>
+            <Button fx:id="annulButton" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="ANNULER"/>
+
         </VBox>
     </right>
     <center>
         <VBox alignment="CENTER">
-            <children>
             <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
-               <children>
-                  <Label text="Nom" />
-                  <TextField fx:id="nomCapteur" layoutX="62.0" layoutY="45.0">
-                     <HBox.margin>
-                        <Insets left="10.0" />
-                     </HBox.margin>
-                  </TextField>
-               </children>
+                <Label text="Nom"/>
+                <TextField fx:id="nomCapteur" layoutX="62.0" layoutY="45.0">
+                    <HBox.margin>
+                        <Insets left="10.0"/>
+                    </HBox.margin>
+                </TextField>
             </HBox>
             <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
-               <children>
-                  <Label text="Id" />
-                  <TextField fx:id="idCapteur">
-                     <HBox.margin>
-                        <Insets left="25.0" />
-                     </HBox.margin>
-                  </TextField>
-               </children>
+                <Label text="Id"/>
+                <TextField fx:id="idCapteur">
+                    <HBox.margin>
+                        <Insets left="25.0"/>
+                    </HBox.margin>
+                </TextField>
             </HBox>
             <Label alignment="CENTER" text="Capteurs : (Ctrl + Click pour en sélectionner plusieurs)">
-               <VBox.margin>
-                  <Insets left="10.0" right="10.0" />
-               </VBox.margin></Label>
-                <ListView fx:id="capteurList" />
-            </children>
+                <VBox.margin>
+                    <Insets left="10.0" right="10.0"/>
+                </VBox.margin>
+            </Label>
+            <ListView fx:id="capteurList"/>
         </VBox>
     </center>
 </BorderPane>
