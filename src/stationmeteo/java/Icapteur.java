@@ -30,7 +30,9 @@ public abstract class Icapteur {
 
     public IntegerProperty idProperty(){return id;}
     public StringProperty nomProperty(){return nom;}
+    @SuppressWarnings("WeakerAccess")
     public abstract FloatProperty temperatureProperty();
+    @SuppressWarnings("WeakerAccess")
     public abstract float getTemperature();
     
     public String getNom() {

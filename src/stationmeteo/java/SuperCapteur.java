@@ -36,7 +36,7 @@ public class SuperCapteur extends Icapteur implements ISuperCapteurSerialize{
     private TempBinding monTempBind;
     private FloatProperty observe=new SimpleFloatProperty(this,"observe");
     //private int actualisation;
-    
+    @SuppressWarnings("WeakerAccess")
     public SuperCapteur(int id , String nom ,CapteurPoid capteur){
         
         setId(id);
@@ -50,13 +50,13 @@ public class SuperCapteur extends Icapteur implements ISuperCapteurSerialize{
        // temperature.bind(temp);
        System.out.println(this.getNom()+" est un super capteur");
     }
-    
+    @SuppressWarnings("WeakerAccess")
     public SuperCapteur() {
         
          setId(10);
         setNom("default");
         this.setListCapteur(new ArrayList());
-        monTempBind=new TempBinding(this.getListCapteur(),this.listCapteur.get().get(0).temperatureProperty());
+         Platform.runLater(() ->monTempBind=new TempBinding(this.getListCapteur(),this.listCapteur.get().get(0).temperatureProperty()));
       
         temperatureProperty().bind(monTempBind);
        // temperature.bind(temp);
@@ -78,6 +78,7 @@ public class SuperCapteur extends Icapteur implements ISuperCapteurSerialize{
     public String toString(){
         return this.getNom()+ " est un superCapteur";
     }
+    @SuppressWarnings("WeakerAccess")
     @Override
      public FloatProperty temperatureProperty(){
          return temperature;

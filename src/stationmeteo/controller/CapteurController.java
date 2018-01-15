@@ -48,7 +48,7 @@ public class CapteurController extends AnchorPane implements Initializable{
     private final ObjectBinding monImage ;
     private final FloatBinding min;
     private final StringConverter<Number> converter = new NumberStringConverter();
-    
+    @SuppressWarnings("WeakerAccess")
     public CapteurController(Icapteur c){
         cap=c;
         Image nuage = new Image("stationmeteo/ressources/images/nuage.png");
@@ -65,7 +65,7 @@ public class CapteurController extends AnchorPane implements Initializable{
         min=(FloatBinding)new When(cap.temperatureProperty().lessThan(-10f)).then(progressBarMin).otherwise(cap.temperatureProperty().add(10f).divide(50f));
     }
    
-
+    @SuppressWarnings("WeakerAccess")
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         
