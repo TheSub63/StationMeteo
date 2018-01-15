@@ -15,7 +15,7 @@ import javafx.beans.property.SimpleObjectProperty;
  *
  * @author matthias
  */
-public class CapteurPoid implements Serializable{
+public class CapteurPoid implements ICapteurPoid{
     private ObjectProperty<Icapteur> monCapteur=new SimpleObjectProperty(this,"monCapteur");
     private FloatProperty monPoid=new SimpleFloatProperty(this,"poid");
     
@@ -29,31 +29,53 @@ public class CapteurPoid implements Serializable{
             actualisation=((Capteur) Uncapteur).getActualisation();
         else actualisation=((SuperCapteur)Uncapteur).getActualisation();
     }
-
-    public Icapteur getMonCapteur() {
-        return monCapteur.get();
+    public CapteurPoid(){
+        monCapteur.set(new Capteur());
+        monPoid.set(1f);
+        actualisation=1;
     }
 
-    public void setMonCapteur(Icapteur monCapteur) {
-        this.monCapteur.set(monCapteur);
+    @Override
+    public int getActualisation() {
+        return actualisation;
     }
+
+    @Override
+    public void setActualisation(int actualisation) {
+        this.actualisation = actualisation;
+    }
+
+   
     public int getActu(){
         return actualisation;
     }
-    public float getMonPoid() {
-        return monPoid.get();
-    }
-
-    public void setMonPoid(float MonPoid) {
-        this.monPoid.set(MonPoid);
+   
+    @Override
+    public ObjectProperty monCapteurProperty(){
+        return monCapteur;
     }
 
     public FloatProperty temperatureProperty() {
         
         return monCapteur.get().temperatureProperty();
     }
+    @Override
     public FloatProperty poidProperty(){
         return monPoid;
+    }
+      @Override public float getMonPoid() {
+        return poidProperty().get();
+    }
+
+     @Override public void setMonPoid(float MonPoid) {
+        this.poidProperty().set(MonPoid);
+    }
+     @Override public Icapteur getMonCapteur() {
+        return (Icapteur) monCapteurProperty().get();
+    }
+
+     @Override public void setMonCapteur(Icapteur monCapteur) {
+        this.monCapteurProperty().set(monCapteur);
     }
 
 }

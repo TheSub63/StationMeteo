@@ -15,9 +15,9 @@ import javafx.beans.property.FloatProperty;
  */
 public class TempBinding extends FloatBinding{
 
-    List<CapteurPoid>maliste;
+    List<ICapteurPoid>maliste;
     
-    public TempBinding(List<CapteurPoid> uneListe,FloatProperty temp){
+    public TempBinding(List<ICapteurPoid> uneListe,FloatProperty temp){
         maliste=uneListe;
         {this.bind(temp);}
     }
@@ -26,8 +26,8 @@ public class TempBinding extends FloatBinding{
     protected float computeValue() {
                 float Poid=0;
                 float result =0;
-                for(CapteurPoid c : maliste){
-                    result+=c.temperatureProperty().get()*c.poidProperty().get();
+                for(ICapteurPoid c : maliste){
+                    result+=((CapteurPoid)c).temperatureProperty().get()*c.poidProperty().get();
                     Poid+=c.poidProperty().get();
                 }
                 result=result/Poid;

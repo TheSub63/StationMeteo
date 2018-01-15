@@ -49,29 +49,16 @@ public class SerializerCapteur extends Icapteur implements Serializable {
         
         return result;
     }
-    public List<Icapteur>chargeIcapte(){
-      List<Icapteur> result= null;
-      List<ICapteurSerialize>capList=chargeCapteur();
-      
-      
-      for(int i=0;i<capList.size();i++){
-        result.add((Capteur)capList.get(i));
-      }
-      List<ISuperCapteurSerialize> supList=chargeSuperCapteur();
-      for(int i=0;i<supList.size();i++){
-        result.add((SuperCapteur)supList.get(i));
-      }
-      return result;
-    }
-
-    
+   
     public void sauveCapteurs(ArrayList<Icapteur> listCapteur) {
         List<ICapteurSerialize> maListe = new ArrayList();
         List<ISuperCapteurSerialize> listSup= new ArrayList();
-        for(int i=0;i<listCapteur.size();i++)
+        for(int i=0;i<listCapteur.size();i++){
             if(listCapteur.get(i).getClass()==Capteur.class)
                 maListe.add((Capteur)listCapteur.get(i));
-            else listSup.add((SuperCapteur)listCapteur.get(i));
+            if(listCapteur.get(i).getClass()==SuperCapteur.class)
+                listSup.add((SuperCapteur)listCapteur.get(i));
+        }
         try (XMLEncoder oos = new XMLEncoder(new FileOutputStream("capteur.xml"))) {
             List<XMLcapteur> bn;
             bn = maListe.stream().map((n)-> new XMLcapteur(n)).collect(Collectors.toList());
@@ -81,8 +68,14 @@ public class SerializerCapteur extends Icapteur implements Serializable {
             e.printStackTrace();
         }
         try (XMLEncoder oos = new XMLEncoder(new FileOutputStream("superCapteur.xml"))) {
-            List<XMLSuperCapteur> bn;
-            bn = listSup.stream().map((n)-> new XMLSuperCapteur(n)).collect(Collectors.toList());
+            List<XMLSuperCapteur> bn=new ArrayList();
+            XMLSuperCapteur i;
+            for (ISuperCapteurSerialize c:listSup){
+                i= new XMLSuperCapteur(c);
+                bn.add(i);
+            }
+                
+            //bn = listSup.stream().map((n)-> new XMLSuperCapteur(n)).collect(Collectors.toList());
             oos.writeObject(bn);
             
         }catch (IOException e) {

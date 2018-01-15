@@ -10,6 +10,7 @@ import stationmeteo.java.CapteurPoid;
 import stationmeteo.java.Icapteur;
 import java.net.URL;
 import java.util.ResourceBundle;
+import stationmeteo.java.ICapteurPoid;
 import stationmeteo.java.SuperCapteur;
 
 public class SuperCapController extends BorderPane implements Initializable{
@@ -54,7 +55,7 @@ public class SuperCapController extends BorderPane implements Initializable{
                     CapteurPoid sousCap = new CapteurPoid(element, Integer.parseInt(poidsI.getEditor().getText()));
                     if (onCap == null) {
                         onCap = new SuperCapteur(Integer.parseInt(idCapteur.getText()),
-                                nomCapteur.getText(), sousCap);
+                                nomCapteur.getText(), (ICapteurPoid) sousCap);
                     }
                     else onCap.ajouter(sousCap);
                 }
