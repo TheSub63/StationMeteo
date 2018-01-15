@@ -1,51 +1,33 @@
 package stationmeteo.controller.WindowControllers;
 import java.net.URL;
 import java.util.ResourceBundle;
-import javafx.collections.FXCollections;
 import javafx.fxml.Initializable;
 import stationmeteo.java.Capteur;
 import stationmeteo.java.algorithmes.Algorithme;
-import stationmeteo.java.algorithmes.AlgorithmeAleatoire;
-import stationmeteo.java.algorithmes.AlgorithmeAleatoireFixe;
-import stationmeteo.java.algorithmes.AlgorithmeFenetreGlissante;
+
 /**
- *
+ * Classe du controleur gérant la fenetre d'ajout
  * @author magaydu
  */
 public class AjoutController extends WindowController implements Initializable{
-
-
-    
+    /**
+     * Initialisation de la fenetre d'ajout : associe au boutons leurs actions et initialise la choice box d'algorithmes
+     * @param location La location relative de l'objet racine
+     * @param resources Les ressources utilisés pour trouver l'objet racine
+     */
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-
         validButton.setOnMousePressed(me -> commitCapteur());
         annulButton.setOnMousePressed(me -> annulButton.getScene().getWindow().hide());
-        verif=new Verification();
-        algoCapteur.setItems(FXCollections.observableArrayList(
-                new AlgorithmeAleatoire(), 
-                new AlgorithmeAleatoireFixe(1f,1f), 
-                new AlgorithmeFenetreGlissante(1f)));
-
-
-        algoCapteur.setOnAction(ae -> {
-            algoCapteur.getSelectionModel().selectedIndexProperty();
-            selectedAlgo=(Algorithme)algoCapteur.getSelectionModel().getSelectedItem();
-            if(selectedAlgo==null) disableAll();
-            else if(selectedAlgo.getClass()==AlgorithmeAleatoireFixe.class){
-                disableAll();
-                onAlgoFixeAfficher1.setDisable(false);
-                onAlgoFixeAfficher2.setDisable(false);
-            }
-            else if(selectedAlgo.getClass()==AlgorithmeFenetreGlissante.class){
-                disableAll();
-                intervalleAlgo.setDisable(false);
-            }
-            else disableAll();
-        });
+        initAlgo();
     }
 
 
+
+    /**
+     * Fonction appelée par le bouton valider
+     * Elle appelle Verification sur les informations saisies, construis l'algorithme et le capteur avant de quitter la scene
+     */
     @Override
     protected void commitCapteur(){
         if(!verif.verifInfos(selectedAlgo, nomCapteur, idCapteur, actualisationCapteur, temperatureCapteur,

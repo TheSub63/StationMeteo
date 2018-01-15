@@ -1,69 +1,62 @@
 package stationmeteo.controller.WindowControllers;
 import java.net.URL;
 import java.util.ResourceBundle;
-import javafx.collections.FXCollections;
 import javafx.fxml.Initializable;
 import stationmeteo.java.Capteur;
 import stationmeteo.java.algorithmes.Algorithme;
-import stationmeteo.java.algorithmes.AlgorithmeAleatoire;
-import stationmeteo.java.algorithmes.AlgorithmeAleatoireFixe;
-import stationmeteo.java.algorithmes.AlgorithmeFenetreGlissante;
 
 /**
- *
+ * Classe du controleur gérant la fenetre de modification
  * @author magaydu
  */
 public class ModifController extends WindowController implements Initializable{
+
     private Capteur capteur;
     private boolean isModified=false;
+    private Algorithme selectedAlgo;
+    @SuppressWarnings("WeakerAccess")
+    protected boolean isModified() {
+        return isModified;
+    }
+
+    public Capteur getCapteur(){
+        return capteur;
+    }
+
+    /**
+     * Constructeur du controleur lui associant un capteur
+     * @param c le capteur sélectionné par l'utilisateur
+     */
     public ModifController(Capteur c){
         capteur=c;
     }
-    private Algorithme selectedAlgo;
 
-
+    /**
+     * Initialisation de la fenetre d'ajout : remplit les zones de textes avec les infos concernant le capteur sélectionné,
+     * associe aux boutons leurs comportements et prepare la choice box d'algorithme
+     * @param location La location relative de l'objet racine
+     * @param resources Les ressources utilisés pour trouver l'objet racine
+     */
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        verif=new Verification();
         nomCapteur.setText(capteur.getNom());
         idCapteur.setText(String.valueOf(capteur.getId()));
         if(capteur.getClass()==Capteur.class){
-            actualisationCapteur.setText(String.valueOf(((Capteur)capteur).getActualisation()));
+            actualisationCapteur.setText(String.valueOf(capteur.getActualisation()));
         }
         temperatureCapteur.setText(String.valueOf(capteur.getTemperature()));
         validButton.setOnMousePressed(me -> commitCapteur());
         annulButton.setOnMousePressed(me -> annulButton.getScene().getWindow().hide());
         selectedAlgo=capteur.getAlgo();
         initAlgo();
-
-    }
-
-    private void initAlgo(){
-        algoCapteur.setItems(FXCollections.observableArrayList(
-                new AlgorithmeAleatoire(),
-                new AlgorithmeAleatoireFixe(1f,1f),
-                new AlgorithmeFenetreGlissante(1f)));
         algoCapteur.setValue(selectedAlgo);
-        algoCapteur.setOnAction(ae -> {
-            algoCapteur.getSelectionModel().selectedIndexProperty();
-            selectedAlgo= algoCapteur.getSelectionModel().getSelectedItem();
-            if(selectedAlgo==null) disableAll();
-            else if(selectedAlgo.getClass()==AlgorithmeAleatoireFixe.class){
-                disableAll();
-                onAlgoFixeAfficher1.setDisable(false);
-                onAlgoFixeAfficher2.setDisable(false);
-            }
-            else if(selectedAlgo.getClass()==AlgorithmeFenetreGlissante.class){
-                disableAll();
-                intervalleAlgo.setDisable(false);
-            }
-            else disableAll();
-        });
     }
 
 
-
-
+    /**
+     * Fonction appelée par le bouton valider
+     * Elle appelle Verification sur les informations saisies, construis l'algorithme et modifie le capteur avant de quitter la scene
+     */
     @Override
     protected void commitCapteur() {
         if (!verif.verifInfos(selectedAlgo, nomCapteur, idCapteur, actualisationCapteur, temperatureCapteur,
@@ -80,11 +73,4 @@ public class ModifController extends WindowController implements Initializable{
         }
     }
 
-    @SuppressWarnings("WeakerAccess")
-    protected boolean isModified() {
-        return isModified;
-    }
-    public Capteur getCapteur(){
-        return capteur;
-    }
 }
