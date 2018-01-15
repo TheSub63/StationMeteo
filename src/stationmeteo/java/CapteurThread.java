@@ -16,7 +16,7 @@ public class CapteurThread extends Thread implements Runnable{
     public CapteurThread(Capteur i){
         this.capteurActif=i;
     }
-    @SuppressWarnings("WeakerAccess")
+    
      @Override
     public void run(){
         while(true){

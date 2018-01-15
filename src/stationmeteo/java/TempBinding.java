@@ -21,7 +21,6 @@ public class TempBinding extends FloatBinding{
         maliste=uneListe;
         {this.bind(temp);}
     }
-    @SuppressWarnings("WeakerAccess")
     @Override
     protected float computeValue() {
                 float Poid=0;
@@ -33,6 +32,5 @@ public class TempBinding extends FloatBinding{
                 result=result/Poid;
                 return result;      
     }
-    
     
 }

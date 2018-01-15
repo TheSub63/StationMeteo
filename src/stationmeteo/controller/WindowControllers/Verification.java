@@ -1,4 +1,4 @@
-package stationmeteo.controller;
+package stationmeteo.controller.WindowControllers;
 
 import javafx.scene.control.TextField;
 import stationmeteo.java.algorithmes.Algorithme;
@@ -25,7 +25,7 @@ class Verification {
      * @param intervalleAlgo Dans le cas d'un algorithme de type Réaliste, la taille de la fenêtre
      * @return booléen indiquant la validité des informations
      */
-    boolean verifInfos(Algorithme selectedAlgo, TextField nomCapteur, TextField idCapteur, TextField actualisationCapteur,
+    public boolean verifInfos(Algorithme selectedAlgo, TextField nomCapteur, TextField idCapteur, TextField actualisationCapteur,
                        TextField temperatureCapteur, TextField onAlgoFixeAfficher1, TextField onAlgoFixeAfficher2,
                        TextField intervalleAlgo) {
         {

@@ -28,10 +28,7 @@ public class AlgorithmeAleatoireFixe implements Algorithme{
      * @return La température modifiée par l'Algorithme
      */
     @Override
-    public float getNewTemp(float temperature) {
-        temperature=min+alea.nextFloat()*(max-min);
-        return temperature;
-    }
+    public float getNewTemp(float temperature) { return min+alea.nextFloat()*(max-min); }
 
     /**
      * La redéfinition de la méthode toString d'algorithme, indiquant le nom de l'algorithme utilisé

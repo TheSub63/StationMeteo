@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<<<<<<< HEAD
 <java version="1.8.0_151" class="java.beans.XMLDecoder">
  <object class="java.util.ArrayList">
   <void method="add">
@@ -12,4 +13,8 @@
    </object>
   </void>
  </object>
+=======
+<java version="1.8.0_121" class="java.beans.XMLDecoder">
+ <object class="java.util.ArrayList"/>
+>>>>>>> 57d58d1a16a6a905740d2f9edc2da8dd07d86423
 </java>
