@@ -1,7 +1,5 @@
 package stationmeteo.java;
 
-import java.util.LinkedList;
-import java.util.List;
 import javafx.beans.property.FloatProperty;
 import javafx.beans.property.SimpleFloatProperty;
 import stationmeteo.java.serialize.ISuperCapteurSerialize;

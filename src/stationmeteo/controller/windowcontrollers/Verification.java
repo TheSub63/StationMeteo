@@ -1,4 +1,4 @@
-package stationmeteo.controller.WindowControllers;
+package stationmeteo.controller.windowcontrollers;
 
 import javafx.scene.control.TextField;
 import stationmeteo.java.algorithmes.Algorithme;

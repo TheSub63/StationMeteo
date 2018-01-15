@@ -1,4 +1,4 @@
-package stationmeteo.controller.WindowControllers;
+package stationmeteo.controller.windowcontrollers;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -9,7 +9,7 @@ import stationmeteo.java.CapteurPoid;
 import stationmeteo.java.Icapteur;
 import java.net.URL;
 import java.util.ResourceBundle;
-import stationmeteo.java.ICapteurPoid;
+
 import stationmeteo.java.SuperCapteur;
 
 /**

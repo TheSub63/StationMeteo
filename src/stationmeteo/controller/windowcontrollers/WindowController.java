@@ -1,4 +1,4 @@
-package stationmeteo.controller.WindowControllers;
+package stationmeteo.controller.windowcontrollers;
 
 import javafx.collections.FXCollections;
 import javafx.fxml.FXML;

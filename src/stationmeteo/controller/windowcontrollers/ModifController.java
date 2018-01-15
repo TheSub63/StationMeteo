@@ -1,4 +1,4 @@
-package stationmeteo.controller.WindowControllers;
+package stationmeteo.controller.windowcontrollers;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.fxml.Initializable;
