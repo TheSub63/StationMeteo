@@ -21,12 +21,20 @@ public interface ISuperCapteurSerialize {
     public StringProperty nomProperty();
     public FloatProperty temperatureProperty();
     public ObjectProperty<List<CapteurPoid>> listCapteurProperty();
+    @SuppressWarnings("WeakerAccess")
     default public int getId(){return idProperty().get();}
+    @SuppressWarnings("WeakerAccess")
     default public String getNom(){return nomProperty().get();}
+    @SuppressWarnings("WeakerAccess")
     default public float getTemperature(){return temperatureProperty().get();}
+    @SuppressWarnings("WeakerAccess")
     default public List<CapteurPoid> getListCapteur(){return listCapteurProperty().get();}
+    @SuppressWarnings("WeakerAccess")
     default public void setId(int id){idProperty().set(id);}
+    @SuppressWarnings("WeakerAccess")
     default public void setNom(String nom){nomProperty().set(nom);}
-    //default public void setTemperature(float temperature){temperatureProperty().set(temperature);}
+    @SuppressWarnings("WeakerAccess")
+    default public void setTemperature(float temperature){temperatureProperty().set(temperature);}
+    @SuppressWarnings("WeakerAccess")
     default public void setListCapteur(List<CapteurPoid>maliste){this.listCapteurProperty().set(maliste);}
 }

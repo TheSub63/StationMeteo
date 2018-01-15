@@ -52,6 +52,7 @@ public class SuperCapteur extends Icapteur implements ISuperCapteurSerialize{
        // temperature.bind(temp);
        System.out.println(this.getNom()+" est un super capteur");//To change body of generated methods, choose Tools | Templates.
     }
+    @SuppressWarnings("WeakerAccess")
     public void ajouter(CapteurPoid lecap){
        getListCapteur().add(lecap);
        int actu=listCapteur.get().get(0).getActu();

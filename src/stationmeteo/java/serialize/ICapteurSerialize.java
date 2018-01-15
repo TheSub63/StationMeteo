@@ -32,9 +32,11 @@ public interface ICapteurSerialize  {
     default public float getTemperature(){return temperatureProperty().get();}
     default public int getActualisation(){return actualisationProperty().get();}
     default public Algorithme getAlgo(){return algoProperty().get();}
-    
+    @SuppressWarnings("WeakerAccess")
     default public void setId(int id){idProperty().set(id);}
+    @SuppressWarnings("WeakerAccess")
     default public void setNom(String nom){nomProperty().set(nom);}
+    @SuppressWarnings("WeakerAccess")
     default public void setTemperature(float temperature){
         try{
             temperatureProperty().set(temperature);
