@@ -48,7 +48,7 @@ abstract class WindowController extends BorderPane {
     public Icapteur getCapteur() {
         return this.capteur;
     }
-
+ 
     /**
      * Methode affichant un message d'alerte en cas d'invalidité des informations saisies
      */
