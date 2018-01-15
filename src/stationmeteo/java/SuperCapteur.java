@@ -2,6 +2,7 @@ package stationmeteo.java;
 
 import java.util.ArrayList;
 import java.util.List;
+import javafx.application.Platform;
 import javafx.beans.property.FloatProperty;
 import javafx.beans.property.ObjectProperty;
 import javafx.beans.property.SimpleFloatProperty;
@@ -39,13 +40,13 @@ public class SuperCapteur extends Icapteur implements ISuperCapteurSerialize{
         
          setId(10);
         setNom("default");
-<<<<<<< HEAD
+
         this.setListCapteur(new ArrayList());
          Platform.runLater(() ->monTempBind=new TempBinding(this.getListCapteur(),this.listCapteur.get().get(0).temperatureProperty()));
-=======
+
         this.setListCapteur(new ArrayList<>());
         monTempBind=new TempBinding(this.getListCapteur(),this.listCapteur.get().get(0).temperatureProperty());
->>>>>>> 1775b60ab7dae5b6631f3b166ab4c6283d9c924c
+
       
         temperatureProperty().bind(monTempBind);
        // temperature.bind(temp);
