@@ -118,4 +118,6 @@ public class XMLSuperCapteur implements Serializable,ISuperCapteurSerialize{
         });
         return uneList;
     }
+
+   
 }
