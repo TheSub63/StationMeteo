@@ -16,7 +16,9 @@ import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.SimpleObjectProperty;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
+import stationmeteo.java.CapteurPoid;
 import stationmeteo.java.ICapteurPoid;
+import stationmeteo.java.ListCapteurPoid;
 import stationmeteo.java.SuperCapteur;
 
 /**
@@ -27,7 +29,7 @@ public class XMLSuperCapteur implements Serializable,ISuperCapteurSerialize{
     private IntegerProperty id;
     private StringProperty nom;
     private FloatProperty temperature; 
-    private ObjectProperty<List<XMLCapteurPoid>> listCapteur;
+    private ObjectProperty<ListCapteurPoid> listCapteur;
     private transient ISuperCapteurSerialize model;
     public XMLSuperCapteur() {
         model = new SuperCapteur();
@@ -63,7 +65,7 @@ public class XMLSuperCapteur implements Serializable,ISuperCapteurSerialize{
     
     public ISuperCapteurSerialize getModel() {
         
-        model = new SuperCapteur(this.getId(),this.getNom(),this.listCapteur.get().get(0).getModel());
+        model = new SuperCapteur(this.getId(),this.getNom(),this.listCapteur.get().get(0));
         /*for (int i=1;i<this.listCapteur.get().size();i++){
             model.getListCapteur().add(this.listCapteur.get().get(i));
         }*/
@@ -104,19 +106,13 @@ public class XMLSuperCapteur implements Serializable,ISuperCapteurSerialize{
     
     
     @Override
-    public void setListCapteur(List<ICapteurPoid>maliste){
-        maliste.stream().forEach((c) -> {
-            listCapteur.get().add(new XMLCapteurPoid(c));
-        });
+    public void setListCapteur(ListCapteurPoid maliste){
+        listCapteur.set(maliste);
     }
 
     @Override
-    public List<ICapteurPoid> getListCapteur() {
-        List<ICapteurPoid> uneList=new LinkedList();
-        listCapteur.get().stream().forEach((c) -> {
-            uneList.add(c.getModel());
-        });
-        return uneList;
+    public ListCapteurPoid getListCapteur() {
+        return listCapteur.get();
     }
 
    

@@ -12,17 +12,12 @@ import stationmeteo.java.serialize.ISuperCapteurSerialize;
  */
 public class SuperCapteur extends Icapteur implements ISuperCapteurSerialize{
 
-    private List<ICapteurPoid> listCapteur=new LinkedList();
+    private ListCapteurPoid listCapteur=new ListCapteurPoid();
     private FloatProperty temperature=new SimpleFloatProperty(this, "temperature") ;
     private TempBinding monTempBind;
     private FloatProperty observe=new SimpleFloatProperty(this,"observe");
 
-    
-    
-    
-    public SuperCapteur(int id , String nom ,ICapteurPoid capteur){
-        
-
+    public SuperCapteur(int id , String nom ,CapteurPoid capteur){
         setId(id);
         setNom(nom);
         this.getListCapteur().add(capteur);
@@ -32,7 +27,6 @@ public class SuperCapteur extends Icapteur implements ISuperCapteurSerialize{
        System.out.println(this.getNom()+" est un super capteur");
     }
 
-    @SuppressWarnings("WeakerAccess")
     public SuperCapteur() {   
         setId(10);
         setNom("default");
@@ -55,10 +49,10 @@ public class SuperCapteur extends Icapteur implements ISuperCapteurSerialize{
         return this.getNom()+ " est un superCapteur";
     }
     @Override
-     public FloatProperty temperatureProperty(){
+    public FloatProperty temperatureProperty(){
          return temperature;
-     }
-     int getActualisation(){
+    }
+    public int getActualisation(){
          int actu=((CapteurPoid)listCapteur.get(0)).getActu();
          for(ICapteurPoid c: listCapteur){
             if(actu>=((CapteurPoid)c).getActu()) actu=((CapteurPoid)c).getActu();
@@ -69,13 +63,15 @@ public class SuperCapteur extends Icapteur implements ISuperCapteurSerialize{
     public float getTemperature() {
         return temperatureProperty().get();
     }
-
     @Override
-    public List<ICapteurPoid> getListCapteur() {
+    public ListCapteurPoid getListCapteur() {
         return listCapteur;
     }
     @Override
-    public void setListCapteur(List<ICapteurPoid> maliste) {
+    public void setListCapteur(ListCapteurPoid maliste) {
         listCapteur=maliste;
+    }
+    @Override public void setTemperature(float temperature){ 
+        temperatureProperty().set(temperature);
     }
 }

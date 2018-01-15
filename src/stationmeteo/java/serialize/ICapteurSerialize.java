@@ -31,14 +31,7 @@ public interface ICapteurSerialize  {
     
     default public void setId(int id){idProperty().set(id);}
     default public void setNom(String nom){nomProperty().set(nom);}
-    default public void setTemperature(float temperature){
-        try{
-            temperatureProperty().set(temperature);
-        }catch(RuntimeException e){
-          
-            System.out.println("");
-        }
-    }
+    default public void setTemperature(float temperature){ temperatureProperty().set(temperature);}
     default public void setActualisation(int actu){actualisationProperty().set(actu);}
     default public void setAlgo(Algorithme algo){algoProperty().set(algo);}
 }

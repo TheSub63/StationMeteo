@@ -12,6 +12,7 @@ import javafx.beans.property.ObjectProperty;
 import javafx.beans.property.StringProperty;
 import stationmeteo.java.CapteurPoid;
 import stationmeteo.java.ICapteurPoid;
+import stationmeteo.java.ListCapteurPoid;
 
 /**
  *
@@ -22,7 +23,7 @@ public interface ISuperCapteurSerialize {
     public StringProperty nomProperty();
     public FloatProperty temperatureProperty();
 
-     public List<ICapteurPoid> getListCapteur();
+     public ListCapteurPoid getListCapteur();
 
     //public ObjectProperty<List<ICapteurPoid>> listCapteurProperty();
     
@@ -35,7 +36,7 @@ public interface ISuperCapteurSerialize {
     default public void setId(int id){idProperty().set(id);}
     default public void setNom(String nom){nomProperty().set(nom);}
     default public void setTemperature(float temperature){temperatureProperty().set(temperature);}
-   public void setListCapteur(List<ICapteurPoid>maliste);
+   public void setListCapteur(ListCapteurPoid maliste);
     //default public void setTemperature(float temperature){temperatureProperty().set(temperature);}
     
 }
