@@ -24,10 +24,7 @@ public class AlgorithmeAleatoire implements Algorithme{
      * @return la nouvelle température aléatoire du capteur
      */
     @Override
-    public float getNewTemp(float temperature){
-        temperature=alea.nextFloat()*100-50;
-        return temperature;
-    }
+    public float getNewTemp(float temperature){ return alea.nextFloat()*100-50; }
 
     /**
      * La redéfinition de la méthode toString d'algorithme, indiquant le nom de l'algorithme utilisé

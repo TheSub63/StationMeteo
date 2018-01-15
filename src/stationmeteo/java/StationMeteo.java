@@ -7,7 +7,7 @@ import javafx.stage.Stage;
 import javafx.fxml.FXMLLoader;
 import java.net.URL;
 import javafx.scene.layout.BorderPane;
-import stationmeteo.controller.MainController;
+import stationmeteo.controller.WindowControllers.MainController;
 
 /**
  * Classe principale de l'application, elle charge la fenêtre principale,
@@ -29,7 +29,7 @@ public class StationMeteo extends Application {
      */
     @Override
     public void start(Stage primaryStage) {
-        leMain.ChargerCapteur();
+        leMain.chargerCapteur();
         URL url=getClass().getResource("/stationmeteo/ressources/fxml/fenetreMain.fxml");
         FXMLLoader loader = new FXMLLoader(url);
         loader.setController(leMain);

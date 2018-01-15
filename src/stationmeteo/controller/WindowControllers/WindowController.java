@@ -1,4 +1,4 @@
-package stationmeteo.controller;
+package stationmeteo.controller.WindowControllers;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
@@ -33,7 +33,7 @@ abstract class WindowController extends BorderPane {
     @FXML
     protected Button annulButton;
     @FXML
-    protected ChoiceBox<Algorithme> algoCapteur;//https://docs.oracle.com/javafx/2/ui_controls/choice-box.htm
+    protected ChoiceBox<Algorithme> algoCapteur;
 
     protected Algorithme selectedAlgo;
     protected Icapteur capteur;
