@@ -79,14 +79,11 @@ public class SuperCapController extends WindowController implements Initializabl
 
                     CapteurPoid sousCap = new CapteurPoid(element, Integer.parseInt(poidsI.getEditor().getText()));
                     if (onCap == null) {
-<<<<<<< HEAD:src/stationmeteo/controller/SuperCapController.java
-                        onCap = new SuperCapteur(Integer.parseInt(idCapteur.getText()),
-                                nomCapteur.getText(), (ICapteurPoid) sousCap);
-=======
+
 
                         onCap = new SuperCapteur(Integer.parseInt(idCapteur.getText()), nomCapteur.getText(), sousCap);
 
->>>>>>> 57d58d1a16a6a905740d2f9edc2da8dd07d86423:src/stationmeteo/controller/WindowControllers/SuperCapController.java
+
                     }
                     else onCap.ajouter(sousCap);
                 }
