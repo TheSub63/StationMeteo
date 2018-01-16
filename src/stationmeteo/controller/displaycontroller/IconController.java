@@ -31,7 +31,7 @@ public class IconController extends DigitalController {
         super(c);
         Image nuage = new Image("stationmeteo/ressources/images/nuage.png");
         Image soleil = new Image("stationmeteo/ressources/images/soleil.png");
-        Image snow = new Image("stationmeteo/ressources/images/snow.png");
+        Image snow = new Image("stationmeteo/ressources/images/neige.png");
 
         ObjectBinding<Image> unePartie = new When(cap.temperatureProperty().lessThan(20f))
                 .then(nuage)
