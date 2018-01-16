@@ -61,7 +61,7 @@ public class SerializerCapteur implements Serializable {
     /**
      *Cette methode va enregistrer dans les différent xml les Capteurs et les 
      * superCapteur
-     * @param listCapteur
+     * @param listCapteur la liste des capteurs
      */
     public void sauveCapteurs(ArrayList<Icapteur> listCapteur) {
         List<ICapteurSerialize> maListe = new ArrayList();

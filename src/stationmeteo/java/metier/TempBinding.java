@@ -1,6 +1,5 @@
 package stationmeteo.java.metier;
 
-import stationmeteo.java.metier.CapteurPoid;
 import java.util.List;
 import javafx.beans.binding.FloatBinding;
 import javafx.beans.property.FloatProperty;
@@ -12,7 +11,7 @@ import javafx.beans.property.FloatProperty;
  */
 public class TempBinding extends FloatBinding{
 
-    List<CapteurPoid>maliste;
+    private List<CapteurPoid>maliste;
     
     /**
      *Constructeur de la classe qui met en place la liste et les dependances

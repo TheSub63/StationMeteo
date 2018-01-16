@@ -1,8 +1,5 @@
 package stationmeteo.java.metier;
 
-import stationmeteo.java.metier.ListCapteurPoid;
-import stationmeteo.java.metier.Icapteur;
-import stationmeteo.java.metier.CapteurPoid;
 import javafx.beans.property.FloatProperty;
 import javafx.beans.property.SimpleFloatProperty;
 import stationmeteo.java.serialize.ISuperCapteurSerialize;
@@ -46,7 +43,7 @@ public class SuperCapteur extends Icapteur implements ISuperCapteurSerialize{
 
     /**
      * Fonction d'ajout à la liste de Super Capteurs
-     * @param lecap
+     * @param lecap capteur à ajouter
      */
     public void ajouter(CapteurPoid lecap){
        getListCapteur().add(lecap);

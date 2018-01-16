@@ -18,9 +18,9 @@ import stationmeteo.java.metier.Icapteur;
 public class DigitalController extends BorderPane implements Initializable{
     
     @FXML
-    protected Label nameText;
+    private Label nameText;
     @FXML
-    protected Label cpt;
+    private Label cpt;
     
     protected final Icapteur cap;
     protected final StringConverter<Number> converter = new NumberStringConverter();

@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package stationmeteo.java.metier;
 
 import stationmeteo.java.algorithmes.Algorithme;
@@ -12,7 +7,7 @@ import stationmeteo.java.algorithmes.Algorithme;
  * par le constructeur
  * @author matthias
  */
-public class fabriqueCapteur {
+public class FabriqueCapteur {
 
     /**
      *Permet de fabriquer un capteur

@@ -70,8 +70,7 @@ public class MainController extends BorderPane implements Initializable {
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         capteurList.setOnMouseClicked(me -> selectedCapteur= capteurList.getSelectionModel().getSelectedItem());
-
-        //CellFactory utilisable mais non utilisée
+        //CellFactory A binder, class a peut etre supprimer
         /*capteurList.setCellFactory(param ->
             new ListCell<Icapteur>(){               
                 @Override
@@ -84,8 +83,7 @@ public class MainController extends BorderPane implements Initializable {
                     
                     }
                 }
-            });*/
-
+            });**/
         addButton.setOnMousePressed(me -> ouvrirFenetreAjout());
         groupButton.setOnMousePressed(me -> ouvrirFenetreSuperCapteur());
 
@@ -159,6 +157,7 @@ public class MainController extends BorderPane implements Initializable {
 
     /**
      * Sauvegarde les capteurs à l'aide du XMLdatamanager
+     * @throws Exception erreur de sauvegarde
      */
     public void sauveCapteur() throws Exception{
         if(this.XMLdatamanager!= null){
@@ -166,7 +165,7 @@ public class MainController extends BorderPane implements Initializable {
             test.addAll(capteurList.getItems());
             XMLdatamanager.sauveCapteurs(test);
         }
-        else throw new Exception("Erreur Sauvegarde");
+        else throw new Exception();
     }
 
     /**

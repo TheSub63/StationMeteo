@@ -81,12 +81,12 @@ abstract class WindowController extends BorderPane {
      * @return l'algorithme utilisable
      */
     protected Algorithme buildAlgo(Algorithme selectedAlgo){
-        if(selectedAlgo.getClass()==AlgorithmeAleatoireFixe.class){
+        if(selectedAlgo.getClass()==AlgorithmeAleatoireFixe.class && intervalleAlgo.getText()!=null){
             selectedAlgo=new AlgorithmeAleatoireFixe(
                     Float.parseFloat(onAlgoFixeAfficher1.getText()),
                     Float.parseFloat(onAlgoFixeAfficher2.getText()));
         }
-        if(selectedAlgo.getClass()==AlgorithmeFenetreGlissante.class){
+        if(selectedAlgo.getClass()==AlgorithmeFenetreGlissante.class && intervalleAlgo.getText()!=null){
             selectedAlgo=new AlgorithmeFenetreGlissante(
                     Float.parseFloat(intervalleAlgo.getText()));
         }

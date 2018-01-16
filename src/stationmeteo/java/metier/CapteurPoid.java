@@ -1,6 +1,5 @@
 package stationmeteo.java.metier;
 
-import stationmeteo.java.metier.Capteur;
 import javafx.beans.property.FloatProperty;
 import javafx.beans.property.ObjectProperty;
 import javafx.beans.property.SimpleFloatProperty;
@@ -20,7 +19,7 @@ public class CapteurPoid {
      * Constructeur par défaut de CapteurPoid
      */
     public CapteurPoid(){
-        monCapteur.set(fabriqueCapteur.fabriqueCapteur());
+        monCapteur.set(FabriqueCapteur.fabriqueCapteur());
         monPoid.set(1f);
         actualisation=1;
     }
@@ -38,7 +37,8 @@ public class CapteurPoid {
     }
 
     /**
-
+     * Getter de l'acutalisation
+     * @return l'actualisation
      */
     public int getActualisation() {return actualisation; }
 

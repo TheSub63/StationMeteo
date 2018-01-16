@@ -5,7 +5,6 @@
  */
 package stationmeteo.java.serialize;
 
-import stationmeteo.java.serialize.ICapteurSerialize;
 import java.io.Serializable;
 import javafx.beans.property.FloatProperty;
 
@@ -16,10 +15,9 @@ import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.SimpleObjectProperty;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
-import stationmeteo.java.metier.Capteur;
 import stationmeteo.java.metier.Icapteur;
 import stationmeteo.java.algorithmes.Algorithme;
-import stationmeteo.java.metier.fabriqueCapteur;
+import stationmeteo.java.metier.FabriqueCapteur;
 
 /**
  *Classe qui permet la serialization des capteurs
@@ -44,7 +42,7 @@ public class XMLCapteur extends Icapteur implements Serializable,ICapteurSeriali
      * par default
      */
     public XMLCapteur() {
-        model = (ICapteurSerialize) fabriqueCapteur.fabriqueCapteur();
+        model = (ICapteurSerialize) FabriqueCapteur.fabriqueCapteur();
         id = new SimpleIntegerProperty(model.getId());
         nom = new SimpleStringProperty(model.getNom());
         temperature = new SimpleFloatProperty(model.getTemperature());
@@ -114,7 +112,7 @@ public class XMLCapteur extends Icapteur implements Serializable,ICapteurSeriali
      * @return l'objet implementer par IcapteurSerialize
      */
     public ICapteurSerialize getModel() {
-        model = (ICapteurSerialize) fabriqueCapteur.fabriqueCapteur(this.getId(),this.getNom(),this.getActualisation(),this.getTemperature(),this.getAlgo());
+        model = (ICapteurSerialize) FabriqueCapteur.fabriqueCapteur(this.getId(),this.getNom(),this.getActualisation(),this.getTemperature(),this.getAlgo());
         return model;
     }
     /**

@@ -5,7 +5,6 @@
  */
 package stationmeteo.java.metier;
 
-import stationmeteo.java.metier.Capteur;
 import javafx.application.Platform;
 
 /**

@@ -5,7 +5,6 @@
  */
 package stationmeteo.java.serialize;
 
-import stationmeteo.java.serialize.ISuperCapteurSerialize;
 import java.io.Serializable;
 import javafx.beans.property.FloatProperty;
 import javafx.beans.property.IntegerProperty;
@@ -16,8 +15,7 @@ import javafx.beans.property.SimpleObjectProperty;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
 import stationmeteo.java.metier.ListCapteurPoid;
-import stationmeteo.java.metier.SuperCapteur;
-import stationmeteo.java.metier.fabriqueCapteur;
+import stationmeteo.java.metier.FabriqueCapteur;
 
 /**
  *Classe qui permet la serialization des SuperCapteurs
@@ -34,7 +32,7 @@ public class XMLSuperCapteur implements Serializable,ISuperCapteurSerialize{
      * par default
      */
     public XMLSuperCapteur() {
-        model = (ISuperCapteurSerialize) fabriqueCapteur.fabriqueSuperCapteur();
+        model = (ISuperCapteurSerialize) FabriqueCapteur.fabriqueSuperCapteur();
         id = new SimpleIntegerProperty(model.getId());
         nom = new SimpleStringProperty(model.getNom());
         temperature = new SimpleFloatProperty(model.getTemperature());
@@ -83,7 +81,7 @@ public class XMLSuperCapteur implements Serializable,ISuperCapteurSerialize{
      * @return l'objet implementer par ISuperCapteurSerialize
      */
     public ISuperCapteurSerialize getModel() {
-        model = (ISuperCapteurSerialize) fabriqueCapteur.fabriqueSuperCapteur(this.getId(),this.getNom(),this.listCapteur.get().get(0));
+        model = (ISuperCapteurSerialize) FabriqueCapteur.fabriqueSuperCapteur(this.getId(),this.getNom(),this.listCapteur.get().get(0));
         return model;
     }
     /**

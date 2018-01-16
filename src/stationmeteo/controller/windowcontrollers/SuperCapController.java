@@ -10,9 +10,8 @@ import stationmeteo.java.metier.Icapteur;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.scene.control.Alert.AlertType;
-
 import stationmeteo.java.metier.SuperCapteur;
-import stationmeteo.java.metier.fabriqueCapteur;
+import stationmeteo.java.metier.FabriqueCapteur;
 
 /**
  * Controller de la fenêtre permettant de créer un super capteur.
@@ -81,9 +80,9 @@ public class SuperCapController extends WindowController implements Initializabl
 
                     CapteurPoid sousCap = new CapteurPoid(element, Integer.parseInt(poidsI.getEditor().getText()));
                     if (onCap == null) {
-                        onCap = (SuperCapteur) fabriqueCapteur.fabriqueSuperCapteur(Integer.parseInt(idCapteur.getText()),
+                        onCap = (SuperCapteur) FabriqueCapteur.fabriqueSuperCapteur(Integer.parseInt(idCapteur.getText()),
                                 nomCapteur.getText(), sousCap);
-                        onCap = (SuperCapteur) fabriqueCapteur.fabriqueSuperCapteur(Integer.parseInt(idCapteur.getText()), nomCapteur.getText(), sousCap);
+                        onCap = (SuperCapteur) FabriqueCapteur.fabriqueSuperCapteur(Integer.parseInt(idCapteur.getText()), nomCapteur.getText(), sousCap);
 
                     }
                     else onCap.ajouter(sousCap);
