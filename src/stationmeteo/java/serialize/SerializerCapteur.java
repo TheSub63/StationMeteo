@@ -5,8 +5,8 @@
  */
 package stationmeteo.java.serialize;
 
-import stationmeteo.java.serialize.XMLClass.XMLSuperCapteur;
-import stationmeteo.java.serialize.XMLClass.XMLCapteur;
+import stationmeteo.java.serialize.xmlclass.XMLSuperCapteur;
+import stationmeteo.java.serialize.xmlclass.XMLCapteur;
 import stationmeteo.java.serialize.interfaceCap.ISuperCapteurSerialize;
 import stationmeteo.java.serialize.interfaceCap.ICapteurSerialize;
 import java.beans.XMLDecoder;

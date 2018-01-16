@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package stationmeteo.java.serialize.XMLClass;
+package stationmeteo.java.serialize.xmlclass;
 
 import stationmeteo.java.serialize.interfaceCap.ISuperCapteurSerialize;
 import java.io.Serializable;
