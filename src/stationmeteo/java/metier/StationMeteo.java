@@ -1,12 +1,7 @@
 package stationmeteo.java.metier;
 
-import java.io.IOException;
 import javafx.application.Application;
-import javafx.scene.Scene;
 import javafx.stage.Stage;
-import javafx.fxml.FXMLLoader;
-import java.net.URL;
-import javafx.scene.layout.BorderPane;
 import stationmeteo.controller.windowcontrollers.MainController;
 
 /**
@@ -40,8 +35,18 @@ public class StationMeteo extends Application {
      */
     @Override
     public void stop(){
-        leMain.sauveCapteur();
-        System.exit(0);
+        int status = 1;
+        try {
+            leMain.sauveCapteur();
+        }
+        catch (Exception e){
+            e.printStackTrace();
+            System.exit(status);
+        }
+        finally {
+            status=0;
+        }
+        System.exit(status);
     }
 
     /**
