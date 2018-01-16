@@ -42,7 +42,7 @@ class Verification {
                 temperatureCapteur.setText("0");
 
             if (!idCapteur.getText().matches(REGINT)
-                    || !actualisationCapteur.getText().matches(REGPOS)) //Si l'id ne correspond pas à REGINT
+                    || !actualisationCapteur.getText().matches(REGINT)) //Si l'id ne correspond pas à REGINT
                                                                         // ou l'actualisation ne correspond pas à REGPOS, FAUX
                 return false;
 
