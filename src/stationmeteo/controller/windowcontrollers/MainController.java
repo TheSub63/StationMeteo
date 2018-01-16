@@ -118,9 +118,37 @@ public class MainController extends BorderPane implements Initializable {
             }
         });
 
-        digitalButton.setOnMousePressed(me -> { if(selectedCapteur!=null)affichageDigital(); });
-        thermoButton.setOnMousePressed(me -> { if(selectedCapteur!=null)affichageThermo(); });
-        iconButton.setOnMousePressed(me -> { if(selectedCapteur!=null)affichageIcone(); });
+        digitalButton.setOnMousePressed(me -> { 
+            if(selectedCapteur!=null)
+                affichageDigital(); 
+            else{
+                Alert alert = new Alert(AlertType.INFORMATION);
+                alert.setTitle("capteur non selectionné");
+                alert.setHeaderText("capteur non selectionné");
+                alert.setContentText("vous devez selectionner un capteur");
+    
+                alert.showAndWait();
+            }
+        });
+        thermoButton.setOnMousePressed(me -> { if(selectedCapteur!=null)affichageThermo();
+        else{
+                Alert alert = new Alert(AlertType.INFORMATION);
+                alert.setTitle("capteur non selectionné");
+                alert.setHeaderText("capteur non selectionné");
+                alert.setContentText("vous devez selectionner un capteur");
+    
+                alert.showAndWait();
+            }
+        });
+        iconButton.setOnMousePressed(me -> { if(selectedCapteur!=null)affichageIcone();
+        else{
+                Alert alert = new Alert(AlertType.INFORMATION);
+                alert.setTitle("capteur non selectionné");
+                alert.setHeaderText("capteur non selectionné");
+                alert.setContentText("vous devez selectionner un capteur");
+    
+                alert.showAndWait();
+            }});
 
         capteurList.setItems(listeDeCapteur);
     }
