@@ -20,7 +20,7 @@ public class CapteurPoid {
      * Constructeur par défaut de CapteurPoid
      */
     public CapteurPoid(){
-        monCapteur.set(new Capteur());
+        monCapteur.set(fabriqueCapteur.fabriqueCapteur());
         monPoid.set(1f);
         actualisation=1;
     }
