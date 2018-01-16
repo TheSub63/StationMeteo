@@ -6,7 +6,6 @@
 package stationmeteo.java.serialize;
 
 import java.io.Serializable;
-import java.util.List;
 import javafx.beans.property.FloatProperty;
 
 import javafx.beans.property.IntegerProperty;
@@ -21,7 +20,7 @@ import stationmeteo.java.Icapteur;
 import stationmeteo.java.algorithmes.Algorithme;
 
 /**
- *
+ *Classe qui permet la serialization des capteurs
  * @author matthias
  */
 public class XMLCapteur extends Icapteur implements Serializable,ICapteurSerialize {
@@ -38,6 +37,10 @@ public class XMLCapteur extends Icapteur implements Serializable,ICapteurSeriali
     //propre au xmlCapteur
     private transient ICapteurSerialize model;
 
+    /**
+     *Constructeur par default de XMLCapteur, il permet de creer un XMLCapteur
+     * par default
+     */
     public XMLCapteur() {
         model = new Capteur();
         id = new SimpleIntegerProperty(model.getId());

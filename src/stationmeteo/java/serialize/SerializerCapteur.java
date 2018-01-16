@@ -14,17 +14,21 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
-import javafx.beans.property.FloatProperty;
 import stationmeteo.java.Capteur;
 import stationmeteo.java.Icapteur;
 import stationmeteo.java.SuperCapteur;
 
 /**
- *
+ *Cette classe permet la mis en place de la serialization en XML, celle-ci va
+ * manager en quelque sorte le chargement etla sauvegarde dans les fichier XML
  * @author matthias
  */
-public class SerializerCapteur extends Icapteur implements Serializable {
+public class SerializerCapteur implements Serializable {
      
+    /**
+     *Cette methodes va charger les capteurs inscrit dans le xml dans une liste
+     * @return une liste de capteur 
+     */
     public List<ICapteurSerialize> chargeCapteur() {
         
         List<ICapteurSerialize> result = null;
@@ -37,6 +41,10 @@ public class SerializerCapteur extends Icapteur implements Serializable {
         
         return result;
     }
+    /**
+     *Cette methodes va charger les Supercapteurs inscrit dans le xml dans une liste
+     * @return une liste de SuperCapteur 
+     */
     public List<ISuperCapteurSerialize> chargeSuperCapteur() {
         
         List<ISuperCapteurSerialize> result = null;
@@ -50,6 +58,11 @@ public class SerializerCapteur extends Icapteur implements Serializable {
         return result;
     }
    
+    /**
+     *Cette methode va enregistrer dans les différent xml les Capteurs et les 
+     * superCapteur
+     * @param listCapteur
+     */
     public void sauveCapteurs(ArrayList<Icapteur> listCapteur) {
         List<ICapteurSerialize> maListe = new ArrayList();
         List<ISuperCapteurSerialize> listSup= new ArrayList();
@@ -75,22 +88,14 @@ public class SerializerCapteur extends Icapteur implements Serializable {
                 bn.add(i);
             }
                 
-            //bn = listSup.stream().map((n)-> new XMLSuperCapteur(n)).collect(Collectors.toList());
+            
             oos.writeObject(bn);
             
         }catch (IOException e) {
             e.printStackTrace();
+        }
       
     }    
 }
 
-    @Override
-    public FloatProperty temperatureProperty() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    @Override
-    public float getTemperature() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-}
+   
