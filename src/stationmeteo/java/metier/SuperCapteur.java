@@ -5,7 +5,7 @@ import stationmeteo.java.metier.Icapteur;
 import stationmeteo.java.metier.CapteurPoid;
 import javafx.beans.property.FloatProperty;
 import javafx.beans.property.SimpleFloatProperty;
-import stationmeteo.java.serialize.interfaceCap.ISuperCapteurSerialize;
+import stationmeteo.java.serialize.ISuperCapteurSerialize;
 
 /**
  * Classe définissant un Super Capteur simple. Un Super Capteur est composé des mêmes attributs qu'un Icapteur, avec en plus une

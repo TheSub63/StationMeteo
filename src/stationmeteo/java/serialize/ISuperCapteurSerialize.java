@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package stationmeteo.java.serialize.interfaceCap;
+package stationmeteo.java.serialize;
 
 import javafx.beans.property.FloatProperty;
 import javafx.beans.property.IntegerProperty;
