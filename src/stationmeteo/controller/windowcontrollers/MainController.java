@@ -14,6 +14,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 import stationmeteo.controller.displaycontroller.DigitalController;
 import stationmeteo.controller.displaycontroller.IconController;
@@ -146,7 +147,7 @@ public class MainController extends BorderPane implements Initializable {
      * @param control instance de controller
      * @return le Stage chargé par la methode
      */
-    private Stage charger(String path, BorderPane control){
+    private Stage charger(String path, Pane control){
         Stage fenetre=new Stage();
         URL url=getClass().getResource(path);
         FXMLLoader loader = new FXMLLoader(url);

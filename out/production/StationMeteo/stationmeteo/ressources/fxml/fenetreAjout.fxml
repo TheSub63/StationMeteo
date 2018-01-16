@@ -2,124 +2,116 @@
 
 <?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
-<?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" stylesheets="stationmeteo/ressources/fxml/fenetreAjout.css" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1">
    <bottom>
       <HBox alignment="BOTTOM_RIGHT" prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
-         <children>
-            <Button fx:id="annulButton" cancelButton="true" mnemonicParsing="false" text="Annuler">
-               <HBox.margin>
-                  <Insets bottom="20.0" right="20.0" />
-               </HBox.margin>
-            </Button>
-            <Button fx:id="validButton" mnemonicParsing="false" text="OK">
-               <HBox.margin>
-                  <Insets bottom="20.0" right="20.0" />
-               </HBox.margin>
-            </Button>
-         </children>
+         <Button fx:id="annulButton" cancelButton="true" mnemonicParsing="false" text="Annuler">
+            <HBox.margin>
+               <Insets bottom="20.0" right="20.0"/>
+            </HBox.margin>
+         </Button>
+         <Button fx:id="validButton" mnemonicParsing="false" text="OK">
+            <HBox.margin>
+               <Insets bottom="20.0" right="20.0"/>
+            </HBox.margin>
+         </Button>
       </HBox>
    </bottom>
    <center>
       <HBox alignment="CENTER" BorderPane.alignment="CENTER">
-         <children>
-            <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
-               <children>
-                  <Label text="id">
-                     <VBox.margin>
-                        <Insets bottom="20.0" top="20.0" />
-                     </VBox.margin>
-                  </Label>
-                  <Label text="nom">
-                     <VBox.margin>
-                        <Insets bottom="20.0" />
-                     </VBox.margin>
-                  </Label>
-                  <Label text="actualisation">
-                     <VBox.margin>
-                        <Insets bottom="20.0" />
-                     </VBox.margin>
-                  </Label>
-                  <Label text="temperature">
-                     <VBox.margin>
-                        <Insets bottom="20.0" />
-                     </VBox.margin>
-                  </Label>
-                  <Label layoutX="19.0" layoutY="206.0" text="Algorithme">
-                     <VBox.margin>
-                        <Insets bottom="20.0" />
-                     </VBox.margin></Label>
-                  <Label id="onAlgoFixeAfficher" stylesheets="@fenetreAjout.css" text="Bornes">
-                     <VBox.margin>
-                        <Insets bottom="30.0" />
-                     </VBox.margin>
-                  </Label>
-                  <Label id="onFenetreGlissanteAfficher" stylesheets="@fenetreAjout.css" text="Intervalle">
-                     <VBox.margin>
-                        <Insets bottom="20.0" />
-                     </VBox.margin>
-                  </Label>
-               </children>
-            </VBox>
-            <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
-               <children>
-                  <TextField fx:id="idCapteur" alignment="TOP_LEFT">
-                     <VBox.margin>
-                        <Insets bottom="10.0" top="10.0" />
-                     </VBox.margin>
-                  </TextField>
-                  <TextField fx:id="nomCapteur">
-                     <VBox.margin>
-                        <Insets bottom="10.0" />
-                     </VBox.margin>
-                  </TextField>
-                  <TextField fx:id="actualisationCapteur">
-                     <VBox.margin>
-                        <Insets bottom="10.0" />
-                     </VBox.margin>
-                  </TextField>
-                  <TextField fx:id="temperatureCapteur">
-                     <VBox.margin>
-                        <Insets bottom="10.0" />
-                     </VBox.margin>
-                  </TextField>
-                  <ChoiceBox fx:id="algoCapteur" prefWidth="150.0">
-                     <VBox.margin>
-                        <Insets bottom="10.0" />
-                     </VBox.margin></ChoiceBox>
-                  <HBox>
-                     <children>
-                        <TextField fx:id="onAlgoFixeAfficher1" disable="true" stylesheets="@fenetreAjout.css">
-                           <HBox.margin>
-                              <Insets />
-                           </HBox.margin>
-                           <tooltip>
-                              <Tooltip text="Minimum" />
-                           </tooltip>
-                        </TextField>
-                        <TextField fx:id="onAlgoFixeAfficher2" disable="true" stylesheets="@fenetreAjout.css">
-                           <HBox.margin>
-                              <Insets bottom="10.0" />
-                           </HBox.margin>
-                           <tooltip>
-                              <Tooltip text="Maximum" />
-                           </tooltip>
-                        </TextField>
-                     </children>
-                     <VBox.margin>
-                        <Insets bottom="10.0" />
-                     </VBox.margin>
-                  </HBox>
-                  <TextField id="onFenetreGlissanteAfficher" fx:id="intervalleAlgo" disable="true" stylesheets="@fenetreAjout.css">
-                     <VBox.margin>
-                        <Insets bottom="10.0" />
-                     </VBox.margin>
-                  </TextField>
-               </children>
-            </VBox>
-         </children>
+         <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+            <Label text="id">
+               <VBox.margin>
+                  <Insets bottom="20.0" top="20.0"/>
+               </VBox.margin>
+            </Label>
+            <Label text="nom">
+               <VBox.margin>
+                  <Insets bottom="20.0"/>
+               </VBox.margin>
+            </Label>
+            <Label text="actualisation">
+               <VBox.margin>
+                  <Insets bottom="20.0"/>
+               </VBox.margin>
+            </Label>
+            <Label text="temperature">
+               <VBox.margin>
+                  <Insets bottom="20.0"/>
+               </VBox.margin>
+            </Label>
+            <Label layoutX="19.0" layoutY="206.0" text="Algorithme">
+               <VBox.margin>
+                  <Insets bottom="20.0"/>
+               </VBox.margin>
+            </Label>
+            <Label id="onAlgoFixeAfficher" stylesheets="@fenetreAjout.css" text="Bornes">
+               <VBox.margin>
+                  <Insets bottom="30.0"/>
+               </VBox.margin>
+            </Label>
+            <Label id="onFenetreGlissanteAfficher" stylesheets="@fenetreAjout.css" text="Intervalle">
+               <VBox.margin>
+                  <Insets bottom="20.0"/>
+               </VBox.margin>
+            </Label>
+         </VBox>
+         <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+            <TextField fx:id="idCapteur" alignment="TOP_LEFT">
+               <VBox.margin>
+                  <Insets bottom="10.0" top="10.0"/>
+               </VBox.margin>
+            </TextField>
+            <TextField fx:id="nomCapteur">
+               <VBox.margin>
+                  <Insets bottom="10.0"/>
+               </VBox.margin>
+            </TextField>
+            <TextField fx:id="actualisationCapteur">
+               <VBox.margin>
+                  <Insets bottom="10.0"/>
+               </VBox.margin>
+            </TextField>
+            <TextField fx:id="temperatureCapteur">
+               <VBox.margin>
+                  <Insets bottom="10.0"/>
+               </VBox.margin>
+            </TextField>
+            <ChoiceBox fx:id="algoCapteur" prefWidth="150.0">
+               <VBox.margin>
+                  <Insets bottom="10.0"/>
+               </VBox.margin>
+            </ChoiceBox>
+            <HBox>
+               <VBox.margin>
+                  <Insets bottom="10.0"/>
+               </VBox.margin>
+               <TextField fx:id="onAlgoFixeAfficher1" disable="true" stylesheets="@fenetreAjout.css">
+                  <HBox.margin>
+                     <Insets/>
+                  </HBox.margin>
+                  <tooltip>
+                     <Tooltip text="Minimum"/>
+                  </tooltip>
+               </TextField>
+               <TextField fx:id="onAlgoFixeAfficher2" disable="true" stylesheets="@fenetreAjout.css">
+                  <HBox.margin>
+                     <Insets bottom="10.0"/>
+                  </HBox.margin>
+                  <tooltip>
+                     <Tooltip text="Maximum"/>
+                  </tooltip>
+               </TextField>
+            </HBox>
+            <TextField id="onFenetreGlissanteAfficher" fx:id="intervalleAlgo" disable="true"
+                       stylesheets="@fenetreAjout.css">
+               <VBox.margin>
+                  <Insets bottom="10.0"/>
+               </VBox.margin>
+            </TextField>
+         </VBox>
       </HBox>
    </center>
 </BorderPane>

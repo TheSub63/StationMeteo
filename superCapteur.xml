@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<java version="1.8.0_151" class="java.beans.XMLDecoder">
+<java version="1.8.0_121" class="java.beans.XMLDecoder">
  <object class="java.util.ArrayList">
   <void method="add">
    <object class="stationmeteo.java.serialize.XMLSuperCapteur" id="XMLSuperCapteur0">
@@ -9,17 +9,12 @@
     <void property="listCapteur">
      <void method="add">
       <object class="stationmeteo.java.CapteurPoid" id="CapteurPoid0">
-       <void id="Capteur0" property="monCapteur">
+       <void property="monCapteur">
         <void property="algo">
          <object class="stationmeteo.java.algorithmes.AlgorithmeAleatoire"/>
         </void>
         <void property="id">
          <int>1</int>
-        </void>
-        <void property="leThread">
-         <void property="name">
-          <string>Thread-8</string>
-         </void>
         </void>
         <void property="nom">
          <string>deffe</string>
