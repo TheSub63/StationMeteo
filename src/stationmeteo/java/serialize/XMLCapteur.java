@@ -24,15 +24,14 @@ import stationmeteo.java.metier.FabriqueCapteur;
  * @author matthias
  */
 public class XMLCapteur extends Icapteur implements Serializable,ICapteurSerialize {
-//commun
-
+    //commun
     private IntegerProperty id;
     private StringProperty nom;
     private FloatProperty temperature;
    
     //capteur
     private IntegerProperty actualisation;
-    private final ObjectProperty<Algorithme> algo;
+    private final SimpleObjectProperty<Algorithme> algo;
 
     //propre au xmlCapteur
     private transient ICapteurSerialize model;
@@ -47,7 +46,7 @@ public class XMLCapteur extends Icapteur implements Serializable,ICapteurSeriali
         nom = new SimpleStringProperty(model.getNom());
         temperature = new SimpleFloatProperty(model.getTemperature());
         actualisation = new SimpleIntegerProperty(model.getActualisation());
-        algo = new SimpleObjectProperty(model.getAlgo());
+        algo = new SimpleObjectProperty<>(model.getAlgo());
    
     }
     
@@ -62,7 +61,7 @@ public class XMLCapteur extends Icapteur implements Serializable,ICapteurSeriali
         nom = new SimpleStringProperty(n.getNom());
         temperature = new SimpleFloatProperty(n.getTemperature());
         actualisation = new SimpleIntegerProperty(n.getActualisation());
-        algo = new SimpleObjectProperty(n.getAlgo());
+        algo = new SimpleObjectProperty<>(n.getAlgo());
         
     }
    

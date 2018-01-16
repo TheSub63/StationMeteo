@@ -2,22 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="547e6231-116d-4ef2-8fd2-74a1b1fee0d9" name="Default" comment="">
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/stationmeteo/java/metier/fabriqueCapteur.java" afterPath="$PROJECT_DIR$/src/stationmeteo/java/metier/FabriqueCapteur.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/stationmeteo/controller/displaycontroller/DigitalController.java" afterPath="$PROJECT_DIR$/src/stationmeteo/controller/displaycontroller/DigitalController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/stationmeteo/controller/windowcontrollers/AjoutController.java" afterPath="$PROJECT_DIR$/src/stationmeteo/controller/windowcontrollers/AjoutController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/stationmeteo/controller/windowcontrollers/MainController.java" afterPath="$PROJECT_DIR$/src/stationmeteo/controller/windowcontrollers/MainController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/stationmeteo/controller/windowcontrollers/SuperCapController.java" afterPath="$PROJECT_DIR$/src/stationmeteo/controller/windowcontrollers/SuperCapController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/stationmeteo/controller/windowcontrollers/WindowController.java" afterPath="$PROJECT_DIR$/src/stationmeteo/controller/windowcontrollers/WindowController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/stationmeteo/java/metier/CapteurPoid.java" afterPath="$PROJECT_DIR$/src/stationmeteo/java/metier/CapteurPoid.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/stationmeteo/java/metier/CapteurThread.java" afterPath="$PROJECT_DIR$/src/stationmeteo/java/metier/CapteurThread.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/stationmeteo/java/metier/ListCapteurPoid.java" afterPath="$PROJECT_DIR$/src/stationmeteo/java/metier/ListCapteurPoid.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/stationmeteo/java/metier/SuperCapteur.java" afterPath="$PROJECT_DIR$/src/stationmeteo/java/metier/SuperCapteur.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/stationmeteo/java/metier/TempBinding.java" afterPath="$PROJECT_DIR$/src/stationmeteo/java/metier/TempBinding.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/stationmeteo/java/serialize/SerializerCapteur.java" afterPath="$PROJECT_DIR$/src/stationmeteo/java/serialize/SerializerCapteur.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/stationmeteo/java/serialize/XMLCapteur.java" afterPath="$PROJECT_DIR$/src/stationmeteo/java/serialize/XMLCapteur.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/stationmeteo/java/serialize/XMLSuperCapteur.java" afterPath="$PROJECT_DIR$/src/stationmeteo/java/serialize/XMLSuperCapteur.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/superCapteur.xml" afterPath="$PROJECT_DIR$/superCapteur.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -45,8 +31,44 @@
       <file leaf-file-name="SerializerCapteur.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/stationmeteo/java/serialize/SerializerCapteur.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="63">
-              <caret line="7" column="7" lean-forward="false" selection-start-line="7" selection-start-column="7" selection-end-line="7" selection-end-column="7" />
+            <state relative-caret-position="-765">
+              <caret line="35" column="49" lean-forward="false" selection-start-line="35" selection-start-column="46" selection-end-line="35" selection-end-column="49" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="XMLCapteur.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/stationmeteo/java/serialize/XMLCapteur.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="924">
+              <caret line="48" column="31" lean-forward="true" selection-start-line="48" selection-start-column="31" selection-end-line="48" selection-end-column="31" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="XMLSuperCapteur.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/stationmeteo/java/serialize/XMLSuperCapteur.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="416">
+              <caret line="38" column="57" lean-forward="false" selection-start-line="38" selection-start-column="57" selection-end-line="38" selection-end-column="57" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AjoutController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/stationmeteo/controller/windowcontrollers/AjoutController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="21">
+              <caret line="1" column="7" lean-forward="true" selection-start-line="1" selection-start-column="7" selection-end-line="1" selection-end-column="7" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -59,48 +81,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="190">
               <caret line="41" column="21" lean-forward="false" selection-start-line="41" selection-start-column="21" selection-end-line="41" selection-end-column="21" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="FabriqueCapteur.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/stationmeteo/java/metier/FabriqueCapteur.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="462">
-              <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Icapteur.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/stationmeteo/java/metier/Icapteur.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="168">
-              <caret line="12" column="22" lean-forward="false" selection-start-line="12" selection-start-column="22" selection-end-line="12" selection-end-column="22" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ListCapteurPoid.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/stationmeteo/java/metier/ListCapteurPoid.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="StationMeteo.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/stationmeteo/java/metier/StationMeteo.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="654">
-              <caret line="42" column="32" lean-forward="false" selection-start-line="42" selection-start-column="32" selection-end-line="42" selection-end-column="32" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -132,14 +112,24 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MainController.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="MainController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/stationmeteo/controller/windowcontrollers/MainController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1474">
+            <state relative-caret-position="3125">
               <caret line="159" column="25" lean-forward="false" selection-start-line="159" selection-start-column="25" selection-end-line="159" selection-end-column="25" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ICapteurSerialize.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/stationmeteo/java/serialize/ICapteurSerialize.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1327">
+              <caret line="18" column="17" lean-forward="false" selection-start-line="18" selection-start-column="17" selection-end-line="18" selection-end-column="17" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -174,8 +164,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/stationmeteo/controller/WindowController.java" />
-        <option value="$PROJECT_DIR$/src/stationmeteo/java/algorithmes/Algorithme.java" />
         <option value="$PROJECT_DIR$/src/stationmeteo/java/algorithmes/AlgorithmeAleatoireFixe.java" />
         <option value="$PROJECT_DIR$/src/stationmeteo/java/algorithmes/AlgorithmeAleatoire.java" />
         <option value="$PROJECT_DIR$/src/stationmeteo/controller/SuperCapController.java" />
@@ -225,6 +213,8 @@
         <option value="$PROJECT_DIR$/src/stationmeteo/java/metier/CapteurPoid.java" />
         <option value="$PROJECT_DIR$/src/stationmeteo/java/serialize/SerializerCapteur.java" />
         <option value="$PROJECT_DIR$/src/stationmeteo/controller/windowcontrollers/MainController.java" />
+        <option value="$PROJECT_DIR$/src/stationmeteo/java/serialize/XMLCapteur.java" />
+        <option value="$PROJECT_DIR$/src/stationmeteo/java/serialize/XMLSuperCapteur.java" />
       </list>
     </option>
   </component>
@@ -555,31 +545,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://C:/Program Files (x86)/Java/jdk1.8.0_121/javafx-src.zip!/javafx/scene/layout/AnchorPane.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="232">
-          <caret line="109" column="13" lean-forward="false" selection-start-line="109" selection-start-column="13" selection-end-line="109" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/doc/diagrammeDeClasseComplet.mdj">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/stationmeteo/ressources/fxml/fenetreDigitale.fxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="63">
-          <caret line="3" column="30" lean-forward="false" selection-start-line="3" selection-start-column="30" selection-end-line="3" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/stationmeteo/ressources/fxml/fenetreIcone.fxml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="63">
@@ -792,14 +757,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/stationmeteo/controller/windowcontrollers/AjoutController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="343">
-          <caret line="32" column="23" lean-forward="false" selection-start-line="32" selection-start-column="23" selection-end-line="32" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/stationmeteo/controller/windowcontrollers/ModifController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1197">
@@ -949,20 +906,58 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/stationmeteo/java/serialize/SerializerCapteur.java">
+    <entry file="file://$PROJECT_DIR$/src/stationmeteo/controller/windowcontrollers/MainController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="63">
-          <caret line="7" column="7" lean-forward="false" selection-start-line="7" selection-start-column="7" selection-end-line="7" selection-end-column="7" />
+        <state relative-caret-position="3125">
+          <caret line="159" column="25" lean-forward="false" selection-start-line="159" selection-start-column="25" selection-end-line="159" selection-end-column="25" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/stationmeteo/controller/windowcontrollers/MainController.java">
+    <entry file="file://$PROJECT_DIR$/src/stationmeteo/java/serialize/ICapteurSerialize.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1474">
-          <caret line="159" column="25" lean-forward="false" selection-start-line="159" selection-start-column="25" selection-end-line="159" selection-end-column="25" />
+        <state relative-caret-position="-1327">
+          <caret line="18" column="17" lean-forward="false" selection-start-line="18" selection-start-column="17" selection-end-line="18" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/stationmeteo/java/serialize/SerializerCapteur.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-765">
+          <caret line="35" column="49" lean-forward="false" selection-start-line="35" selection-start-column="46" selection-end-line="35" selection-end-column="49" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/stationmeteo/controller/windowcontrollers/AjoutController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="21">
+          <caret line="1" column="7" lean-forward="true" selection-start-line="1" selection-start-column="7" selection-end-line="1" selection-end-column="7" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/stationmeteo/java/serialize/XMLCapteur.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="924">
+          <caret line="48" column="31" lean-forward="true" selection-start-line="48" selection-start-column="31" selection-end-line="48" selection-end-column="31" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/stationmeteo/java/serialize/XMLSuperCapteur.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="416">
+          <caret line="38" column="57" lean-forward="false" selection-start-line="38" selection-start-column="57" selection-end-line="38" selection-end-column="57" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
