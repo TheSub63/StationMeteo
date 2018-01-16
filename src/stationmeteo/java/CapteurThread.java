@@ -8,16 +8,27 @@ package stationmeteo.java;
 import javafx.application.Platform;
 
 /**
- *
+ *La classe CapteurThread permet de mettre en place un thread qui met à jour la 
+ * temperature des capteurs automatiquement
  * @author matthias
  */
 public class CapteurThread extends Thread implements Runnable{
     private Capteur capteurActif;
+
+    /**
+     *Constructeur de la classe CapteurThread
+     * @param i : c'est un capteur, car il faut renseigner la classe du capteur à
+     * implémenter
+     */
     public CapteurThread(Capteur i){
         this.capteurActif=i;
     }
     
-     @Override
+    /**
+     *cette méthode met à jour la température des capteurs, elle est appelé dés 
+     * que le thread est start()
+     */
+    @Override
     public void run(){
         while(true){
             try {
@@ -39,10 +50,18 @@ public class CapteurThread extends Thread implements Runnable{
     
     }
 
+    /**
+     *Getteur du Capteur Actif
+     * @return le capteur que le thread actualise
+     */
     public Capteur getCapteurActif() {
         return capteurActif;
     }
 
+    /**
+     *Setteur du Capteur Actif
+     * @param capteurActif : le capteur que le thread actualise
+     */
     public void setCapteurActif(Capteur capteurActif) {
         this.capteurActif = capteurActif;
     }

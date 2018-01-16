@@ -24,7 +24,7 @@ import stationmeteo.java.algorithmes.Algorithme;
  *
  * @author matthias
  */
-public class XMLcapteur extends Icapteur implements Serializable,ICapteurSerialize {
+public class XMLCapteur extends Icapteur implements Serializable,ICapteurSerialize {
 //commun
 
     private IntegerProperty id;
@@ -38,7 +38,7 @@ public class XMLcapteur extends Icapteur implements Serializable,ICapteurSeriali
     //propre au xmlCapteur
     private transient ICapteurSerialize model;
 
-    public XMLcapteur() {
+    public XMLCapteur() {
         model = new Capteur();
         id = new SimpleIntegerProperty(model.getId());
         nom = new SimpleStringProperty(model.getNom());
@@ -48,7 +48,7 @@ public class XMLcapteur extends Icapteur implements Serializable,ICapteurSeriali
    
     }
 
-    public XMLcapteur(ICapteurSerialize n) {
+    public XMLCapteur(ICapteurSerialize n) {
         model = n;
         id = new SimpleIntegerProperty(n.getId());
         nom = new SimpleStringProperty(n.getNom());

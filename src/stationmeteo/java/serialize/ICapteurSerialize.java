@@ -12,7 +12,8 @@ import javafx.beans.property.StringProperty;
 import stationmeteo.java.algorithmes.Algorithme;
 
 /**
- *
+ *Interface qui permet de mettre en place un composite entre la classe Capteur
+ * et la class XMLCapteur
  * @author matthias
  */
 public interface ICapteurSerialize  {
