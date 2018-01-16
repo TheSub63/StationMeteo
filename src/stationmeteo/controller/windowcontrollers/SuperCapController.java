@@ -9,6 +9,7 @@ import stationmeteo.java.CapteurPoid;
 import stationmeteo.java.Icapteur;
 import java.net.URL;
 import java.util.ResourceBundle;
+import javafx.scene.control.Alert.AlertType;
 
 import stationmeteo.java.SuperCapteur;
 
@@ -60,7 +61,15 @@ public class SuperCapController extends WindowController implements Initializabl
      * des sous Capteurs.
      */
     void commitCapteur() {
+        if(!verif.verifInfoSuperCapteur(nomCapteur, idCapteur, selectedCapteurs)){
+            Alert alert = new Alert(AlertType.ERROR);
+            alert.setTitle("SuperCapteur");
+            alert.setHeaderText("nom, id ,capteur selectionné");
+            alert.setContentText("le nom doit etre inserer, l'id doit être un entier, des capteurs doivent être selectionné");
 
+            alert.showAndWait();
+        }
+        else{
         for (Icapteur element : selectedCapteurs.getItems()) {
 
             TextInputDialog poidsI=new TextInputDialog("Entrez le poids du capteur "+element.getNom());
@@ -85,5 +94,6 @@ public class SuperCapController extends WindowController implements Initializabl
 
         listeDeCapteur.add(onCap);
         validButton.getScene().getWindow().hide();
+        }
     }
 }

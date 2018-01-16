@@ -1,6 +1,8 @@
 package stationmeteo.controller.windowcontrollers;
 
+import javafx.scene.control.ListView;
 import javafx.scene.control.TextField;
+import stationmeteo.java.Icapteur;
 import stationmeteo.java.algorithmes.Algorithme;
 
 /**
@@ -63,4 +65,20 @@ class Verification {
                                                                                         //et conforme et à REGPOS
         }
     }
+    /**
+     * Fonction vérifiant les informations envoyées par l'utilisateur.
+     * @param nomCapteur Le nom choisi
+     * @param idCapteur L'id attribuée
+     * @param selectedCapteur le capteurChoisi
+     */
+    public boolean verifInfoSuperCapteur( TextField nomCapteur, TextField idCapteur,ListView<Icapteur> selectedCapteurs){
+            if (nomCapteur.getText().isEmpty()
+                    || idCapteur.getText().isEmpty()) //Si un des textFiels nom, id ou actualisation est vide, FAUX
+                return false;
+            if (!idCapteur.getText().matches(REGINT)) //Si l'id ne correspond pas à REGINT                                                            // ou l'actualisation ne correspond pas à REGPOS, FAUX
+                return false;
+            return !selectedCapteurs.getItems().isEmpty();
+        
+    }
+    
 }

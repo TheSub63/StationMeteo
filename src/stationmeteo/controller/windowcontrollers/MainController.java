@@ -13,6 +13,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
+import javafx.scene.control.Alert.AlertType;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
@@ -87,8 +88,25 @@ public class MainController extends BorderPane implements Initializable {
         groupButton.setOnMousePressed(me -> ouvrirFenetreSuperCapteur());
 
         uptButton.setOnMousePressed(me -> {
-            if(selectedCapteur!=null && selectedCapteur.getClass()==Capteur.class )
-                 ouvrirFenetreModif();
+            if(selectedCapteur!=null)
+                if(selectedCapteur.getClass()==Capteur.class )
+                    ouvrirFenetreModif();
+                else{
+                    Alert alert = new Alert(AlertType.WARNING);
+                    alert.setTitle("SuperCapteur selectionné");
+                    alert.setHeaderText("SuperCapteur  selectionné");
+                    alert.setContentText("vous devez selectionner un capteur");
+    
+                    alert.showAndWait();
+                }
+            else{
+                Alert alert = new Alert(AlertType.ERROR);
+                alert.setTitle("capteur non selectionné");
+                alert.setHeaderText("capteur non selectionné");
+                alert.setContentText("vous devez selectionner un capteur");
+    
+                alert.showAndWait();
+            }
         });
 
         delButton.setOnMousePressed(me -> {
