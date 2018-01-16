@@ -2,7 +2,7 @@ package stationmeteo.java;
 
 import javafx.beans.property.*;
 import stationmeteo.java.algorithmes.Algorithme;
-import stationmeteo.java.serialize.ICapteurSerialize;
+import stationmeteo.java.serialize.interfaceCap.ICapteurSerialize;
 
 /**
  * Classe définissant un capteur simple. Un capteur est composé des mêmes attributs qu'un Icapteur, avec en plus une propriété

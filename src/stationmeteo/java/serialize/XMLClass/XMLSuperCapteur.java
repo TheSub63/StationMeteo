@@ -3,8 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package stationmeteo.java.serialize;
+package stationmeteo.java.serialize.XMLClass;
 
+import stationmeteo.java.serialize.interfaceCap.ISuperCapteurSerialize;
 import java.io.Serializable;
 import javafx.beans.property.FloatProperty;
 import javafx.beans.property.IntegerProperty;

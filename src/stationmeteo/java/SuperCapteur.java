@@ -2,7 +2,7 @@ package stationmeteo.java;
 
 import javafx.beans.property.FloatProperty;
 import javafx.beans.property.SimpleFloatProperty;
-import stationmeteo.java.serialize.ISuperCapteurSerialize;
+import stationmeteo.java.serialize.interfaceCap.ISuperCapteurSerialize;
 
 /**
  *
