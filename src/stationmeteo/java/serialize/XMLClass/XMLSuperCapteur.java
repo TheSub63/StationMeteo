@@ -15,8 +15,8 @@ import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.SimpleObjectProperty;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
-import stationmeteo.java.ListCapteurPoid;
-import stationmeteo.java.SuperCapteur;
+import stationmeteo.java.metier.ListCapteurPoid;
+import stationmeteo.java.metier.SuperCapteur;
 
 /**
  *Classe qui permet la serialization des SuperCapteurs

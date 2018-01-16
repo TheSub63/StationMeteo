@@ -16,8 +16,8 @@ import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.SimpleObjectProperty;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
-import stationmeteo.java.Capteur;
-import stationmeteo.java.Icapteur;
+import stationmeteo.java.metier.Capteur;
+import stationmeteo.java.metier.Icapteur;
 import stationmeteo.java.algorithmes.Algorithme;
 
 /**

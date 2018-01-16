@@ -1,5 +1,8 @@
-package stationmeteo.java;
+package stationmeteo.java.metier;
 
+import stationmeteo.java.metier.ListCapteurPoid;
+import stationmeteo.java.metier.Icapteur;
+import stationmeteo.java.metier.CapteurPoid;
 import javafx.beans.property.FloatProperty;
 import javafx.beans.property.SimpleFloatProperty;
 import stationmeteo.java.serialize.interfaceCap.ISuperCapteurSerialize;

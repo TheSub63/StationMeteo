@@ -7,7 +7,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.BorderPane;
-import stationmeteo.java.Icapteur;
+import stationmeteo.java.metier.Icapteur;
 import stationmeteo.java.algorithmes.Algorithme;
 import stationmeteo.java.algorithmes.AlgorithmeAleatoire;
 import stationmeteo.java.algorithmes.AlgorithmeAleatoireFixe;

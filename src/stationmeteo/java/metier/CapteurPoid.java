@@ -1,5 +1,6 @@
-package stationmeteo.java;
+package stationmeteo.java.metier;
 
+import stationmeteo.java.metier.Capteur;
 import javafx.beans.property.FloatProperty;
 import javafx.beans.property.ObjectProperty;
 import javafx.beans.property.SimpleFloatProperty;

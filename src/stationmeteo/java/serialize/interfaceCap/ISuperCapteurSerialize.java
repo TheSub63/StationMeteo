@@ -8,7 +8,7 @@ package stationmeteo.java.serialize.interfaceCap;
 import javafx.beans.property.FloatProperty;
 import javafx.beans.property.IntegerProperty;
 import javafx.beans.property.StringProperty;
-import stationmeteo.java.ListCapteurPoid;
+import stationmeteo.java.metier.ListCapteurPoid;
 
 /**
  *Interface qui permet de mettre en place un composite entre la classe SuperCapteur

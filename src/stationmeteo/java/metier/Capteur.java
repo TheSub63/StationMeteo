@@ -1,4 +1,4 @@
-package stationmeteo.java;
+package stationmeteo.java.metier;
 
 import javafx.beans.property.*;
 import stationmeteo.java.algorithmes.Algorithme;

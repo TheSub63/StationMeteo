@@ -20,10 +20,10 @@ import javafx.stage.Stage;
 import stationmeteo.controller.displaycontroller.DigitalController;
 import stationmeteo.controller.displaycontroller.IconController;
 import stationmeteo.controller.displaycontroller.ThermoController;
-import stationmeteo.java.Capteur;
+import stationmeteo.java.metier.Capteur;
 import stationmeteo.java.serialize.interfaceCap.ICapteurSerialize;
-import stationmeteo.java.Icapteur;
-import stationmeteo.java.SuperCapteur;
+import stationmeteo.java.metier.Icapteur;
+import stationmeteo.java.metier.SuperCapteur;
 import stationmeteo.java.serialize.interfaceCap.ISuperCapteurSerialize;
 import stationmeteo.java.serialize.SerializerCapteur;
 

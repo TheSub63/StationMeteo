@@ -6,7 +6,7 @@ import javafx.beans.property.SimpleObjectProperty;
 import javafx.fxml.FXML;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
-import stationmeteo.java.Icapteur;
+import stationmeteo.java.metier.Icapteur;
 import java.net.URL;
 import java.util.ResourceBundle;
 

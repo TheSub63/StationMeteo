@@ -6,7 +6,7 @@ import javafx.beans.property.FloatProperty;
 import javafx.beans.property.SimpleFloatProperty;
 import javafx.fxml.FXML;
 import javafx.scene.control.ProgressBar;
-import stationmeteo.java.Icapteur;
+import stationmeteo.java.metier.Icapteur;
 import java.net.URL;
 import java.util.ResourceBundle;
 

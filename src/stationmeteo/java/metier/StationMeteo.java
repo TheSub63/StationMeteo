@@ -1,4 +1,4 @@
-package stationmeteo.java;
+package stationmeteo.java.metier;
 
 import java.io.IOException;
 import javafx.application.Application;

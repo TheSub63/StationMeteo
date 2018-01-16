@@ -5,13 +5,13 @@ import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
-import stationmeteo.java.CapteurPoid;
-import stationmeteo.java.Icapteur;
+import stationmeteo.java.metier.CapteurPoid;
+import stationmeteo.java.metier.Icapteur;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.scene.control.Alert.AlertType;
 
-import stationmeteo.java.SuperCapteur;
+import stationmeteo.java.metier.SuperCapteur;
 
 /**
  * Controller de la fenêtre permettant de créer un super capteur.

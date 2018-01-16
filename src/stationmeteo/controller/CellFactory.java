@@ -2,7 +2,7 @@ package stationmeteo.controller;
 
 import javafx.scene.control.ListCell;
 import javafx.scene.paint.Color;
-import stationmeteo.java.Icapteur;
+import stationmeteo.java.metier.Icapteur;
 
 public class CellFactory extends ListCell<Icapteur> {
 

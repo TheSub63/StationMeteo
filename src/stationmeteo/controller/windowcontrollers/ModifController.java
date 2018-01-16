@@ -1,7 +1,7 @@
 package stationmeteo.controller.windowcontrollers;
 
 import javafx.fxml.Initializable;
-import stationmeteo.java.Capteur;
+import stationmeteo.java.metier.Capteur;
 import stationmeteo.java.algorithmes.Algorithme;
 
 import java.net.URL;

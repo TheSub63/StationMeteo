@@ -3,8 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package stationmeteo.java;
+package stationmeteo.java.metier;
 
+import stationmeteo.java.metier.Capteur;
 import javafx.application.Platform;
 
 /**

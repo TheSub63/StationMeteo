@@ -9,7 +9,7 @@ import javafx.scene.control.Label;
 import javafx.scene.layout.BorderPane;
 import javafx.util.StringConverter;
 import javafx.util.converter.NumberStringConverter;
-import stationmeteo.java.Icapteur;
+import stationmeteo.java.metier.Icapteur;
 
 /**
  * Classe mere de l'ensemble controlant les fenetres d'affichage des capteurs

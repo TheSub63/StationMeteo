@@ -18,9 +18,9 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
-import stationmeteo.java.Capteur;
-import stationmeteo.java.Icapteur;
-import stationmeteo.java.SuperCapteur;
+import stationmeteo.java.metier.Capteur;
+import stationmeteo.java.metier.Icapteur;
+import stationmeteo.java.metier.SuperCapteur;
 
 /**
  *Cette classe permet la mis en place de la serialization en XML, celle-ci va

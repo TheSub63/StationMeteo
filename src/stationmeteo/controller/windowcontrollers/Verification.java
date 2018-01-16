@@ -2,7 +2,7 @@ package stationmeteo.controller.windowcontrollers;
 
 import javafx.scene.control.ListView;
 import javafx.scene.control.TextField;
-import stationmeteo.java.Icapteur;
+import stationmeteo.java.metier.Icapteur;
 import stationmeteo.java.algorithmes.Algorithme;
 
 /**
