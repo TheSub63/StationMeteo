@@ -28,15 +28,15 @@ class Verification {
      * @return booléen indiquant la validité des informations
      */
     public boolean verifInfos(Algorithme selectedAlgo, TextField nomCapteur, TextField idCapteur, TextField actualisationCapteur,
-                       TextField temperatureCapteur, TextField onAlgoFixeAfficher1, TextField onAlgoFixeAfficher2,
-                       TextField intervalleAlgo) {
+                                     TextField temperatureCapteur, TextField onAlgoFixeAfficher1, TextField onAlgoFixeAfficher2,
+                                     TextField intervalleAlgo) {
         {
-            if (selectedAlgo == null) return false;
+            if (selectedAlgo == null) return true;
 
             if (nomCapteur.getText().isEmpty()
                     || idCapteur.getText().isEmpty()
-                    || actualisationCapteur.getText().isEmpty()) //Si un des textFiels nom, id ou actualisation est vide, FAUX
-                return false;
+                    || actualisationCapteur.getText().isEmpty()) //Si un des textFiels nom, id ou actualisation est vide, infos fausses
+                return true;
 
             if (temperatureCapteur.getText().isEmpty()
                     || !temperatureCapteur.getText().matches(REGNUM)) //Si la température n'est pas spécifiée ou ne correspond pas à REGNUM,
@@ -45,22 +45,22 @@ class Verification {
 
             if (!idCapteur.getText().matches(REGINT)
                     || !actualisationCapteur.getText().matches(REGINT)) //Si l'id ne correspond pas à REGINT
-                                                                        // ou l'actualisation ne correspond pas à REGPOS, FAUX
-                return false;
+                                                                        // ou l'actualisation ne correspond pas à REGPOS, infos fausses
+                return true;
 
             if (!onAlgoFixeAfficher1.isDisable()) {                     //Si l'algorithme est de type Fixe,
 
                 if (!onAlgoFixeAfficher1.getText().matches(REGNUM) || !onAlgoFixeAfficher2.getText().matches(REGNUM))
-                    return false;   //et que un des champs n'est pas conforme à REGNUM, FAUX
+                    return true;   //et que un des champs n'est pas conforme à REGNUM, infos fausses
 
                 if (Float.parseFloat(onAlgoFixeAfficher1.getText()) >= Float.parseFloat(onAlgoFixeAfficher2.getText()))
-                    return false;   //et que la borne minimale est supérieure ou égale à la borne maximale, FAUX
+                    return true;   //et que la borne minimale est supérieure ou égale à la borne maximale, infos fausses
 
             }
 
-            return intervalleAlgo.isDisable() ||
-                    intervalleAlgo.getText().matches(REGPOS) &&
-                            (!intervalleAlgo.getText().isEmpty()); //Retourne Vrai si l'algo n'est pas réaliste
+            return !intervalleAlgo.isDisable() &&
+                    (!intervalleAlgo.getText().matches(REGPOS) ||
+                            (intervalleAlgo.getText().isEmpty())); //Retourne Vrai si l'algo n'est pas réaliste
                                                                                         //ou la taille de la fenêtre de variation est spécifiée
                                                                                         //et conforme et à REGPOS
         }
@@ -69,16 +69,14 @@ class Verification {
      * Fonction vérifiant les informations envoyées par l'utilisateur.
      * @param nomCapteur Le nom choisi
      * @param idCapteur L'id attribuée
-     * @param selectedCapteur le capteurChoisi
+     * @param selectedCapteurs le capteurChoisi
      */
-    public boolean verifInfoSuperCapteur( TextField nomCapteur, TextField idCapteur,ListView<Icapteur> selectedCapteurs){
-            if (nomCapteur.getText().isEmpty()
-                    || idCapteur.getText().isEmpty()) //Si un des textFiels nom, id ou actualisation est vide, FAUX
-                return false;
-            if (!idCapteur.getText().matches(REGINT)) //Si l'id ne correspond pas à REGINT                                                            // ou l'actualisation ne correspond pas à REGPOS, FAUX
-                return false;
-            return !selectedCapteurs.getItems().isEmpty();
-        
+    public boolean verifInfoSuperCapteur( TextField nomCapteur, TextField idCapteur,ListView<Icapteur> selectedCapteurs) {
+        //Si un des textFiels nom  ou id est vide, OU que l'id n'est pas valide, OU qu'aucun capteur n'a été sélectionné, FAUX
+        return !nomCapteur.getText().isEmpty()
+                && !idCapteur.getText().isEmpty() && idCapteur.getText().matches(REGINT) &&
+                    !selectedCapteurs.getItems().isEmpty();
+
     }
     
 }

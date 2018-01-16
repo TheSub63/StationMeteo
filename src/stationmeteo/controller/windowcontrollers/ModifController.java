@@ -1,9 +1,11 @@
 package stationmeteo.controller.windowcontrollers;
-import java.net.URL;
-import java.util.ResourceBundle;
+
 import javafx.fxml.Initializable;
 import stationmeteo.java.Capteur;
 import stationmeteo.java.algorithmes.Algorithme;
+
+import java.net.URL;
+import java.util.ResourceBundle;
 
 /**
  * Classe du controleur gérant la fenetre de modification
@@ -59,7 +61,7 @@ public class ModifController extends WindowController implements Initializable{
      */
     @Override
     protected void commitCapteur() {
-        if (!verif.verifInfos(selectedAlgo, nomCapteur, idCapteur, actualisationCapteur, temperatureCapteur,
+        if (verif.verifInfos(selectedAlgo, nomCapteur, idCapteur, actualisationCapteur, temperatureCapteur,
                 onAlgoFixeAfficher1, onAlgoFixeAfficher2, intervalleAlgo)){
             showError();
         } else {

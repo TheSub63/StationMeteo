@@ -20,62 +20,62 @@ public interface ISuperCapteurSerialize {
      *Getteur de l'idProperty
      * @return l'IntegerProperty id
      */
-    public IntegerProperty idProperty();
+    IntegerProperty idProperty();
     /**
      *Getteur du nomProperty
      * @return le StringProperty nom
      */
-    public StringProperty nomProperty();
+    StringProperty nomProperty();
      /**
      *Getteur de la temperatureProperty
      * @return le floatProperty temperature
      */
-    public FloatProperty temperatureProperty();
+     FloatProperty temperatureProperty();
     
     /**
      *Getteur de la liste de capteur
      * @return la Liste de capteurPoid
      */
-    public ListCapteurPoid getListCapteur();
+    ListCapteurPoid getListCapteur();
 
       /**
      *Getteur de l'id
      * @return l'id du capteur
      */
-    default public int getId(){return idProperty().get();}
+    default int getId(){return idProperty().get();}
     /**
      *Getteur du nom du capteur
      * @return le nom du capteur
      */
-    default public String getNom(){return nomProperty().get();}
+    default String getNom(){return nomProperty().get();}
     /**
      *Getteur de la temperature du capteur
      * @return la temperature du capteur
      */
-    default public float getTemperature(){return temperatureProperty().get();}
+    default float getTemperature(){return temperatureProperty().get();}
     
   
     /**
      *Setteur de l'id du capteur
      * @param id est la nouvelle id du capteur
      */
-    default public void setId(int id){idProperty().set(id);}
+    default void setId(int id){idProperty().set(id);}
     /**
      *Setteur du nom du capteur
      * @param nom est le nouveaux nom du capteur
      */
-    default public void setNom(String nom){nomProperty().set(nom);}
+    default void setNom(String nom){nomProperty().set(nom);}
     /**
      *Setteur de la temperature du capteur
      * @param temperature est la nouvelle temperature du capteur
      */
-    default public void setTemperature(float temperature){temperatureProperty().set(temperature);}
+    default void setTemperature(float temperature){temperatureProperty().set(temperature);}
     
     /**
      *Setteur de la liste de capteur
      * @param maliste est ma nouvelle liste de CapteurPoid
      */
-    public void setListCapteur(ListCapteurPoid maliste);
+    void setListCapteur(ListCapteurPoid maliste);
     
     
 }
