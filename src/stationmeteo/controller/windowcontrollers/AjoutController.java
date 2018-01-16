@@ -4,6 +4,7 @@ import java.util.ResourceBundle;
 import javafx.fxml.Initializable;
 import stationmeteo.java.metier.Capteur;
 import stationmeteo.java.algorithmes.Algorithme;
+import stationmeteo.java.metier.fabriqueCapteur;
 
 /**
  * Classe du controleur gérant la fenetre d'ajout
@@ -37,7 +38,7 @@ public class AjoutController extends WindowController implements Initializable{
         else {
             Algorithme algo = buildAlgo(selectedAlgo);
             int id = Integer.parseInt(idCapteur.getText());
-            capteur = new Capteur(
+            capteur = fabriqueCapteur.fabriqueCapteur(
                     id, 
                     nomCapteur.getText(), 
                     Integer.parseInt(actualisationCapteur.getText()), 
