@@ -50,7 +50,12 @@ public class XMLCapteur extends Icapteur implements Serializable,ICapteurSeriali
         algo = new SimpleObjectProperty(model.getAlgo());
    
     }
-
+    
+    /**
+     *Constructeur de XMLCapteur, il permet de creer un XMLCApteur à partir des
+     * classes implementées par IcapteurSerialize
+     * @param n est l'objet de la classe implementé par IcapteurSerialize
+     */
     public XMLCapteur(ICapteurSerialize n) {
         model = n;
         id = new SimpleIntegerProperty(n.getId());
@@ -61,102 +66,143 @@ public class XMLCapteur extends Icapteur implements Serializable,ICapteurSeriali
         
     }
    
-
+    /**
+     *Getteur de l'idProperty
+     * @return l'IntegerProperty id
+     */
     @Override
     public IntegerProperty idProperty() {
         return id;
     }
-
+    /**
+     *Getteur du nomProperty
+     * @return le StringProperty nom
+     */
     @Override
     public StringProperty nomProperty() {
         return nom;
     }
-
+    /**
+     *Getteur de la temperatureProperty
+     * @return le floatProperty temperature
+     */
     @Override
     public FloatProperty temperatureProperty() {
         return temperature;
     }
-
-  
-
+    /**
+     *Getteur de l'actualisationProperty
+     * @return l'IntegerProperty actualisation
+     */
     @Override
     public IntegerProperty actualisationProperty() {
         return actualisation;
     }
-
+    /**
+     *Getteur de algoProperty
+     * @return l'ObjectProperty algo
+     */
     @Override
     public ObjectProperty<Algorithme> algoProperty() {
         return algo;
     }
 
-
-
+    /**
+     *Permet de donner le modele utiliser par XMLCapteur pour se creer
+     * @return l'objet implementer par IcapteurSerialize
+     */
     public ICapteurSerialize getModel() {
         model = new Capteur(this.getId(),this.getNom(),this.getActualisation(),this.getTemperature(),this.getAlgo());
         return model;
     }
-
+    /**
+     *Getteur de l'id
+     * @return l'id du capteur
+     */
     @Override
     public int getId() {
         return id.get();
     }
 
     /**
-     *
-     * @param id
+     *Setteur de l'id du capteur
+     * @param id est la nouvelle id du capteur
      */
     @Override
     public void setId(int id) {
         this.id.set(id);
     }
-
+    /**
+     *Getteur du nom du capteur
+     * @return le nom du capteur
+     */
     @Override
     public String getNom() {
         return nom.get();
     }
-
+    /**
+     *Setteur du nom du capteur
+     * @param nom est le nouveaux nom du capteur
+     */
     @Override
     public void setNom(String nom) {
         this.nom.set(nom);
     }
-
+    /**
+     *Getteur de la temperature du capteur
+     * @return la temperature du capteur
+     */
     @Override
     public float getTemperature() {
         return temperature.get();
     }
 
     /**
-     *
-     * @param temperature
+     *Setteur de la temperature du capteur
+     * @param temperature est la nouvelle temperature du capteur
      */
     @Override
     public void setTemperature(float temperature) {
         this.temperature.set(temperature);
     }
 
-
+    /**
+     *Getteur de l'actualisation du capteur
+     * @return le temps d'actualisation du capteur
+     */
     @Override
     public int getActualisation() {
         return actualisation.get();
     }
-
+    /**
+     *Setteur de l'actualisation du capteur
+     * @param actualisation est le nouveau temps d'actualisation du capteur
+     */
     @Override
     public void setActualisation(int actualisation) {
         this.actualisation.set(actualisation);
     }
-
-    
-
+    /**
+     *Getteur de l'Algorithme du capteur
+     * @return l'Algorithme du capteur
+     */
     @Override
     public Algorithme getAlgo() {
         return algo.get();
     }
-
+    /**
+     *Setteur de l'Algorithme du capteur
+     * @param algo est le nouvelle Algorithme du capteur
+     */
     @Override
     public void setAlgo(Algorithme algo) {
         this.algo.set(algo);
     }
 
+    /**
+     *Cette callse permet de convertir l'Objet XMLCapteur en String
+     * @return la conversion de l'objet XMLCapteur en string
+     */
     @Override
     public String toString(){
         return this.getNom();
