@@ -30,17 +30,7 @@ public class StationMeteo extends Application {
     @Override
     public void start(Stage primaryStage) {
         leMain.chargerCapteur();
-        URL url=getClass().getResource("/stationmeteo/ressources/fxml/fenetreMain.fxml");
-        FXMLLoader loader = new FXMLLoader(url);
-        loader.setController(leMain);
-        try{
-            BorderPane page = loader.load();
-            Scene scene = new Scene(page);
-            primaryStage.setScene(scene);
-        }
-        catch (IOException e){
-            e.printStackTrace();     
-        }
+        primaryStage=leMain.charger("/stationmeteo/ressources/fxml/fenetreMain.fxml",leMain);
         primaryStage.setTitle("Station Meteo");
         primaryStage.show(); 
     }

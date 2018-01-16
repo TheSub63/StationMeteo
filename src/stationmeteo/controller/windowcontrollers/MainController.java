@@ -92,20 +92,10 @@ public class MainController extends BorderPane implements Initializable {
                 if(selectedCapteur.getClass()==Capteur.class )
                     ouvrirFenetreModif();
                 else{
-                    Alert alert = new Alert(AlertType.WARNING);
-                    alert.setTitle("SuperCapteur selectionné");
-                    alert.setHeaderText("SuperCapteur  selectionné");
-                    alert.setContentText("vous devez selectionner un capteur");
-    
-                    alert.showAndWait();
+                    showError();
                 }
             else{
-                Alert alert = new Alert(AlertType.ERROR);
-                alert.setTitle("capteur non selectionné");
-                alert.setHeaderText("capteur non selectionné");
-                alert.setContentText("vous devez selectionner un capteur");
-    
-                alert.showAndWait();
+                showError();
             }
         });
 
@@ -120,37 +110,28 @@ public class MainController extends BorderPane implements Initializable {
 
         digitalButton.setOnMousePressed(me -> { 
             if(selectedCapteur!=null)
-                affichageDigital(); 
-            else{
-                Alert alert = new Alert(AlertType.INFORMATION);
-                alert.setTitle("capteur non selectionné");
-                alert.setHeaderText("capteur non selectionné");
-                alert.setContentText("vous devez selectionner un capteur");
-    
-                alert.showAndWait();
-            }
+                affichageDigital();
+            else showError();
         });
-        thermoButton.setOnMousePressed(me -> { if(selectedCapteur!=null)affichageThermo();
-        else{
-                Alert alert = new Alert(AlertType.INFORMATION);
-                alert.setTitle("capteur non selectionné");
-                alert.setHeaderText("capteur non selectionné");
-                alert.setContentText("vous devez selectionner un capteur");
-    
-                alert.showAndWait();
-            }
+        thermoButton.setOnMousePressed(me -> {
+            if(selectedCapteur!=null)affichageThermo();
+            else showError();
         });
-        iconButton.setOnMousePressed(me -> { if(selectedCapteur!=null)affichageIcone();
-        else{
-                Alert alert = new Alert(AlertType.INFORMATION);
-                alert.setTitle("capteur non selectionné");
-                alert.setHeaderText("capteur non selectionné");
-                alert.setContentText("vous devez selectionner un capteur");
-    
-                alert.showAndWait();
-            }});
+        iconButton.setOnMousePressed(me -> {
+            if(selectedCapteur!=null)affichageIcone();
+            else showError();
+        });
 
         capteurList.setItems(listeDeCapteur);
+    }
+
+    private void showError(){
+        Alert alert = new Alert(AlertType.INFORMATION);
+        alert.setTitle("capteur non selectionné");
+        alert.setHeaderText("capteur non selectionné");
+        alert.setContentText("vous devez selectionner un capteur");
+
+        alert.showAndWait();
     }
 
     /**
@@ -181,7 +162,6 @@ public class MainController extends BorderPane implements Initializable {
         if(this.XMLdatamanager!= null){
             ArrayList<Icapteur> test =new ArrayList<>();
             test.addAll(capteurList.getItems());
-            //ObservableList items = this.capteurList.getItems();
             XMLdatamanager.sauveCapteurs(test);
         }
         else System.out.println("Erreur P");
@@ -193,7 +173,7 @@ public class MainController extends BorderPane implements Initializable {
      * @param control instance de controller
      * @return le Stage chargé par la methode
      */
-    private Stage charger(String path, Pane control){
+    public Stage charger(String path, Pane control){
         Stage fenetre=new Stage();
         URL url=getClass().getResource(path);
         FXMLLoader loader = new FXMLLoader(url);
