@@ -32,11 +32,11 @@ public class SuperCapteur extends Icapteur implements ISuperCapteurSerialize{
     }
     public void ajouter(CapteurPoid lecap){
        getListCapteur().add(lecap);
-       int actu=((CapteurPoid)listCapteur.get(0)).getActu();
-       for(ICapteurPoid c : listCapteur){
-           if(((CapteurPoid) c).getActu()<=actu){
-             actu=((CapteurPoid) c).getActu();
-             observe=((CapteurPoid) c).temperatureProperty();
+       int actu= listCapteur.get(0).getActu();
+       for(CapteurPoid c : listCapteur){
+           if(c.getActu()<=actu){
+             actu= c.getActu();
+             observe= c.temperatureProperty();
            }
        }
     } 
@@ -50,9 +50,9 @@ public class SuperCapteur extends Icapteur implements ISuperCapteurSerialize{
          return temperature;
     }
     public int getActualisation(){
-         int actu=((CapteurPoid)listCapteur.get(0)).getActu();
-         for(ICapteurPoid c: listCapteur){
-            if(actu>=((CapteurPoid)c).getActu()) actu=((CapteurPoid)c).getActu();
+         int actu= listCapteur.get(0).getActu();
+         for(CapteurPoid c: listCapteur){
+            if(actu>= c.getActu()) actu= c.getActu();
          }
         return actu;
      }

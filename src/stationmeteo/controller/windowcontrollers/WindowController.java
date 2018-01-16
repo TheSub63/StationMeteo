@@ -14,7 +14,7 @@ import stationmeteo.java.algorithmes.AlgorithmeAleatoireFixe;
 import stationmeteo.java.algorithmes.AlgorithmeFenetreGlissante;
 
 /**
- * Classe mere des controleurs de fenêtres agissant sur les capteurs.
+ * Classe abstraite mere des controleurs de fenêtres agissant sur les capteurs.
  * @author Clément
  */
 @SuppressWarnings("WeakerAccess")
@@ -75,8 +75,6 @@ abstract class WindowController extends BorderPane {
         intervalleAlgo.setText("");
     }
 
-    abstract void commitCapteur();
-
     /**
      * Methode construisant un algorithme avec les paramètres choisis
      * @param selectedAlgo l'algorithme souhaité
@@ -119,4 +117,6 @@ abstract class WindowController extends BorderPane {
             else disableAll();                          //Sinon on desactive les zones de textes
         });
     }
+
+    abstract void commitCapteur();
 }

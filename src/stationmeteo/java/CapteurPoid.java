@@ -1,11 +1,5 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package stationmeteo.java;
 
-import java.io.Serializable;
 import javafx.beans.property.FloatProperty;
 import javafx.beans.property.ObjectProperty;
 import javafx.beans.property.SimpleFloatProperty;
@@ -15,7 +9,7 @@ import javafx.beans.property.SimpleObjectProperty;
  *
  * @author matthias
  */
-public class CapteurPoid implements ICapteurPoid{
+public class CapteurPoid{
     private ObjectProperty<Icapteur> monCapteur=new SimpleObjectProperty(this,"monCapteur");
     private FloatProperty monPoid=new SimpleFloatProperty(this,"poid");
     
@@ -35,12 +29,10 @@ public class CapteurPoid implements ICapteurPoid{
         actualisation=1;
     }
 
-    @Override
     public int getActualisation() {
         return actualisation;
     }
 
-    @Override
     public void setActualisation(int actualisation) {
         this.actualisation = actualisation;
     }
@@ -49,8 +41,7 @@ public class CapteurPoid implements ICapteurPoid{
     public int getActu(){
         return actualisation;
     }
-   
-    @Override
+
     public ObjectProperty monCapteurProperty(){
         return monCapteur;
     }
@@ -59,22 +50,22 @@ public class CapteurPoid implements ICapteurPoid{
         
         return monCapteur.get().temperatureProperty();
     }
-    @Override
+
     public FloatProperty poidProperty(){
         return monPoid;
     }
-      @Override public float getMonPoid() {
+    public float getMonPoid() {
         return poidProperty().get();
     }
 
-     @Override public void setMonPoid(float MonPoid) {
+public void setMonPoid(float MonPoid) {
         this.poidProperty().set(MonPoid);
     }
-     @Override public Icapteur getMonCapteur() {
+    public Icapteur getMonCapteur() {
         return (Icapteur) monCapteurProperty().get();
     }
 
-     @Override public void setMonCapteur(Icapteur monCapteur) {
+     public void setMonCapteur(Icapteur monCapteur) {
         this.monCapteurProperty().set(monCapteur);
     }
 
