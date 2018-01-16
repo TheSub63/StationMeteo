@@ -18,7 +18,7 @@ public class TempBinding extends FloatBinding{
      * @param uneListe est la liste de capteur poid
      * @param temp est la propriété observé pour le changement
      */
-    public TempBinding(List<CapteurPoid> uneListe,FloatProperty temp){
+    public TempBinding(List<CapteurPoid> uneListe, FloatProperty temp){
         maliste=uneListe;
         {this.bind(temp);}
     }
