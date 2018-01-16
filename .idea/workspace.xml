@@ -3,14 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="547e6231-116d-4ef2-8fd2-74a1b1fee0d9" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/nbproject/private/retriever/www.oracle.com/technetwork/java/javase/overview/index.html" afterPath="$PROJECT_DIR$/nbproject/private/retriever/www.oracle.com/technetwork/java/javase/overview/index.html" />
-      <change beforePath="$PROJECT_DIR$/out/production/StationMeteo/stationmeteo/java/SerializerCapteur.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/production/StationMeteo/stationmeteo/java/SuperCapteur$1.class" afterPath="" />
       <change beforePath="$PROJECT_DIR$/src/stationmeteo/controller/windowcontrollers/AjoutController.java" afterPath="$PROJECT_DIR$/src/stationmeteo/controller/windowcontrollers/AjoutController.java" />
       <change beforePath="$PROJECT_DIR$/src/stationmeteo/controller/windowcontrollers/ModifController.java" afterPath="$PROJECT_DIR$/src/stationmeteo/controller/windowcontrollers/ModifController.java" />
+      <change beforePath="$PROJECT_DIR$/src/stationmeteo/controller/windowcontrollers/SuperCapController.java" afterPath="$PROJECT_DIR$/src/stationmeteo/controller/windowcontrollers/SuperCapController.java" />
       <change beforePath="$PROJECT_DIR$/src/stationmeteo/controller/windowcontrollers/Verification.java" afterPath="$PROJECT_DIR$/src/stationmeteo/controller/windowcontrollers/Verification.java" />
-      <change beforePath="$PROJECT_DIR$/src/stationmeteo/java/serialize/interfaceCap/ICapteurSerialize.java" afterPath="$PROJECT_DIR$/src/stationmeteo/java/serialize/interfaceCap/ICapteurSerialize.java" />
-      <change beforePath="$PROJECT_DIR$/src/stationmeteo/java/serialize/interfaceCap/ISuperCapteurSerialize.java" afterPath="$PROJECT_DIR$/src/stationmeteo/java/serialize/interfaceCap/ISuperCapteurSerialize.java" />
+      <change beforePath="$PROJECT_DIR$/src/stationmeteo/controller/windowcontrollers/WindowController.java" afterPath="$PROJECT_DIR$/src/stationmeteo/controller/windowcontrollers/WindowController.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -38,7 +35,7 @@
         <entry file="file://$PROJECT_DIR$/src/stationmeteo/controller/windowcontrollers/WindowController.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="318">
-              <caret line="45" column="0" lean-forward="false" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="52" />
+              <caret line="45" column="0" lean-forward="false" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -49,8 +46,8 @@
       <file leaf-file-name="SuperCapController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/stationmeteo/controller/windowcontrollers/SuperCapController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="192">
-              <caret line="63" column="17" lean-forward="false" selection-start-line="63" selection-start-column="17" selection-end-line="63" selection-end-column="17" />
+            <state relative-caret-position="444">
+              <caret line="63" column="24" lean-forward="false" selection-start-line="63" selection-start-column="24" selection-end-line="63" selection-end-column="24" />
               <folding />
             </state>
           </provider>
@@ -68,554 +65,573 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="JAVA/stationmeteo" pinned="false" current-in-tab="false">
+      <file leaf-file-name="JAVA/stationmeteo" pinned="false" current-in-tab="true">
         <entry file="uml://JAVA/stationmeteo">
           <provider selected="true" editor-type-id="UmlEditorProvider">
             <state>
               <ID>JAVA</ID>
               <OriginalElement>stationmeteo</OriginalElement>
               <nodes>
-                <node x="588.4444444444446" y="2334.5">stationmeteo.java.serialize.XMLClass.XMLSuperCapteur</node>
-                <node x="1964.3690734353631" y="206.5">stationmeteo.java.Icapteur</node>
-                <node x="3222.361559095123" y="2308.0">stationmeteo.controller.windowcontrollers.WindowController</node>
-                <node x="1438.1190734353634" y="2992.5">stationmeteo.controller.windowcontrollers.SuperCapController</node>
-                <node x="1835.749059095123" y="3995.0">stationmeteo.java.StationMeteo</node>
-                <node x="2025.6190734353631" y="2470.0">stationmeteo.controller.displaycontroller.DigitalController</node>
-                <node x="2837.626649192939" y="1955.0">stationmeteo.java.algorithmes.AlgorithmeAleatoireFixe</node>
-                <node x="1773.249059095123" y="3340.0">stationmeteo.controller.windowcontrollers.MainController</node>
-                <node x="32.5" y="1227.0">stationmeteo.java.serialize.XMLClass.XMLCapteur</node>
-                <node x="3725.0228535353535" y="3061.0">stationmeteo.controller.windowcontrollers.AjoutController</node>
-                <node x="1099.1190734353634" y="1348.5">stationmeteo.java.CapteurPoid</node>
-                <node x="1377.6582106304932" y="637.0">stationmeteo.java.Capteur</node>
-                <node x="1464.758210630493" y="274.0">stationmeteo.java.CapteurThread</node>
-                <node x="467.5277777777778" y="1942.0">stationmeteo.java.serialize.interfaceCap.ISuperCapteurSerialize</node>
-                <node x="2372.619073435363" y="3019.5">stationmeteo.controller.displaycontroller.IconController</node>
-                <node x="661.9525355363569" y="664.0">stationmeteo.java.SuperCapteur</node>
-                <node x="78.13876618604854" y="180.0">stationmeteo.java.serialize.interfaceCap.ICapteurSerialize</node>
-                <node x="1857.1190734353634" y="3019.5">stationmeteo.controller.displaycontroller.ThermoController</node>
-                <node x="530.5887661860486" y="3047.5">stationmeteo.java.serialize.SerializerCapteur</node>
-                <node x="3093.9657257617896" y="2992.0">stationmeteo.controller.windowcontrollers.ModifController</node>
-                <node x="3455.376649192939" y="0.0">stationmeteo.java.algorithmes.Algorithme</node>
-                <node x="2370.619073435363" y="800.5">stationmeteo.controller.CellFactory</node>
-                <node x="3925.126649192939" y="1968.5">stationmeteo.java.algorithmes.AlgorithmeFenetreGlissante</node>
-                <node x="3012.126649192939" y="746.0">stationmeteo.controller.windowcontrollers.Verification</node>
-                <node x="3655.126649192939" y="260.5">stationmeteo.java.algorithmes.AlgorithmeAleatoire</node>
-                <node x="757.8985582636296" y="274.0">stationmeteo.java.TempBinding</node>
-                <node x="752.3611111111111" y="1856.0">stationmeteo.java.ListCapteurPoid</node>
+                <node x="623.5916684959275" y="2278.5">stationmeteo.java.serialize.XMLClass.XMLSuperCapteur</node>
+                <node x="1992.7307164217214" y="216.5">stationmeteo.java.Icapteur</node>
+                <node x="3053.0441767624498" y="2238.0">stationmeteo.controller.windowcontrollers.WindowController</node>
+                <node x="1508.4807164217214" y="2885.5">stationmeteo.controller.windowcontrollers.SuperCapController</node>
+                <node x="1854.5542601550146" y="3860.0">stationmeteo.java.StationMeteo</node>
+                <node x="2053.980716421721" y="2400.5">stationmeteo.controller.displaycontroller.DigitalController</node>
+                <node x="3286.01870385469" y="1899.0">stationmeteo.java.algorithmes.AlgorithmeAleatoireFixe</node>
+                <node x="1792.0542601550146" y="3205.0">stationmeteo.controller.windowcontrollers.MainController</node>
+                <node x="98.2703131260862" y="1192.0">stationmeteo.java.serialize.XMLClass.XMLCapteur</node>
+                <node x="3666.2052878735603" y="2940.0">stationmeteo.controller.windowcontrollers.AjoutController</node>
+                <node x="1158.5083351625944" y="1313.5">stationmeteo.java.CapteurPoid</node>
+                <node x="1431.173090903864" y="687.0">stationmeteo.java.Capteur</node>
+                <node x="1525.3230909038639" y="298.0">stationmeteo.java.CapteurThread</node>
+                <node x="802.5083351625944" y="1872.0">stationmeteo.java.serialize.interfaceCap.ISuperCapteurSerialize</node>
+                <node x="2227.480716421721" y="2912.5">stationmeteo.controller.displaycontroller.IconController</node>
+                <node x="579.1011212068943" y="714.0">stationmeteo.java.SuperCapteur</node>
+                <node x="60.520313126086194" y="190.0">stationmeteo.java.serialize.interfaceCap.ICapteurSerialize</node>
+                <node x="1885.4807164217214" y="2912.5">stationmeteo.controller.displaycontroller.ThermoController</node>
+                <node x="497.2703131260862" y="2926.5">stationmeteo.java.serialize.SerializerCapteur</node>
+                <node x="3058.460843429116" y="2885.0">stationmeteo.controller.windowcontrollers.ModifController</node>
+                <node x="3227.480716421721" y="0.0">stationmeteo.java.algorithmes.Algorithme</node>
+                <node x="2652.480716421721" y="823.0">stationmeteo.controller.CellFactory</node>
+                <node x="3014.480716421721" y="1912.5">stationmeteo.java.algorithmes.AlgorithmeFenetreGlissante</node>
+                <node x="3425.196954540227" y="2400.5">stationmeteo.controller.windowcontrollers.Verification</node>
+                <node x="3513.950522036508" y="284.5">stationmeteo.java.algorithmes.AlgorithmeAleatoire</node>
+                <node x="603.4761212068943" y="298.0">stationmeteo.java.TempBinding</node>
+                <node x="571.925001829261" y="1766.0">stationmeteo.java.ListCapteurPoid</node>
               </nodes>
               <notes />
               <edges>
                 <edge source="stationmeteo.controller.windowcontrollers.AjoutController" target="stationmeteo.controller.windowcontrollers.WindowController">
-                  <point x="-40.125" y="-45.0" />
-                  <point x="3845.3978535353535" y="2862.0" />
-                  <point x="3472.861559095123" y="2862.0" />
-                  <point x="83.5" y="262.0" />
-                </edge>
-                <edge source="stationmeteo.controller.windowcontrollers.WindowController" target="stationmeteo.controller.windowcontrollers.Verification">
-                  <point x="0.0" y="-262.0" />
-                  <point x="3389.361559095123" y="1207.0" />
-                  <point x="3579.876649192939" y="1207.0" />
-                  <point x="189.25" y="86.0" />
+                  <point x="-64.19999999999982" y="-45.0" />
+                  <point x="3762.5052878735605" y="2765.0" />
+                  <point x="3303.5441767624498" y="2765.0" />
+                  <point x="83.5" y="248.5" />
                 </edge>
                 <edge source="stationmeteo.java.algorithmes.AlgorithmeFenetreGlissante" target="stationmeteo.java.algorithmes.Algorithme">
-                  <point x="0.0" y="-86.5" />
-                  <point x="4080.626649192939" y="140.0" />
-                  <point x="3637.3381876544777" y="140.0" />
-                  <point x="57.46153846153857" y="45.0" />
+                  <point x="0.0" y="-72.5" />
+                  <point x="3138.980716421721" y="1842.0" />
+                  <point x="3406.196954540227" y="1842.0" />
+                  <point x="3406.196954540227" y="170.0" />
+                  <point x="3351.980716421721" y="170.0" />
+                  <point x="0.0" y="45.0" />
                 </edge>
                 <edge source="stationmeteo.java.serialize.SerializerCapteur" target="stationmeteo.java.serialize.interfaceCap.ISuperCapteurSerialize">
-                  <point x="-47.111111111111086" y="-58.5" />
-                  <point x="695.4776550749375" y="2942.0" />
-                  <point x="548.5668621254258" y="2942.0" />
-                  <point x="548.5668621254258" y="2288.0" />
-                  <point x="564.7277777777779" y="2288.0" />
-                  <point x="-64.79999999999995" y="113.0" />
+                  <point x="94.22222222222217" y="-58.5" />
+                  <point x="803.4925353483084" y="2845.0" />
+                  <point x="1031.5750018292608" y="2845.0" />
+                  <point x="1031.5750018292608" y="2218.0" />
+                  <point x="1029.3083351625944" y="2218.0" />
+                  <point x="64.79999999999995" y="113.0" />
                 </edge>
                 <edge source="stationmeteo.java.TempBinding" target="stationmeteo.java.CapteurPoid">
-                  <point x="50.75" y="59.5" />
-                  <point x="1011.6485582636296" y="547.0" />
-                  <point x="1056.8985582636296" y="547.0" />
-                  <point x="1056.8985582636296" y="1057.0" />
-                  <point x="1226.9315734353634" y="1057.0" />
-                  <point x="-76.6875" y="-168.0" />
+                  <point x="97.125" y="45.5" />
+                  <point x="830.1011212068943" y="547.0" />
+                  <point x="1281.4027777777778" y="547.0" />
+                  <point x="1281.4027777777778" y="1042.0" />
+                  <point x="1337.4458351625944" y="1042.0" />
+                  <point x="-25.5625" y="-140.5" />
                 </edge>
                 <edge source="stationmeteo.controller.windowcontrollers.ModifController" target="stationmeteo.java.algorithmes.Algorithme">
-                  <point x="128.39999999999964" y="-114.0" />
-                  <point x="3382.8657257617892" y="2962.0" />
-                  <point x="4264.967558283848" y="2962.0" />
-                  <point x="4264.967558283848" y="120.0" />
-                  <point x="3675.64587996217" y="120.0" />
+                  <point x="133.75" y="-100.0" />
+                  <point x="3352.710843429116" y="2855.0" />
+                  <point x="4192.696954540228" y="2855.0" />
+                  <point x="4192.696954540228" y="120.0" />
+                  <point x="3447.7499471909523" y="120.0" />
                   <point x="95.76923076923094" y="45.0" />
                 </edge>
                 <edge source="stationmeteo.controller.windowcontrollers.MainController" target="stationmeteo.controller.windowcontrollers.AjoutController">
                   <point x="168.1111111111113" y="-302.5" />
-                  <point x="2119.360170206234" y="3320.0" />
-                  <point x="3965.7728535353535" y="3320.0" />
+                  <point x="2138.165371266126" y="3185.0" />
+                  <point x="3906.9552878735603" y="3185.0" />
                   <point x="80.25" y="45.0" />
                 </edge>
                 <edge source="stationmeteo.controller.windowcontrollers.WindowController" target="stationmeteo.java.algorithmes.AlgorithmeAleatoireFixe">
-                  <point x="-60.72727272727252" y="-262.0" />
-                  <point x="3328.6342863678506" y="2258.0" />
-                  <point x="3083.626649192939" y="2258.0" />
-                  <point x="82.0" y="100.0" />
+                  <point x="74.22222222222217" y="-248.5" />
+                  <point x="3294.2663989846715" y="2198.0" />
+                  <point x="3472.76870385469" y="2198.0" />
+                  <point x="62.25" y="86.0" />
+                </edge>
+                <edge source="stationmeteo.controller.windowcontrollers.AjoutController" target="stationmeteo.controller.windowcontrollers.Verification">
+                  <point x="64.19999999999982" y="-45.0" />
+                  <point x="3890.90528787356" y="2845.0" />
+                  <point x="4056.030287873561" y="2845.0" />
+                  <point x="252.33333333333348" y="86.0" />
                 </edge>
                 <edge source="stationmeteo.controller.windowcontrollers.MainController" target="stationmeteo.java.serialize.interfaceCap.ISuperCapteurSerialize">
-                  <point x="-148.33333333333303" y="-302.5" />
-                  <point x="1802.9157257617899" y="3310.0" />
-                  <point x="432.0" y="3310.0" />
-                  <point x="432.0" y="2288.0" />
-                  <point x="499.9277777777779" y="2288.0" />
-                  <point x="-129.5999999999999" y="113.0" />
+                  <point x="-89.0" y="-302.5" />
+                  <point x="1881.0542601550146" y="3145.0" />
+                  <point x="1059.6980909038639" y="3145.0" />
+                  <point x="1059.6980909038639" y="2118.0" />
+                  <point x="1094.1083351625944" y="2118.0" />
+                  <point x="129.5999999999999" y="113.0" />
                 </edge>
                 <edge source="stationmeteo.java.algorithmes.AlgorithmeAleatoireFixe" target="stationmeteo.java.algorithmes.Algorithme">
-                  <point x="0.0" y="-100.0" />
-                  <point x="3001.626649192939" y="160.0" />
-                  <point x="3560.722803039093" y="160.0" />
-                  <point x="-19.15384615384619" y="45.0" />
+                  <point x="0.0" y="-86.0" />
+                  <point x="3410.51870385469" y="1852.0" />
+                  <point x="3498.490277777778" y="1852.0" />
+                  <point x="3498.490277777778" y="160.0" />
+                  <point x="3371.1345625755675" y="160.0" />
+                  <point x="19.15384615384619" y="45.0" />
                 </edge>
                 <edge source="stationmeteo.controller.windowcontrollers.WindowController" target="stationmeteo.java.algorithmes.AlgorithmeAleatoire">
-                  <point x="30.363636363636488" y="-262.0" />
-                  <point x="3419.7251954587596" y="2248.0" />
-                  <point x="3779.626649192939" y="2248.0" />
-                  <point x="0.0" y="73.0" />
+                  <point x="111.33333333333348" y="-248.5" />
+                  <point x="3331.377510095783" y="2208.0" />
+                  <point x="3638.450522036508" y="2208.0" />
+                  <point x="0.0" y="59.0" />
                 </edge>
                 <edge source="stationmeteo.controller.windowcontrollers.MainController" target="stationmeteo.java.Capteur">
                   <point x="-69.22222222222217" y="-302.5" />
-                  <point x="1882.0268368729007" y="3270.0" />
-                  <point x="1427.6190734353634" y="3270.0" />
-                  <point x="1427.6190734353634" y="2208.0" />
-                  <point x="1529.6190734353634" y="2208.0" />
-                  <point x="1529.6190734353634" y="1157.0" />
-                  <point x="1590.2832106304932" y="1157.0" />
-                  <point x="23.625" y="195.0" />
+                  <point x="1900.8320379327924" y="3135.0" />
+                  <point x="1497.9807164217214" y="3135.0" />
+                  <point x="1497.9807164217214" y="2138.0" />
+                  <point x="1589.0083351625944" y="2138.0" />
+                  <point x="1589.0083351625944" y="1122.0" />
+                  <point x="1643.798090903864" y="1122.0" />
+                  <point x="23.625" y="167.5" />
                 </edge>
                 <edge source="stationmeteo.java.serialize.interfaceCap.ICapteurSerialize" target="stationmeteo.java.algorithmes.Algorithme">
                   <point x="0.0" y="-153.5" />
-                  <point x="267.13876618604854" y="130.0" />
-                  <point x="3503.2612645775544" y="130.0" />
+                  <point x="249.5203131260862" y="150.0" />
+                  <point x="3275.365331806336" y="150.0" />
                   <point x="-76.61538461538476" y="45.0" />
                 </edge>
                 <edge source="stationmeteo.java.Capteur" target="stationmeteo.java.algorithmes.Algorithme">
-                  <point x="-132.30000000000007" y="-195.0" />
-                  <point x="1434.358210630493" y="517.0" />
-                  <point x="1272.4503234353633" y="517.0" />
-                  <point x="1272.4503234353633" y="140.0" />
-                  <point x="3522.4151107314005" y="140.0" />
+                  <point x="-132.30000000000007" y="-167.5" />
+                  <point x="1487.873090903864" y="527.0" />
+                  <point x="1145.7011212068942" y="527.0" />
+                  <point x="1145.7011212068942" y="160.0" />
+                  <point x="3294.519177960183" y="160.0" />
                   <point x="-57.46153846153857" y="45.0" />
                 </edge>
                 <edge source="stationmeteo.java.CapteurPoid" target="stationmeteo.java.SuperCapteur">
-                  <point x="-178.9375" y="-168.0" />
-                  <point x="1124.6815734353634" y="1077.0" />
-                  <point x="954.7252628090841" y="1077.0" />
-                  <point x="123.27272727272725" y="168.0" />
+                  <point x="-178.9375" y="-140.5" />
+                  <point x="1184.0708351625944" y="1072.0" />
+                  <point x="858.919303025076" y="1072.0" />
+                  <point x="117.81818181818176" y="140.5" />
                 </edge>
                 <edge source="stationmeteo.controller.windowcontrollers.MainController" target="stationmeteo.controller.displaycontroller.DigitalController">
                   <point x="29.666666666666515" y="-302.5" />
-                  <point x="1980.9157257617894" y="3250.0" />
-                  <point x="2188.619073435363" y="3250.0" />
-                  <point x="0.0" y="100.0" />
+                  <point x="1999.7209268216811" y="3115.0" />
+                  <point x="2216.980716421721" y="3115.0" />
+                  <point x="0.0" y="86.0" />
                 </edge>
                 <edge source="stationmeteo.java.Capteur" target="stationmeteo.java.Icapteur">
-                  <point x="132.29999999999995" y="-195.0" />
-                  <point x="1698.9582106304929" y="577.0" />
-                  <point x="2001.1872552535451" y="577.0" />
-                  <point x="-125.18181818181802" y="127.0" />
+                  <point x="132.29999999999995" y="-167.5" />
+                  <point x="1752.473090903864" y="587.0" />
+                  <point x="2029.548898239903" y="587.0" />
+                  <point x="-125.18181818181824" y="127.0" />
                 </edge>
                 <edge source="stationmeteo.controller.displaycontroller.ThermoController" target="stationmeteo.controller.displaycontroller.DigitalController">
-                  <point x="107.0" y="-86.5" />
-                  <point x="2124.619073435363" y="2912.0" />
-                  <point x="2123.4190734353633" y="2912.0" />
-                  <point x="-65.19999999999982" y="100.0" />
+                  <point x="107.0" y="-72.5" />
+                  <point x="2152.9807164217214" y="2805.0" />
+                  <point x="2151.780716421721" y="2805.0" />
+                  <point x="-65.19999999999982" y="86.0" />
                 </edge>
                 <edge source="stationmeteo.java.serialize.XMLClass.XMLCapteur" target="stationmeteo.java.serialize.interfaceCap.ICapteurSerialize">
-                  <point x="54.0" y="-289.5" />
-                  <point x="275.5" y="1207.0" />
-                  <point x="283.38876618604854" y="1207.0" />
-                  <point x="283.38876618604854" y="617.0" />
-                  <point x="298.63876618604854" y="617.0" />
+                  <point x="0.0" y="-262.0" />
+                  <point x="287.2703131260862" y="1142.0" />
+                  <point x="211.25" y="1142.0" />
+                  <point x="211.25" y="657.0" />
+                  <point x="281.0203131260862" y="657.0" />
                   <point x="31.5" y="153.5" />
                 </edge>
                 <edge source="stationmeteo.java.serialize.XMLClass.XMLSuperCapteur" target="stationmeteo.java.ListCapteurPoid">
-                  <point x="95.5" y="-235.5" />
-                  <point x="874.9444444444446" y="2288.0" />
-                  <point x="867.8611111111111" y="2288.0" />
-                  <point x="867.8611111111111" y="1917.0" />
-                  <point x="889.8611111111111" y="1917.0" />
-                  <point x="55.0" y="18.0" />
+                  <point x="-159.16666666666652" y="-208.0" />
+                  <point x="655.425001829261" y="2218.0" />
+                  <point x="632.1944444444446" y="2218.0" />
+                  <point x="632.1944444444446" y="1852.0" />
+                  <point x="599.425001829261" y="1852.0" />
+                  <point x="-55.0" y="18.0" />
                 </edge>
                 <edge source="stationmeteo.java.serialize.SerializerCapteur" target="stationmeteo.java.Icapteur">
                   <point x="188.44444444444434" y="-58.5" />
-                  <point x="931.0332106304929" y="2972.0" />
-                  <point x="1339.0332106304932" y="2972.0" />
-                  <point x="1339.0332106304932" y="2218.0" />
-                  <point x="2067.7320742668567" y="2218.0" />
-                  <point x="2067.7320742668567" y="587.0" />
-                  <point x="2074.8236188899086" y="587.0" />
+                  <point x="897.7147575705305" y="2865.0" />
+                  <point x="1392.548090903864" y="2865.0" />
+                  <point x="1392.548090903864" y="2148.0" />
+                  <point x="2083.7969545402275" y="2148.0" />
+                  <point x="2083.7969545402275" y="637.0" />
+                  <point x="2103.185261876267" y="637.0" />
                   <point x="-51.545454545454504" y="127.0" />
                 </edge>
                 <edge source="stationmeteo.controller.windowcontrollers.MainController" target="stationmeteo.java.Icapteur">
-                  <point x="-9.888888888888687" y="-302.5" />
-                  <point x="1941.3601702062342" y="3240.0" />
-                  <point x="1846.6190734353634" y="3240.0" />
-                  <point x="1846.6190734353634" y="2258.0" />
-                  <point x="2199.9820742668567" y="2258.0" />
-                  <point x="2199.9820742668567" y="617.0" />
-                  <point x="2133.7327097989996" y="617.0" />
-                  <point x="7.363636363636488" y="127.0" />
+                  <point x="89.0" y="-302.5" />
+                  <point x="2059.0542601550146" y="3145.0" />
+                  <point x="2641.980716421721" y="3145.0" />
+                  <point x="2641.980716421721" y="607.0" />
+                  <point x="2250.457989148994" y="607.0" />
+                  <point x="95.72727272727275" y="127.0" />
                 </edge>
                 <edge source="stationmeteo.controller.windowcontrollers.SuperCapController" target="stationmeteo.java.Icapteur">
-                  <point x="44.22222222222217" y="-113.5" />
-                  <point x="1681.3412956575855" y="2962.0" />
-                  <point x="1720.6082804858518" y="2962.0" />
-                  <point x="1720.6082804858518" y="2238.0" />
-                  <point x="2089.7320742668567" y="2238.0" />
-                  <point x="2089.7320742668567" y="607.0" />
-                  <point x="2104.278164344454" y="607.0" />
-                  <point x="-22.09090909090901" y="127.0" />
+                  <point x="-17.799999999999955" y="-99.5" />
+                  <point x="1668.6807164217212" y="2845.0" />
+                  <point x="1726.4307164217212" y="2845.0" />
+                  <point x="1726.4307164217212" y="2158.0" />
+                  <point x="2094.7969545402275" y="2158.0" />
+                  <point x="2094.7969545402275" y="647.0" />
+                  <point x="2117.91253460354" y="647.0" />
+                  <point x="-36.818181818181756" y="127.0" />
                 </edge>
                 <edge source="stationmeteo.controller.displaycontroller.ThermoController" target="stationmeteo.java.Icapteur">
-                  <point x="-107.0" y="-86.5" />
-                  <point x="1910.6190734353634" y="2912.0" />
-                  <point x="1952.1860582636295" y="2912.0" />
-                  <point x="1952.1860582636295" y="2268.0" />
-                  <point x="2210.9820742668567" y="2268.0" />
-                  <point x="2210.9820742668567" y="607.0" />
-                  <point x="2148.459982526272" y="607.0" />
-                  <point x="22.09090909090901" y="127.0" />
+                  <point x="-107.0" y="-72.5" />
+                  <point x="1938.9807164217214" y="2805.0" />
+                  <point x="1984.8880220365081" y="2805.0" />
+                  <point x="1984.8880220365081" y="2198.0" />
+                  <point x="2225.4469545402276" y="2198.0" />
+                  <point x="2225.4469545402276" y="657.0" />
+                  <point x="2176.821625512631" y="657.0" />
+                  <point x="22.090909090909236" y="127.0" />
                 </edge>
                 <edge source="stationmeteo.java.serialize.XMLClass.XMLSuperCapteur" target="stationmeteo.java.SuperCapteur">
-                  <point x="159.16666666666674" y="-235.5" />
-                  <point x="938.6111111111113" y="2288.0" />
-                  <point x="927.8611111111111" y="2288.0" />
-                  <point x="927.8611111111111" y="1127.0" />
-                  <point x="800.6343537181751" y="1127.0" />
-                  <point x="-30.818181818181756" y="168.0" />
+                  <point x="-31.833333333333258" y="-208.0" />
+                  <point x="782.7583351625942" y="2218.0" />
+                  <point x="792.0083351625944" y="2218.0" />
+                  <point x="792.0083351625944" y="1112.0" />
+                  <point x="741.1011212068943" y="1112.0" />
+                  <point x="0.0" y="140.5" />
                 </edge>
                 <edge source="stationmeteo.controller.windowcontrollers.MainController" target="stationmeteo.java.serialize.SerializerCapteur">
-                  <point x="-128.55555555555566" y="-302.5" />
-                  <point x="1822.6935035395672" y="3300.0" />
-                  <point x="636.5887661860486" y="3300.0" />
+                  <point x="-128.55555555555543" y="-302.5" />
+                  <point x="1841.4987045994592" y="3165.0" />
+                  <point x="603.2703131260862" y="3165.0" />
                   <point x="-106.0" y="58.5" />
                 </edge>
                 <edge source="stationmeteo.controller.windowcontrollers.AjoutController" target="stationmeteo.java.algorithmes.Algorithme">
-                  <point x="120.375" y="-45.0" />
-                  <point x="4005.8978535353535" y="2972.0" />
-                  <point x="4294.989650024432" y="2972.0" />
-                  <point x="4294.989650024432" y="110.0" />
-                  <point x="3694.7997261160162" y="110.0" />
+                  <point x="128.4000000000001" y="-45.0" />
+                  <point x="3955.105287873561" y="2865.0" />
+                  <point x="4203.696954540228" y="2865.0" />
+                  <point x="4203.696954540228" y="110.0" />
+                  <point x="3466.903793344798" y="110.0" />
                   <point x="114.92307692307713" y="45.0" />
+                </edge>
+                <edge source="stationmeteo.controller.windowcontrollers.ModifController" target="stationmeteo.controller.windowcontrollers.Verification">
+                  <point x="80.25" y="-100.0" />
+                  <point x="3299.210843429116" y="2845.0" />
+                  <point x="3803.696954540227" y="2845.0" />
+                  <point x="0.0" y="86.0" />
                 </edge>
                 <edge source="stationmeteo.controller.windowcontrollers.Verification" target="stationmeteo.java.Icapteur">
                   <point x="-189.25" y="-86.0" />
-                  <point x="3201.376649192939" y="517.0" />
-                  <point x="2281.0054370717266" y="517.0" />
-                  <point x="154.6363636363635" y="127.0" />
+                  <point x="3614.446954540227" y="2198.0" />
+                  <point x="3545.51870385469" y="2198.0" />
+                  <point x="3545.51870385469" y="1822.0" />
+                  <point x="3329.980716421721" y="1822.0" />
+                  <point x="3329.980716421721" y="567.0" />
+                  <point x="2309.367080058085" y="567.0" />
+                  <point x="154.63636363636374" y="127.0" />
                 </edge>
                 <edge source="stationmeteo.java.SuperCapteur" target="stationmeteo.java.serialize.interfaceCap.ISuperCapteurSerialize">
-                  <point x="-154.090909090909" y="168.0" />
-                  <point x="677.3616264454479" y="1147.0" />
-                  <point x="548.5277777777778" y="1147.0" />
-                  <point x="-81.0" y="-113.0" />
+                  <point x="29.454545454545496" y="140.5" />
+                  <point x="770.5556666614398" y="1102.0" />
+                  <point x="1045.5083351625944" y="1102.0" />
+                  <point x="81.0" y="-113.0" />
                 </edge>
                 <edge source="stationmeteo.controller.windowcontrollers.MainController" target="stationmeteo.controller.windowcontrollers.ModifController">
                   <point x="108.77777777777783" y="-302.5" />
-                  <point x="2060.0268368729007" y="3290.0" />
-                  <point x="3174.2157257617896" y="3290.0" />
-                  <point x="-80.25" y="114.0" />
+                  <point x="2078.8320379327924" y="3155.0" />
+                  <point x="3138.710843429116" y="3155.0" />
+                  <point x="-80.25" y="100.0" />
                 </edge>
                 <edge source="stationmeteo.java.CapteurPoid" target="stationmeteo.java.Capteur">
-                  <point x="25.5625" y="-168.0" />
-                  <point x="1329.1815734353634" y="1167.0" />
-                  <point x="1448.5332106304932" y="1167.0" />
-                  <point x="-118.125" y="195.0" />
+                  <point x="25.5625" y="-140.5" />
+                  <point x="1388.5708351625944" y="1132.0" />
+                  <point x="1502.048090903864" y="1132.0" />
+                  <point x="-118.125" y="167.5" />
                 </edge>
                 <edge source="stationmeteo.java.algorithmes.AlgorithmeAleatoire" target="stationmeteo.java.algorithmes.Algorithme">
-                  <point x="0.0" y="-73.0" />
-                  <point x="3779.626649192939" y="160.0" />
-                  <point x="3599.0304953467853" y="160.0" />
-                  <point x="19.15384615384619" y="45.0" />
+                  <point x="0.0" y="-59.0" />
+                  <point x="3638.450522036508" y="150.0" />
+                  <point x="3390.2884087294133" y="150.0" />
+                  <point x="38.30769230769238" y="45.0" />
                 </edge>
                 <edge source="stationmeteo.java.serialize.interfaceCap.ISuperCapteurSerialize" target="stationmeteo.java.ListCapteurPoid">
-                  <point x="81.0" y="-113.0" />
-                  <point x="710.5277777777778" y="1917.0" />
-                  <point x="779.8611111111111" y="1917.0" />
-                  <point x="-55.0" y="18.0" />
+                  <point x="-81.0" y="-113.0" />
+                  <point x="883.5083351625944" y="1852.0" />
+                  <point x="709.425001829261" y="1852.0" />
+                  <point x="55.0" y="18.0" />
                 </edge>
                 <edge source="stationmeteo.java.serialize.XMLClass.XMLSuperCapteur" target="stationmeteo.java.serialize.interfaceCap.ISuperCapteurSerialize">
-                  <point x="-31.833333333333258" y="-235.5" />
-                  <point x="747.6111111111113" y="2288.0" />
-                  <point x="759.1277777777777" y="2288.0" />
-                  <point x="129.5999999999999" y="113.0" />
+                  <point x="159.16666666666674" y="-208.0" />
+                  <point x="973.7583351625942" y="2218.0" />
+                  <point x="964.5083351625944" y="2218.0" />
+                  <point x="0.0" y="113.0" />
                 </edge>
                 <edge source="stationmeteo.java.serialize.SerializerCapteur" target="stationmeteo.java.serialize.XMLClass.XMLCapteur">
-                  <point x="-188.44444444444434" y="-58.5" />
-                  <point x="554.1443217416042" y="2972.0" />
-                  <point x="217.40190778301167" y="2972.0" />
-                  <point x="217.40190778301167" y="1831.0" />
-                  <point x="127.0" y="1831.0" />
-                  <point x="-94.5" y="289.5" />
+                  <point x="-141.33333333333326" y="-58.5" />
+                  <point x="567.9369797927529" y="2855.0" />
+                  <point x="253.88872985198395" y="2855.0" />
+                  <point x="253.88872985198395" y="1746.0" />
+                  <point x="192.7703131260862" y="1746.0" />
+                  <point x="-94.5" y="262.0" />
                 </edge>
                 <edge source="stationmeteo.java.SuperCapteur" target="stationmeteo.java.Icapteur">
-                  <point x="127.125" y="-168.0" />
-                  <point x="958.5775355363569" y="567.0" />
-                  <point x="1986.4599825262721" y="567.0" />
+                  <point x="121.5" y="-140.5" />
+                  <point x="862.6011212068943" y="577.0" />
+                  <point x="2014.8216255126304" y="577.0" />
                   <point x="-139.909090909091" y="127.0" />
                 </edge>
                 <edge source="stationmeteo.java.serialize.XMLClass.XMLCapteur" target="stationmeteo.java.Capteur">
-                  <point x="108.0" y="-289.5" />
-                  <point x="329.5" y="1157.0" />
-                  <point x="1401.2832106304932" y="1157.0" />
-                  <point x="-165.375" y="195.0" />
+                  <point x="108.0" y="-262.0" />
+                  <point x="395.2703131260862" y="1122.0" />
+                  <point x="1454.798090903864" y="1122.0" />
+                  <point x="-165.375" y="167.5" />
+                </edge>
+                <edge source="stationmeteo.controller.windowcontrollers.SuperCapController" target="stationmeteo.controller.windowcontrollers.Verification">
+                  <point x="160.20000000000005" y="-99.5" />
+                  <point x="1846.6807164217212" y="2835.0" />
+                  <point x="3551.363621206894" y="2835.0" />
+                  <point x="-252.33333333333348" y="86.0" />
                 </edge>
                 <edge source="stationmeteo.java.ListCapteurPoid" target="stationmeteo.java.CapteurPoid">
                   <point x="61.875" y="-18.0" />
-                  <point x="896.7361111111111" y="1831.0" />
-                  <point x="1167.28574010203" y="1831.0" />
-                  <point x="-136.33333333333326" y="168.0" />
+                  <point x="716.300001829261" y="1746.0" />
+                  <point x="1226.675001829261" y="1746.0" />
+                  <point x="-136.33333333333326" y="140.5" />
                 </edge>
                 <edge source="stationmeteo.controller.windowcontrollers.Verification" target="stationmeteo.java.algorithmes.Algorithme">
                   <point x="189.25" y="-86.0" />
-                  <point x="0.0" y="45.0" />
+                  <point x="3992.946954540227" y="2218.0" />
+                  <point x="3855.9167601550143" y="2218.0" />
+                  <point x="3855.9167601550143" y="130.0" />
+                  <point x="3428.5961010371057" y="130.0" />
+                  <point x="76.61538461538476" y="45.0" />
                 </edge>
                 <edge source="stationmeteo.controller.windowcontrollers.MainController" target="stationmeteo.controller.windowcontrollers.SuperCapController">
                   <point x="-49.44444444444434" y="-302.5" />
-                  <point x="1901.8046146506786" y="3260.0" />
-                  <point x="1537.6190734353634" y="3260.0" />
-                  <point x="-99.5" y="113.5" />
+                  <point x="1920.6098157105703" y="3125.0" />
+                  <point x="1597.4807164217214" y="3125.0" />
+                  <point x="-89.0" y="99.5" />
                 </edge>
                 <edge source="stationmeteo.java.serialize.SerializerCapteur" target="stationmeteo.java.serialize.XMLClass.XMLSuperCapteur">
                   <point x="47.111111111111086" y="-58.5" />
-                  <point x="789.6998772971597" y="2942.0" />
-                  <point x="874.9444444444446" y="2942.0" />
-                  <point x="95.5" y="235.5" />
+                  <point x="756.3814242371973" y="2835.0" />
+                  <point x="910.0916684959275" y="2835.0" />
+                  <point x="95.5" y="208.0" />
                 </edge>
                 <edge source="stationmeteo.java.serialize.XMLClass.XMLCapteur" target="stationmeteo.java.algorithmes.Algorithme">
-                  <point x="-162.0" y="-289.5" />
-                  <point x="59.5" y="1207.0" />
-                  <point x="0.0" y="1207.0" />
-                  <point x="0.0" y="110.0" />
-                  <point x="3464.953572269862" y="110.0" />
-                  <point x="-114.92307692307713" y="45.0" />
+                  <point x="-108.0" y="-262.0" />
+                  <point x="179.2703131260862" y="1162.0" />
+                  <point x="11.0" y="1162.0" />
+                  <point x="11.0" y="140.0" />
+                  <point x="3256.2114856524904" y="140.0" />
+                  <point x="-95.76923076923094" y="45.0" />
                 </edge>
                 <edge source="stationmeteo.controller.CellFactory" target="stationmeteo.java.Icapteur">
                   <point x="0.0" y="-31.5" />
-                  <point x="2530.119073435363" y="577.0" />
-                  <point x="2192.64180070809" y="577.0" />
-                  <point x="66.27272727272702" y="127.0" />
+                  <point x="2811.980716421721" y="597.0" />
+                  <point x="2265.185261876267" y="597.0" />
+                  <point x="110.45454545454527" y="127.0" />
                 </edge>
                 <edge source="stationmeteo.java.SuperCapteur" target="stationmeteo.java.ListCapteurPoid">
-                  <point x="-61.63636363636351" y="168.0" />
-                  <point x="769.8161718999934" y="1137.0" />
-                  <point x="825.2361111111111" y="1137.0" />
-                  <point x="825.2361111111111" y="1831.0" />
-                  <point x="855.4861111111111" y="1831.0" />
-                  <point x="20.625" y="-18.0" />
+                  <point x="-58.90909090909099" y="140.5" />
+                  <point x="682.1920302978033" y="1102.0" />
+                  <point x="642.4027777777778" y="1102.0" />
+                  <point x="642.4027777777778" y="1746.0" />
+                  <point x="633.800001829261" y="1746.0" />
+                  <point x="-20.625" y="-18.0" />
                 </edge>
                 <edge source="stationmeteo.controller.windowcontrollers.AjoutController" target="stationmeteo.java.Capteur">
-                  <point x="-120.375" y="-45.0" />
-                  <point x="3765.1478535353535" y="2872.0" />
-                  <point x="2409.932074266857" y="2872.0" />
-                  <point x="2409.932074266857" y="2208.0" />
-                  <point x="2011.1582804858517" y="2208.0" />
-                  <point x="2011.1582804858517" y="1177.0" />
-                  <point x="1732.0332106304932" y="1177.0" />
-                  <point x="165.375" y="195.0" />
+                  <point x="-128.4000000000001" y="-45.0" />
+                  <point x="3698.3052878735607" y="2775.0" />
+                  <point x="2424.3969545402274" y="2775.0" />
+                  <point x="2424.3969545402274" y="2138.0" />
+                  <point x="2036.8380220365084" y="2138.0" />
+                  <point x="2036.8380220365084" y="1142.0" />
+                  <point x="1785.548090903864" y="1142.0" />
+                  <point x="165.375" y="167.5" />
                 </edge>
                 <edge source="stationmeteo.controller.windowcontrollers.WindowController" target="stationmeteo.java.Icapteur">
-                  <point x="-121.4545454545455" y="-262.0" />
-                  <point x="3267.9070136405776" y="2278.0" />
-                  <point x="2827.126649192939" y="2278.0" />
-                  <point x="2827.126649192939" y="527.0" />
-                  <point x="2266.278164344454" y="527.0" />
-                  <point x="139.909090909091" y="127.0" />
+                  <point x="-111.33333333333348" y="-248.5" />
+                  <point x="3108.710843429116" y="2208.0" />
+                  <point x="2992.980716421721" y="2208.0" />
+                  <point x="2992.980716421721" y="577.0" />
+                  <point x="2294.639807330812" y="577.0" />
+                  <point x="139.90909090909076" y="127.0" />
                 </edge>
                 <edge source="stationmeteo.java.Capteur" target="stationmeteo.java.serialize.interfaceCap.ICapteurSerialize">
-                  <point x="-170.10000000000014" y="-195.0" />
-                  <point x="1396.5582106304928" y="527.0" />
-                  <point x="424.63876618604854" y="527.0" />
+                  <point x="-170.10000000000008" y="-167.5" />
+                  <point x="1450.0730909038639" y="537.0" />
+                  <point x="407.0203131260862" y="537.0" />
                   <point x="157.5" y="153.5" />
                 </edge>
                 <edge source="stationmeteo.controller.windowcontrollers.SuperCapController" target="stationmeteo.controller.windowcontrollers.WindowController">
-                  <point x="132.66666666666652" y="-113.5" />
-                  <point x="1769.7857401020299" y="2922.0" />
-                  <point x="3250.1948924284566" y="2922.0" />
-                  <point x="-139.16666666666652" y="262.0" />
+                  <point x="89.0" y="-99.5" />
+                  <point x="1775.4807164217214" y="2815.0" />
+                  <point x="3080.877510095783" y="2815.0" />
+                  <point x="-139.16666666666652" y="248.5" />
                 </edge>
                 <edge source="stationmeteo.java.Capteur" target="stationmeteo.java.CapteurThread">
-                  <point x="-56.700000000000045" y="-195.0" />
-                  <point x="1509.9582106304929" y="547.0" />
-                  <point x="1489.458210630493" y="547.0" />
-                  <point x="-98.79999999999995" y="59.5" />
+                  <point x="-56.700000000000045" y="-167.5" />
+                  <point x="1563.473090903864" y="557.0" />
+                  <point x="1545.3230909038639" y="557.0" />
+                  <point x="-80.0" y="45.5" />
                 </edge>
                 <edge source="stationmeteo.java.CapteurThread" target="stationmeteo.java.Capteur">
-                  <point x="98.80000000000007" y="59.5" />
-                  <point x="1687.0582106304932" y="547.0" />
-                  <point x="1661.1582106304932" y="547.0" />
-                  <point x="94.5" y="-195.0" />
+                  <point x="80.0" y="45.5" />
+                  <point x="1705.3230909038639" y="557.0" />
+                  <point x="1714.673090903864" y="557.0" />
+                  <point x="94.5" y="-167.5" />
                 </edge>
                 <edge source="stationmeteo.controller.windowcontrollers.WindowController" target="stationmeteo.java.algorithmes.AlgorithmeFenetreGlissante">
-                  <point x="91.09090909090901" y="-262.0" />
-                  <point x="3480.452468186032" y="2268.0" />
-                  <point x="4002.876649192939" y="2268.0" />
-                  <point x="-77.75" y="86.5" />
+                  <point x="-37.11111111111131" y="-248.5" />
+                  <point x="3182.9330656513384" y="2188.0" />
+                  <point x="3076.730716421721" y="2188.0" />
+                  <point x="-62.25" y="72.5" />
                 </edge>
                 <edge source="stationmeteo.java.CapteurPoid" target="stationmeteo.java.Icapteur">
-                  <point x="178.9375" y="-168.0" />
-                  <point x="1482.5565734353634" y="1207.0" />
-                  <point x="1808.5445742668567" y="1207.0" />
-                  <point x="1808.5445742668567" y="617.0" />
-                  <point x="2060.0963461626357" y="617.0" />
-                  <point x="-66.27272727272748" y="127.0" />
+                  <point x="127.8125" y="-140.5" />
+                  <point x="1490.8208351625944" y="1162.0" />
+                  <point x="1834.6094545402275" y="1162.0" />
+                  <point x="1834.6094545402275" y="617.0" />
+                  <point x="2073.7307164217214" y="617.0" />
+                  <point x="-81.0" y="127.0" />
                 </edge>
                 <edge source="stationmeteo.java.SuperCapteur" target="stationmeteo.java.CapteurPoid">
-                  <point x="154.090909090909" y="168.0" />
-                  <point x="985.5434446272659" y="1067.0" />
-                  <point x="1175.8065734353634" y="1067.0" />
-                  <point x="-127.8125" y="-168.0" />
+                  <point x="147.27272727272725" y="140.5" />
+                  <point x="888.3738484796215" y="1062.0" />
+                  <point x="1235.1958351625944" y="1062.0" />
+                  <point x="-127.8125" y="-140.5" />
                 </edge>
                 <edge source="stationmeteo.java.serialize.SerializerCapteur" target="stationmeteo.java.SuperCapteur">
-                  <point x="94.22222222222217" y="-58.5" />
-                  <point x="836.8109884082708" y="2952.0" />
-                  <point x="980.9444444444443" y="2952.0" />
-                  <point x="980.9444444444443" y="1117.0" />
-                  <point x="831.4525355363569" y="1117.0" />
-                  <point x="0.0" y="168.0" />
+                  <point x="-47.111111111111086" y="-58.5" />
+                  <point x="662.1592020149751" y="2835.0" />
+                  <point x="560.3416684959275" y="2835.0" />
+                  <point x="560.3416684959275" y="1112.0" />
+                  <point x="623.2829393887125" y="1112.0" />
+                  <point x="-117.81818181818176" y="140.5" />
                 </edge>
                 <edge source="stationmeteo.controller.windowcontrollers.MainController" target="stationmeteo.java.serialize.interfaceCap.ICapteurSerialize">
-                  <point x="-168.11111111111086" y="-302.5" />
-                  <point x="1783.137947984012" y="3320.0" />
-                  <point x="22.0" y="3320.0" />
-                  <point x="22.0" y="617.0" />
-                  <point x="109.63876618604854" y="617.0" />
+                  <point x="-168.1111111111111" y="-302.5" />
+                  <point x="1801.9431490439035" y="3185.0" />
+                  <point x="22.0" y="3185.0" />
+                  <point x="22.0" y="627.0" />
+                  <point x="92.0203131260862" y="627.0" />
                   <point x="-157.5" y="153.5" />
                 </edge>
                 <edge source="stationmeteo.java.serialize.SerializerCapteur" target="stationmeteo.java.serialize.interfaceCap.ICapteurSerialize">
-                  <point x="-94.22222222222217" y="-58.5" />
-                  <point x="648.3665439638264" y="2952.0" />
-                  <point x="421.0" y="2952.0" />
-                  <point x="421.0" y="617.0" />
-                  <point x="361.63876618604854" y="617.0" />
-                  <point x="94.5" y="153.5" />
+                  <point x="-188.44444444444434" y="-58.5" />
+                  <point x="520.8258686816419" y="2865.0" />
+                  <point x="33.0" y="2865.0" />
+                  <point x="33.0" y="637.0" />
+                  <point x="155.0203131260862" y="637.0" />
+                  <point x="-94.5" y="153.5" />
                 </edge>
                 <edge source="stationmeteo.controller.windowcontrollers.SuperCapController" target="stationmeteo.java.SuperCapteur">
-                  <point x="-176.8888888888889" y="-113.5" />
-                  <point x="1460.2301845464744" y="2962.0" />
-                  <point x="1077.6190734353634" y="2962.0" />
-                  <point x="1077.6190734353634" y="1097.0" />
-                  <point x="893.0888991727206" y="1097.0" />
-                  <point x="61.63636363636374" y="168.0" />
+                  <point x="-124.60000000000014" y="-99.5" />
+                  <point x="1561.880716421721" y="2845.0" />
+                  <point x="1148.0083351625944" y="2845.0" />
+                  <point x="1148.0083351625944" y="1082.0" />
+                  <point x="829.4647575705305" y="1082.0" />
+                  <point x="88.36363636363626" y="140.5" />
                 </edge>
                 <edge source="stationmeteo.controller.windowcontrollers.MainController" target="stationmeteo.java.SuperCapteur">
-                  <point x="-89.0" y="-302.5" />
-                  <point x="1862.249059095123" y="3280.0" />
-                  <point x="1066.6190734353634" y="3280.0" />
-                  <point x="1066.6190734353634" y="1107.0" />
-                  <point x="862.2707173545386" y="1107.0" />
-                  <point x="30.818181818181756" y="168.0" />
+                  <point x="-148.33333333333326" y="-302.5" />
+                  <point x="1821.7209268216814" y="3175.0" />
+                  <point x="486.7703131260862" y="3175.0" />
+                  <point x="486.7703131260862" y="1102.0" />
+                  <point x="593.828393934167" y="1102.0" />
+                  <point x="-147.27272727272725" y="140.5" />
                 </edge>
                 <edge source="stationmeteo.controller.windowcontrollers.MainController" target="stationmeteo.controller.displaycontroller.IconController">
                   <point x="49.44444444444434" y="-302.5" />
-                  <point x="2000.6935035395672" y="3260.0" />
-                  <point x="2569.119073435363" y="3260.0" />
-                  <point x="0.0" y="86.5" />
+                  <point x="2019.498704599459" y="3125.0" />
+                  <point x="2423.980716421721" y="3125.0" />
+                  <point x="0.0" y="72.5" />
                 </edge>
                 <edge source="stationmeteo.controller.displaycontroller.DigitalController" target="stationmeteo.java.Icapteur">
-                  <point x="-81.5" y="-100.0" />
-                  <point x="2107.119073435363" y="2278.0" />
-                  <point x="2349.119073435363" y="2278.0" />
-                  <point x="2349.119073435363" y="597.0" />
-                  <point x="2163.187255253545" y="597.0" />
-                  <point x="36.81818181818198" y="127.0" />
+                  <point x="-81.5" y="-86.0" />
+                  <point x="2135.480716421721" y="2208.0" />
+                  <point x="2377.480716421721" y="2208.0" />
+                  <point x="2377.480716421721" y="647.0" />
+                  <point x="2191.548898239903" y="647.0" />
+                  <point x="36.818181818181756" y="127.0" />
                 </edge>
                 <edge source="stationmeteo.controller.displaycontroller.IconController" target="stationmeteo.java.Icapteur">
-                  <point x="131.0" y="-86.5" />
-                  <point x="2700.119073435363" y="567.0" />
-                  <point x="2207.369073435363" y="567.0" />
-                  <point x="81.0" y="127.0" />
+                  <point x="131.0" y="-72.5" />
+                  <point x="2554.980716421721" y="2805.0" />
+                  <point x="2512.1469545402274" y="2805.0" />
+                  <point x="2512.1469545402274" y="627.0" />
+                  <point x="2221.003443694449" y="627.0" />
+                  <point x="66.27272727272725" y="127.0" />
                 </edge>
                 <edge source="stationmeteo.java.StationMeteo" target="stationmeteo.controller.windowcontrollers.MainController">
                   <point x="57.75" y="-72.5" />
-                  <point x="2008.999059095123" y="3970.0" />
-                  <point x="2040.249059095123" y="3970.0" />
+                  <point x="2027.8042601550146" y="3835.0" />
+                  <point x="2059.0542601550146" y="3835.0" />
                   <point x="89.0" y="302.5" />
                 </edge>
                 <edge source="stationmeteo.controller.windowcontrollers.ModifController" target="stationmeteo.controller.windowcontrollers.WindowController">
-                  <point x="0.0" y="-114.0" />
-                  <point x="3254.4657257617896" y="2942.0" />
-                  <point x="3361.5282257617896" y="2942.0" />
-                  <point x="-27.833333333333485" y="262.0" />
+                  <point x="-26.75" y="-100.0" />
+                  <point x="-27.833333333333485" y="248.5" />
                 </edge>
                 <edge source="stationmeteo.java.serialize.XMLClass.XMLCapteur" target="stationmeteo.java.Icapteur">
-                  <point x="162.0" y="-289.5" />
-                  <point x="383.5" y="1187.0" />
-                  <point x="1786.5445742668567" y="1187.0" />
-                  <point x="1786.5445742668567" y="597.0" />
-                  <point x="2030.6418007080906" y="597.0" />
-                  <point x="-95.72727272727252" y="127.0" />
+                  <point x="162.0" y="-262.0" />
+                  <point x="449.2703131260862" y="1152.0" />
+                  <point x="1823.6094545402275" y="1152.0" />
+                  <point x="1823.6094545402275" y="607.0" />
+                  <point x="2059.003443694449" y="607.0" />
+                  <point x="-95.72727272727275" y="127.0" />
                 </edge>
                 <edge source="stationmeteo.controller.windowcontrollers.WindowController" target="stationmeteo.java.algorithmes.Algorithme">
-                  <point x="151.81818181818198" y="-262.0" />
-                  <point x="3541.179740913305" y="2288.0" />
-                  <point x="4246.626649192939" y="2288.0" />
-                  <point x="4246.626649192939" y="130.0" />
-                  <point x="3656.492033808324" y="130.0" />
-                  <point x="76.61538461538476" y="45.0" />
+                  <point x="148.44444444444434" y="-248.5" />
+                  <point x="3368.488621206894" y="2218.0" />
+                  <point x="3773.450522036508" y="2218.0" />
+                  <point x="3773.450522036508" y="140.0" />
+                  <point x="3409.44225488326" y="140.0" />
+                  <point x="57.46153846153857" y="45.0" />
                 </edge>
                 <edge source="stationmeteo.java.SuperCapteur" target="stationmeteo.java.TempBinding">
-                  <point x="-127.125" y="-168.0" />
-                  <point x="704.3275355363569" y="537.0" />
-                  <point x="808.6485582636296" y="537.0" />
-                  <point x="-152.25" y="59.5" />
+                  <point x="-121.5" y="-140.5" />
+                  <point x="619.6011212068943" y="667.0" />
+                  <point x="635.8511212068943" y="667.0" />
+                  <point x="-97.125" y="45.5" />
                 </edge>
                 <edge source="stationmeteo.java.serialize.SerializerCapteur" target="stationmeteo.java.Capteur">
                   <point x="141.33333333333326" y="-58.5" />
-                  <point x="883.9220995193818" y="2962.0" />
-                  <point x="1020.5357401020299" y="2962.0" />
-                  <point x="1020.5357401020299" y="2198.0" />
-                  <point x="1518.6190734353634" y="2198.0" />
-                  <point x="1518.6190734353634" y="1147.0" />
-                  <point x="1543.0332106304932" y="1147.0" />
-                  <point x="-23.625" y="195.0" />
+                  <point x="850.6036464594195" y="2855.0" />
+                  <point x="1042.5750018292608" y="2855.0" />
+                  <point x="1042.5750018292608" y="2128.0" />
+                  <point x="1578.0083351625944" y="2128.0" />
+                  <point x="1578.0083351625944" y="1112.0" />
+                  <point x="1596.548090903864" y="1112.0" />
+                  <point x="-23.625" y="167.5" />
                 </edge>
                 <edge source="stationmeteo.controller.windowcontrollers.ModifController" target="stationmeteo.java.Capteur">
-                  <point x="-128.39999999999964" y="-114.0" />
-                  <point x="3126.06572576179" y="2892.0" />
-                  <point x="1570.5332106304932" y="2892.0" />
-                  <point x="1570.5332106304932" y="1167.0" />
-                  <point x="1637.5332106304932" y="1167.0" />
-                  <point x="70.875" y="195.0" />
+                  <point x="-133.75" y="-100.0" />
+                  <point x="3085.210843429116" y="2795.0" />
+                  <point x="1624.048090903864" y="2795.0" />
+                  <point x="1624.048090903864" y="1132.0" />
+                  <point x="1691.048090903864" y="1132.0" />
+                  <point x="70.875" y="167.5" />
                 </edge>
                 <edge source="stationmeteo.controller.windowcontrollers.SuperCapController" target="stationmeteo.java.CapteurPoid">
-                  <point x="-44.22222222222217" y="-113.5" />
-                  <point x="1592.8968512131412" y="2932.0" />
-                  <point x="1540.1720995193818" y="2932.0" />
-                  <point x="1540.1720995193818" y="2188.0" />
-                  <point x="1427.1720995193818" y="2188.0" />
-                  <point x="1427.1720995193818" y="1831.0" />
-                  <point x="1439.9524067686966" y="1831.0" />
-                  <point x="136.33333333333326" y="168.0" />
+                  <point x="-89.0" y="-99.5" />
+                  <point x="1597.4807164217214" y="2835.0" />
+                  <point x="1363.0083351625944" y="2835.0" />
+                  <point x="0.0" y="140.5" />
                 </edge>
                 <edge source="stationmeteo.controller.windowcontrollers.MainController" target="stationmeteo.controller.displaycontroller.ThermoController">
-                  <point x="9.888888888888687" y="-302.5" />
-                  <point x="1961.1379479840116" y="3240.0" />
-                  <point x="2017.6190734353634" y="3240.0" />
-                  <point x="0.0" y="86.5" />
+                  <point x="9.888888888888914" y="-302.5" />
+                  <point x="1979.9431490439035" y="3105.0" />
+                  <point x="2045.9807164217214" y="3105.0" />
+                  <point x="0.0" y="72.5" />
                 </edge>
                 <edge source="stationmeteo.controller.displaycontroller.IconController" target="stationmeteo.controller.displaycontroller.DigitalController">
-                  <point x="-131.0" y="-86.5" />
-                  <point x="2438.119073435363" y="2912.0" />
-                  <point x="2253.819073435363" y="2912.0" />
-                  <point x="65.19999999999982" y="100.0" />
+                  <point x="-131.0" y="-72.5" />
+                  <point x="2292.980716421721" y="2805.0" />
+                  <point x="2282.1807164217207" y="2805.0" />
+                  <point x="65.19999999999982" y="86.0" />
                 </edge>
               </edges>
-              <settings layout="Hierarchic Group" zoom="1.4000000000000001" x="1584.4285714285713" y="1149.4285714285713" />
-              <SelectedNodes />
+              <settings layout="Hierarchic Group" zoom="0.30000000000000004" x="2799.476440226441" y="1551.703102453102" />
+              <SelectedNodes>
+                <node>stationmeteo.controller.displaycontroller.DigitalController</node>
+              </SelectedNodes>
               <Categories>
-                <Category>Constructors</Category>
-                <Category>Inner Classes</Category>
-                <Category>Fields</Category>
                 <Category>Methods</Category>
                 <Category>Properties</Category>
+                <Category>Inner Classes</Category>
+                <Category>Fields</Category>
               </Categories>
               <SCOPE>All</SCOPE>
               <VISIBILITY>private</VISIBILITY>
@@ -623,11 +639,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Verification.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Verification.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/stationmeteo/controller/windowcontrollers/Verification.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="987">
-              <caret line="56" column="120" lean-forward="false" selection-start-line="56" selection-start-column="120" selection-end-line="56" selection-end-column="120" />
+            <state relative-caret-position="395">
+              <caret line="75" column="16" lean-forward="false" selection-start-line="75" selection-start-column="16" selection-end-line="75" selection-end-column="16" />
               <folding />
             </state>
           </provider>
@@ -636,8 +652,8 @@
       <file leaf-file-name="AjoutController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/stationmeteo/controller/windowcontrollers/AjoutController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="364">
-              <caret line="33" column="9" lean-forward="false" selection-start-line="33" selection-start-column="9" selection-end-line="33" selection-end-column="9" />
+            <state relative-caret-position="343">
+              <caret line="32" column="23" lean-forward="false" selection-start-line="32" selection-start-column="23" selection-end-line="32" selection-end-column="23" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -659,10 +675,10 @@
         <entry file="file://$PROJECT_DIR$/src/stationmeteo/controller/windowcontrollers/ModifController.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="311">
-              <caret line="63" column="17" lean-forward="false" selection-start-line="63" selection-start-column="17" selection-end-line="63" selection-end-column="17" />
+              <caret line="63" column="24" lean-forward="false" selection-start-line="63" selection-start-column="24" selection-end-line="63" selection-end-column="24" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <marker date="1516113649945" expanded="true" signature="1527:1897" ph="{...}" />
+                <marker date="1516114011678" expanded="true" signature="1527:1897" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -754,10 +770,10 @@
         <option value="$PROJECT_DIR$/src/stationmeteo/java/CapteurPoids.java" />
         <option value="$PROJECT_DIR$/src/stationmeteo/java/CapteurPoid.java" />
         <option value="$PROJECT_DIR$/src/stationmeteo/java/SuperCapteur.java" />
-        <option value="$PROJECT_DIR$/src/stationmeteo/controller/windowcontrollers/SuperCapController.java" />
         <option value="$PROJECT_DIR$/src/stationmeteo/controller/windowcontrollers/WindowController.java" />
-        <option value="$PROJECT_DIR$/src/stationmeteo/controller/windowcontrollers/ModifController.java" />
         <option value="$PROJECT_DIR$/src/stationmeteo/controller/windowcontrollers/AjoutController.java" />
+        <option value="$PROJECT_DIR$/src/stationmeteo/controller/windowcontrollers/ModifController.java" />
+        <option value="$PROJECT_DIR$/src/stationmeteo/controller/windowcontrollers/SuperCapController.java" />
         <option value="$PROJECT_DIR$/src/stationmeteo/controller/windowcontrollers/Verification.java" />
       </list>
     </option>
@@ -1045,12 +1061,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1512228791314</updated>
-      <workItem from="1516111551242" duration="2328000" />
+      <workItem from="1516111551242" duration="2507000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2328000" />
+    <option name="totallyTimeSpent" value="2507000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
@@ -1453,563 +1469,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="uml://JAVA/stationmeteo">
-      <provider selected="true" editor-type-id="UmlEditorProvider">
-        <state>
-          <ID>JAVA</ID>
-          <OriginalElement>stationmeteo</OriginalElement>
-          <nodes>
-            <node x="588.4444444444446" y="2334.5">stationmeteo.java.serialize.XMLClass.XMLSuperCapteur</node>
-            <node x="1964.3690734353631" y="206.5">stationmeteo.java.Icapteur</node>
-            <node x="3222.361559095123" y="2308.0">stationmeteo.controller.windowcontrollers.WindowController</node>
-            <node x="1438.1190734353634" y="2992.5">stationmeteo.controller.windowcontrollers.SuperCapController</node>
-            <node x="1835.749059095123" y="3995.0">stationmeteo.java.StationMeteo</node>
-            <node x="2025.6190734353631" y="2470.0">stationmeteo.controller.displaycontroller.DigitalController</node>
-            <node x="2837.626649192939" y="1955.0">stationmeteo.java.algorithmes.AlgorithmeAleatoireFixe</node>
-            <node x="1773.249059095123" y="3340.0">stationmeteo.controller.windowcontrollers.MainController</node>
-            <node x="32.5" y="1227.0">stationmeteo.java.serialize.XMLClass.XMLCapteur</node>
-            <node x="3725.0228535353535" y="3061.0">stationmeteo.controller.windowcontrollers.AjoutController</node>
-            <node x="1099.1190734353634" y="1348.5">stationmeteo.java.CapteurPoid</node>
-            <node x="1377.6582106304932" y="637.0">stationmeteo.java.Capteur</node>
-            <node x="1464.758210630493" y="274.0">stationmeteo.java.CapteurThread</node>
-            <node x="467.5277777777778" y="1942.0">stationmeteo.java.serialize.interfaceCap.ISuperCapteurSerialize</node>
-            <node x="2372.619073435363" y="3019.5">stationmeteo.controller.displaycontroller.IconController</node>
-            <node x="661.9525355363569" y="664.0">stationmeteo.java.SuperCapteur</node>
-            <node x="78.13876618604854" y="180.0">stationmeteo.java.serialize.interfaceCap.ICapteurSerialize</node>
-            <node x="1857.1190734353634" y="3019.5">stationmeteo.controller.displaycontroller.ThermoController</node>
-            <node x="530.5887661860486" y="3047.5">stationmeteo.java.serialize.SerializerCapteur</node>
-            <node x="3093.9657257617896" y="2992.0">stationmeteo.controller.windowcontrollers.ModifController</node>
-            <node x="3455.376649192939" y="0.0">stationmeteo.java.algorithmes.Algorithme</node>
-            <node x="2370.619073435363" y="800.5">stationmeteo.controller.CellFactory</node>
-            <node x="3925.126649192939" y="1968.5">stationmeteo.java.algorithmes.AlgorithmeFenetreGlissante</node>
-            <node x="3012.126649192939" y="746.0">stationmeteo.controller.windowcontrollers.Verification</node>
-            <node x="3655.126649192939" y="260.5">stationmeteo.java.algorithmes.AlgorithmeAleatoire</node>
-            <node x="757.8985582636296" y="274.0">stationmeteo.java.TempBinding</node>
-            <node x="752.3611111111111" y="1856.0">stationmeteo.java.ListCapteurPoid</node>
-          </nodes>
-          <notes />
-          <edges>
-            <edge source="stationmeteo.controller.windowcontrollers.AjoutController" target="stationmeteo.controller.windowcontrollers.WindowController">
-              <point x="-40.125" y="-45.0" />
-              <point x="3845.3978535353535" y="2862.0" />
-              <point x="3472.861559095123" y="2862.0" />
-              <point x="83.5" y="262.0" />
-            </edge>
-            <edge source="stationmeteo.controller.windowcontrollers.WindowController" target="stationmeteo.controller.windowcontrollers.Verification">
-              <point x="0.0" y="-262.0" />
-              <point x="3389.361559095123" y="1207.0" />
-              <point x="3579.876649192939" y="1207.0" />
-              <point x="189.25" y="86.0" />
-            </edge>
-            <edge source="stationmeteo.java.algorithmes.AlgorithmeFenetreGlissante" target="stationmeteo.java.algorithmes.Algorithme">
-              <point x="0.0" y="-86.5" />
-              <point x="4080.626649192939" y="140.0" />
-              <point x="3637.3381876544777" y="140.0" />
-              <point x="57.46153846153857" y="45.0" />
-            </edge>
-            <edge source="stationmeteo.java.serialize.SerializerCapteur" target="stationmeteo.java.serialize.interfaceCap.ISuperCapteurSerialize">
-              <point x="-47.111111111111086" y="-58.5" />
-              <point x="695.4776550749375" y="2942.0" />
-              <point x="548.5668621254258" y="2942.0" />
-              <point x="548.5668621254258" y="2288.0" />
-              <point x="564.7277777777779" y="2288.0" />
-              <point x="-64.79999999999995" y="113.0" />
-            </edge>
-            <edge source="stationmeteo.java.TempBinding" target="stationmeteo.java.CapteurPoid">
-              <point x="50.75" y="59.5" />
-              <point x="1011.6485582636296" y="547.0" />
-              <point x="1056.8985582636296" y="547.0" />
-              <point x="1056.8985582636296" y="1057.0" />
-              <point x="1226.9315734353634" y="1057.0" />
-              <point x="-76.6875" y="-168.0" />
-            </edge>
-            <edge source="stationmeteo.controller.windowcontrollers.ModifController" target="stationmeteo.java.algorithmes.Algorithme">
-              <point x="128.39999999999964" y="-114.0" />
-              <point x="3382.8657257617892" y="2962.0" />
-              <point x="4264.967558283848" y="2962.0" />
-              <point x="4264.967558283848" y="120.0" />
-              <point x="3675.64587996217" y="120.0" />
-              <point x="95.76923076923094" y="45.0" />
-            </edge>
-            <edge source="stationmeteo.controller.windowcontrollers.MainController" target="stationmeteo.controller.windowcontrollers.AjoutController">
-              <point x="168.1111111111113" y="-302.5" />
-              <point x="2119.360170206234" y="3320.0" />
-              <point x="3965.7728535353535" y="3320.0" />
-              <point x="80.25" y="45.0" />
-            </edge>
-            <edge source="stationmeteo.controller.windowcontrollers.WindowController" target="stationmeteo.java.algorithmes.AlgorithmeAleatoireFixe">
-              <point x="-60.72727272727252" y="-262.0" />
-              <point x="3328.6342863678506" y="2258.0" />
-              <point x="3083.626649192939" y="2258.0" />
-              <point x="82.0" y="100.0" />
-            </edge>
-            <edge source="stationmeteo.controller.windowcontrollers.MainController" target="stationmeteo.java.serialize.interfaceCap.ISuperCapteurSerialize">
-              <point x="-148.33333333333303" y="-302.5" />
-              <point x="1802.9157257617899" y="3310.0" />
-              <point x="432.0" y="3310.0" />
-              <point x="432.0" y="2288.0" />
-              <point x="499.9277777777779" y="2288.0" />
-              <point x="-129.5999999999999" y="113.0" />
-            </edge>
-            <edge source="stationmeteo.java.algorithmes.AlgorithmeAleatoireFixe" target="stationmeteo.java.algorithmes.Algorithme">
-              <point x="0.0" y="-100.0" />
-              <point x="3001.626649192939" y="160.0" />
-              <point x="3560.722803039093" y="160.0" />
-              <point x="-19.15384615384619" y="45.0" />
-            </edge>
-            <edge source="stationmeteo.controller.windowcontrollers.WindowController" target="stationmeteo.java.algorithmes.AlgorithmeAleatoire">
-              <point x="30.363636363636488" y="-262.0" />
-              <point x="3419.7251954587596" y="2248.0" />
-              <point x="3779.626649192939" y="2248.0" />
-              <point x="0.0" y="73.0" />
-            </edge>
-            <edge source="stationmeteo.controller.windowcontrollers.MainController" target="stationmeteo.java.Capteur">
-              <point x="-69.22222222222217" y="-302.5" />
-              <point x="1882.0268368729007" y="3270.0" />
-              <point x="1427.6190734353634" y="3270.0" />
-              <point x="1427.6190734353634" y="2208.0" />
-              <point x="1529.6190734353634" y="2208.0" />
-              <point x="1529.6190734353634" y="1157.0" />
-              <point x="1590.2832106304932" y="1157.0" />
-              <point x="23.625" y="195.0" />
-            </edge>
-            <edge source="stationmeteo.java.serialize.interfaceCap.ICapteurSerialize" target="stationmeteo.java.algorithmes.Algorithme">
-              <point x="0.0" y="-153.5" />
-              <point x="267.13876618604854" y="130.0" />
-              <point x="3503.2612645775544" y="130.0" />
-              <point x="-76.61538461538476" y="45.0" />
-            </edge>
-            <edge source="stationmeteo.java.Capteur" target="stationmeteo.java.algorithmes.Algorithme">
-              <point x="-132.30000000000007" y="-195.0" />
-              <point x="1434.358210630493" y="517.0" />
-              <point x="1272.4503234353633" y="517.0" />
-              <point x="1272.4503234353633" y="140.0" />
-              <point x="3522.4151107314005" y="140.0" />
-              <point x="-57.46153846153857" y="45.0" />
-            </edge>
-            <edge source="stationmeteo.java.CapteurPoid" target="stationmeteo.java.SuperCapteur">
-              <point x="-178.9375" y="-168.0" />
-              <point x="1124.6815734353634" y="1077.0" />
-              <point x="954.7252628090841" y="1077.0" />
-              <point x="123.27272727272725" y="168.0" />
-            </edge>
-            <edge source="stationmeteo.controller.windowcontrollers.MainController" target="stationmeteo.controller.displaycontroller.DigitalController">
-              <point x="29.666666666666515" y="-302.5" />
-              <point x="1980.9157257617894" y="3250.0" />
-              <point x="2188.619073435363" y="3250.0" />
-              <point x="0.0" y="100.0" />
-            </edge>
-            <edge source="stationmeteo.java.Capteur" target="stationmeteo.java.Icapteur">
-              <point x="132.29999999999995" y="-195.0" />
-              <point x="1698.9582106304929" y="577.0" />
-              <point x="2001.1872552535451" y="577.0" />
-              <point x="-125.18181818181802" y="127.0" />
-            </edge>
-            <edge source="stationmeteo.controller.displaycontroller.ThermoController" target="stationmeteo.controller.displaycontroller.DigitalController">
-              <point x="107.0" y="-86.5" />
-              <point x="2124.619073435363" y="2912.0" />
-              <point x="2123.4190734353633" y="2912.0" />
-              <point x="-65.19999999999982" y="100.0" />
-            </edge>
-            <edge source="stationmeteo.java.serialize.XMLClass.XMLCapteur" target="stationmeteo.java.serialize.interfaceCap.ICapteurSerialize">
-              <point x="54.0" y="-289.5" />
-              <point x="275.5" y="1207.0" />
-              <point x="283.38876618604854" y="1207.0" />
-              <point x="283.38876618604854" y="617.0" />
-              <point x="298.63876618604854" y="617.0" />
-              <point x="31.5" y="153.5" />
-            </edge>
-            <edge source="stationmeteo.java.serialize.XMLClass.XMLSuperCapteur" target="stationmeteo.java.ListCapteurPoid">
-              <point x="95.5" y="-235.5" />
-              <point x="874.9444444444446" y="2288.0" />
-              <point x="867.8611111111111" y="2288.0" />
-              <point x="867.8611111111111" y="1917.0" />
-              <point x="889.8611111111111" y="1917.0" />
-              <point x="55.0" y="18.0" />
-            </edge>
-            <edge source="stationmeteo.java.serialize.SerializerCapteur" target="stationmeteo.java.Icapteur">
-              <point x="188.44444444444434" y="-58.5" />
-              <point x="931.0332106304929" y="2972.0" />
-              <point x="1339.0332106304932" y="2972.0" />
-              <point x="1339.0332106304932" y="2218.0" />
-              <point x="2067.7320742668567" y="2218.0" />
-              <point x="2067.7320742668567" y="587.0" />
-              <point x="2074.8236188899086" y="587.0" />
-              <point x="-51.545454545454504" y="127.0" />
-            </edge>
-            <edge source="stationmeteo.controller.windowcontrollers.MainController" target="stationmeteo.java.Icapteur">
-              <point x="-9.888888888888687" y="-302.5" />
-              <point x="1941.3601702062342" y="3240.0" />
-              <point x="1846.6190734353634" y="3240.0" />
-              <point x="1846.6190734353634" y="2258.0" />
-              <point x="2199.9820742668567" y="2258.0" />
-              <point x="2199.9820742668567" y="617.0" />
-              <point x="2133.7327097989996" y="617.0" />
-              <point x="7.363636363636488" y="127.0" />
-            </edge>
-            <edge source="stationmeteo.controller.windowcontrollers.SuperCapController" target="stationmeteo.java.Icapteur">
-              <point x="44.22222222222217" y="-113.5" />
-              <point x="1681.3412956575855" y="2962.0" />
-              <point x="1720.6082804858518" y="2962.0" />
-              <point x="1720.6082804858518" y="2238.0" />
-              <point x="2089.7320742668567" y="2238.0" />
-              <point x="2089.7320742668567" y="607.0" />
-              <point x="2104.278164344454" y="607.0" />
-              <point x="-22.09090909090901" y="127.0" />
-            </edge>
-            <edge source="stationmeteo.controller.displaycontroller.ThermoController" target="stationmeteo.java.Icapteur">
-              <point x="-107.0" y="-86.5" />
-              <point x="1910.6190734353634" y="2912.0" />
-              <point x="1952.1860582636295" y="2912.0" />
-              <point x="1952.1860582636295" y="2268.0" />
-              <point x="2210.9820742668567" y="2268.0" />
-              <point x="2210.9820742668567" y="607.0" />
-              <point x="2148.459982526272" y="607.0" />
-              <point x="22.09090909090901" y="127.0" />
-            </edge>
-            <edge source="stationmeteo.java.serialize.XMLClass.XMLSuperCapteur" target="stationmeteo.java.SuperCapteur">
-              <point x="159.16666666666674" y="-235.5" />
-              <point x="938.6111111111113" y="2288.0" />
-              <point x="927.8611111111111" y="2288.0" />
-              <point x="927.8611111111111" y="1127.0" />
-              <point x="800.6343537181751" y="1127.0" />
-              <point x="-30.818181818181756" y="168.0" />
-            </edge>
-            <edge source="stationmeteo.controller.windowcontrollers.MainController" target="stationmeteo.java.serialize.SerializerCapteur">
-              <point x="-128.55555555555566" y="-302.5" />
-              <point x="1822.6935035395672" y="3300.0" />
-              <point x="636.5887661860486" y="3300.0" />
-              <point x="-106.0" y="58.5" />
-            </edge>
-            <edge source="stationmeteo.controller.windowcontrollers.AjoutController" target="stationmeteo.java.algorithmes.Algorithme">
-              <point x="120.375" y="-45.0" />
-              <point x="4005.8978535353535" y="2972.0" />
-              <point x="4294.989650024432" y="2972.0" />
-              <point x="4294.989650024432" y="110.0" />
-              <point x="3694.7997261160162" y="110.0" />
-              <point x="114.92307692307713" y="45.0" />
-            </edge>
-            <edge source="stationmeteo.controller.windowcontrollers.Verification" target="stationmeteo.java.Icapteur">
-              <point x="-189.25" y="-86.0" />
-              <point x="3201.376649192939" y="517.0" />
-              <point x="2281.0054370717266" y="517.0" />
-              <point x="154.6363636363635" y="127.0" />
-            </edge>
-            <edge source="stationmeteo.java.SuperCapteur" target="stationmeteo.java.serialize.interfaceCap.ISuperCapteurSerialize">
-              <point x="-154.090909090909" y="168.0" />
-              <point x="677.3616264454479" y="1147.0" />
-              <point x="548.5277777777778" y="1147.0" />
-              <point x="-81.0" y="-113.0" />
-            </edge>
-            <edge source="stationmeteo.controller.windowcontrollers.MainController" target="stationmeteo.controller.windowcontrollers.ModifController">
-              <point x="108.77777777777783" y="-302.5" />
-              <point x="2060.0268368729007" y="3290.0" />
-              <point x="3174.2157257617896" y="3290.0" />
-              <point x="-80.25" y="114.0" />
-            </edge>
-            <edge source="stationmeteo.java.CapteurPoid" target="stationmeteo.java.Capteur">
-              <point x="25.5625" y="-168.0" />
-              <point x="1329.1815734353634" y="1167.0" />
-              <point x="1448.5332106304932" y="1167.0" />
-              <point x="-118.125" y="195.0" />
-            </edge>
-            <edge source="stationmeteo.java.algorithmes.AlgorithmeAleatoire" target="stationmeteo.java.algorithmes.Algorithme">
-              <point x="0.0" y="-73.0" />
-              <point x="3779.626649192939" y="160.0" />
-              <point x="3599.0304953467853" y="160.0" />
-              <point x="19.15384615384619" y="45.0" />
-            </edge>
-            <edge source="stationmeteo.java.serialize.interfaceCap.ISuperCapteurSerialize" target="stationmeteo.java.ListCapteurPoid">
-              <point x="81.0" y="-113.0" />
-              <point x="710.5277777777778" y="1917.0" />
-              <point x="779.8611111111111" y="1917.0" />
-              <point x="-55.0" y="18.0" />
-            </edge>
-            <edge source="stationmeteo.java.serialize.XMLClass.XMLSuperCapteur" target="stationmeteo.java.serialize.interfaceCap.ISuperCapteurSerialize">
-              <point x="-31.833333333333258" y="-235.5" />
-              <point x="747.6111111111113" y="2288.0" />
-              <point x="759.1277777777777" y="2288.0" />
-              <point x="129.5999999999999" y="113.0" />
-            </edge>
-            <edge source="stationmeteo.java.serialize.SerializerCapteur" target="stationmeteo.java.serialize.XMLClass.XMLCapteur">
-              <point x="-188.44444444444434" y="-58.5" />
-              <point x="554.1443217416042" y="2972.0" />
-              <point x="217.40190778301167" y="2972.0" />
-              <point x="217.40190778301167" y="1831.0" />
-              <point x="127.0" y="1831.0" />
-              <point x="-94.5" y="289.5" />
-            </edge>
-            <edge source="stationmeteo.java.SuperCapteur" target="stationmeteo.java.Icapteur">
-              <point x="127.125" y="-168.0" />
-              <point x="958.5775355363569" y="567.0" />
-              <point x="1986.4599825262721" y="567.0" />
-              <point x="-139.909090909091" y="127.0" />
-            </edge>
-            <edge source="stationmeteo.java.serialize.XMLClass.XMLCapteur" target="stationmeteo.java.Capteur">
-              <point x="108.0" y="-289.5" />
-              <point x="329.5" y="1157.0" />
-              <point x="1401.2832106304932" y="1157.0" />
-              <point x="-165.375" y="195.0" />
-            </edge>
-            <edge source="stationmeteo.java.ListCapteurPoid" target="stationmeteo.java.CapteurPoid">
-              <point x="61.875" y="-18.0" />
-              <point x="896.7361111111111" y="1831.0" />
-              <point x="1167.28574010203" y="1831.0" />
-              <point x="-136.33333333333326" y="168.0" />
-            </edge>
-            <edge source="stationmeteo.controller.windowcontrollers.Verification" target="stationmeteo.java.algorithmes.Algorithme">
-              <point x="189.25" y="-86.0" />
-              <point x="0.0" y="45.0" />
-            </edge>
-            <edge source="stationmeteo.controller.windowcontrollers.MainController" target="stationmeteo.controller.windowcontrollers.SuperCapController">
-              <point x="-49.44444444444434" y="-302.5" />
-              <point x="1901.8046146506786" y="3260.0" />
-              <point x="1537.6190734353634" y="3260.0" />
-              <point x="-99.5" y="113.5" />
-            </edge>
-            <edge source="stationmeteo.java.serialize.SerializerCapteur" target="stationmeteo.java.serialize.XMLClass.XMLSuperCapteur">
-              <point x="47.111111111111086" y="-58.5" />
-              <point x="789.6998772971597" y="2942.0" />
-              <point x="874.9444444444446" y="2942.0" />
-              <point x="95.5" y="235.5" />
-            </edge>
-            <edge source="stationmeteo.java.serialize.XMLClass.XMLCapteur" target="stationmeteo.java.algorithmes.Algorithme">
-              <point x="-162.0" y="-289.5" />
-              <point x="59.5" y="1207.0" />
-              <point x="0.0" y="1207.0" />
-              <point x="0.0" y="110.0" />
-              <point x="3464.953572269862" y="110.0" />
-              <point x="-114.92307692307713" y="45.0" />
-            </edge>
-            <edge source="stationmeteo.controller.CellFactory" target="stationmeteo.java.Icapteur">
-              <point x="0.0" y="-31.5" />
-              <point x="2530.119073435363" y="577.0" />
-              <point x="2192.64180070809" y="577.0" />
-              <point x="66.27272727272702" y="127.0" />
-            </edge>
-            <edge source="stationmeteo.java.SuperCapteur" target="stationmeteo.java.ListCapteurPoid">
-              <point x="-61.63636363636351" y="168.0" />
-              <point x="769.8161718999934" y="1137.0" />
-              <point x="825.2361111111111" y="1137.0" />
-              <point x="825.2361111111111" y="1831.0" />
-              <point x="855.4861111111111" y="1831.0" />
-              <point x="20.625" y="-18.0" />
-            </edge>
-            <edge source="stationmeteo.controller.windowcontrollers.AjoutController" target="stationmeteo.java.Capteur">
-              <point x="-120.375" y="-45.0" />
-              <point x="3765.1478535353535" y="2872.0" />
-              <point x="2409.932074266857" y="2872.0" />
-              <point x="2409.932074266857" y="2208.0" />
-              <point x="2011.1582804858517" y="2208.0" />
-              <point x="2011.1582804858517" y="1177.0" />
-              <point x="1732.0332106304932" y="1177.0" />
-              <point x="165.375" y="195.0" />
-            </edge>
-            <edge source="stationmeteo.controller.windowcontrollers.WindowController" target="stationmeteo.java.Icapteur">
-              <point x="-121.4545454545455" y="-262.0" />
-              <point x="3267.9070136405776" y="2278.0" />
-              <point x="2827.126649192939" y="2278.0" />
-              <point x="2827.126649192939" y="527.0" />
-              <point x="2266.278164344454" y="527.0" />
-              <point x="139.909090909091" y="127.0" />
-            </edge>
-            <edge source="stationmeteo.java.Capteur" target="stationmeteo.java.serialize.interfaceCap.ICapteurSerialize">
-              <point x="-170.10000000000014" y="-195.0" />
-              <point x="1396.5582106304928" y="527.0" />
-              <point x="424.63876618604854" y="527.0" />
-              <point x="157.5" y="153.5" />
-            </edge>
-            <edge source="stationmeteo.controller.windowcontrollers.SuperCapController" target="stationmeteo.controller.windowcontrollers.WindowController">
-              <point x="132.66666666666652" y="-113.5" />
-              <point x="1769.7857401020299" y="2922.0" />
-              <point x="3250.1948924284566" y="2922.0" />
-              <point x="-139.16666666666652" y="262.0" />
-            </edge>
-            <edge source="stationmeteo.java.Capteur" target="stationmeteo.java.CapteurThread">
-              <point x="-56.700000000000045" y="-195.0" />
-              <point x="1509.9582106304929" y="547.0" />
-              <point x="1489.458210630493" y="547.0" />
-              <point x="-98.79999999999995" y="59.5" />
-            </edge>
-            <edge source="stationmeteo.java.CapteurThread" target="stationmeteo.java.Capteur">
-              <point x="98.80000000000007" y="59.5" />
-              <point x="1687.0582106304932" y="547.0" />
-              <point x="1661.1582106304932" y="547.0" />
-              <point x="94.5" y="-195.0" />
-            </edge>
-            <edge source="stationmeteo.controller.windowcontrollers.WindowController" target="stationmeteo.java.algorithmes.AlgorithmeFenetreGlissante">
-              <point x="91.09090909090901" y="-262.0" />
-              <point x="3480.452468186032" y="2268.0" />
-              <point x="4002.876649192939" y="2268.0" />
-              <point x="-77.75" y="86.5" />
-            </edge>
-            <edge source="stationmeteo.java.CapteurPoid" target="stationmeteo.java.Icapteur">
-              <point x="178.9375" y="-168.0" />
-              <point x="1482.5565734353634" y="1207.0" />
-              <point x="1808.5445742668567" y="1207.0" />
-              <point x="1808.5445742668567" y="617.0" />
-              <point x="2060.0963461626357" y="617.0" />
-              <point x="-66.27272727272748" y="127.0" />
-            </edge>
-            <edge source="stationmeteo.java.SuperCapteur" target="stationmeteo.java.CapteurPoid">
-              <point x="154.090909090909" y="168.0" />
-              <point x="985.5434446272659" y="1067.0" />
-              <point x="1175.8065734353634" y="1067.0" />
-              <point x="-127.8125" y="-168.0" />
-            </edge>
-            <edge source="stationmeteo.java.serialize.SerializerCapteur" target="stationmeteo.java.SuperCapteur">
-              <point x="94.22222222222217" y="-58.5" />
-              <point x="836.8109884082708" y="2952.0" />
-              <point x="980.9444444444443" y="2952.0" />
-              <point x="980.9444444444443" y="1117.0" />
-              <point x="831.4525355363569" y="1117.0" />
-              <point x="0.0" y="168.0" />
-            </edge>
-            <edge source="stationmeteo.controller.windowcontrollers.MainController" target="stationmeteo.java.serialize.interfaceCap.ICapteurSerialize">
-              <point x="-168.11111111111086" y="-302.5" />
-              <point x="1783.137947984012" y="3320.0" />
-              <point x="22.0" y="3320.0" />
-              <point x="22.0" y="617.0" />
-              <point x="109.63876618604854" y="617.0" />
-              <point x="-157.5" y="153.5" />
-            </edge>
-            <edge source="stationmeteo.java.serialize.SerializerCapteur" target="stationmeteo.java.serialize.interfaceCap.ICapteurSerialize">
-              <point x="-94.22222222222217" y="-58.5" />
-              <point x="648.3665439638264" y="2952.0" />
-              <point x="421.0" y="2952.0" />
-              <point x="421.0" y="617.0" />
-              <point x="361.63876618604854" y="617.0" />
-              <point x="94.5" y="153.5" />
-            </edge>
-            <edge source="stationmeteo.controller.windowcontrollers.SuperCapController" target="stationmeteo.java.SuperCapteur">
-              <point x="-176.8888888888889" y="-113.5" />
-              <point x="1460.2301845464744" y="2962.0" />
-              <point x="1077.6190734353634" y="2962.0" />
-              <point x="1077.6190734353634" y="1097.0" />
-              <point x="893.0888991727206" y="1097.0" />
-              <point x="61.63636363636374" y="168.0" />
-            </edge>
-            <edge source="stationmeteo.controller.windowcontrollers.MainController" target="stationmeteo.java.SuperCapteur">
-              <point x="-89.0" y="-302.5" />
-              <point x="1862.249059095123" y="3280.0" />
-              <point x="1066.6190734353634" y="3280.0" />
-              <point x="1066.6190734353634" y="1107.0" />
-              <point x="862.2707173545386" y="1107.0" />
-              <point x="30.818181818181756" y="168.0" />
-            </edge>
-            <edge source="stationmeteo.controller.windowcontrollers.MainController" target="stationmeteo.controller.displaycontroller.IconController">
-              <point x="49.44444444444434" y="-302.5" />
-              <point x="2000.6935035395672" y="3260.0" />
-              <point x="2569.119073435363" y="3260.0" />
-              <point x="0.0" y="86.5" />
-            </edge>
-            <edge source="stationmeteo.controller.displaycontroller.DigitalController" target="stationmeteo.java.Icapteur">
-              <point x="-81.5" y="-100.0" />
-              <point x="2107.119073435363" y="2278.0" />
-              <point x="2349.119073435363" y="2278.0" />
-              <point x="2349.119073435363" y="597.0" />
-              <point x="2163.187255253545" y="597.0" />
-              <point x="36.81818181818198" y="127.0" />
-            </edge>
-            <edge source="stationmeteo.controller.displaycontroller.IconController" target="stationmeteo.java.Icapteur">
-              <point x="131.0" y="-86.5" />
-              <point x="2700.119073435363" y="567.0" />
-              <point x="2207.369073435363" y="567.0" />
-              <point x="81.0" y="127.0" />
-            </edge>
-            <edge source="stationmeteo.java.StationMeteo" target="stationmeteo.controller.windowcontrollers.MainController">
-              <point x="57.75" y="-72.5" />
-              <point x="2008.999059095123" y="3970.0" />
-              <point x="2040.249059095123" y="3970.0" />
-              <point x="89.0" y="302.5" />
-            </edge>
-            <edge source="stationmeteo.controller.windowcontrollers.ModifController" target="stationmeteo.controller.windowcontrollers.WindowController">
-              <point x="0.0" y="-114.0" />
-              <point x="3254.4657257617896" y="2942.0" />
-              <point x="3361.5282257617896" y="2942.0" />
-              <point x="-27.833333333333485" y="262.0" />
-            </edge>
-            <edge source="stationmeteo.java.serialize.XMLClass.XMLCapteur" target="stationmeteo.java.Icapteur">
-              <point x="162.0" y="-289.5" />
-              <point x="383.5" y="1187.0" />
-              <point x="1786.5445742668567" y="1187.0" />
-              <point x="1786.5445742668567" y="597.0" />
-              <point x="2030.6418007080906" y="597.0" />
-              <point x="-95.72727272727252" y="127.0" />
-            </edge>
-            <edge source="stationmeteo.controller.windowcontrollers.WindowController" target="stationmeteo.java.algorithmes.Algorithme">
-              <point x="151.81818181818198" y="-262.0" />
-              <point x="3541.179740913305" y="2288.0" />
-              <point x="4246.626649192939" y="2288.0" />
-              <point x="4246.626649192939" y="130.0" />
-              <point x="3656.492033808324" y="130.0" />
-              <point x="76.61538461538476" y="45.0" />
-            </edge>
-            <edge source="stationmeteo.java.SuperCapteur" target="stationmeteo.java.TempBinding">
-              <point x="-127.125" y="-168.0" />
-              <point x="704.3275355363569" y="537.0" />
-              <point x="808.6485582636296" y="537.0" />
-              <point x="-152.25" y="59.5" />
-            </edge>
-            <edge source="stationmeteo.java.serialize.SerializerCapteur" target="stationmeteo.java.Capteur">
-              <point x="141.33333333333326" y="-58.5" />
-              <point x="883.9220995193818" y="2962.0" />
-              <point x="1020.5357401020299" y="2962.0" />
-              <point x="1020.5357401020299" y="2198.0" />
-              <point x="1518.6190734353634" y="2198.0" />
-              <point x="1518.6190734353634" y="1147.0" />
-              <point x="1543.0332106304932" y="1147.0" />
-              <point x="-23.625" y="195.0" />
-            </edge>
-            <edge source="stationmeteo.controller.windowcontrollers.ModifController" target="stationmeteo.java.Capteur">
-              <point x="-128.39999999999964" y="-114.0" />
-              <point x="3126.06572576179" y="2892.0" />
-              <point x="1570.5332106304932" y="2892.0" />
-              <point x="1570.5332106304932" y="1167.0" />
-              <point x="1637.5332106304932" y="1167.0" />
-              <point x="70.875" y="195.0" />
-            </edge>
-            <edge source="stationmeteo.controller.windowcontrollers.SuperCapController" target="stationmeteo.java.CapteurPoid">
-              <point x="-44.22222222222217" y="-113.5" />
-              <point x="1592.8968512131412" y="2932.0" />
-              <point x="1540.1720995193818" y="2932.0" />
-              <point x="1540.1720995193818" y="2188.0" />
-              <point x="1427.1720995193818" y="2188.0" />
-              <point x="1427.1720995193818" y="1831.0" />
-              <point x="1439.9524067686966" y="1831.0" />
-              <point x="136.33333333333326" y="168.0" />
-            </edge>
-            <edge source="stationmeteo.controller.windowcontrollers.MainController" target="stationmeteo.controller.displaycontroller.ThermoController">
-              <point x="9.888888888888687" y="-302.5" />
-              <point x="1961.1379479840116" y="3240.0" />
-              <point x="2017.6190734353634" y="3240.0" />
-              <point x="0.0" y="86.5" />
-            </edge>
-            <edge source="stationmeteo.controller.displaycontroller.IconController" target="stationmeteo.controller.displaycontroller.DigitalController">
-              <point x="-131.0" y="-86.5" />
-              <point x="2438.119073435363" y="2912.0" />
-              <point x="2253.819073435363" y="2912.0" />
-              <point x="65.19999999999982" y="100.0" />
-            </edge>
-          </edges>
-          <settings layout="Hierarchic Group" zoom="1.4000000000000001" x="1584.4285714285713" y="1149.4285714285713" />
-          <SelectedNodes />
-          <Categories>
-            <Category>Constructors</Category>
-            <Category>Inner Classes</Category>
-            <Category>Fields</Category>
-            <Category>Methods</Category>
-            <Category>Properties</Category>
-          </Categories>
-          <SCOPE>All</SCOPE>
-          <VISIBILITY>private</VISIBILITY>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/stationmeteo/controller/windowcontrollers/SuperCapController.java">
+    <entry file="file://$PROJECT_DIR$/src/stationmeteo/controller/windowcontrollers/MainController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="63" column="17" lean-forward="false" selection-start-line="63" selection-start-column="17" selection-end-line="63" selection-end-column="17" />
+        <state relative-caret-position="458">
+          <caret line="155" column="7" lean-forward="true" selection-start-line="155" selection-start-column="7" selection-end-line="155" selection-end-column="7" />
           <folding />
         </state>
       </provider>
@@ -2017,7 +1480,17 @@
     <entry file="file://$PROJECT_DIR$/src/stationmeteo/controller/windowcontrollers/WindowController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="318">
-          <caret line="45" column="0" lean-forward="false" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="52" />
+          <caret line="45" column="0" lean-forward="false" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/stationmeteo/controller/windowcontrollers/AjoutController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="343">
+          <caret line="32" column="23" lean-forward="false" selection-start-line="32" selection-start-column="23" selection-end-line="32" selection-end-column="23" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -2027,37 +1500,599 @@
     <entry file="file://$PROJECT_DIR$/src/stationmeteo/controller/windowcontrollers/ModifController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="311">
-          <caret line="63" column="17" lean-forward="false" selection-start-line="63" selection-start-column="17" selection-end-line="63" selection-end-column="17" />
+          <caret line="63" column="24" lean-forward="false" selection-start-line="63" selection-start-column="24" selection-end-line="63" selection-end-column="24" />
           <folding>
             <element signature="imports" expanded="true" />
-            <marker date="1516113649945" expanded="true" signature="1527:1897" ph="{...}" />
+            <marker date="1516114011678" expanded="true" signature="1527:1897" ph="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/stationmeteo/controller/windowcontrollers/MainController.java">
+    <entry file="file://$PROJECT_DIR$/src/stationmeteo/controller/windowcontrollers/SuperCapController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="458">
-          <caret line="155" column="7" lean-forward="true" selection-start-line="155" selection-start-column="7" selection-end-line="155" selection-end-column="7" />
+        <state relative-caret-position="444">
+          <caret line="63" column="24" lean-forward="false" selection-start-line="63" selection-start-column="24" selection-end-line="63" selection-end-column="24" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/stationmeteo/controller/windowcontrollers/AjoutController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="364">
-          <caret line="33" column="9" lean-forward="false" selection-start-line="33" selection-start-column="9" selection-end-line="33" selection-end-column="9" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/stationmeteo/controller/windowcontrollers/Verification.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="987">
-          <caret line="56" column="120" lean-forward="false" selection-start-line="56" selection-start-column="120" selection-end-line="56" selection-end-column="120" />
+        <state relative-caret-position="395">
+          <caret line="75" column="16" lean-forward="false" selection-start-line="75" selection-start-column="16" selection-end-line="75" selection-end-column="16" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://JAVA/stationmeteo">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JAVA</ID>
+          <OriginalElement>stationmeteo</OriginalElement>
+          <nodes>
+            <node x="623.5916684959275" y="2278.5">stationmeteo.java.serialize.XMLClass.XMLSuperCapteur</node>
+            <node x="1992.7307164217214" y="216.5">stationmeteo.java.Icapteur</node>
+            <node x="3053.0441767624498" y="2238.0">stationmeteo.controller.windowcontrollers.WindowController</node>
+            <node x="1508.4807164217214" y="2885.5">stationmeteo.controller.windowcontrollers.SuperCapController</node>
+            <node x="1854.5542601550146" y="3860.0">stationmeteo.java.StationMeteo</node>
+            <node x="2053.980716421721" y="2400.5">stationmeteo.controller.displaycontroller.DigitalController</node>
+            <node x="3286.01870385469" y="1899.0">stationmeteo.java.algorithmes.AlgorithmeAleatoireFixe</node>
+            <node x="1792.0542601550146" y="3205.0">stationmeteo.controller.windowcontrollers.MainController</node>
+            <node x="98.2703131260862" y="1192.0">stationmeteo.java.serialize.XMLClass.XMLCapteur</node>
+            <node x="3666.2052878735603" y="2940.0">stationmeteo.controller.windowcontrollers.AjoutController</node>
+            <node x="1158.5083351625944" y="1313.5">stationmeteo.java.CapteurPoid</node>
+            <node x="1431.173090903864" y="687.0">stationmeteo.java.Capteur</node>
+            <node x="1525.3230909038639" y="298.0">stationmeteo.java.CapteurThread</node>
+            <node x="802.5083351625944" y="1872.0">stationmeteo.java.serialize.interfaceCap.ISuperCapteurSerialize</node>
+            <node x="2227.480716421721" y="2912.5">stationmeteo.controller.displaycontroller.IconController</node>
+            <node x="579.1011212068943" y="714.0">stationmeteo.java.SuperCapteur</node>
+            <node x="60.520313126086194" y="190.0">stationmeteo.java.serialize.interfaceCap.ICapteurSerialize</node>
+            <node x="1885.4807164217214" y="2912.5">stationmeteo.controller.displaycontroller.ThermoController</node>
+            <node x="497.2703131260862" y="2926.5">stationmeteo.java.serialize.SerializerCapteur</node>
+            <node x="3058.460843429116" y="2885.0">stationmeteo.controller.windowcontrollers.ModifController</node>
+            <node x="3227.480716421721" y="0.0">stationmeteo.java.algorithmes.Algorithme</node>
+            <node x="2652.480716421721" y="823.0">stationmeteo.controller.CellFactory</node>
+            <node x="3014.480716421721" y="1912.5">stationmeteo.java.algorithmes.AlgorithmeFenetreGlissante</node>
+            <node x="3425.196954540227" y="2400.5">stationmeteo.controller.windowcontrollers.Verification</node>
+            <node x="3513.950522036508" y="284.5">stationmeteo.java.algorithmes.AlgorithmeAleatoire</node>
+            <node x="603.4761212068943" y="298.0">stationmeteo.java.TempBinding</node>
+            <node x="571.925001829261" y="1766.0">stationmeteo.java.ListCapteurPoid</node>
+          </nodes>
+          <notes />
+          <edges>
+            <edge source="stationmeteo.controller.windowcontrollers.AjoutController" target="stationmeteo.controller.windowcontrollers.WindowController">
+              <point x="-64.19999999999982" y="-45.0" />
+              <point x="3762.5052878735605" y="2765.0" />
+              <point x="3303.5441767624498" y="2765.0" />
+              <point x="83.5" y="248.5" />
+            </edge>
+            <edge source="stationmeteo.java.algorithmes.AlgorithmeFenetreGlissante" target="stationmeteo.java.algorithmes.Algorithme">
+              <point x="0.0" y="-72.5" />
+              <point x="3138.980716421721" y="1842.0" />
+              <point x="3406.196954540227" y="1842.0" />
+              <point x="3406.196954540227" y="170.0" />
+              <point x="3351.980716421721" y="170.0" />
+              <point x="0.0" y="45.0" />
+            </edge>
+            <edge source="stationmeteo.java.serialize.SerializerCapteur" target="stationmeteo.java.serialize.interfaceCap.ISuperCapteurSerialize">
+              <point x="94.22222222222217" y="-58.5" />
+              <point x="803.4925353483084" y="2845.0" />
+              <point x="1031.5750018292608" y="2845.0" />
+              <point x="1031.5750018292608" y="2218.0" />
+              <point x="1029.3083351625944" y="2218.0" />
+              <point x="64.79999999999995" y="113.0" />
+            </edge>
+            <edge source="stationmeteo.java.TempBinding" target="stationmeteo.java.CapteurPoid">
+              <point x="97.125" y="45.5" />
+              <point x="830.1011212068943" y="547.0" />
+              <point x="1281.4027777777778" y="547.0" />
+              <point x="1281.4027777777778" y="1042.0" />
+              <point x="1337.4458351625944" y="1042.0" />
+              <point x="-25.5625" y="-140.5" />
+            </edge>
+            <edge source="stationmeteo.controller.windowcontrollers.ModifController" target="stationmeteo.java.algorithmes.Algorithme">
+              <point x="133.75" y="-100.0" />
+              <point x="3352.710843429116" y="2855.0" />
+              <point x="4192.696954540228" y="2855.0" />
+              <point x="4192.696954540228" y="120.0" />
+              <point x="3447.7499471909523" y="120.0" />
+              <point x="95.76923076923094" y="45.0" />
+            </edge>
+            <edge source="stationmeteo.controller.windowcontrollers.MainController" target="stationmeteo.controller.windowcontrollers.AjoutController">
+              <point x="168.1111111111113" y="-302.5" />
+              <point x="2138.165371266126" y="3185.0" />
+              <point x="3906.9552878735603" y="3185.0" />
+              <point x="80.25" y="45.0" />
+            </edge>
+            <edge source="stationmeteo.controller.windowcontrollers.WindowController" target="stationmeteo.java.algorithmes.AlgorithmeAleatoireFixe">
+              <point x="74.22222222222217" y="-248.5" />
+              <point x="3294.2663989846715" y="2198.0" />
+              <point x="3472.76870385469" y="2198.0" />
+              <point x="62.25" y="86.0" />
+            </edge>
+            <edge source="stationmeteo.controller.windowcontrollers.AjoutController" target="stationmeteo.controller.windowcontrollers.Verification">
+              <point x="64.19999999999982" y="-45.0" />
+              <point x="3890.90528787356" y="2845.0" />
+              <point x="4056.030287873561" y="2845.0" />
+              <point x="252.33333333333348" y="86.0" />
+            </edge>
+            <edge source="stationmeteo.controller.windowcontrollers.MainController" target="stationmeteo.java.serialize.interfaceCap.ISuperCapteurSerialize">
+              <point x="-89.0" y="-302.5" />
+              <point x="1881.0542601550146" y="3145.0" />
+              <point x="1059.6980909038639" y="3145.0" />
+              <point x="1059.6980909038639" y="2118.0" />
+              <point x="1094.1083351625944" y="2118.0" />
+              <point x="129.5999999999999" y="113.0" />
+            </edge>
+            <edge source="stationmeteo.java.algorithmes.AlgorithmeAleatoireFixe" target="stationmeteo.java.algorithmes.Algorithme">
+              <point x="0.0" y="-86.0" />
+              <point x="3410.51870385469" y="1852.0" />
+              <point x="3498.490277777778" y="1852.0" />
+              <point x="3498.490277777778" y="160.0" />
+              <point x="3371.1345625755675" y="160.0" />
+              <point x="19.15384615384619" y="45.0" />
+            </edge>
+            <edge source="stationmeteo.controller.windowcontrollers.WindowController" target="stationmeteo.java.algorithmes.AlgorithmeAleatoire">
+              <point x="111.33333333333348" y="-248.5" />
+              <point x="3331.377510095783" y="2208.0" />
+              <point x="3638.450522036508" y="2208.0" />
+              <point x="0.0" y="59.0" />
+            </edge>
+            <edge source="stationmeteo.controller.windowcontrollers.MainController" target="stationmeteo.java.Capteur">
+              <point x="-69.22222222222217" y="-302.5" />
+              <point x="1900.8320379327924" y="3135.0" />
+              <point x="1497.9807164217214" y="3135.0" />
+              <point x="1497.9807164217214" y="2138.0" />
+              <point x="1589.0083351625944" y="2138.0" />
+              <point x="1589.0083351625944" y="1122.0" />
+              <point x="1643.798090903864" y="1122.0" />
+              <point x="23.625" y="167.5" />
+            </edge>
+            <edge source="stationmeteo.java.serialize.interfaceCap.ICapteurSerialize" target="stationmeteo.java.algorithmes.Algorithme">
+              <point x="0.0" y="-153.5" />
+              <point x="249.5203131260862" y="150.0" />
+              <point x="3275.365331806336" y="150.0" />
+              <point x="-76.61538461538476" y="45.0" />
+            </edge>
+            <edge source="stationmeteo.java.Capteur" target="stationmeteo.java.algorithmes.Algorithme">
+              <point x="-132.30000000000007" y="-167.5" />
+              <point x="1487.873090903864" y="527.0" />
+              <point x="1145.7011212068942" y="527.0" />
+              <point x="1145.7011212068942" y="160.0" />
+              <point x="3294.519177960183" y="160.0" />
+              <point x="-57.46153846153857" y="45.0" />
+            </edge>
+            <edge source="stationmeteo.java.CapteurPoid" target="stationmeteo.java.SuperCapteur">
+              <point x="-178.9375" y="-140.5" />
+              <point x="1184.0708351625944" y="1072.0" />
+              <point x="858.919303025076" y="1072.0" />
+              <point x="117.81818181818176" y="140.5" />
+            </edge>
+            <edge source="stationmeteo.controller.windowcontrollers.MainController" target="stationmeteo.controller.displaycontroller.DigitalController">
+              <point x="29.666666666666515" y="-302.5" />
+              <point x="1999.7209268216811" y="3115.0" />
+              <point x="2216.980716421721" y="3115.0" />
+              <point x="0.0" y="86.0" />
+            </edge>
+            <edge source="stationmeteo.java.Capteur" target="stationmeteo.java.Icapteur">
+              <point x="132.29999999999995" y="-167.5" />
+              <point x="1752.473090903864" y="587.0" />
+              <point x="2029.548898239903" y="587.0" />
+              <point x="-125.18181818181824" y="127.0" />
+            </edge>
+            <edge source="stationmeteo.controller.displaycontroller.ThermoController" target="stationmeteo.controller.displaycontroller.DigitalController">
+              <point x="107.0" y="-72.5" />
+              <point x="2152.9807164217214" y="2805.0" />
+              <point x="2151.780716421721" y="2805.0" />
+              <point x="-65.19999999999982" y="86.0" />
+            </edge>
+            <edge source="stationmeteo.java.serialize.XMLClass.XMLCapteur" target="stationmeteo.java.serialize.interfaceCap.ICapteurSerialize">
+              <point x="0.0" y="-262.0" />
+              <point x="287.2703131260862" y="1142.0" />
+              <point x="211.25" y="1142.0" />
+              <point x="211.25" y="657.0" />
+              <point x="281.0203131260862" y="657.0" />
+              <point x="31.5" y="153.5" />
+            </edge>
+            <edge source="stationmeteo.java.serialize.XMLClass.XMLSuperCapteur" target="stationmeteo.java.ListCapteurPoid">
+              <point x="-159.16666666666652" y="-208.0" />
+              <point x="655.425001829261" y="2218.0" />
+              <point x="632.1944444444446" y="2218.0" />
+              <point x="632.1944444444446" y="1852.0" />
+              <point x="599.425001829261" y="1852.0" />
+              <point x="-55.0" y="18.0" />
+            </edge>
+            <edge source="stationmeteo.java.serialize.SerializerCapteur" target="stationmeteo.java.Icapteur">
+              <point x="188.44444444444434" y="-58.5" />
+              <point x="897.7147575705305" y="2865.0" />
+              <point x="1392.548090903864" y="2865.0" />
+              <point x="1392.548090903864" y="2148.0" />
+              <point x="2083.7969545402275" y="2148.0" />
+              <point x="2083.7969545402275" y="637.0" />
+              <point x="2103.185261876267" y="637.0" />
+              <point x="-51.545454545454504" y="127.0" />
+            </edge>
+            <edge source="stationmeteo.controller.windowcontrollers.MainController" target="stationmeteo.java.Icapteur">
+              <point x="89.0" y="-302.5" />
+              <point x="2059.0542601550146" y="3145.0" />
+              <point x="2641.980716421721" y="3145.0" />
+              <point x="2641.980716421721" y="607.0" />
+              <point x="2250.457989148994" y="607.0" />
+              <point x="95.72727272727275" y="127.0" />
+            </edge>
+            <edge source="stationmeteo.controller.windowcontrollers.SuperCapController" target="stationmeteo.java.Icapteur">
+              <point x="-17.799999999999955" y="-99.5" />
+              <point x="1668.6807164217212" y="2845.0" />
+              <point x="1726.4307164217212" y="2845.0" />
+              <point x="1726.4307164217212" y="2158.0" />
+              <point x="2094.7969545402275" y="2158.0" />
+              <point x="2094.7969545402275" y="647.0" />
+              <point x="2117.91253460354" y="647.0" />
+              <point x="-36.818181818181756" y="127.0" />
+            </edge>
+            <edge source="stationmeteo.controller.displaycontroller.ThermoController" target="stationmeteo.java.Icapteur">
+              <point x="-107.0" y="-72.5" />
+              <point x="1938.9807164217214" y="2805.0" />
+              <point x="1984.8880220365081" y="2805.0" />
+              <point x="1984.8880220365081" y="2198.0" />
+              <point x="2225.4469545402276" y="2198.0" />
+              <point x="2225.4469545402276" y="657.0" />
+              <point x="2176.821625512631" y="657.0" />
+              <point x="22.090909090909236" y="127.0" />
+            </edge>
+            <edge source="stationmeteo.java.serialize.XMLClass.XMLSuperCapteur" target="stationmeteo.java.SuperCapteur">
+              <point x="-31.833333333333258" y="-208.0" />
+              <point x="782.7583351625942" y="2218.0" />
+              <point x="792.0083351625944" y="2218.0" />
+              <point x="792.0083351625944" y="1112.0" />
+              <point x="741.1011212068943" y="1112.0" />
+              <point x="0.0" y="140.5" />
+            </edge>
+            <edge source="stationmeteo.controller.windowcontrollers.MainController" target="stationmeteo.java.serialize.SerializerCapteur">
+              <point x="-128.55555555555543" y="-302.5" />
+              <point x="1841.4987045994592" y="3165.0" />
+              <point x="603.2703131260862" y="3165.0" />
+              <point x="-106.0" y="58.5" />
+            </edge>
+            <edge source="stationmeteo.controller.windowcontrollers.AjoutController" target="stationmeteo.java.algorithmes.Algorithme">
+              <point x="128.4000000000001" y="-45.0" />
+              <point x="3955.105287873561" y="2865.0" />
+              <point x="4203.696954540228" y="2865.0" />
+              <point x="4203.696954540228" y="110.0" />
+              <point x="3466.903793344798" y="110.0" />
+              <point x="114.92307692307713" y="45.0" />
+            </edge>
+            <edge source="stationmeteo.controller.windowcontrollers.ModifController" target="stationmeteo.controller.windowcontrollers.Verification">
+              <point x="80.25" y="-100.0" />
+              <point x="3299.210843429116" y="2845.0" />
+              <point x="3803.696954540227" y="2845.0" />
+              <point x="0.0" y="86.0" />
+            </edge>
+            <edge source="stationmeteo.controller.windowcontrollers.Verification" target="stationmeteo.java.Icapteur">
+              <point x="-189.25" y="-86.0" />
+              <point x="3614.446954540227" y="2198.0" />
+              <point x="3545.51870385469" y="2198.0" />
+              <point x="3545.51870385469" y="1822.0" />
+              <point x="3329.980716421721" y="1822.0" />
+              <point x="3329.980716421721" y="567.0" />
+              <point x="2309.367080058085" y="567.0" />
+              <point x="154.63636363636374" y="127.0" />
+            </edge>
+            <edge source="stationmeteo.java.SuperCapteur" target="stationmeteo.java.serialize.interfaceCap.ISuperCapteurSerialize">
+              <point x="29.454545454545496" y="140.5" />
+              <point x="770.5556666614398" y="1102.0" />
+              <point x="1045.5083351625944" y="1102.0" />
+              <point x="81.0" y="-113.0" />
+            </edge>
+            <edge source="stationmeteo.controller.windowcontrollers.MainController" target="stationmeteo.controller.windowcontrollers.ModifController">
+              <point x="108.77777777777783" y="-302.5" />
+              <point x="2078.8320379327924" y="3155.0" />
+              <point x="3138.710843429116" y="3155.0" />
+              <point x="-80.25" y="100.0" />
+            </edge>
+            <edge source="stationmeteo.java.CapteurPoid" target="stationmeteo.java.Capteur">
+              <point x="25.5625" y="-140.5" />
+              <point x="1388.5708351625944" y="1132.0" />
+              <point x="1502.048090903864" y="1132.0" />
+              <point x="-118.125" y="167.5" />
+            </edge>
+            <edge source="stationmeteo.java.algorithmes.AlgorithmeAleatoire" target="stationmeteo.java.algorithmes.Algorithme">
+              <point x="0.0" y="-59.0" />
+              <point x="3638.450522036508" y="150.0" />
+              <point x="3390.2884087294133" y="150.0" />
+              <point x="38.30769230769238" y="45.0" />
+            </edge>
+            <edge source="stationmeteo.java.serialize.interfaceCap.ISuperCapteurSerialize" target="stationmeteo.java.ListCapteurPoid">
+              <point x="-81.0" y="-113.0" />
+              <point x="883.5083351625944" y="1852.0" />
+              <point x="709.425001829261" y="1852.0" />
+              <point x="55.0" y="18.0" />
+            </edge>
+            <edge source="stationmeteo.java.serialize.XMLClass.XMLSuperCapteur" target="stationmeteo.java.serialize.interfaceCap.ISuperCapteurSerialize">
+              <point x="159.16666666666674" y="-208.0" />
+              <point x="973.7583351625942" y="2218.0" />
+              <point x="964.5083351625944" y="2218.0" />
+              <point x="0.0" y="113.0" />
+            </edge>
+            <edge source="stationmeteo.java.serialize.SerializerCapteur" target="stationmeteo.java.serialize.XMLClass.XMLCapteur">
+              <point x="-141.33333333333326" y="-58.5" />
+              <point x="567.9369797927529" y="2855.0" />
+              <point x="253.88872985198395" y="2855.0" />
+              <point x="253.88872985198395" y="1746.0" />
+              <point x="192.7703131260862" y="1746.0" />
+              <point x="-94.5" y="262.0" />
+            </edge>
+            <edge source="stationmeteo.java.SuperCapteur" target="stationmeteo.java.Icapteur">
+              <point x="121.5" y="-140.5" />
+              <point x="862.6011212068943" y="577.0" />
+              <point x="2014.8216255126304" y="577.0" />
+              <point x="-139.909090909091" y="127.0" />
+            </edge>
+            <edge source="stationmeteo.java.serialize.XMLClass.XMLCapteur" target="stationmeteo.java.Capteur">
+              <point x="108.0" y="-262.0" />
+              <point x="395.2703131260862" y="1122.0" />
+              <point x="1454.798090903864" y="1122.0" />
+              <point x="-165.375" y="167.5" />
+            </edge>
+            <edge source="stationmeteo.controller.windowcontrollers.SuperCapController" target="stationmeteo.controller.windowcontrollers.Verification">
+              <point x="160.20000000000005" y="-99.5" />
+              <point x="1846.6807164217212" y="2835.0" />
+              <point x="3551.363621206894" y="2835.0" />
+              <point x="-252.33333333333348" y="86.0" />
+            </edge>
+            <edge source="stationmeteo.java.ListCapteurPoid" target="stationmeteo.java.CapteurPoid">
+              <point x="61.875" y="-18.0" />
+              <point x="716.300001829261" y="1746.0" />
+              <point x="1226.675001829261" y="1746.0" />
+              <point x="-136.33333333333326" y="140.5" />
+            </edge>
+            <edge source="stationmeteo.controller.windowcontrollers.Verification" target="stationmeteo.java.algorithmes.Algorithme">
+              <point x="189.25" y="-86.0" />
+              <point x="3992.946954540227" y="2218.0" />
+              <point x="3855.9167601550143" y="2218.0" />
+              <point x="3855.9167601550143" y="130.0" />
+              <point x="3428.5961010371057" y="130.0" />
+              <point x="76.61538461538476" y="45.0" />
+            </edge>
+            <edge source="stationmeteo.controller.windowcontrollers.MainController" target="stationmeteo.controller.windowcontrollers.SuperCapController">
+              <point x="-49.44444444444434" y="-302.5" />
+              <point x="1920.6098157105703" y="3125.0" />
+              <point x="1597.4807164217214" y="3125.0" />
+              <point x="-89.0" y="99.5" />
+            </edge>
+            <edge source="stationmeteo.java.serialize.SerializerCapteur" target="stationmeteo.java.serialize.XMLClass.XMLSuperCapteur">
+              <point x="47.111111111111086" y="-58.5" />
+              <point x="756.3814242371973" y="2835.0" />
+              <point x="910.0916684959275" y="2835.0" />
+              <point x="95.5" y="208.0" />
+            </edge>
+            <edge source="stationmeteo.java.serialize.XMLClass.XMLCapteur" target="stationmeteo.java.algorithmes.Algorithme">
+              <point x="-108.0" y="-262.0" />
+              <point x="179.2703131260862" y="1162.0" />
+              <point x="11.0" y="1162.0" />
+              <point x="11.0" y="140.0" />
+              <point x="3256.2114856524904" y="140.0" />
+              <point x="-95.76923076923094" y="45.0" />
+            </edge>
+            <edge source="stationmeteo.controller.CellFactory" target="stationmeteo.java.Icapteur">
+              <point x="0.0" y="-31.5" />
+              <point x="2811.980716421721" y="597.0" />
+              <point x="2265.185261876267" y="597.0" />
+              <point x="110.45454545454527" y="127.0" />
+            </edge>
+            <edge source="stationmeteo.java.SuperCapteur" target="stationmeteo.java.ListCapteurPoid">
+              <point x="-58.90909090909099" y="140.5" />
+              <point x="682.1920302978033" y="1102.0" />
+              <point x="642.4027777777778" y="1102.0" />
+              <point x="642.4027777777778" y="1746.0" />
+              <point x="633.800001829261" y="1746.0" />
+              <point x="-20.625" y="-18.0" />
+            </edge>
+            <edge source="stationmeteo.controller.windowcontrollers.AjoutController" target="stationmeteo.java.Capteur">
+              <point x="-128.4000000000001" y="-45.0" />
+              <point x="3698.3052878735607" y="2775.0" />
+              <point x="2424.3969545402274" y="2775.0" />
+              <point x="2424.3969545402274" y="2138.0" />
+              <point x="2036.8380220365084" y="2138.0" />
+              <point x="2036.8380220365084" y="1142.0" />
+              <point x="1785.548090903864" y="1142.0" />
+              <point x="165.375" y="167.5" />
+            </edge>
+            <edge source="stationmeteo.controller.windowcontrollers.WindowController" target="stationmeteo.java.Icapteur">
+              <point x="-111.33333333333348" y="-248.5" />
+              <point x="3108.710843429116" y="2208.0" />
+              <point x="2992.980716421721" y="2208.0" />
+              <point x="2992.980716421721" y="577.0" />
+              <point x="2294.639807330812" y="577.0" />
+              <point x="139.90909090909076" y="127.0" />
+            </edge>
+            <edge source="stationmeteo.java.Capteur" target="stationmeteo.java.serialize.interfaceCap.ICapteurSerialize">
+              <point x="-170.10000000000008" y="-167.5" />
+              <point x="1450.0730909038639" y="537.0" />
+              <point x="407.0203131260862" y="537.0" />
+              <point x="157.5" y="153.5" />
+            </edge>
+            <edge source="stationmeteo.controller.windowcontrollers.SuperCapController" target="stationmeteo.controller.windowcontrollers.WindowController">
+              <point x="89.0" y="-99.5" />
+              <point x="1775.4807164217214" y="2815.0" />
+              <point x="3080.877510095783" y="2815.0" />
+              <point x="-139.16666666666652" y="248.5" />
+            </edge>
+            <edge source="stationmeteo.java.Capteur" target="stationmeteo.java.CapteurThread">
+              <point x="-56.700000000000045" y="-167.5" />
+              <point x="1563.473090903864" y="557.0" />
+              <point x="1545.3230909038639" y="557.0" />
+              <point x="-80.0" y="45.5" />
+            </edge>
+            <edge source="stationmeteo.java.CapteurThread" target="stationmeteo.java.Capteur">
+              <point x="80.0" y="45.5" />
+              <point x="1705.3230909038639" y="557.0" />
+              <point x="1714.673090903864" y="557.0" />
+              <point x="94.5" y="-167.5" />
+            </edge>
+            <edge source="stationmeteo.controller.windowcontrollers.WindowController" target="stationmeteo.java.algorithmes.AlgorithmeFenetreGlissante">
+              <point x="-37.11111111111131" y="-248.5" />
+              <point x="3182.9330656513384" y="2188.0" />
+              <point x="3076.730716421721" y="2188.0" />
+              <point x="-62.25" y="72.5" />
+            </edge>
+            <edge source="stationmeteo.java.CapteurPoid" target="stationmeteo.java.Icapteur">
+              <point x="127.8125" y="-140.5" />
+              <point x="1490.8208351625944" y="1162.0" />
+              <point x="1834.6094545402275" y="1162.0" />
+              <point x="1834.6094545402275" y="617.0" />
+              <point x="2073.7307164217214" y="617.0" />
+              <point x="-81.0" y="127.0" />
+            </edge>
+            <edge source="stationmeteo.java.SuperCapteur" target="stationmeteo.java.CapteurPoid">
+              <point x="147.27272727272725" y="140.5" />
+              <point x="888.3738484796215" y="1062.0" />
+              <point x="1235.1958351625944" y="1062.0" />
+              <point x="-127.8125" y="-140.5" />
+            </edge>
+            <edge source="stationmeteo.java.serialize.SerializerCapteur" target="stationmeteo.java.SuperCapteur">
+              <point x="-47.111111111111086" y="-58.5" />
+              <point x="662.1592020149751" y="2835.0" />
+              <point x="560.3416684959275" y="2835.0" />
+              <point x="560.3416684959275" y="1112.0" />
+              <point x="623.2829393887125" y="1112.0" />
+              <point x="-117.81818181818176" y="140.5" />
+            </edge>
+            <edge source="stationmeteo.controller.windowcontrollers.MainController" target="stationmeteo.java.serialize.interfaceCap.ICapteurSerialize">
+              <point x="-168.1111111111111" y="-302.5" />
+              <point x="1801.9431490439035" y="3185.0" />
+              <point x="22.0" y="3185.0" />
+              <point x="22.0" y="627.0" />
+              <point x="92.0203131260862" y="627.0" />
+              <point x="-157.5" y="153.5" />
+            </edge>
+            <edge source="stationmeteo.java.serialize.SerializerCapteur" target="stationmeteo.java.serialize.interfaceCap.ICapteurSerialize">
+              <point x="-188.44444444444434" y="-58.5" />
+              <point x="520.8258686816419" y="2865.0" />
+              <point x="33.0" y="2865.0" />
+              <point x="33.0" y="637.0" />
+              <point x="155.0203131260862" y="637.0" />
+              <point x="-94.5" y="153.5" />
+            </edge>
+            <edge source="stationmeteo.controller.windowcontrollers.SuperCapController" target="stationmeteo.java.SuperCapteur">
+              <point x="-124.60000000000014" y="-99.5" />
+              <point x="1561.880716421721" y="2845.0" />
+              <point x="1148.0083351625944" y="2845.0" />
+              <point x="1148.0083351625944" y="1082.0" />
+              <point x="829.4647575705305" y="1082.0" />
+              <point x="88.36363636363626" y="140.5" />
+            </edge>
+            <edge source="stationmeteo.controller.windowcontrollers.MainController" target="stationmeteo.java.SuperCapteur">
+              <point x="-148.33333333333326" y="-302.5" />
+              <point x="1821.7209268216814" y="3175.0" />
+              <point x="486.7703131260862" y="3175.0" />
+              <point x="486.7703131260862" y="1102.0" />
+              <point x="593.828393934167" y="1102.0" />
+              <point x="-147.27272727272725" y="140.5" />
+            </edge>
+            <edge source="stationmeteo.controller.windowcontrollers.MainController" target="stationmeteo.controller.displaycontroller.IconController">
+              <point x="49.44444444444434" y="-302.5" />
+              <point x="2019.498704599459" y="3125.0" />
+              <point x="2423.980716421721" y="3125.0" />
+              <point x="0.0" y="72.5" />
+            </edge>
+            <edge source="stationmeteo.controller.displaycontroller.DigitalController" target="stationmeteo.java.Icapteur">
+              <point x="-81.5" y="-86.0" />
+              <point x="2135.480716421721" y="2208.0" />
+              <point x="2377.480716421721" y="2208.0" />
+              <point x="2377.480716421721" y="647.0" />
+              <point x="2191.548898239903" y="647.0" />
+              <point x="36.818181818181756" y="127.0" />
+            </edge>
+            <edge source="stationmeteo.controller.displaycontroller.IconController" target="stationmeteo.java.Icapteur">
+              <point x="131.0" y="-72.5" />
+              <point x="2554.980716421721" y="2805.0" />
+              <point x="2512.1469545402274" y="2805.0" />
+              <point x="2512.1469545402274" y="627.0" />
+              <point x="2221.003443694449" y="627.0" />
+              <point x="66.27272727272725" y="127.0" />
+            </edge>
+            <edge source="stationmeteo.java.StationMeteo" target="stationmeteo.controller.windowcontrollers.MainController">
+              <point x="57.75" y="-72.5" />
+              <point x="2027.8042601550146" y="3835.0" />
+              <point x="2059.0542601550146" y="3835.0" />
+              <point x="89.0" y="302.5" />
+            </edge>
+            <edge source="stationmeteo.controller.windowcontrollers.ModifController" target="stationmeteo.controller.windowcontrollers.WindowController">
+              <point x="-26.75" y="-100.0" />
+              <point x="-27.833333333333485" y="248.5" />
+            </edge>
+            <edge source="stationmeteo.java.serialize.XMLClass.XMLCapteur" target="stationmeteo.java.Icapteur">
+              <point x="162.0" y="-262.0" />
+              <point x="449.2703131260862" y="1152.0" />
+              <point x="1823.6094545402275" y="1152.0" />
+              <point x="1823.6094545402275" y="607.0" />
+              <point x="2059.003443694449" y="607.0" />
+              <point x="-95.72727272727275" y="127.0" />
+            </edge>
+            <edge source="stationmeteo.controller.windowcontrollers.WindowController" target="stationmeteo.java.algorithmes.Algorithme">
+              <point x="148.44444444444434" y="-248.5" />
+              <point x="3368.488621206894" y="2218.0" />
+              <point x="3773.450522036508" y="2218.0" />
+              <point x="3773.450522036508" y="140.0" />
+              <point x="3409.44225488326" y="140.0" />
+              <point x="57.46153846153857" y="45.0" />
+            </edge>
+            <edge source="stationmeteo.java.SuperCapteur" target="stationmeteo.java.TempBinding">
+              <point x="-121.5" y="-140.5" />
+              <point x="619.6011212068943" y="667.0" />
+              <point x="635.8511212068943" y="667.0" />
+              <point x="-97.125" y="45.5" />
+            </edge>
+            <edge source="stationmeteo.java.serialize.SerializerCapteur" target="stationmeteo.java.Capteur">
+              <point x="141.33333333333326" y="-58.5" />
+              <point x="850.6036464594195" y="2855.0" />
+              <point x="1042.5750018292608" y="2855.0" />
+              <point x="1042.5750018292608" y="2128.0" />
+              <point x="1578.0083351625944" y="2128.0" />
+              <point x="1578.0083351625944" y="1112.0" />
+              <point x="1596.548090903864" y="1112.0" />
+              <point x="-23.625" y="167.5" />
+            </edge>
+            <edge source="stationmeteo.controller.windowcontrollers.ModifController" target="stationmeteo.java.Capteur">
+              <point x="-133.75" y="-100.0" />
+              <point x="3085.210843429116" y="2795.0" />
+              <point x="1624.048090903864" y="2795.0" />
+              <point x="1624.048090903864" y="1132.0" />
+              <point x="1691.048090903864" y="1132.0" />
+              <point x="70.875" y="167.5" />
+            </edge>
+            <edge source="stationmeteo.controller.windowcontrollers.SuperCapController" target="stationmeteo.java.CapteurPoid">
+              <point x="-89.0" y="-99.5" />
+              <point x="1597.4807164217214" y="2835.0" />
+              <point x="1363.0083351625944" y="2835.0" />
+              <point x="0.0" y="140.5" />
+            </edge>
+            <edge source="stationmeteo.controller.windowcontrollers.MainController" target="stationmeteo.controller.displaycontroller.ThermoController">
+              <point x="9.888888888888914" y="-302.5" />
+              <point x="1979.9431490439035" y="3105.0" />
+              <point x="2045.9807164217214" y="3105.0" />
+              <point x="0.0" y="72.5" />
+            </edge>
+            <edge source="stationmeteo.controller.displaycontroller.IconController" target="stationmeteo.controller.displaycontroller.DigitalController">
+              <point x="-131.0" y="-72.5" />
+              <point x="2292.980716421721" y="2805.0" />
+              <point x="2282.1807164217207" y="2805.0" />
+              <point x="65.19999999999982" y="86.0" />
+            </edge>
+          </edges>
+          <settings layout="Hierarchic Group" zoom="0.30000000000000004" x="2799.476440226441" y="1551.703102453102" />
+          <SelectedNodes>
+            <node>stationmeteo.controller.displaycontroller.DigitalController</node>
+          </SelectedNodes>
+          <Categories>
+            <Category>Methods</Category>
+            <Category>Properties</Category>
+            <Category>Inner Classes</Category>
+            <Category>Fields</Category>
+          </Categories>
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>private</VISIBILITY>
         </state>
       </provider>
     </entry>

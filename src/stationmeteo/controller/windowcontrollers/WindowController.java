@@ -43,7 +43,7 @@ abstract class WindowController extends BorderPane {
 
     protected Algorithme selectedAlgo;
     protected Icapteur capteur;
-    protected Verification verif=new Verification();
+
 
     public Icapteur getCapteur() {
         return this.capteur;

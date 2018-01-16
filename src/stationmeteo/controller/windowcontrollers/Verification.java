@@ -27,7 +27,7 @@ class Verification {
      * @param intervalleAlgo Dans le cas d'un algorithme de type Réaliste, la taille de la fenêtre
      * @return booléen indiquant la validité des informations
      */
-    public boolean verifInfos(Algorithme selectedAlgo, TextField nomCapteur, TextField idCapteur, TextField actualisationCapteur,
+    public static boolean verifInfos(Algorithme selectedAlgo, TextField nomCapteur, TextField idCapteur, TextField actualisationCapteur,
                                      TextField temperatureCapteur, TextField onAlgoFixeAfficher1, TextField onAlgoFixeAfficher2,
                                      TextField intervalleAlgo) {
         {
@@ -71,7 +71,7 @@ class Verification {
      * @param idCapteur L'id attribuée
      * @param selectedCapteurs le capteurChoisi
      */
-    public boolean verifInfoSuperCapteur( TextField nomCapteur, TextField idCapteur,ListView<Icapteur> selectedCapteurs) {
+    public static boolean verifInfoSuperCapteur( TextField nomCapteur, TextField idCapteur,ListView<Icapteur> selectedCapteurs) {
         //Si un des textFiels nom  ou id est vide, OU que l'id n'est pas valide, OU qu'aucun capteur n'a été sélectionné, FAUX
         return !nomCapteur.getText().isEmpty()
                 && !idCapteur.getText().isEmpty() && idCapteur.getText().matches(REGINT) &&

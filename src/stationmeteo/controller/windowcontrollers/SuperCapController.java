@@ -61,7 +61,7 @@ public class SuperCapController extends WindowController implements Initializabl
      * des sous Capteurs.
      */
     void commitCapteur() {
-        if(!verif.verifInfoSuperCapteur(nomCapteur, idCapteur, selectedCapteurs)){
+        if(!Verification.verifInfoSuperCapteur(nomCapteur, idCapteur, selectedCapteurs)){
             Alert alert = new Alert(AlertType.ERROR);
             alert.setTitle("SuperCapteur");
             alert.setHeaderText("nom, id ,capteur selectionné");

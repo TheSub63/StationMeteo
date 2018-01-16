@@ -61,7 +61,7 @@ public class ModifController extends WindowController implements Initializable{
      */
     @Override
     protected void commitCapteur() {
-        if (verif.verifInfos(selectedAlgo, nomCapteur, idCapteur, actualisationCapteur, temperatureCapteur,
+        if (Verification.verifInfos(selectedAlgo, nomCapteur, idCapteur, actualisationCapteur, temperatureCapteur,
                 onAlgoFixeAfficher1, onAlgoFixeAfficher2, intervalleAlgo)){
             showError();
         } else {
